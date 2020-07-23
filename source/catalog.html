@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class='page' lang='ru'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Document</title>
+</head>
+
+<body class='page__body'>
+  <header class='page-header'>
+    <h1 class='page-header__title'>Попутчики</h1>
+    <a class='page-header__logo logo' href='index.html' aria-label='перейти на главную страницу'>Погнали?</a>
+    <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'>
+      <span class='visually-hidden'>Открыть меню</span>
+    </button>
+
+    <div class='header-submenu header-submenu--hidden'>
+      <p class='header-submenu__logo logo'>Погнали?</p>
+      <a class='header-submenu__button' href='#'>Авторизация</a>
+
+      <ul class='header-submenu__contacts contact-list'>
+        <li class='contact-list__contact-item'>
+          <a class='contact-list__item-phone' href='tel:88005558628' aria-label='наш телефон'>8 800
+            555-86-28</a>
+          </li>
+        <li class='contact-list__contact-item'>
+          <a class='contact-list__item-email' href='mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
+        </li>
+      </ul>
+
+      <ul class='header-submenu__social'>
+        <li class='header-submenu__social-item'>
+          <a href='#' class='header-submenu__item-fb' aria-label='Перейти на нашу страницу в Facebook'></a>
+        </li>
+        <li class='header-submenu__social-item'>
+          <a href='#' class='header-submenu__item-vk' aria-label='Перейти на нашу страницу в Vkontakte'></a>
+        </li>
+        <li class='header-submenu__social-item'>
+          <a href='#' class='header-submenu__item-instagram' aria-label='Перейти на нашу страницу в Instagram'></a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main class='page-main'>
+    <section class='find-companion-filter'>
+      <h2 class='find-companion-filter__title'>Подберите идеального попутчика</h2>
+      <!--секция с фильтрами. Пока не делаем-->
+    </section>
+
+    <section class='page-main__companions-catalog companions-catalog'>
+      <h3 class='visually-hidden'>Каталог попутчиков</h3>
+      <ul class='companions-catalog__list'>
+        <li>
+          <article class='companions-catalog__item'>
+
+            <a class='companions-catalog__avatar-link' href='#'>
+              <img class='companions-catalog__avatar companions-catalog__avatar--liked' aria-label='Перейти на страницу пользователя' alt='Аватар пользователя'>
+            </a>
+            <h3 class='companions-catalog__name'>
+              <a class='companions-catalog__name-link' href='#'>Таня Фирсова</a>
+            </h3>
+
+            <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
+            <div class='companions-catalog__likes'>1,5 М</div>
+            <ul class='companions-catalog__tag-list'>
+              <li class='companions-catalog__tag-item'>#ЗОЖ</li>
+              <li class='companions-catalog__tag-item'>#ПП</li>
+              <li class='companions-catalog__tag-item'>#Фитнес</li>
+              <li class='companions-catalog__tag-item'>#пляж</li>
+              <li class='companions-catalog__tag-item'>#авокадо</li>
+              <li class='companions-catalog__tag-item'>#смузи</li>
+            </ul>
+
+            <p class='companions-catalog__text'>хочет посетить:</p>
+            <ul class='companions-catalog__destinations'>
+              <li class='companions-catalog__destinations-item'>Шри-Ланка</li>
+              <li class='companions-catalog__destinations-item'>Тайланд</li>
+              <li class='companions-catalog__destinations-item'>Сейшелы</li>
+            </ul>
+
+            <p class='companions-catalog__text'>транспорт:</p>
+            <ul class='companions-catalog__transports'>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--train'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--bike'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--walk'></li>
+            </ul>
+
+            <p class='companions-catalog__text'>левел</p>
+            <div class='companions-catalog__lvl'>99</div>
+            <a class='companions-catalog__call-btn call-btn'>Позвать</a>
+          </article>
+        </li>
+
+        <li>
+          <article class='companions-catalog__item'>
+
+            <a class='companions-catalog__avatar-link' href='#'>
+              <img class='companions-catalog__avatar' aria-label='Перейти на страницу пользователя' alt='Аватар пользователя'>
+            </a>
+            <h3 class='companions-catalog__name'>
+              <a class='companions-catalog__name-link' href='#'>Петя Демин</a>
+            </h3>
+
+            <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
+            <div class='companions-catalog__likes'>1500</div>
+            <ul class='companions-catalog__tag-list'>
+              <li class='companions-catalog__tag-item'>#бургер</li>
+              <li class='companions-catalog__tag-item'>#бар</li>
+              <li class='companions-catalog__tag-item'>#футбол</li>
+              <li class='companions-catalog__tag-item'>#концерт</li>
+              <li class='companions-catalog__tag-item'>#крафт</li>
+            </ul>
+
+            <p class='companions-catalog__text'>хочет посетить:</p>
+            <ul class='companions-catalog__destinations'>
+              <li class='companions-catalog__destinations-item'>Бельгия</li>
+              <li class='companions-catalog__destinations-item'>Чехия</li>
+            </ul>
+
+            <p class='companions-catalog__text'>транспорт:</p>
+            <ul class='companions-catalog__transports'>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--train companions-catalog__transports-item--active'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--bike'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--walk companions-catalog__transports-item--active'></li>
+            </ul>
+
+            <p class='companions-catalog__text'>левел</p>
+            <div class='companions-catalog__lvl'>80</div>
+            <a class='companions-catalog__call-btn call-btn'>Позвать</a>
+          </article>
+        </li>
+
+        <li>
+          <article class='companions-catalog__item'>
+
+            <a class='companions-catalog__avatar-link' href='#'>
+              <img class='companions-catalog__avatar' aria-label='Перейти на страницу пользователя' alt='Аватар пользователя'>
+            </a>
+            <h3 class='companions-catalog__name'>
+              <a class='companions-catalog__name-link' href='#'>Марк Смолов</a>
+            </h3>
+
+            <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
+            <div class='companions-catalog__likes'>170</div>
+            <ul class='companions-catalog__tag-list'>
+              <li class='companions-catalog__tag-item'>#рэп</li>
+              <li class='companions-catalog__tag-item'>#тату</li>
+              <li class='companions-catalog__tag-item'>#хайпбист</li>
+              <li class='companions-catalog__tag-item'>#кроссовки</li>
+              <li class='companions-catalog__tag-item'>#суприм</li>
+            </ul>
+
+            <p class='companions-catalog__text'>хочет посетить:</p>
+            <ul class='companions-catalog__destinations'>
+              <li class='companions-catalog__destinations-item'>США</li>
+              <li class='companions-catalog__destinations-item'>Австралия</li>
+              <li class='companions-catalog__destinations-item'>Доминикана</li>
+            </ul>
+
+            <p class='companions-catalog__text'>транспорт:</p>
+            <ul class='companions-catalog__transports'>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--train'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--bike'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--walk companions-catalog__transports-item--active'></li>
+            </ul>
+
+            <p class='companions-catalog__text'>левел</p>
+            <div class='companions-catalog__lvl'>25</div>
+            <a class='companions-catalog__call-btn call-btn'>Позвать</a>
+          </article>
+        </li>
+
+        <li>
+          <article class='companions-catalog__item'>
+
+            <a class='companions-catalog__avatar-link' href='#'>
+              <img class='companions-catalog__avatar' aria-label='Перейти на страницу пользователя' alt='Аватар пользователя'>
+            </a>
+            <h3 class='companions-catalog__name'>
+              <a class='companions-catalog__name-link' href='#'>Лариса Роговая</a>
+            </h3>
+
+            <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
+            <div class='companions-catalog__likes'>23</div>
+            <ul class='companions-catalog__tag-list'>
+              <li class='companions-catalog__tag-item'>#образование</li>
+              <li class='companions-catalog__tag-item'>#карьера</li>
+              <li class='companions-catalog__tag-item'>#учеба</li>
+              <li class='companions-catalog__tag-item'>#линкедин</li>
+            </ul>
+
+            <p class='companions-catalog__text'>хочет посетить:</p>
+            <ul class='companions-catalog__destinations'>
+              <li class='companions-catalog__destinations-item'>Великобритания</li>
+              <li class='companions-catalog__destinations-item'>Германия</li>
+            </ul>
+
+            <p class='companions-catalog__text'>транспорт:</p>
+            <ul class='companions-catalog__transports'>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--train companions-catalog__transports-item--active'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--bike'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--walk'></li>
+
+            </ul>
+
+            <p class='companions-catalog__text'>левел</p>
+            <div class='companions-catalog__lvl'>50</div>
+            <a class='companions-catalog__call-btn call-btn'>Позвать</a>
+          </article>
+        </li>
+      </ul>
+      <a class='companions-catalog__show-more-btn'>Показать еще</a>
+    </section>
+
+    <div class='page-main__paginator paginator'>
+      <a class='paginator__previous-btn' aria-label='предыдущая страница'></a>
+      <a class='paginator__next-btn' aria-label='следующая страница'></a>
+    </div>
+
+  </main>
+
+  <footer class='page-footer footer'>
+    <p class='footer__logo logo'>Погнали?</p>
+    <ul class='footer__social'>
+      <li class='footer__social-item'>
+        <a class='footer__item-fb' href='#' aria-label='перейти на нашу страницу в Facebook'></a>
+      </li>
+      <li class='footer__social-item'>
+        <a class='footer__item-vk' href='#' aria-label='перейти на нашу страницу в Vkontakte'></a>
+      </li>
+      <li class='footer__social-item'>
+        <a class='footer__item-insta' href='#' aria-label='перейти на нашу страницу в Instagram'></a>
+      </li>
+    </ul>
+    <div class='footer__developer-wrapper'>
+      <p class='footer__developed-by'>Разработано</p>
+      <a class='footer__developer-link' href='https://htmlacademy.ru/intensive/adaptive' aria-label='перейти на сайт разработчика сайта'>
+        <img class='footer__developer-logo' alt='лого htmlacademy' >
+      </a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
