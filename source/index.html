@@ -11,34 +11,33 @@
   <header class='page-header'>
 
     <p class='page-header__logo logo'>Погнали?</p> <!--добавил класс логотипу, согласно БЭМ это блок-->
-    <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'>
-      <span class='visually-hidden'>Открыть меню</span>
-    </button>
-
+    <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'>Открыть меню</button>
     <div class='header-submenu header-submenu--hidden'>
       <p class='header-submenu__logo logo'>Погнали?</p>
-      <h2 class='header-submenu__title'>О сервисе направления попутчики</h2>
+      <h2 class='header-submenu__title'>
+        <a href='catalog.html'>О сервисе направления попутчики</a>
+      </h2>
       <a class='header-submenu__button' href='#'>Авторизация</a>
 
       <ul class='header-submenu__contacts contact-list'>
-        <li class='contact-list__contact-item'>
-          <a class='contact-list__item-phone' href='tel:88005558628' aria-label='наш телефон'>8 800
+        <li class='contact-list__contact-item-wrapper'>
+          <a class='contact-list__item contact-list__item--phone' href='tel:88005558628' aria-label='наш телефон'>8 800
             555-86-28</a>
           </li>
-        <li class='contact-list__contact-item'>
-          <a class='contact-list__item-email' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
+        <li class='contact-list__contact-item-wrapper'>
+          <a class='contact-list__item contact-list__item--email' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
         </li>
       </ul>
 
       <ul class='header-submenu__social'>
-        <li class='header-submenu__social-item'>
-          <a href='#' class='header-submenu__item-fb' aria-label='Перейти на нашу страницу в Facebook'></a>
+        <li class='header-submenu__social-item-wrapper'>
+          <a href='#' class='header-submenu__social-item header-submenu__social-item--fb' aria-label='Перейти на нашу страницу в Facebook'></a>
         </li>
-        <li class='header-submenu__social-item'>
-          <a href='#' class='header-submenu__item-vk' aria-label='Перейти на нашу страницу в Vkontakte'></a>
+        <li class='header-submenu__social-item-wrapper'>
+          <a href='#' class='header-submenu__social-item header-submenu__social-item--vk' aria-label='Перейти на нашу страницу в Vkontakte'></a>
         </li>
-        <li class='header-submenu__social-item'>
-          <a href='#' class='header-submenu__item-instagram' aria-label='Перейти на нашу страницу в Instagram'></a>
+        <li class='header-submenu__social-item-wrapper'>
+          <a href='#' class='header-submenu__social-item header-submenu__social-item--instagram' aria-label='Перейти на нашу страницу в Instagram'></a>
         </li>
       </ul>
     </div>
@@ -46,9 +45,9 @@
 
   <main class='page-main'>
     <section class='page-main__hero hero'>
-      <h1 class='hero__slogan hero-slogan'>В путешествие с крутыми попутчиками!</h1>
-      <a class='hero__phone' href='tel:88005558628' aria-label='наш телефон'>8 800 555-86-28</a>
-      <a class='hero__email' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
+      <h1 class='hero__title main-title'>В путешествие с крутыми попутчиками!</h1>
+      <a class='hero__contact-item hero__contact-item--phone' href='tel:88005558628' aria-label='наш телефон'>8 800 555-86-28</a>
+      <a class='hero__contact-item hero__contact-item--email' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
       <a class='hero__auth' href='#'>Авторизация</a>
     </section>
 
@@ -145,10 +144,18 @@
               <li class='companions-list__tag-item'>#смузи</li>
             </ul>
             <ul class='companions-list__transport'>
-              <li class='companions-list__transport-item companions-list__transport-item--plane companions-list__transport-item--active' aria-label='передвижение на самолете'></li>
-              <li class='companions-list__transport-item companions-list__transport-item--train' aria-label='передвижение на поезде'></li>
-              <li class='companions-list__transport-item companions-list__transport-item--bike' aria-label='передвижение на велосипеде'></li>
-              <li class='companions-list__transport-item companions-list__transport-item--walk' aria-label='передвижение пешком'></li>
+              <li class='companions-list__transport-item companions-list__transport-item--plane companions-list__transport-item--active'>
+                <span сlass='visually-hidden'>передвижение на самолете</span>
+              </li>
+              <li class='companions-list__transport-item companions-list__transport-item--train'>
+                <span сlass='visually-hidden'>передвижение на поезде</span>
+              </li>
+              <li class='companions-list__transport-item companions-list__transport-item--bike'>
+                <span сlass='visually-hidden'>передвижение на велосипеде</span>
+              </li>
+              <li class='companions-list__transport-item companions-list__transport-item--walk'>
+                <span сlass='visually-hidden'>передвижение пешком</span>
+              </li>
             </ul>
           </article>
         </li>
@@ -170,10 +177,18 @@
               <li class='companions-list__tags-item'>#крафт</li>
             </ul>
             <ul class='companions-list__transport'>
-              <li class='companions-list__transport-item companions-list__transport-item--plane companions-list__transport-item--active' aria-label='передвижение на самолете'></li>
-              <li class='companions-list__transport-item companions-list__transport-item--train companions-list__transport-item--active' aria-label='передвижение на поезде'></li>
-              <li class='companions-list__transport-item companions-list__transport-item--bike' aria-label='передвижение на велосипеде'></li>
-              <li class='companions-list__transport-item companions-list__transport-item--walk companions-list__transport-item--active' aria-label='передвижение пешком'></li>
+              <li class='companions-list__transport-item companions-list__transport-item--plane companions-list__transport-item--active'>
+                <span сlass='visually-hidden'>передвижение на самолете</span>
+              </li>
+              <li class='companions-list__transport-item companions-list__transport-item--train companions-list__transport-item--active'>
+                <span сlass='visually-hidden'>передвижение на поезде</span>
+              </li>
+              <li class='companions-list__transport-item companions-list__transport-item--bike'>
+                <span сlass='visually-hidden'>передвижение на велосипеде</span>
+              </li>
+              <li class='companions-list__transport-item companions-list__transport-item--walk companions-list__transport-item--active'>
+                <span сlass='visually-hidden'>передвижение пешком</span>
+              </li>
             </ul>
           </article>
         </li>
@@ -240,11 +255,12 @@
       <p class='registration__text'>Остались вопросы?<br>Мы с радостью на них ответим!</p>
 
       <ul class='registration__contacts contact-list'>
-        <li class='contact-list__contact-item contact-list__contact-item--phone'>
-          <a class='contact-list__contact-item-link' href='tel:88005558628' aria-label='наш телефон'>8 800 555-86-28</a>
+        <li class='contact-list__contact-item-wrapper'>
+          <a class='contact-list__item contact-list__item--phone' href='tel:88005558628' aria-label='наш телефон'>8 800
+            555-86-28</a>
           </li>
-        <li class='contact-list__contact-item contact-list__contact-item--email'>
-          <a class='contact-list__contact-item-link' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
+        <li class='contact-list__contact-item-wrapper'>
+          <a class='contact-list__item contact-list__item--email' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
         </li>
         <!--картинки будут идти псевдоэлементами к классу-->
       </ul>
@@ -277,7 +293,7 @@
     <div class='footer__developer-wrapper'>
       <p class='footer__developed-by'>Разработано</p>
       <a class='footer__developer-link' href='https://htmlacademy.ru/intensive/adaptive' aria-label='перейти на сайт разработчика сайта'>
-        <img class='footer__developer-logo' alt='лого htmlacademy'  width='27' height='33'>>
+        <img class='footer__developer-logo' alt='лого htmlacademy'  width='27' height='33'>
       </a>
     </div>
   </footer>

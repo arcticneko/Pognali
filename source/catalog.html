@@ -9,31 +9,29 @@
 <body class='page__body'>
   <header class='page-header'>
     <a class='page-header__logo logo' href='index.html' aria-label='перейти на главную страницу'>Погнали?</a>
-    <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'>
-      <span class='visually-hidden'>Открыть меню</span>
-    </button>
-    <h1 class='page-header__title companions-logo'>Попутчики</h1>
+    <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'>Открыть меню</button>
+    <h1 class='page-header__title main-title'>Попутчики</h1>
     <div class='header-submenu header-submenu--hidden'>
       <p class='header-submenu__logo logo'>Погнали?</p>
       <a class='header-submenu__button' href='#'>Авторизация</a>
       <ul class='header-submenu__contacts contact-list'>
-        <li class='contact-list__contact-item'>
-          <a class='contact-list__item-phone' href='tel:88005558628' aria-label='наш телефон'>8 800
+        <li class='contact-list__contact-item-wrapper'>
+          <a class='contact-list__item contact-list__item--phone' href='tel:88005558628' aria-label='наш телефон'>8 800
             555-86-28</a>
           </li>
-        <li class='contact-list__contact-item'>
-          <a class='contact-list__item-email' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
+        <li class='contact-list__contact-item-wrapper'>
+          <a class='contact-list__item contact-list__item--email' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
         </li>
       </ul>
       <ul class='header-submenu__social'>
-        <li class='header-submenu__social-item'>
-          <a href='#' class='header-submenu__item-fb' aria-label='Перейти на нашу страницу в Facebook'></a>
+        <li class='header-submenu__social-item-wrapper'>
+          <a href='#' class='header-submenu__social-item header-submenu__social-item--fb' aria-label='Перейти на нашу страницу в Facebook'></a>
         </li>
-        <li class='header-submenu__social-item'>
-          <a href='#' class='header-submenu__item-vk' aria-label='Перейти на нашу страницу в Vkontakte'></a>
+        <li class='header-submenu__social-item-wrapper'>
+          <a href='#' class='header-submenu__social-item header-submenu__social-item--vk' aria-label='Перейти на нашу страницу в Vkontakte'></a>
         </li>
-        <li class='header-submenu__social-item'>
-          <a href='#' class='header-submenu__item-instagram' aria-label='Перейти на нашу страницу в Instagram'></a>
+        <li class='header-submenu__social-item-wrapper'>
+          <a href='#' class='header-submenu__social-item header-submenu__social-item--instagram' aria-label='Перейти на нашу страницу в Instagram'></a>
         </li>
       </ul>
     </div>
@@ -74,10 +72,18 @@
             </ul>
             <p class='companions-catalog__text'>транспорт:</p>
             <ul class='companions-catalog__transports'>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active' aria-label='передвижение на самолете'></li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--train' aria-label='передвижение на поезде'></li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--bike' aria-label='передвижение на велосипеде'></li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--walk' aria-label='передвижение пешком'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
+                <span сlass='visually-hidden'>передвижение на самолете</span>
+              </li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--train'>
+                <span сlass='visually-hidden'>передвижение на поезде</span>
+              </li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--bike'>
+                <span сlass='visually-hidden'>передвижение на велосипеде</span>
+              </li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--walk'>
+                <span сlass='visually-hidden'>передвижение пешком</span>
+              </li>
             </ul>
 
             <p class='companions-catalog__text'>левел</p>
@@ -110,10 +116,18 @@
             </ul>
             <p class='companions-catalog__text'>транспорт:</p>
             <ul class='companions-catalog__transports'>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active' aria-label='передвижение на самолете'></li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--train companions-catalog__transports-item--active' aria-label='передвижение на поезде'></li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--bike' aria-label='передвижение на велосипеде'></li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--walk companions-catalog__transports-item--active' aria-label='передвижение пешком'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
+                <span сlass='visually-hidden'>передвижение на самолете</span>
+              </li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--train companions-catalog__transports-item--active'>
+                <span сlass='visually-hidden'>передвижение на поезде</span>
+              </li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--bike'>
+                <span сlass='visually-hidden'>передвижение на велосипеде</span>
+              </li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--walk companions-catalog__transports-item--active'>
+                <span сlass='visually-hidden'>передвижение пешком</span>
+              </li>
             </ul>
 
             <p class='companions-catalog__text'>левел</p>
@@ -147,10 +161,18 @@
             </ul>
             <p class='companions-catalog__text'>транспорт:</p>
             <ul class='companions-catalog__transports'>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active' aria-label='передвижение на самолете'></li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--train' aria-label='передвижение на роезде'></li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--bike' aria-label='передвижение на велосипеде'></li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--walk companions-catalog__transports-item--active' aria-label='передвижение пешком'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
+                <span сlass='visually-hidden'>передвижение на самолете</span>
+              </li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--train'>
+                <span сlass='visually-hidden'>передвижение на поезде</span>
+              </li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--bike'>
+                <span сlass='visually-hidden'>передвижение на велосипеде</span>
+              </li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--walk companions-catalog__transports-item--active'>
+                <span сlass='visually-hidden'>передвижение пешком</span>
+              </li>
             </ul>
 
             <p class='companions-catalog__text'>левел</p>
@@ -183,10 +205,18 @@
 
             <p class='companions-catalog__text'>транспорт:</p>
             <ul class='companions-catalog__transports'>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active' aria-label='передвижение на самолете'></li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--train companions-catalog__transports-item--active' aria-label='передвижение на поезде'></li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--bike' aria-label='передвижение на велосипеде'></li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--walk' aria-label='передвижение пешком'></li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
+                <span сlass='visually-hidden'>передвижение на самолете</span>
+              </li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--train companions-catalog__transports-item--active'>
+                <span сlass='visually-hidden'>передвижение на поезде</span>
+              </li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--bike'>
+                <span сlass='visually-hidden'>передвижение на велосипеде</span>
+              </li>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--walk'>
+                <span сlass='visually-hidden'>передвижение пешком</span>
+              </li>
             </ul>
             <p class='companions-catalog__text'>левел</p>
             <div class='companions-catalog__lvl'>50</div>

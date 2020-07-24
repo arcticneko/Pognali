@@ -10,33 +10,31 @@
 
   <header class='page-header'>
     <a class='page-header__logo logo' href='index.html'>Погнали?</a>
-    <button class='page-header__toggle'>
-      <span class='visually-hidden'>Открыть меню</span>
-    </button>
-
+    <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'>Открыть меню</button>
+    <h1 class='page-header__title main-title'>Направления</h1>
     <div class='header-submenu header-submenu--hidden'>
       <p class='header-submenu__logo logo'>Погнали?</p>
       <a class='header-submenu__button' href='#'>Авторизация</a>
 
       <ul class='header-submenu__contacts contact-list'>
-        <li class='contact-list__contact-item contact-list__contact-item--phone'>
-          <a href='tel:88005558628'>8 800
+        <li class='contact-list__contact-item-wrapper'>
+          <a class='contact-list__item contact-list__item--phone' href='tel:88005558628' aria-label='наш телефон'>8 800
             555-86-28</a>
           </li>
-        <li class='contact-list__contact-item contact-list__contact-item--email'>
-          <a href='mail@htmlacademy.ru'>mail@htmlacademy.ru</a>
+        <li class='contact-list__contact-item-wrapper'>
+          <a class='contact-list__item contact-list__item--email' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
         </li>
       </ul>
 
       <ul class='header-submenu__social'>
-        <li class='header-submenu__social-item'>
-          <a href='#' class='header-submenu__item-fb' aria-label='Перейти на нашу страницу в Facebook'></a>
+        <li class='header-submenu__social-item-wrapper'>
+          <a href='#' class='header-submenu__social-item header-submenu__social-item--fb' aria-label='Перейти на нашу страницу в Facebook'></a>
         </li>
-        <li class='header-submenu__social-item'>
-          <a href='#' class='header-submenu__item-vk' aria-label='Перейти на нашу страницу в Vkontakte'></a>
+        <li class='header-submenu__social-item-wrapper'>
+          <a href='#' class='header-submenu__social-item header-submenu__social-item--vk' aria-label='Перейти на нашу страницу в Vkontakte'></a>
         </li>
-        <li class='header-submenu__social-item'>
-          <a href='#' class='header-submenu__item-instagram' aria-label='Перейти на нашу страницу в Instagram'></a>
+        <li class='header-submenu__social-item-wrapper'>
+          <a href='#' class='header-submenu__social-item header-submenu__social-item--instagram' aria-label='Перейти на нашу страницу в Instagram'></a>
         </li>
       </ul>
     </div>
