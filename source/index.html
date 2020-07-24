@@ -26,7 +26,7 @@
             555-86-28</a>
           </li>
         <li class='contact-list__contact-item'>
-          <a class='contact-list__item-email' href='mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
+          <a class='contact-list__item-email' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
         </li>
       </ul>
 
@@ -48,7 +48,7 @@
     <section class='page-main__hero hero'>
       <h1 class='hero__slogan hero-slogan'>В путешествие с крутыми попутчиками!</h1>
       <a class='hero__phone' href='tel:88005558628' aria-label='наш телефон'>8 800 555-86-28</a>
-      <a class='hero__email' href='mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
+      <a class='hero__email' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
       <a class='hero__auth' href='#'>Авторизация</a>
     </section>
 
@@ -87,28 +87,28 @@
         там заняться.</p>
 
       <ul class='directions__directions-list directions-list'>
-        <li class='directions-list__item'>
-          <article>
+        <li class='directions-list__item-wrapper'>
+          <article class='directions-list__item'>
             <h3 class='directions-list__name'>Таиланд</h3>
-            <img class='directions-list__pic' alt='Тайланд'>
+            <img class='directions-list__pic' alt='Тайланд' width='35' height='24'>
             <p class='directions-list__slogan'>Джунгли зовут!</p>
             <p class='directions-list__people'>18321</p>
           </article>
         </li>
 
-        <li class='directions-list__item'>
-          <article>
+        <li class='directions-list__item-wrapper'>
+          <article class='directions-list__item'>
             <h3 class='directions-list__name'>Франция</h3>
-            <img class='directions-list__pic' alt='Франция'>
+            <img class='directions-list__pic' alt='Франция' width='35' height='24'>
             <p class='directions-list__slogan'>Трэ бьен, манифик!</p>
             <p class='directions-list__people'>12518</p>
           </article>
         </li>
 
-        <li class='directions-list__item'>
-          <article>
+        <li class='directions-list__item-wrapper'>
+          <article class='directions-list__item'>
             <h3 class='directions-list__name'>Чехия</h3>
-            <img class='directions-list__pic' alt='Чехия'>
+            <img class='directions-list__pic' alt='Чехия' width='35' height='24'>
             <p class='directions-list__slogan'>Закоулки старой Европы</p>
             <p class='directions-list__people'>5326</p>
           </article>
@@ -116,7 +116,6 @@
       </ul>
       <a class='button directions__button' href='form.html'>Показать все</a>
     </section>
-
 
     <section class='page-main__companions companions'>
       <h2 class='companions__title'>
@@ -127,7 +126,7 @@
       <p class='companions__text companions__text--bold'>Теперь можно легко найти единомышленников!</p>
 
       <ul class='companions__companions-list companions-list'>
-        <li> <!--не вижу смысла для доп класса здесь. есть companions-list__item-->
+        <li class='companions-list__item-wrapper'>
           <article class='companions-list__item'>
             <div class='companions-list__lvl'>99 level</div>
             <ul class='companions-list__countries'>
@@ -146,15 +145,15 @@
               <li class='companions-list__tag-item'>#смузи</li>
             </ul>
             <ul class='companions-list__transport'>
-              <li class='companions-list__transport-item companions-list__transport-item--plane companions-list__transport-item--active'></li>
-              <li class='companions-list__transport-item companions-list__transport-item--train'></li>
-              <li class='companions-list__transport-item companions-list__transport-item--bike'></li>
-              <li class='companions-list__transport-item companions-list__transport-item--walk'></li>
+              <li class='companions-list__transport-item companions-list__transport-item--plane companions-list__transport-item--active' aria-label='передвижение на самолете'></li>
+              <li class='companions-list__transport-item companions-list__transport-item--train' aria-label='передвижение на поезде'></li>
+              <li class='companions-list__transport-item companions-list__transport-item--bike' aria-label='передвижение на велосипеде'></li>
+              <li class='companions-list__transport-item companions-list__transport-item--walk' aria-label='передвижение пешком'></li>
             </ul>
           </article>
         </li>
 
-        <li> <!--не вижу смысла для доп класса здесь. есть companions-list__item-->
+        <li class='companions-list__item-wrapper'>
           <article class='companions-list__item'>
             <div class='companions-list__lvl'>80 level</div>
             <ul class='companions-list__countries'>
@@ -171,10 +170,10 @@
               <li class='companions-list__tags-item'>#крафт</li>
             </ul>
             <ul class='companions-list__transport'>
-              <li class='companions-list__transport-item companions-list__transport-item--plane companions-list__transport-item--active'></li>
-              <li class='companions-list__transport-item companions-list__transport-item--train companions-list__transport-item--active'></li>
-              <li class='companions-list__transport-item companions-list__transport-item--bike'></li>
-              <li class='companions-list__transport-item companions-list__transport-item--walk companions-list__transport-item--active'></li>
+              <li class='companions-list__transport-item companions-list__transport-item--plane companions-list__transport-item--active' aria-label='передвижение на самолете'></li>
+              <li class='companions-list__transport-item companions-list__transport-item--train companions-list__transport-item--active' aria-label='передвижение на поезде'></li>
+              <li class='companions-list__transport-item companions-list__transport-item--bike' aria-label='передвижение на велосипеде'></li>
+              <li class='companions-list__transport-item companions-list__transport-item--walk companions-list__transport-item--active' aria-label='передвижение пешком'></li>
             </ul>
           </article>
         </li>
@@ -245,7 +244,7 @@
           <a class='contact-list__contact-item-link' href='tel:88005558628' aria-label='наш телефон'>8 800 555-86-28</a>
           </li>
         <li class='contact-list__contact-item contact-list__contact-item--email'>
-          <a class='contact-list__contact-item-link' href='mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
+          <a class='contact-list__contact-item-link' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
         </li>
         <!--картинки будут идти псевдоэлементами к классу-->
       </ul>
@@ -262,23 +261,23 @@
     </section>
   </main>
 
-  <footer class='page-footer footer'>
+  <footer class='page__footer footer'>
     <p class='footer__logo logo'>Погнали?</p>
     <ul class='footer__social'>
       <li class='footer__social-item'>
-        <a class='footer__item-fb' href='#' aria-label='перейти на нашу страницу в Facebook'></a>
+        <a class='footer__item-link footer__item-link--fb' href='#' aria-label='перейти на нашу страницу в Facebook'></a>
       </li>
       <li class='footer__social-item'>
-        <a class='footer__item-vk' href='#' aria-label='перейти на нашу страницу в Vkontakte'></a>
+        <a class='footer__item-link footer__item-link--vk' href='#' aria-label='перейти на нашу страницу в Vkontakte'></a>
       </li>
       <li class='footer__social-item'>
-        <a class='footer__item-insta' href='#' aria-label='перейти на нашу страницу в Instagram'></a>
+        <a class='footer__item-link footer__item-link--instagram' href='#' aria-label='перейти на нашу страницу в Instagram'></a>
       </li>
     </ul>
     <div class='footer__developer-wrapper'>
       <p class='footer__developed-by'>Разработано</p>
       <a class='footer__developer-link' href='https://htmlacademy.ru/intensive/adaptive' aria-label='перейти на сайт разработчика сайта'>
-        <img class='footer__developer-logo' alt='лого htmlacademy' >
+        <img class='footer__developer-logo' alt='лого htmlacademy'  width='27' height='33'>>
       </a>
     </div>
   </footer>
