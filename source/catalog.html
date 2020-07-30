@@ -13,34 +13,270 @@
     <h1 class='page-header__title main-title'>Попутчики</h1>
     <div class='header-submenu header-submenu--hidden'>
       <p class='header-submenu__logo logo'>Погнали?</p>
+      <div class='header-submenu__links-wrapper'>
+        <a class='header-submenu__link' href='#'>О сервисе</a>
+        <a class='header-submenu__link' href='form.html'>направления</a>
+        <a class='header-submenu__link' href='catalog.html'>попутчики</a>
+      </div>
       <a class='header-submenu__button' href='#'>Авторизация</a>
       <ul class='header-submenu__contacts contact-list'>
         <li class='contact-list__contact-item-wrapper'>
           <a class='contact-list__item contact-list__item--phone' href='tel:88005558628' aria-label='наш телефон'>8 800
             555-86-28</a>
-          </li>
+        </li>
         <li class='contact-list__contact-item-wrapper'>
-          <a class='contact-list__item contact-list__item--email' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>mail@htmlacademy.ru</a>
+          <a class='contact-list__item contact-list__item--email' href='mailto:mail@htmlacademy.ru'
+            aria-label='наша почта'>mail@htmlacademy.ru</a>
         </li>
       </ul>
       <ul class='header-submenu__social'>
         <li class='header-submenu__social-item-wrapper'>
-          <a href='#' class='header-submenu__social-item header-submenu__social-item--fb' aria-label='Перейти на нашу страницу в Facebook'></a>
+          <a href='#' class='header-submenu__social-item header-submenu__social-item--fb'
+            aria-label='Перейти на нашу страницу в Facebook'></a>
         </li>
         <li class='header-submenu__social-item-wrapper'>
-          <a href='#' class='header-submenu__social-item header-submenu__social-item--vk' aria-label='Перейти на нашу страницу в Vkontakte'></a>
+          <a href='#' class='header-submenu__social-item header-submenu__social-item--vk'
+            aria-label='Перейти на нашу страницу в Vkontakte'></a>
         </li>
         <li class='header-submenu__social-item-wrapper'>
-          <a href='#' class='header-submenu__social-item header-submenu__social-item--instagram' aria-label='Перейти на нашу страницу в Instagram'></a>
+          <a href='#' class='header-submenu__social-item header-submenu__social-item--instagram'
+            aria-label='Перейти на нашу страницу в Instagram'></a>
         </li>
       </ul>
     </div>
   </header>
 
   <main class='page-main'>
-    <section class='find-companion-filter'>
-      <h2 class='find-companion-filter__title'>Подберите идеального попутчика</h2>
-      <!--секция с фильтрами. Пока не делаем-->
+    <section class='page-main__country-filters country-filter'>
+      <!--Псевдокласс для иконки-->
+      <h2 class='country-filter__title-main'>Фильтрация по странам</h2>
+      <button class='country-filter__toggle'></button>
+      <button class='country-filter__world-toggle'>Европа</button>
+      <button class='country-filter__world-toggle'>Азия</button>
+      <button class='country-filter__world-toggle'>Америка</button>
+      <button class='country-filter__world-toggle'>Острова</button>
+      <ul class='country-filter__letters-wrapper'>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--a'>А</a>
+          <ul class='country-filter__country-list country-filter__country-list--a visually-hidden'>
+            <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
+              <a class='country-filter__country-link' href='/europe/france.html'>Австралия</a>
+            </li>
+            <li class='country-filter__country-list-item country-filter__country-list-item--europ'>
+              <a class='country-filter__country-link' href='#'>Австрия</a>
+            </li>
+            <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
+              <a class='country-filter__country-link' href='#'>Азербайджан</a>
+            </li>
+            <li class='country-filter__country-list-item country-filter__country-list-item--europ'>
+              <a class='country-filter__country-link' href='#'>Албания</a>
+            </li>
+            <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
+              <a class='country-filter__country-link' href='#'>Алжир</a>
+            </li>
+            <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
+              <a class='country-filter__country-link' href='#'>Ангола</a>
+            </li>
+            <li class='country-filter__country-list-item country-filter__country-list-item--europ'>
+              <a class='country-filter__country-link' href='#'>Андорра</a>
+            </li>
+            <li class='country-filter__country-list-item country-filter__country-list-item--islands'>
+              <a class='country-filter__country-link' href='#'>Антигуа и Барбуда</a>
+            </li>
+            <li class='country-filter__country-list-item country-filter__country-list-item--america'>
+              <a class='country-filter__country-link' href='#'>Аргентина</a>
+            </li>
+            <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
+              <a class='country-filter__country-link' href='#'>Армения</a>
+            </li>
+            <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
+              <a class='country-filter__country-link'>Афганистан</a>
+            </li>
+          </ul>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--b'>Б</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--v'>В</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--g'>Г</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--d'>Д</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--e'>Е</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--z'>З</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--i'>И</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--k'>К</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--l'>Л</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--m'>М</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--n'>Н</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--o'>О</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--p'>П</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--r'>Р</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--s'>С</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--t'>Т</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--y'>У</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--f'>Ф</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--h'>Х</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--ch'>Ч</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--sh'>Ш</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--ye'>Э</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--u'>Ю</a>
+        </li>
+        <li class='country-filter__letter-wrapper'>
+          <a class='country-filter__letter country-filter__letter--ya'>Я</a>
+        </li>
+      </ul>
+      <div class='country-filter__current-visible-list'></div>
+      <button class='country-filter__button button button--close'>Свернуть</button>
+    </section>
+
+    <section class='page-main__filters filter'>
+      <h2 class='filter__title-main'>Подберите идеального попутчика</h2>
+      <form class='filter__form' action='https://echo.htmlacademy.ru' method='get'>
+        <div class='filter__filtration-wrapper filter__filtration-wrapper--hobby'>
+          <span class='filter__title'>Хобби</span>
+          <ul class='filter__item-filter-list filter__item-filter-list--open'>
+            <li class='filter__list-option'>
+              <input class='filter__list-option-input' type='checkbox' id='sport'>
+              <label class='filter__list-option-label' for='sport'>Спортзал</label>
+            </li>
+            <li class='filter__list-option'>
+              <input class='filter__list-option-input' type='checkbox' id='hookah'>
+              <label class='filter__list-option-label' for='hookah'>Кальян</label>
+            </li>
+            <li class='filter__list-option'>
+              <input class='filter__list-option-input' type='checkbox' id='sofa'>
+              <label class='filter__list-option-label' for='sofa'>Диван</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class='filter__filtration-wrapper filter__filtration-wrapper--music'>
+          <span class='filter__title'>Музыка</span>
+          <ul class='filter__item-filter-list filter__item-filter-list--open'>
+            <li class='filter__list-option'>
+              <input class='filter__list-option-input' type='checkbox' id='hard-rock'>
+              <label class='filter__list-option-label' for='hard-rock'>Тяжелый рок</label>
+            </li>
+            <li class='filter__list-option'>
+              <input class='filter__list-option-input' type='checkbox' id='rus-rap'>
+              <label class='filter__list-option-label' for='rus-rap'>Русский рэп</label>
+            </li>
+            <li class='filter__list-option'>
+              <input class='filter__list-option-input' type='checkbox' id='eurodance'>
+              <label class='filter__list-option-label' for='eurodance'>Евроденс</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class='filter__filtration-wrapper filter__filtration-wrapper--food'>
+          <span class='filter__title'>Еда</span>
+          <ul class='filter__item-filter-list filter__item-filter-list--open'>
+            <li class='filter__list-option'>
+              <input class='filter__list-option-input' type='checkbox' id='meat-eater'>
+              <label class='filter__list-option-label' for='meat-eater'>Мясоед</label>
+            </li>
+            <li class='filter__list-option'>
+              <input class='filter__list-option-input' type='checkbox' id='healthy-diet'>
+              <label class='filter__list-option-label' for='healthy-diet'>Сидит на ПП</label>
+            </li>
+            <li class='filter__list-option'>
+              <input class='filter__list-option-input' type='checkbox' id='vegan-raw'>
+              <label class='filter__list-option-label' for='vegan-raw'>Веган-сыроед</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class='filter__filtration-wrapper filter__filtration-wrapper--transport'>
+          <span class='filter__title'>Транспорт</span>
+          <ul class='filter__item-filter-list filter__item-filter-list--open'>
+            <li class='filter__list-option'>
+              <input class='filter__list-option-input filter__list-option-input--airplane' type='checkbox'
+                id='airplane'>
+              <label class='filter__list-option-label' for='airplane'>Самолет</label>
+            </li>
+            <li class='filter__list-option'>
+              <input class='filter__list-option-input filter__list-option-input--train' type='checkbox' id='train'>
+              <label class='filter__list-option-label' for='train'>Поезд</label>
+            </li>
+            <li class='filter__list-option'>
+              <input class='filter__list-option-input filter__list-option-input--bicycle' type='checkbox' id='bicycle'>
+              <label class='filter__list-option-label' for='bicycle'>Велосипед</label>
+            </li>
+            <li class='filter__list-option'>
+              <input class='filter__list-option-input filter__list-option-input--walk' type='checkbox' id='walk'>
+              <label class='filter__list-option-label' for='walk'>Пешком</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class='filter__filtration-wrapper filter__filtration-wrapper--lvl'>
+          <span class='filter__title'>Левел</span>
+          <div class='filter__lvl-range-wrapper'>
+            <label class='filter__lvl-range filter__lvl-range--min'>
+              <input class='filter__lvl-input filter__lvl-input--min' type='number' name='min-lvl' value='30' step='1'
+                min='0' max='100' aria-label='минимальный уровень'>
+            </label>
+            <label class='filter__lvl-range filter__lvl-range--max'>
+              <input class='filter__lvl-input filter__lvl-input--max' type='number' name='max-lvl' value='100' step='1'
+                min='0' max='100' aria-label='максимальный уровень'>
+            </label>
+          </div>
+
+          <div class='filter__lvl-range-controls'>
+            <div class='filter__lvl-range-scale'>
+              <!--Шкала-->
+              <div class='filter__lvl-range-bar'></div>
+              <!--Шкала. Полоска заполнения-->
+            </div>
+            <div class='filter__lvl-range-toggle filter__lvl-range-toggle--min' tabindex='0' aria-label='ползунок минимального уровня'></div>
+            <div class='filter__lvl-range-toggle filter__lvl-range-toggle--max' tabindex='0' aria-label='ползунок максимального уровня'></div>
+          </div>
+        </div>
+
+        <button class='filter__button button button--bright' type='submit'>Показать</button>
+      </form>
     </section>
 
     <section class='page-main__companions-catalog companions-catalog'>
@@ -49,7 +285,8 @@
         <li class='companions-catalog__item-wrapper'>
           <article class='companions-catalog__item'>
             <a class='companions-catalog__avatar-link' href='#'>
-              <img class='companions-catalog__avatar companions-catalog__avatar--liked' aria-label='Перейти на страницу пользователя' alt='Аватар пользователя' width='70' height='70'>
+              <img class='companions-catalog__avatar companions-catalog__avatar--liked'
+                aria-label='Перейти на страницу пользователя' alt='Аватар пользователя' width='70' height='70'>
             </a>
             <h3 class='companions-catalog__name'>
               <a class='companions-catalog__name-link' href='#'>Таня Фирсова</a>
@@ -72,7 +309,8 @@
             </ul>
             <p class='companions-catalog__text'>транспорт:</p>
             <ul class='companions-catalog__transports'>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
+              <li
+                class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
                 <span class='visually-hidden'>передвижение на самолете</span>
               </li>
               <li class='companions-catalog__transports-item companions-catalog__transports-item--train'>
@@ -95,7 +333,8 @@
         <li class='companions-catalog__item-wrapper'>
           <article class='companions-catalog__item'>
             <a class='companions-catalog__avatar-link' href='#'>
-              <img class='companions-catalog__avatar' aria-label='Перейти на страницу пользователя' alt='Аватар пользователя' width='70' height='70'>
+              <img class='companions-catalog__avatar' aria-label='Перейти на страницу пользователя'
+                alt='Аватар пользователя' width='70' height='70'>
             </a>
             <h3 class='companions-catalog__name'>
               <a class='companions-catalog__name-link' href='#'>Петя Демин</a>
@@ -116,16 +355,19 @@
             </ul>
             <p class='companions-catalog__text'>транспорт:</p>
             <ul class='companions-catalog__transports'>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
+              <li
+                class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
                 <span class='visually-hidden'>передвижение на самолете</span>
               </li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--train companions-catalog__transports-item--active'>
+              <li
+                class='companions-catalog__transports-item companions-catalog__transports-item--train companions-catalog__transports-item--active'>
                 <span class='visually-hidden'>передвижение на поезде</span>
               </li>
               <li class='companions-catalog__transports-item companions-catalog__transports-item--bike'>
                 <span class='visually-hidden'>передвижение на велосипеде</span>
               </li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--walk companions-catalog__transports-item--active'>
+              <li
+                class='companions-catalog__transports-item companions-catalog__transports-item--walk companions-catalog__transports-item--active'>
                 <span class='visually-hidden'>передвижение пешком</span>
               </li>
             </ul>
@@ -139,7 +381,8 @@
         <li class='companions-catalog__item-wrapper'>
           <article class='companions-catalog__item'>
             <a class='companions-catalog__avatar-link' href='#'>
-              <img class='companions-catalog__avatar' aria-label='Перейти на страницу пользователя' alt='Аватар пользователя' width='70' height='70'>
+              <img class='companions-catalog__avatar' aria-label='Перейти на страницу пользователя'
+                alt='Аватар пользователя' width='70' height='70'>
             </a>
             <h3 class='companions-catalog__name'>
               <a class='companions-catalog__name-link' href='#'>Марк Смолов</a>
@@ -161,7 +404,8 @@
             </ul>
             <p class='companions-catalog__text'>транспорт:</p>
             <ul class='companions-catalog__transports'>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
+              <li
+                class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
                 <span class='visually-hidden'>передвижение на самолете</span>
               </li>
               <li class='companions-catalog__transports-item companions-catalog__transports-item--train'>
@@ -170,7 +414,8 @@
               <li class='companions-catalog__transports-item companions-catalog__transports-item--bike'>
                 <span class='visually-hidden'>передвижение на велосипеде</span>
               </li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--walk companions-catalog__transports-item--active'>
+              <li
+                class='companions-catalog__transports-item companions-catalog__transports-item--walk companions-catalog__transports-item--active'>
                 <span class='visually-hidden'>передвижение пешком</span>
               </li>
             </ul>
@@ -184,7 +429,8 @@
         <li class='companions-catalog__item-wrapper'>
           <article class='companions-catalog__item'>
             <a class='companions-catalog__avatar-link' href='#'>
-              <img class='companions-catalog__avatar' aria-label='Перейти на страницу пользователя' alt='Аватар пользователя' width='70' height='70'>
+              <img class='companions-catalog__avatar' aria-label='Перейти на страницу пользователя'
+                alt='Аватар пользователя' width='70' height='70'>
             </a>
             <h3 class='companions-catalog__name'>
               <a class='companions-catalog__name-link' href='#'>Лариса Роговая</a>
@@ -205,10 +451,12 @@
 
             <p class='companions-catalog__text'>транспорт:</p>
             <ul class='companions-catalog__transports'>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
+              <li
+                class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
                 <span class='visually-hidden'>передвижение на самолете</span>
               </li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--train companions-catalog__transports-item--active'>
+              <li
+                class='companions-catalog__transports-item companions-catalog__transports-item--train companions-catalog__transports-item--active'>
                 <span class='visually-hidden'>передвижение на поезде</span>
               </li>
               <li class='companions-catalog__transports-item companions-catalog__transports-item--bike'>
@@ -224,7 +472,7 @@
           </article>
         </li>
       </ul>
-      <a class='companions-catalog__show-more-btn'>Показать еще</a>
+      <a class='companions-catalog__text-btn'>Показать еще</a>
     </section>
     <div class='page-main__pagination pagination'>
       <a class='pagination__button pagination__button--prev' aria-label='предыдущая страница'></a>
@@ -232,25 +480,30 @@
     </div>
   </main>
 
-  <footer class='page__footer footer'>
+  <footer class='page-footer footer'>
     <p class='footer__logo logo'>Погнали?</p>
     <ul class='footer__social'>
       <li class='footer__social-item'>
-        <a class='footer__item-link footer__item-link--fb' href='#' aria-label='перейти на нашу страницу в Facebook'></a>
+        <a class='footer__item-link footer__item-link--fb' href='#'
+          aria-label='перейти на нашу страницу в Facebook'></a>
       </li>
       <li class='footer__social-item'>
-        <a class='footer__item-link footer__item-link--vk' href='#' aria-label='перейти на нашу страницу в Vkontakte'></a>
+        <a class='footer__item-link footer__item-link--vk' href='#'
+          aria-label='перейти на нашу страницу в Vkontakte'></a>
       </li>
       <li class='footer__social-item'>
-        <a class='footer__item-link footer__item-link--instagram' href='#' aria-label='перейти на нашу страницу в Instagram'></a>
+        <a class='footer__item-link footer__item-link--instagram' href='#'
+          aria-label='перейти на нашу страницу в Instagram'></a>
       </li>
     </ul>
     <div class='footer__developer-wrapper'>
       <p class='footer__developed-by'>Разработано</p>
-      <a class='footer__developer-link' href='https://htmlacademy.ru/intensive/adaptive' aria-label='перейти на сайт разработчика сайта'>
+      <a class='footer__developer-link' href='https://htmlacademy.ru/intensive/adaptive'
+        aria-label='перейти на сайт разработчика сайта'>
         <img class='footer__developer-logo' alt='лого htmlacademy' width='27' height='33'>
       </a>
     </div>
   </footer>
 </body>
+
 </html>
