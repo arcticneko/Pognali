@@ -13,11 +13,19 @@
     <h1 class='page-header__title main-title'>Попутчики</h1>
     <div class='header-submenu header-submenu--hidden'>
       <p class='header-submenu__logo logo'>Погнали?</p>
-      <div class='header-submenu__links-wrapper'>
-        <a class='header-submenu__link' href='#'>О сервисе</a>
-        <a class='header-submenu__link' href='form.html'>направления</a>
-        <a class='header-submenu__link' href='catalog.html'>попутчики</a>
-      </div>
+      <nav class='header-submenu__links-wrapper'>
+        <ul class='header-submenu__nav-list'>
+          <li class='header-submenu__item'>
+            <a class='header-submenu__link' href='#'>О сервисе</a>
+          </li>
+          <li class='header-submenu__item'>
+            <a class='header-submenu__link' href='form.html'>направления</a>
+          </li>
+          <li class='header-submenu__item'>
+            <a class='header-submenu__link' href='catalog.html'>попутчики</a>
+          </li>
+        </ul>
+      </nav>
       <a class='header-submenu__button' href='#'>Авторизация</a>
       <ul class='header-submenu__contacts contact-list'>
         <li class='contact-list__contact-item-wrapper'>
@@ -50,14 +58,14 @@
     <section class='page-main__country-filters country-filter'>
       <!--Псевдокласс для иконки-->
       <h2 class='country-filter__title-main'>Фильтрация по странам</h2>
-      <button class='country-filter__toggle'></button>
+      <button class='country-filter__toggle' aria-label='Открыть/Закрыть фильтрацию по странам'></button>
       <button class='country-filter__world-toggle'>Европа</button>
       <button class='country-filter__world-toggle'>Азия</button>
       <button class='country-filter__world-toggle'>Америка</button>
       <button class='country-filter__world-toggle'>Острова</button>
       <ul class='country-filter__letters-wrapper'>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--a' href='#'>А</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву А'>А</a>
           <ul class='country-filter__country-list country-filter__country-list--a visually-hidden'>
             <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
               <a class='country-filter__country-link' href='/europe/france.html'>Австралия</a>
@@ -95,86 +103,122 @@
           </ul>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--b' href='#'>Б</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву Б'>Б</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--v' href='#'>В</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву В'>В</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--g' href='#'>Г</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву Г'>Г</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--d' href='#'>Д</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву Д'>Д</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--e' href='#'>Е</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву Е'>Е</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--z' href='#'>З</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву З'>З</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--i' href='#'>И</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву И'>И</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--k' href='#'>К</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву К'>К</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--l' href='#'>Л</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву Л'>Л</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--m' href='#'>М</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву М'>М</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--n' href='#'>Н</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву Н'>Н</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--o' href='#'>О</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву О'>О</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--p' href='#'>П</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву П'>П</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--r' href='#'>Р</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву Р'>Р</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--s' href='#'>С</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву С'>С</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--t' href='#'>Т</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву Т'>Т</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--y' href='#'>У</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву У'>У</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--f' href='#'>Ф</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву Ф'>Ф</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--h' href='#'>Х</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву Х'>Х</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--ch' href='#'>Ч</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву Ч'>Ч</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--sh' href='#'>Ш</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву Ш'>Ш</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--ye' href='#'>Э</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву Э'>Э</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--u' href='#'>Ю</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву Ю'>Ю</a>
         </li>
         <li class='country-filter__letter-wrapper'>
-          <a class='country-filter__letter country-filter__letter--ya' href='#'>Я</a>
+          <a class='country-filter__letter' href='#' aria-label='Страны на букву Я'>Я</a>
         </li>
       </ul>
-      <div class='country-filter__current-visible-list'></div>
-      <button class='country-filter__button button button--close'>Свернуть</button>
+      <div class='country-filter__current-visible-list'>
+        <ul class='country-filter__country-list country-filter__country-list--a'>
+          <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
+            <a class='country-filter__country-link' href='/europe/france.html'>Австралия</a>
+          </li>
+          <li class='country-filter__country-list-item country-filter__country-list-item--europ'>
+            <a class='country-filter__country-link' href='#'>Австрия</a>
+          </li>
+          <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
+            <a class='country-filter__country-link' href='#'>Азербайджан</a>
+          </li>
+          <li class='country-filter__country-list-item country-filter__country-list-item--europ'>
+            <a class='country-filter__country-link' href='#'>Албания</a>
+          </li>
+          <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
+            <a class='country-filter__country-link' href='#'>Алжир</a>
+          </li>
+          <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
+            <a class='country-filter__country-link' href='#'>Ангола</a>
+          </li>
+          <li class='country-filter__country-list-item country-filter__country-list-item--europ'>
+            <a class='country-filter__country-link' href='#'>Андорра</a>
+          </li>
+          <li class='country-filter__country-list-item country-filter__country-list-item--islands'>
+            <a class='country-filter__country-link' href='#'>Антигуа и Барбуда</a>
+          </li>
+          <li class='country-filter__country-list-item country-filter__country-list-item--america'>
+            <a class='country-filter__country-link' href='#'>Аргентина</a>
+          </li>
+          <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
+            <a class='country-filter__country-link' href='#'>Армения</a>
+          </li>
+          <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
+            <a class='country-filter__country-link'>Афганистан</a>
+          </li>
+        </ul>
+      </div>
+      <button class='country-filter__button button button--close' aria-label='Свернуть фильтрацию по странам'>Свернуть</button>
     </section>
 
     <section class='page-main__filters filter'>
       <h2 class='filter__title-main'>Подберите идеального попутчика</h2>
       <form class='filter__form' action='https://echo.htmlacademy.ru' method='get'>
-        <div class='filter__filtration-wrapper filter__filtration-wrapper--hobby'>
+        <fieldset class='filter__filtration-wrapper filter__filtration-wrapper--hobby'>
           <span class='filter__title'>Хобби</span>
           <ul class='filter__item-filter-list filter__item-filter-list--open'>
             <li class='filter__list-option'>
@@ -190,9 +234,9 @@
               <label class='filter__list-option-label' for='sofa'>Диван</label>
             </li>
           </ul>
-        </div>
+        </fieldset>
 
-        <div class='filter__filtration-wrapper filter__filtration-wrapper--music'>
+        <fieldset class='filter__filtration-wrapper filter__filtration-wrapper--music'>
           <span class='filter__title'>Музыка</span>
           <ul class='filter__item-filter-list filter__item-filter-list--open'>
             <li class='filter__list-option'>
@@ -208,9 +252,9 @@
               <label class='filter__list-option-label' for='eurodance'>Евроденс</label>
             </li>
           </ul>
-        </div>
+        </fieldset>
 
-        <div class='filter__filtration-wrapper filter__filtration-wrapper--food'>
+        <fieldset class='filter__filtration-wrapper filter__filtration-wrapper--food'>
           <span class='filter__title'>Еда</span>
           <ul class='filter__item-filter-list filter__item-filter-list--open'>
             <li class='filter__list-option'>
@@ -226,9 +270,9 @@
               <label class='filter__list-option-label' for='vegan-raw'>Веган-сыроед</label>
             </li>
           </ul>
-        </div>
+        </fieldset>
 
-        <div class='filter__filtration-wrapper filter__filtration-wrapper--transport'>
+        <fieldset class='filter__filtration-wrapper filter__filtration-wrapper--transport'>
           <span class='filter__title'>Транспорт</span>
           <ul class='filter__item-filter-list filter__item-filter-list--open'>
             <li class='filter__list-option'>
@@ -249,9 +293,9 @@
               <label class='filter__list-option-label' for='walk'>Пешком</label>
             </li>
           </ul>
-        </div>
+        </fieldset>
 
-        <div class='filter__filtration-wrapper filter__filtration-wrapper--lvl'>
+        <fieldset class='filter__filtration-wrapper filter__filtration-wrapper--lvl'>
           <span class='filter__title'>Левел</span>
           <div class='filter__lvl-range-wrapper'>
             <label class='filter__lvl-range filter__lvl-range--min'>
@@ -270,12 +314,16 @@
               <div class='filter__lvl-range-bar'></div>
               <!--Шкала. Полоска заполнения-->
             </div>
-            <div class='filter__lvl-range-toggle filter__lvl-range-toggle--min' tabindex='0' aria-label='ползунок минимального уровня'></div>
-            <div class='filter__lvl-range-toggle filter__lvl-range-toggle--max' tabindex='0' aria-label='ползунок максимального уровня'></div>
+            <div class='filter__lvl-range-toggle filter__lvl-range-toggle--min' tabindex='0'>
+              <span class='visually-hidden'>Ползунок минимального уровня</span>
+            </div>
+            <div class='filter__lvl-range-toggle filter__lvl-range-toggle--max' tabindex='0'>
+              <span class='visually-hidden'>Ползунок максимального уровня</span>
+            </div>
           </div>
-        </div>
+        </fieldset>
 
-        <button class='filter__button button button--bright' type='submit'>Показать</button>
+        <button class='filter__button button button--bright' type='submit' aria-label='Показать результат поиска по фильтру'>Показать</button>
       </form>
     </section>
 
@@ -284,12 +332,11 @@
       <ul class='companions-catalog__list'>
         <li class='companions-catalog__item-wrapper'>
           <article class='companions-catalog__item'>
-            <a class='companions-catalog__avatar-link' href='#'>
-              <img class='companions-catalog__avatar companions-catalog__avatar--liked'
-                aria-label='Перейти на страницу пользователя' alt='Аватар пользователя' width='70' height='70'>
+            <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
+              <img class='companions-catalog__avatar companions-catalog__avatar--liked' alt='Аватар пользователя' width='70' height='70'>
             </a>
             <h3 class='companions-catalog__name'>
-              <a class='companions-catalog__name-link' href='#'>Таня Фирсова</a>
+              <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Таня Фирсова</a>
             </h3>
             <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
             <div class='companions-catalog__likes'>1,5 М</div>
@@ -309,8 +356,7 @@
             </ul>
             <p class='companions-catalog__text'>транспорт:</p>
             <ul class='companions-catalog__transports'>
-              <li
-                class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
                 <span class='visually-hidden'>передвижение на самолете</span>
               </li>
               <li class='companions-catalog__transports-item companions-catalog__transports-item--train'>
@@ -332,12 +378,11 @@
 
         <li class='companions-catalog__item-wrapper'>
           <article class='companions-catalog__item'>
-            <a class='companions-catalog__avatar-link' href='#'>
-              <img class='companions-catalog__avatar' aria-label='Перейти на страницу пользователя'
-                alt='Аватар пользователя' width='70' height='70'>
+            <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
+              <img class='companions-catalog__avatar' alt='Аватар пользователя' width='70' height='70'>
             </a>
             <h3 class='companions-catalog__name'>
-              <a class='companions-catalog__name-link' href='#'>Петя Демин</a>
+              <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Петя Демин</a>
             </h3>
             <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
             <div class='companions-catalog__likes'>1500</div>
@@ -380,12 +425,11 @@
 
         <li class='companions-catalog__item-wrapper'>
           <article class='companions-catalog__item'>
-            <a class='companions-catalog__avatar-link' href='#'>
-              <img class='companions-catalog__avatar' aria-label='Перейти на страницу пользователя'
-                alt='Аватар пользователя' width='70' height='70'>
+            <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
+              <img class='companions-catalog__avatar' alt='Аватар пользователя' width='70' height='70'>
             </a>
             <h3 class='companions-catalog__name'>
-              <a class='companions-catalog__name-link' href='#'>Марк Смолов</a>
+              <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Марк Смолов</a>
             </h3>
             <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
             <div class='companions-catalog__likes'>170</div>
@@ -428,12 +472,11 @@
 
         <li class='companions-catalog__item-wrapper'>
           <article class='companions-catalog__item'>
-            <a class='companions-catalog__avatar-link' href='#'>
-              <img class='companions-catalog__avatar' aria-label='Перейти на страницу пользователя'
-                alt='Аватар пользователя' width='70' height='70'>
+            <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
+              <img class='companions-catalog__avatar' alt='Аватар пользователя' width='70' height='70'>
             </a>
             <h3 class='companions-catalog__name'>
-              <a class='companions-catalog__name-link' href='#'>Лариса Роговая</a>
+              <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Лариса Роговая</a>
             </h3>
             <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
             <div class='companions-catalog__likes'>23</div>
@@ -475,25 +518,22 @@
       <a class='companions-catalog__text-btn' href='#'>Показать еще</a>
     </section>
     <div class='page-main__pagination pagination'>
-      <button class='pagination__button pagination__button--prev' aria-label='предыдущая страница'></button>
-      <button class='pagination__button pagination__button--next' aria-label='следующая страница'></button>
+      <a class='pagination__button pagination__button--prev' aria-label='предыдущая страница'></a>
+      <a class='pagination__button pagination__button--next' aria-label='следующая страница'></a>
     </div>
   </main>
 
-  <footer class='page-footer footer'>
+  <footer class='page__footer footer'>
     <p class='footer__logo logo'>Погнали?</p>
     <ul class='footer__social'>
       <li class='footer__social-item'>
-        <a class='footer__item-link footer__item-link--fb' href='#'
-          aria-label='перейти на нашу страницу в Facebook'></a>
+        <a class='footer__item-link footer__item-link--fb' href='#' aria-label='перейти на нашу страницу в Facebook'></a>
       </li>
       <li class='footer__social-item'>
-        <a class='footer__item-link footer__item-link--vk' href='#'
-          aria-label='перейти на нашу страницу в Vkontakte'></a>
+        <a class='footer__item-link footer__item-link--vk' href='#' aria-label='перейти на нашу страницу в Vkontakte'></a>
       </li>
       <li class='footer__social-item'>
-        <a class='footer__item-link footer__item-link--instagram' href='#'
-          aria-label='перейти на нашу страницу в Instagram'></a>
+        <a class='footer__item-link footer__item-link--instagram' href='#' aria-label='перейти на нашу страницу в Instagram'></a>
       </li>
     </ul>
     <div class='footer__developer-wrapper'>

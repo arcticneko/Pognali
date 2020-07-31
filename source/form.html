@@ -59,29 +59,35 @@
         </div>
 
         <fieldset class='companion-card__tags'>
-          <legend class='companion-card__tags-title'>Тэги</legend>
-          <textarea class='companion-card__tags-list'>
-          #бургер #бар #футбол #концерт #крафт
+          <legend class='companion-card__tags-legend'>Тэги</legend>
+          <label class='companion-card__tags-title visually-hidden' for='tags-list'>Тэги</label>
+          <textarea class='companion-card__tags-list' name='tags-list' id='tags-list'>
+            #бургер #бар #футбол #концерт #крафт
           </textarea>
         </fieldset>
 
         <fieldset class='companion-card__transport'>
           <legend class='companion-card__transport-title'>Транспорт</legend>
-          <ul class='companion-card__transports'>
-            <li
-              class='companion-card__transports-item companion-card__transports-item--plane companion-card__transports-item--active'>
-              <span class='visually-hidden'>передвижение на самолете</span>
+          <ul class='companion-card__transports-list'>
+            <li class='companion-card__transport-wrapper'>
+              <label class='companion-card__transports-item companion-card__transports-item--plane companion-card__transports-item--active'>передвижение на самолете
+                <input type='checkbox' name='plane' id='plane' class='companion-card__transport-input visually-hidden'>
+              </label>
             </li>
-            <li
-              class='companion-card__transports-item companion-card__transports-item--train companion-card__transports-item--active'>
-              <span class='visually-hidden'>передвижение на поезде</span>
+            <li class='companion-card__transport-wrapper'>
+              <label class='companion-card__transports-item companion-card__transports-item--train companion-card__transports-item--active'>передвижение на поезде
+                <input type='checkbox' name='train' id='train' class='companion-card__transport-input visually-hidden'>
+              </label>
             </li>
-            <li class='companion-card__transports-item companion-card__transports-item--bike'>
-              <span class='visually-hidden'>передвижение на велосипеде</span>
+            <li class='companion-card__transport-wrapper'>
+              <label class='companion-card__transports-item companion-card__transports-item--bike'>передвижение на велосипеде
+                <input type='checkbox' name='bike' id='bike' class='companion-card__transport-input visually-hidden'>
+              </label>
             </li>
-            <li
-              class='companion-card__transports-item companion-card__transports-item--walk companion-card__transports-item--active'>
-              <span class='visually-hidden'>передвижение пешком</span>
+            <li class='companion-card__transport-wrapper'>
+              <label class='companion-card__transports-item companion-card__transports-item--walk companion-card__transports-item--active'>передвижение пешком
+                <input type='checkbox' name='walk' id='walk' class='companion-card__transport-input visually-hidden'>
+              </label>
             </li>
           </ul>
         </fieldset>
@@ -109,9 +115,15 @@
         <h2 class='steps-wrapper__title'>Добавить план</h2>
         <ul class='steps-wrapper__bullet-list'>
           <!-- список буллетов, чтобы смог прочесть скрин ридер -->
-          <li class='steps-wrapper__bullet-list-item steps-wrapper__bullet-list-item--actice'></li>
-          <li class='steps-wrapper__bullet-list-item'></li>
-          <li class='steps-wrapper__bullet-list-item'></li>
+          <li class='steps-wrapper__bullet-list-item steps-wrapper__bullet-list-item--actice'>
+            <span class='visually-hidden'>Шаг 1. Даты пребывания</span>
+          </li>
+          <li class='steps-wrapper__bullet-list-item'>
+            <span class='visually-hidden'>Шаг 2. Маршрут</span>
+          </li>
+          <li class='steps-wrapper__bullet-list-item'>
+            <span class='visually-hidden'>Шаг 3. Развлечения</span>
+          </li>
         </ul>
         <div class='steps-wrapper__step-one step-one' id='step-one'>
           <h3 class='step-one__main-title step-title'>Шаг 1.<br>
@@ -120,22 +132,22 @@
             позвать в
             поездку и ее предполагаемую
             длительность.</p>
-          <div class='step-one__companions-wrapper'>
-            <label class='step-one__title' for='companions-q-ty'>Ищу попутчиков:
+          <div class='step-one__companions-days-wrapper'>
+            <label class='step-one__title' for='companions-quantity'>Ищу попутчиков:
               <span class='step-one__title-desc'>чел.</span>
             </label>
-            <button class='step-one__btn step-one__btn--less'></button>
-            <input class='step-one__input-amount' name='companions-q-ty' id='companions-q-ty'>
-            <button class='step-one__btn step-one__btn--more'></button>
+            <button class='step-one__btn step-one__btn--less' aria-label='Уменьшить количество попутчиков'></button>
+            <input  type='number' min='1' value='1' class='step-one__input-amount' name='companions-quantity' id='companions-quantity'>
+            <button class='step-one__btn step-one__btn--more' aria-label='Увеличить количество попутчиков'></button>
           </div>
 
-          <div class='step-one__days-wrapper'>
+          <div class='step-one__companions-days-wrapper'>
             <label class='step-one__title' for='days-of-trip'>Длительность:
               <span class='step-one__title-desc'>дн.</span>
             </label>
-            <button class='step-one__btn step-one__btn--less'></button>
-            <input class='step-one__input-amount' name='days-of-trip' id='days-of-trip'>
-            <button class='step-one__btn step-one__btn--more'></button>
+            <button class='step-one__btn step-one__btn--less' aria-label='Уменьшить количество дней'></button>
+            <input type='number' min='1' value='1' class='step-one__input-amount' name='days-of-trip' id='days-of-trip'>
+            <button class='step-one__btn step-one__btn--more' aria-label='Увеличить количество дней'></button>
           </div>
 
           <div class='step-one__is-children-wrapper'>
@@ -160,43 +172,43 @@
               <tr class='step-one__calendar-table-row'>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>23
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='23-02-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='23-02-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>24
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='24-02-20'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='24-02-20'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>25
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='25-02-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='25-02-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>26
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='26-02-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='26-02-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>27
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='27-02-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='27-02-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>28
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='28-02-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='28-02-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>1
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='01-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='01-03-19'
                       disabled>
                   </label>
                 </td>
@@ -204,43 +216,43 @@
               <tr class='step-one__calendar-table-row'>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>2
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='02-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='02-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>3
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='03-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='03-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>4
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='04-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='04-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>5
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='05-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='05-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>6
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='06-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='06-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>7
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='07-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='07-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>8
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='01-04-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='01-04-19'
                       disabled>
                   </label>
                 </td>
@@ -248,43 +260,43 @@
               <tr class='step-one__calendar-table-row'>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>9
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='09-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='09-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>10
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='10-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='10-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>11
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='11-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='11-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>12
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='12-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='12-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>13
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='13-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='13-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>14
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='14-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='14-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>15
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='15-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='15-03-19'
                       disabled>
                   </label>
                 </td>
@@ -292,43 +304,43 @@
               <tr class='step-one__calendar-table-row'>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>16
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='16-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='16-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>17
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='17-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='17-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>18
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='18-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='18-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>19
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='19-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='19-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>20
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='20-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='20-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>21
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='21-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='21-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>22
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='22-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='22-03-19'
                       disabled>
                   </label>
                 </td>
@@ -336,80 +348,80 @@
               <tr class='step-one__calendar-table-row'>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>23
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='23-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='23-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>24
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='24-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='24-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>25
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='25-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='25-03-19'
                       disabled>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date step-one__calendar-item-date--current'>26
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='26-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='26-03-19'
                       checked>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>27
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='27-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='27-03-19'
                       checked>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>28
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='28-03-19'
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='28-03-19'
                       checked>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>29
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='29-03-19'>
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='29-03-19'>
                   </label>
                 </td>
               </tr>
               <tr class='step-one__calendar-table-row'>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>30
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='30-03-19'>
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='30-03-19'>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>31
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='31-03-19'>
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='31-03-19'>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>1
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='01-04-19'>
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='01-04-19'>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>2
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='02-04-19'>
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='02-04-19'>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>3
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='03-04-19'>
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='03-04-19'>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>4
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='04-04-19'>
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='04-04-19'>
                   </label>
                 </td>
                 <td class='step-one__calendar-item-wrapper'>
                   <label class='step-one__calendar-item-date'>5
-                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' name='05-04-19'>
+                    <input class='step-one__calendar-item-input visually-hidden' type='checkbox' value='05-04-19'>
                   </label>
                 </td>
               </tr>
@@ -425,31 +437,36 @@
             несколько.
           </p>
           <div class='step-two__country-to-visit-wrapper'>
-            <label class='step-two__country-to-visit-label' for='country-to-visit-one'></label>
+            <label class='step-two__country-to-visit-label' for='country-to-visit-one'>
+              <span class='visually-hidden'>Первая страна для визита</span>
+              <!-- Вот есть у тебя лейбл, но текстового описания у него нет. Как понять, что представляет из себя поле, к которому он относится? -->
+            </label>
             <select class='step-two__country-to-visit-select' name='country-to-visit-one' id='country-to-visit-one'>
               <option class='step-two__country-to-visit-option'>Босиния и Герцеговина</option>
             </select>
             <div class='step-two__country-to-visit-flag-wrapper'>
               <img class='step-two__country-to-visit-flag' width='35' height='24' alt='флаг страны'>
             </div>
-            <button class='step-two__country-to-visit-del-btn del-button'></button>
+            <button class='step-two__country-to-visit-del-btn del-button' aria-label='Удалить страну'></button>
           </div>
           <div class='step-two__country-to-visit-wrapper'>
-            <label class='step-two__country-to-visit-label visually-hidden' for='country-to-visit-two'></label>
+            <label class='step-two__country-to-visit-label visually-hidden' for='country-to-visit-two'>
+              <span class='visually-hidden'>Вторая страна для визита</span>
+            </label>
             <select class='step-two__country-to-visit-select' name='country-to-visit-two' id='country-to-visit-two'>
               <option class='step-two__country-to-visit-option'>Чехия</option>
             </select>
             <div class='step-two__country-to-visit-flag-wrapper'>
               <img class='step-two__country-to-visit-flag' width='35' height='24' alt='флаг страны'>
             </div>
-            <button class='step-two__country-to-visit-del-btn del-button'></button>
+            <button class='step-two__country-to-visit-del-btn del-button' aria-label='Удалить страну'></button>
           </div>
           <div class='step-two__country-to-visit-new-wrapper'>
             <label class='step-two__country-to-visit-new-label visually-hidden' for='country-to-visit-new'></label>
             <select class='step-two__country-to-visit-new-select' name='country-to-visit-new' id='country-to-visit-new'>
               <option class='step-two__country-to-visit-new-option'>Выберите страну</option>
             </select>
-            <button class='step-two__country-to-visit-new-del-btn del-button'></button>
+            <button class='step-two__country-to-visit-new-del-btn del-button' aria-label='Удалить страну'></button>
           </div>
           <div class='step-two__country-to-add-wrapper'>
             <!-- по идее блок похож с предыдущей кнопкой, но что-то не понятно стоит ли это в бэм отобразить -->
@@ -486,7 +503,7 @@
     </form>
 
   </main>
-  <footer class='page-footer footer'>
+  <footer class='page__footer footer'>
     <p class='footer__logo logo'>Погнали?</p>
     <ul class='footer__social'>
       <li class='footer__social-item'>
