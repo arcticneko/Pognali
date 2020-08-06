@@ -1,6 +1,6 @@
 @mixin catalog-countries-list-flag($background-image) {
   background-image: $background-image;
-  content: '';
+  content: "";
   background-size: contain;
   width: 26px;
   height: 18px;

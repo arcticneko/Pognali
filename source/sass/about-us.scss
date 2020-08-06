@@ -1,23 +1,23 @@
 .about-us {
-  background-image: url('/img/about-mobile@1x.png');
+  background-image: url("/img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center;
+}
 
-  &__title {
-    padding-top: 33px;
-    margin-left: 49px;
-  }
+.about-us__title {
+  padding-top: 33px;
+  margin-left: 49px;
+}
 
-  &__text {
-    margin-left: 49px;
-    margin-right: 60px;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 22px;
-  }
+.about-us__text {
+  margin-left: 49px;
+  margin-right: 60px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
 
-  &__text--bold {
-  font-weight: bold;
+  &--bold {
+    font-weight: bold;
   }
 }

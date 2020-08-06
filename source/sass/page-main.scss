@@ -1,95 +1,94 @@
 .page-main {
   display: grid;
   margin-top: -25px;
+}
 
-  &__hero {
-    width: 320px;
-    height: 383px;
-  }
+.page-main__hero {
+  width: 320px;
+  height: 383px;
+}
 
-  &__feedback {
-    width: 320px;
-    height: 285px;
-  }
+.page-main__feedback {
+  width: 320px;
+  height: 285px;
+}
 
-  &__how-to-use {
-    width: 320px;
-    height: 712px;
-    z-index: 10;
-    margin-top: -80px;
-    border-radius: 0px 0px 25px 25px;
-  }
+.page-main__how-to-use {
+  width: 320px;
+  height: 712px;
+  z-index: 10;
+  margin-top: -80px;
+  border-radius: 0 0 25px 25px;
+}
 
-  &__about-us {
-    box-sizing: border-box;
-    height: 100%;
-  }
+.page-main__about-us {
+  box-sizing: border-box;
+  height: 100%;
+}
 
-  &__directions {
-    height: 1025px;
-    width: 320px;
-    margin-top: -20px;
-    z-index: 9;
-    border-radius: 0 0 25px 25px;
-  }
+.page-main__directions {
+  height: 1025px;
+  width: 320px;
+  margin-top: -20px;
+  z-index: 9;
+  border-radius: 0 0 25px 25px;
+}
 
-  &__directions-list {
-    width: 270px;
-    height: 188px;
-    margin-top: 45px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.page-main__directions-list {
+  width: 270px;
+  height: 188px;
+  margin-top: 45px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  &__companions {
-    height: 1315px;
-    margin-top: -20px;
-    z-index: 8;
-    border-radius: 0px 0px 30px 30px;
-  }
+.page-main__companions {
+  height: 1315px;
+  margin-top: -20px;
+  z-index: 8;
+  border-radius: 0 0 25px 25px;
+}
 
-  &__tariff {
-    height: 480px;
-    z-index: 7;
-    margin-top: -25px;
-    border-radius: 0px 0px 25px 25px;
-  }
+.page-main__tariff {
+  height: 480px;
+  z-index: 7;
+  margin-top: -25px;
+  border-radius: 0 0 25px 25px;
+}
 
-  &__registration {
-    height: 536px;
-    z-index: 6;
-    margin-top: -25px;
-    border-radius: 0px 0px 25px 25px;
-  }
+.page-main__registration {
+  height: 536px;
+  z-index: 6;
+  margin-top: -25px;
+  border-radius: 0 0 25px 25px;
+}
 
-  &__our-address {
-    height: 238px;
-    margin-top: -25px;
-    z-index: 5;
-    border-radius: 0px 0px 25px 25px;
-  }
+.page-main__our-address {
+  height: 238px;
+  margin-top: -25px;
+  z-index: 5;
+  border-radius: 0 0 25px 25px;
+}
 
-  &__map {
-    height: 424px;
-    width: 320px;
-    z-index: -1; /*z-index от 0 не дает результат. почему?*/
-    margin-top: -25px;
-    margin-bottom: -105px;
-    background-image: url('/img/map-temporal.jpg');
-    background-size: contain;
-  }
+.page-main__map {
+  height: 424px;
+  width: 320px;
+  z-index: -1; /*z-index от 0 не дает результат. почему?*/
+  margin-top: -25px;
+  margin-bottom: -105px;
+  background-image: url("/img/map-temporal.jpg");
+  background-size: contain;
+}
 
-  &__footer {
-    height: 239px;
-    z-index: 5;
-  }
+.page-main__footer {
+  height: 239px;
+  z-index: 5;
+}
 
-  /* Catalog page */
+/* Catalog page */
 
-  &__companions-catalog {
-    z-index: 0; /*z-index от 0 не дает результат. почему?*/
-    min-height: 1824px;
-    margin-bottom: -25px;
-  }
-
+.page-main__companions-catalog {
+  z-index: 0; /*z-index от 0 не дает результат. почему?*/
+  min-height: 1824px;
+  margin-bottom: -25px;
 }

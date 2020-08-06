@@ -1,19 +1,19 @@
 .feedback {
   background-color: var(--basic-blue);
+}
 
-  &__item {
-    margin-top: 48px;
-    margin-left: 50px;
-  }
+.feedback__item {
+  margin-top: 48px;
+  margin-left: 50px;
+}
 
-  &__text {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 22px;
-  }
+.feedback__text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
 
-  &__text--bold {
-    font-weight: bold;
-  }
+.feedback__text--bold {
+  font-weight: bold;
 }

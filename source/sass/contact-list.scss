@@ -2,52 +2,50 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+}
 
-  &__contact-item-wrapper {
-    position: relative;
-  }
+.contact-list__contact-item-wrapper {
+  position: relative;
 
-  &__contact-item-wrapper:nth-child(2) {
+  &:nth-child(2) {
     margin-top: 23px;
   }
+}
 
-  &__item {
-    color: var(--basic-yellow);
-    text-decoration: none;
-    text-transform: uppercase;
-  }
+.contact-list__item {
+  color: var(--basic-yellow);
+  text-decoration: none;
+  text-transform: uppercase;
 
-  &__item--phone::before {
-    content: '';
+  &--phone::before {
+    content: "";
     position: absolute;
     top: -16px;
     left: -60px;
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    background-image: url('/img/contacts-phone-yellow.svg');
+    background-image: url("/img/contacts-phone-yellow.svg");
     background-repeat: no-repeat;
     background-size: 35%;
     background-color: #121936;
     background-position: center;
-
   }
 
-  &__item--email::before {
-    content: '';
+  &--email::before {
+    content: "";
     position: absolute;
     top: -13px;
     left: -60px;
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    background-image: url('/img/contacts-mail-yellow.svg');
+    background-image: url("/img/contacts-mail-yellow.svg");
     background-repeat: no-repeat;
     background-size: 40%;
     background-color: #121936;
     background-position: center;
-
   }
 }

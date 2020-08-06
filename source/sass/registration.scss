@@ -4,82 +4,80 @@
   align-items: center;
   background-color: var(--basic-blue-dark);
   color: var(--basic-white);
+}
 
+.registration__title {
+  margin-top: 105px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+}
 
-  &__title {
-    margin-top: 105px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 24px;
-  }
+.registration__text {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 211px;
+  height: 88px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
 
-  &__text {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    width: 211px;
-    height: 88px;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 22px;
-  }
+.registration__login-link {
+  display: inline;
+  color: var(--basic-yellow);
+  margin: 0;
+  padding: 0;
+}
 
-  &__login-link {
-    display: inline;
-    color: var(--basic-yellow);
-    margin: 0;
-    padding: 0;
-  }
+.registration__login-form {
+  margin-top: 29px;
+  display: flex;
+  flex-direction: row;
+}
 
-  &__login-form {
-    margin-top: 29px;
-    display: flex;
-    flex-direction: row;
-  }
+.registration__email-field {
+  box-sizing: border-box;
+  width: 220px;
+  height: 62px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  padding-left: 25px;
+  color: var(--special-grey-light-transp);
+}
 
-  &__email-field {
-    box-sizing: border-box;
-    width: 220px;
-    height: 62px;
-    border: none;
-    border-radius: 10px 0px 0px 10px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 18px;
-    padding-left: 25px;
-    color: var(--special-grey-light-transp);
-  }
+.registration__button-form {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-left: -10px;
+  width: 60px;
+  height: 100%;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--basic-yellow);
 
-  &__button-form {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    margin-left: -10px;
-    width: 60px;
-    height: 100%;
-    border-radius: 10px;
-    border: none;
-    background-color: var(--basic-yellow);
-  }
-
-  &__button-form::after {
+  &::after {
     position: absolute;
-    content: url('/img/email-arrow-blue.svg');
+    content: url("/img/email-arrow-blue.svg");
     bottom: 20px;
     left: 26px;
   }
+}
 
-  &__text--bottom {
-    text-align: center;
-    margin-top: 29px;
-    width: 216px;
-  }
+.registration__text--bottom {
+  text-align: center;
+  margin-top: 29px;
+  width: 216px;
+}
 
-  &__contacts {
-    margin-top: 30px;
-  }
-
+.registration__contacts {
+  margin-top: 30px;
 }

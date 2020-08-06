@@ -4,25 +4,24 @@
   justify-content: center;
   background-color: var(--basic-blue-pale);
   color: var(--basic-blue);
+}
 
+.directions__title-link {
+  /* align-self: flex-start; */
+  margin-left: 50px;
+}
 
-  &__title-link {
-    /* align-self: flex-start; */
-    margin-left: 50px;
-  }
+.directions__text {
+  width: 216px;
+  height: 110px;
+  margin-left: 49px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
 
-  &__text {
-    width: 216px;
-    height: 110px;
-    margin-left: 49px;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 22px;
-  }
-
-  &__button {
-    align-self: center;
-    margin-top: 20px;
-  }
+.directions__button {
+  align-self: center;
+  margin-top: 20px;
 }

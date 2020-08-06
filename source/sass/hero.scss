@@ -3,54 +3,54 @@
   display: flex;
   justify-content: center;
   background-color: var(--basic-blue);
-  background-image:url('../img/globe-back-mobile@1x.jpg');
+  background-image: url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center 50% ;
+  background-position: center 50%;
   background-size: auto auto; /*ШВ*/
+}
 
-  &__inner-wrapper {
-    display: flex;
-    justify-content: center;
-    background-image: url('../img/traveller-illustration-mobile@1x.png');
-    background-repeat: no-repeat;
-    background-position: 90% bottom;
-  }
+.hero__inner-wrapper {
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/traveller-illustration-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 90% bottom;
+}
 
-  &__title {
-    text-align: center;
-  }
+.hero__title {
+  text-align: center;
+}
 
-  &__contacts-wrapper {
-    display: flex;
-    position: absolute;
-    bottom: -20px;
-  }
+.hero__contacts-wrapper {
+  display: flex;
+  position: absolute;
+  bottom: -20px;
+}
 
-  &__contact-item {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-size: 16px 16px;
-  }
+.hero__contact-item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: 16px 16px;
 
-  &__contact-item--phone {
-    background-image: url('../img/topmenu-phone.svg');
+  &--phone {
+    background-image: url("../img/topmenu-phone.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-color: var(--special-orange);
   }
 
-  &__contact-item--email {
-    background-image: url('../img/topmenu-mail.svg');
+  &--email {
+    background-image: url("../img/topmenu-mail.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-color: var(--special-yellow-dark);
   }
+}
 
-  &__auth {
-    align-self: flex-bottom;
-  }
+.hero__auth {
+  align-self: flex-bottom;
 }

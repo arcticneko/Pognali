@@ -5,31 +5,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
 
-  &__title {
-    align-self: start;
-    margin-left: 49px;
-  }
+.companions__title {
+  align-self: start;
+  margin-left: 49px;
+}
 
-  &__title-link {
-    margin-top: 10px;
-  }
+.companions__title-link {
+  margin-top: 10px;
+}
 
-  &__text {
-    align-self: start;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 22px;
-    margin-left: 51px;
-  }
+.companions__text {
+  align-self: start;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  margin-left: 51px;
 
-  &__text--bold {
+  &--bold {
     font-weight: 600;
   }
+}
 
-  &__show-all {
-    margin-top: 20px;
-  }
-
+.companions__show-all {
+  margin-top: 20px;
 }

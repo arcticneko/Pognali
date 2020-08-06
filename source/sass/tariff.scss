@@ -1,47 +1,45 @@
 .tariff {
-
   display: flex;
   flex-direction: column;
   align-items: start;
   color: var(--special-grey-light);
   background-color: var(--basic-white-dark);
+}
 
-  &__title {
-    position: relative;
-    margin-top: 63px;
-    margin-left: 50px;
-  }
+.tariff__title {
+  position: relative;
+  margin-top: 63px;
+  margin-left: 50px;
 
-  &__title::after {
+  &::after {
     position: absolute;
-    content:'';
+    content: "";
     width: 100px;
     height: 100px;
     top: -12px;
     right: -148px;
-    background-image: url('/img/rates@1x.png');
+    background-image: url("/img/rates@1x.png");
     background-size: contain;
-
   }
+}
 
-  &__private-fee-list {
-    margin: 0px;
-    padding: 0px;
-    margin-left: 49px;
-    counter-reset: my-counter;
-  }
+.tariff__private-fee-list {
+  margin: 0;
+  padding: 0;
+  margin-left: 49px;
+  counter-reset: my-counter;
+}
 
-  &__private-item {
-    position: relative;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
-    padding: 0px;
-    margin-top: 32px;
-  }
+.tariff__private-item {
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  margin-top: 32px;
 
-  &__private-item::after {
+  &::after {
     counter-increment: my-counter;
     content: counter(my-counter);
     position: absolute;
@@ -59,40 +57,40 @@
     font-family: inherit;
   }
 
-  &__private-item:nth-child(1)::after {
+  &:nth-child(1)::after {
     background-color: var(--special-orange);
   }
 
-  &__private-item:nth-child(2)::after {
+  &:nth-child(2)::after {
     background-color: var(--special-yellow-dark);
   }
 
-  &__private-item:nth-child(3)::after {
+  &:nth-child(3)::after {
     background-color: var(--basic-yellow);
   }
+}
 
-  &__private-descr {
-    margin: 0px;
-    padding: 0px;
-  }
+.tariff__private-descr {
+  margin: 0;
+  padding: 0;
+}
 
-  &__private-fee {
-    margin: 0px;
-    padding: 0px;
-  }
+.tariff__private-fee {
+  margin: 0;
+  padding: 0;
+}
 
-  &__business-button-open {
-    margin: 0px;
-    font-family: 'Blogger Sans';
-    padding: 0px;
-    margin-left: 50px;
-    margin-top: 46px;
-    background-color: transparent;
-    border: none;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 16px;
-    color:  #132576;
-  }
+.tariff__business-button-open {
+  margin: 0;
+  padding: 0;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  margin-left: 50px;
+  margin-top: 46px;
+  background-color: transparent;
+  border: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--basic-blue-bright);
 }

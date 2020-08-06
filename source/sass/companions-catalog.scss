@@ -5,28 +5,28 @@
   /* flex-wrap: wrap; */
   align-items: center;
   color: #1d2e5b;
+}
 
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    width: 270px;
-  }
+.companions-catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 270px;
+}
 
-  &__item-wrapper {
-    position: relative;
-    background-color: var(--basic-white);
-    margin-top: 10px;
-    border-radius: 20px;
-  }
+.companions-catalog__item-wrapper {
+  position: relative;
+  background-color: var(--basic-white);
+  margin-top: 10px;
+  border-radius: 20px;
+}
 
-  &__item {
-    box-sizing: border-box;
-    margin-left: 18px;
-    padding-top: 15px;
-  }
+.companions-catalog__item {
+  box-sizing: border-box;
+  margin-left: 18px;
+  padding-top: 15px;
 
-  &__item::before {
+  &::before {
     content: "";
     position: absolute;
     top: 22px;
@@ -37,20 +37,20 @@
     background-color: #f97676;
   }
 
-  &__item--online::before {
+  &--online::before {
     content: "";
     background-color: #bbf085;
   }
+}
 
-  &__desc-wrapper {
-    display: flex;
-  }
+.companions-catalog__desc-wrapper {
+  display: flex;
+}
 
-  &__avatar-link {
-    position: relative;
-  }
+.companions-catalog__avatar-link {
+  position: relative;
 
-  &__avatar-link::after {
+  &::after {
     position: absolute;
     bottom: 4px;
     left: 50px;
@@ -65,200 +65,185 @@
     background-position: center center;
   }
 
-  &__avatar-link--liked::after {
+  &--liked::after {
     content: "";
     background-image: url("/img/heart-active-red.svg");
     background-color: #f9eaea;
   }
+}
 
-  &__avatar {
-    border-radius: 50%;
+.companions-catalog__avatar {
+  border-radius: 50%;
+}
+
+.companions-catalog__name {
+  margin: 0;
+  padding: 0;
+  margin-left: 16px;
+  text-decoration: none;
+}
+
+.companions-catalog__name-link {
+  text-decoration: none;
+}
+
+.companions-catalog__likes {
+  position: absolute;
+  top: 63px;
+  left: 104px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.companions-catalog__tag-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-left: 8px;
+  margin-top: 13px;
+  width: 176px;
+}
+
+.companions-catalog__text {
+  margin-left: 8px;
+}
+
+.companions-catalog__destinations {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: 47px;
+}
+
+.companions-catalog__destinations-item {
+  position: relative;
+  margin-top: 12px;
+  text-transform: uppercase;
+
+  &--sri-lanka::before {
+    @include catalog-countries-list-flag(url("/img/flag-sri-lanka.png"));
   }
 
-  &__name {
-    margin: 0px;
-    padding: 0px;
-    margin-left: 16px;
-    text-decoration: none;
-  }
-
-  &__name-link {
-    text-decoration: none;
-  }
-
-  &__likes {
-    position: absolute;
-    top: 63px;
-    left: 104px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
-  }
-
-  &__tag-list {
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin-left: 8px;
-    margin-top: 13px;
-    width: 176px;
-  }
-
-  &__text {
-    margin-left: 8px;
-  }
-
-  &__destinations {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    margin-left: 47px;
-  }
-
-  &__destinations-item {
-    position: relative;
-    margin-top: 12px;
-    text-transform: uppercase;
-  }
-
-  &__destinations-item--sri-lanka::before {
-    background-image: url("/img/flag-sri-lanka.png");
-    content: "";
-    background-size: contain;
-    width: 26px;
-    height: 18px;
-    position: absolute;
-    bottom: 1px;
-    left: -39px;
-    background-repeat: no-repeat;
-  }
-
-  &__destinations-item--thailand::before {
+  &--thailand::before {
     @include catalog-countries-list-flag(url("/img/flag-thailand.png"));
   }
 
-  &__destinations-item--seychelles::before {
+  &--seychelles::before {
     @include catalog-countries-list-flag(url("/img/flag-seychelles.png"));
   }
 
-  &__destinations-item--belgium::before {
+  &--belgium::before {
     @include catalog-countries-list-flag(url("/img/flag-belgium.png"));
   }
 
-  &__destinations-item--czech::before {
+  &--czech::before {
     @include catalog-countries-list-flag(url("/img/flag-czech.png"));
   }
 
-  &__destinations-item--usa::before {
+  &--usa::before {
     @include catalog-countries-list-flag(url("/img/flag-usa.png"));
   }
 
-  &__destinations-item--austria::before {
+  &--austria::before {
     @include catalog-countries-list-flag(url("/img/flag-austria.png"));
   }
 
-  &__destinations-item--dominica::before {
+  &--dominica::before {
     @include catalog-countries-list-flag(url("/img/flag-dominica.png"));
   }
 
-  &__destinations-item--uk::before {
+  &--uk::before {
     @include catalog-countries-list-flag(url("/img/flag-uk.png"));
   }
 
-  &__destinations-item--germany::before {
+  &_--germany::before {
     @include catalog-countries-list-flag(url("/img/flag-germany.png"));
   }
+}
 
-  &__transports {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    display: flex;
-    margin-left: 4px;
-  }
+.companions-catalog__transports {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  margin-left: 4px;
+}
 
-  &__transports-item {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: var(--basic-blue-pale);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 40%;
-  }
+.companions-catalog__transports-item {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--basic-blue-pale);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
 
-  &__transports-item--plane {
+  &--plane {
     background-image: url("/img/plane.svg");
   }
 
-  &__transports-item--bus {
+  &--bus {
     background-image: url("/img/bus.svg");
   }
 
-  &__transports-item--bike {
+  &--bike {
     background-image: url("/img/bike.svg");
   }
 
-  &__transports-item--walk {
+  &_--walk {
     background-image: url("/img/run.svg");
   }
+}
 
-  /*
+.companions-catalog__lvl {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+}
 
-  &__transports-item--active {}
+.companions-catalog__lvl-text {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+}
 
-*/
+.companions-catalog__button {
+  display: flex;
+  margin-top: 13px;
+  align-self: center;
+}
 
-  &__lvl {
-    padding: 0px;
-    margin: 0px;
-    position: absolute;
-    bottom: 50px;
-    right: 0px;
-  }
+.companions-catalog__text-btn {
+  position: relative;
+  text-decoration: none;
+  margin-top: 18px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  color: var(--basic-blue-light);
 
-  &__lvl-text {
-    padding: 0px;
-    margin: 0px;
-    position: absolute;
-    bottom: 50px;
-    right: 0px;
-  }
-
-  &__button {
-    display: flex;
-    margin-top: 13px;
-    align-self: center;
-  }
-
-  &__text-btn {
-    position: relative;
-    text-decoration: none;
-    margin-top: 18px;
-    text-transform: uppercase;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 30px;
-    color: var(--basic-blue-light);
-  }
-
-  &__text-btn::before {
-    content: url('/img/button-plus-blue.svg');
+  &::before {
+    content: url("/img/button-plus-blue.svg");
     width: 18px;
     height: 18px;
     position: absolute;
     bottom: 9px;
     left: -33px;
   }
+}
 
-  &__pagination {
-    width: 270px;
-    height: 51px;
-    margin-top: 18px;
-  }
-
+.companions-catalog__pagination {
+  width: 270px;
+  height: 51px;
+  margin-top: 18px;
 }

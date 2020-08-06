@@ -3,39 +3,38 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
 
+.page-header__logo {
+  margin-top: 28px;
+  margin-left: 24px;
+  width: 100px;
+  height: 15px;
+}
 
-  &__logo {
-    margin-top: 28px;
-    margin-left:  24px;
-    width: 100px;
-    height: 15px;
-  }
+.page-header__toggle {
+  margin-top: 28px;
+  margin-right: 26px;
+  background-image: url("../img/menu-white.svg");
+  background-color: transparent;
+  height: 11px;
+  width: 25px;
+  border: none;
+}
 
-  &__toggle {
-    margin-top: 28px;
-    margin-right: 26px;
-    background-image: url(../img/menu-white.svg);
-    background-color: transparent;
-    height: 11px;
-    width: 25px;
-    border: none;
-  }
+/* Cataog page */
 
-  /* Cataog page */
+.page-header__title {
+  position: relative;
+  margin-left: 25px;
+  margin-bottom: 11px;
+  margin-top: auto;
 
-  &__title {
-    position: relative;
-    margin-left: 25px;
-    margin-bottom: 11px;
-    margin-top: auto;
-  }
-
-  &__title::after {
+  &::after {
     position: absolute;
     top: 48px;
-    left: 0px;
-    content: '';
+    left: 0;
+    content: "";
     width: 173px;
     height: 5px;
     border-radius: 3px;

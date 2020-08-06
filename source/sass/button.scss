@@ -8,10 +8,9 @@
   border-radius: 25px;
   color: var(--basic-blue);
   background-color: var(--basic-yellow);
-  color: var(--basic-blue);
   text-decoration: none;
   text-transform: uppercase;
-  font-family: "Blogger Sans";
+  font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
@@ -63,7 +62,7 @@
     top: 20px;
     height: 11px;
     width: 10px;
-    content: url('/img/email-arrow-blue.svg');
+    content: url("/img/email-arrow-blue.svg");
   }
 
   &--long {
@@ -71,6 +70,4 @@
     height: 40px;
     font-family: inherit;
   }
-
-
 }
