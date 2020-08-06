@@ -1,0 +1,28 @@
+.directions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--basic-blue-pale);
+  color: var(--basic-blue);
+
+
+  &__title-link {
+    /* align-self: flex-start; */
+    margin-left: 50px;
+  }
+
+  &__text {
+    width: 216px;
+    height: 110px;
+    margin-left: 49px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__button {
+    align-self: center;
+    margin-top: 20px;
+  }
+}

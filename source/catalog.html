@@ -3,13 +3,15 @@
 
 <head>
   <meta charset='UTF-8'>
-  <title>Document</title>
+  <title>Попутчики</title>
+  <link href='css/style.css' rel='stylesheet'>
 </head>
 
 <body class='page__body'>
-  <header class='page-header'>
-    <a class='page-header__logo logo' href='index.html' aria-label='перейти на главную страницу'>Погнали?</a>
-    <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'>Открыть меню</button>
+
+  <header class='page__header page-header'>
+    <a class='page-header__logo logo' href='index.html' aria-label='перейти на главную страницу'></a>
+    <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'></button>
     <h1 class='page-header__title main-title'>Попутчики</h1>
     <div class='header-submenu header-submenu--hidden'>
       <p class='header-submenu__logo logo'>Погнали?</p>
@@ -27,6 +29,7 @@
         </ul>
       </nav>
       <a class='header-submenu__button' href='#'>Авторизация</a>
+
       <ul class='header-submenu__contacts contact-list'>
         <li class='contact-list__contact-item-wrapper'>
           <a class='contact-list__item contact-list__item--phone' href='tel:88005558628' aria-label='наш телефон'>8 800
@@ -98,7 +101,7 @@
               <a class='country-filter__country-link' href='#'>Армения</a>
             </li>
             <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
-              <a class='country-filter__country-link'>Афганистан</a>
+              <a class='country-filter__country-link' href='#'>Афганистан</a>
             </li>
           </ul>
         </li>
@@ -208,11 +211,12 @@
             <a class='country-filter__country-link' href='#'>Армения</a>
           </li>
           <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
-            <a class='country-filter__country-link'>Афганистан</a>
+            <a class='country-filter__country-link' href='#'>Афганистан</a>
           </li>
         </ul>
       </div>
-      <button class='country-filter__button button button--close' aria-label='Свернуть фильтрацию по странам'>Свернуть</button>
+      <button class='country-filter__button button button--close'
+        aria-label='Свернуть фильтрацию по странам'>Свернуть</button>
     </section>
 
     <section class='page-main__filters filter'>
@@ -281,8 +285,8 @@
               <label class='filter__list-option-label' for='airplane'>Самолет</label>
             </li>
             <li class='filter__list-option'>
-              <input class='filter__list-option-input filter__list-option-input--train' type='checkbox' id='train'>
-              <label class='filter__list-option-label' for='train'>Поезд</label>
+              <input class='filter__list-option-input filter__list-option-input--bus' type='checkbox' id='bus'>
+              <label class='filter__list-option-label' for='bus'>Автобус</label>
             </li>
             <li class='filter__list-option'>
               <input class='filter__list-option-input filter__list-option-input--bicycle' type='checkbox' id='bicycle'>
@@ -323,7 +327,8 @@
           </div>
         </fieldset>
 
-        <button class='filter__button button button--bright' type='submit' aria-label='Показать результат поиска по фильтру'>Показать</button>
+        <button class='filter__button button button--bright' type='submit'
+          aria-label='Показать результат поиска по фильтру'>Показать</button>
       </form>
     </section>
 
@@ -332,14 +337,18 @@
       <ul class='companions-catalog__list'>
         <li class='companions-catalog__item-wrapper'>
           <article class='companions-catalog__item'>
-            <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
-              <img class='companions-catalog__avatar companions-catalog__avatar--liked' alt='Аватар пользователя' width='70' height='70'>
-            </a>
-            <h3 class='companions-catalog__name'>
-              <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Таня Фирсова</a>
-            </h3>
-            <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
-            <div class='companions-catalog__likes'>1,5 М</div>
+            <div class='companions-catalog__desc-wrapper'>
+              <a class='companions-catalog__avatar-link  companions-catalog__avatar-link--liked' href='#'
+                aria-label='Перейти на страницу пользователя'>
+                <img class='companions-catalog__avatar' alt='Аватар пользователя' width='70' height='70'
+                  src='/img/firsova-mobile@1x.jpg'> <!--  -->
+              </a>
+              <h3 class='companions-catalog__name'>
+                <a class='companions-catalog__name-link' href='#'
+                  aria-label='Перейти на страницу пользователя'>Таня<br>Фирсова</a> <!--  -->
+              </h3>
+              <div class='companions-catalog__likes'>1,5 М</div>
+            </div>
             <ul class='companions-catalog__tag-list'>
               <li class='companions-catalog__tag-item'>#ЗОЖ</li>
               <li class='companions-catalog__tag-item'>#ПП</li>
@@ -350,16 +359,20 @@
             </ul>
             <p class='companions-catalog__text'>хочет посетить:</p>
             <ul class='companions-catalog__destinations'>
-              <li class='companions-catalog__destinations-item'>Шри-Ланка</li>
-              <li class='companions-catalog__destinations-item'>Тайланд</li>
-              <li class='companions-catalog__destinations-item'>Сейшелы</li>
+              <li class='companions-catalog__destinations-item companions-catalog__destinations-item--sri-lanka'>
+                Шри-Ланка</li>
+              <li class='companions-catalog__destinations-item companions-catalog__destinations-item--thailand'>Тайланд
+              </li>
+              <li class='companions-catalog__destinations-item companions-catalog__destinations-item--seychelles'>
+                Сейшелы</li>
             </ul>
             <p class='companions-catalog__text'>транспорт:</p>
             <ul class='companions-catalog__transports'>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
+              <li
+                class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
                 <span class='visually-hidden'>передвижение на самолете</span>
               </li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--train'>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--bus'>
                 <span class='visually-hidden'>передвижение на поезде</span>
               </li>
               <li class='companions-catalog__transports-item companions-catalog__transports-item--bike'>
@@ -370,22 +383,26 @@
               </li>
             </ul>
 
-            <p class='companions-catalog__text'>левел</p>
+            <p class='companions-catalog__lvl-text'>левел</p>
             <div class='companions-catalog__lvl'>99</div>
-            <a class='companions-catalog__button button button--long' href='#'>Позвать</a>
+            <a class='companions-catalog__button button button--long' href='#'>Позвать!</a>
           </article>
         </li>
 
         <li class='companions-catalog__item-wrapper'>
           <article class='companions-catalog__item'>
-            <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
-              <img class='companions-catalog__avatar' alt='Аватар пользователя' width='70' height='70'>
-            </a>
-            <h3 class='companions-catalog__name'>
-              <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Петя Демин</a>
-            </h3>
-            <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
-            <div class='companions-catalog__likes'>1500</div>
+            <div class='companions-catalog__desc-wrapper'>
+              <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
+                <img class='companions-catalog__avatar' alt='Аватар пользователя' width='70' height='70'
+                  src='/img/photo-account-mobile@1x.jpg'>
+              </a>
+              <h3 class='companions-catalog__name'>
+                <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Петя<br>
+                  Демин</a>
+              </h3>
+              <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
+              <div class='companions-catalog__likes'>1500</div>
+            </div>
             <ul class='companions-catalog__tag-list'>
               <li class='companions-catalog__tag-item'>#бургер</li>
               <li class='companions-catalog__tag-item'>#бар</li>
@@ -395,8 +412,8 @@
             </ul>
             <p class='companions-catalog__text'>хочет посетить:</p>
             <ul class='companions-catalog__destinations'>
-              <li class='companions-catalog__destinations-item'>Бельгия</li>
-              <li class='companions-catalog__destinations-item'>Чехия</li>
+              <li class='companions-catalog__destinations-item companions-catalog__destinations-item--belgium'>Бельгия</li>
+              <li class='companions-catalog__destinations-item companions-catalog__destinations-item--czech'>Чехия</li>
             </ul>
             <p class='companions-catalog__text'>транспорт:</p>
             <ul class='companions-catalog__transports'>
@@ -405,7 +422,7 @@
                 <span class='visually-hidden'>передвижение на самолете</span>
               </li>
               <li
-                class='companions-catalog__transports-item companions-catalog__transports-item--train companions-catalog__transports-item--active'>
+                class='companions-catalog__transports-item companions-catalog__transports-item--bus companions-catalog__transports-item--active'>
                 <span class='visually-hidden'>передвижение на поезде</span>
               </li>
               <li class='companions-catalog__transports-item companions-catalog__transports-item--bike'>
@@ -417,22 +434,26 @@
               </li>
             </ul>
 
-            <p class='companions-catalog__text'>левел</p>
+            <p class='companions-catalog__lvl-text'>левел</p>
             <div class='companions-catalog__lvl'>80</div>
-            <a class='companions-catalog__button button button--long' href='#'>Позвать</a>
+            <a class='companions-catalog__button button button--long' href='#'>Позвать!</a>
           </article>
         </li>
 
         <li class='companions-catalog__item-wrapper'>
           <article class='companions-catalog__item'>
-            <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
-              <img class='companions-catalog__avatar' alt='Аватар пользователя' width='70' height='70'>
-            </a>
-            <h3 class='companions-catalog__name'>
-              <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Марк Смолов</a>
-            </h3>
-            <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
-            <div class='companions-catalog__likes'>170</div>
+            <div class='companions-catalog__desc-wrapper'>
+              <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
+                <img class='companions-catalog__avatar' alt='Аватар пользователя' width='70' height='70'
+                src='/img/smolov-mobile@1x.jpg'>
+              </a>
+              <h3 class='companions-catalog__name'>
+                <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Марк<br>
+                  Смолов</a>
+              </h3>
+              <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
+              <div class='companions-catalog__likes'>170</div>
+            </div>
             <ul class='companions-catalog__tag-list'>
               <li class='companions-catalog__tag-item'>#рэп</li>
               <li class='companions-catalog__tag-item'>#тату</li>
@@ -442,9 +463,9 @@
             </ul>
             <p class='companions-catalog__text'>хочет посетить:</p>
             <ul class='companions-catalog__destinations'>
-              <li class='companions-catalog__destinations-item'>США</li>
-              <li class='companions-catalog__destinations-item'>Австралия</li>
-              <li class='companions-catalog__destinations-item'>Доминикана</li>
+              <li class='companions-catalog__destinations-item companions-catalog__destinations-item--usa'>США</li>
+              <li class='companions-catalog__destinations-item companions-catalog__destinations-item--austria'>Австралия</li>
+              <li class='companions-catalog__destinations-item companions-catalog__destinations-item--dominica'>Доминикана</li>
             </ul>
             <p class='companions-catalog__text'>транспорт:</p>
             <ul class='companions-catalog__transports'>
@@ -452,7 +473,7 @@
                 class='companions-catalog__transports-item companions-catalog__transports-item--plane companions-catalog__transports-item--active'>
                 <span class='visually-hidden'>передвижение на самолете</span>
               </li>
-              <li class='companions-catalog__transports-item companions-catalog__transports-item--train'>
+              <li class='companions-catalog__transports-item companions-catalog__transports-item--bus'>
                 <span class='visually-hidden'>передвижение на поезде</span>
               </li>
               <li class='companions-catalog__transports-item companions-catalog__transports-item--bike'>
@@ -464,22 +485,26 @@
               </li>
             </ul>
 
-            <p class='companions-catalog__text'>левел</p>
+            <p class='companions-catalog__lvl-text'>левел</p>
             <div class='companions-catalog__lvl'>25</div>
-            <a class='companions-catalog__button button button--long' href='#'>Позвать</a>
+            <a class='companions-catalog__button button button--long' href='#'>Позвать!</a>
           </article>
         </li>
 
         <li class='companions-catalog__item-wrapper'>
-          <article class='companions-catalog__item'>
-            <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
-              <img class='companions-catalog__avatar' alt='Аватар пользователя' width='70' height='70'>
-            </a>
-            <h3 class='companions-catalog__name'>
-              <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Лариса Роговая</a>
-            </h3>
-            <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
-            <div class='companions-catalog__likes'>23</div>
+          <article class='companions-catalog__item companions-catalog__item--online'>
+            <div class='companions-catalog__desc-wrapper'>
+              <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
+                <img class='companions-catalog__avatar' alt='Аватар пользователя' width='70' height='70'
+                src='/img/rogovaya-mobile@1x.jpg'>
+              </a>
+              <h3 class='companions-catalog__name'>
+                <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Лариса<br>
+                  Роговая</a>
+              </h3>
+              <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
+              <div class='companions-catalog__likes'>23</div>
+            </div>
             <ul class='companions-catalog__tag-list'>
               <li class='companions-catalog__tag-item'>#образование</li>
               <li class='companions-catalog__tag-item'>#карьера</li>
@@ -488,8 +513,8 @@
             </ul>
             <p class='companions-catalog__text'>хочет посетить:</p>
             <ul class='companions-catalog__destinations'>
-              <li class='companions-catalog__destinations-item'>Великобритания</li>
-              <li class='companions-catalog__destinations-item'>Германия</li>
+              <li class='companions-catalog__destinations-item companions-catalog__destinations-item--uk'>Великобритания</li>
+              <li class='companions-catalog__destinations-item companions-catalog__destinations-item--germany'>Германия</li>
             </ul>
 
             <p class='companions-catalog__text'>транспорт:</p>
@@ -499,7 +524,7 @@
                 <span class='visually-hidden'>передвижение на самолете</span>
               </li>
               <li
-                class='companions-catalog__transports-item companions-catalog__transports-item--train companions-catalog__transports-item--active'>
+                class='companions-catalog__transports-item companions-catalog__transports-item--bus companions-catalog__transports-item--active'>
                 <span class='visually-hidden'>передвижение на поезде</span>
               </li>
               <li class='companions-catalog__transports-item companions-catalog__transports-item--bike'>
@@ -509,38 +534,42 @@
                 <span class='visually-hidden'>передвижение пешком</span>
               </li>
             </ul>
-            <p class='companions-catalog__text'>левел</p>
+            <p class='companions-catalog__lvl-text'>левел</p>
             <div class='companions-catalog__lvl'>50</div>
-            <a class='companions-catalog__button button button--long' href='#'>Позвать</a>
+            <a class='companions-catalog__button button button--long' href='#'>Позвать!</a>
           </article>
         </li>
       </ul>
       <a class='companions-catalog__text-btn' href='#'>Показать еще</a>
+      <div class='companions-catalog__pagination pagination'>
+        <a class='pagination__button pagination__button--prev' aria-label='предыдущая страница' href='#'></a>
+        <a class='pagination__button pagination__button--next' aria-label='следующая страница' href='#'></a>
+      </div>
     </section>
-    <div class='page-main__pagination pagination'>
-      <a class='pagination__button pagination__button--prev' aria-label='предыдущая страница'></a>
-      <a class='pagination__button pagination__button--next' aria-label='следующая страница'></a>
-    </div>
+
   </main>
 
   <footer class='page__footer footer'>
-    <p class='footer__logo logo'>Погнали?</p>
+    <p class='footer__logo logo'></p>
     <ul class='footer__social'>
       <li class='footer__social-item'>
-        <a class='footer__item-link footer__item-link--fb' href='#' aria-label='перейти на нашу страницу в Facebook'></a>
+        <a class='footer__item-link footer__item-link--fb' href='#'
+          aria-label='перейти на нашу страницу в Facebook'></a>
       </li>
       <li class='footer__social-item'>
-        <a class='footer__item-link footer__item-link--vk' href='#' aria-label='перейти на нашу страницу в Vkontakte'></a>
+        <a class='footer__item-link footer__item-link--vk' href='#'
+          aria-label='перейти на нашу страницу в Vkontakte'></a>
       </li>
       <li class='footer__social-item'>
-        <a class='footer__item-link footer__item-link--instagram' href='#' aria-label='перейти на нашу страницу в Instagram'></a>
+        <a class='footer__item-link footer__item-link--instagram' href='#'
+          aria-label='перейти на нашу страницу в Instagram'></a>
       </li>
     </ul>
     <div class='footer__developer-wrapper'>
       <p class='footer__developed-by'>Разработано</p>
       <a class='footer__developer-link' href='https://htmlacademy.ru/intensive/adaptive'
         aria-label='перейти на сайт разработчика сайта'>
-        <img class='footer__developer-logo' alt='лого htmlacademy' width='27' height='33'>
+        <img class='footer__developer-logo' src='/img/htmlacademy-blue.svg' alt='лого htmlacademy' width='27' height='33'>
       </a>
     </div>
   </footer>

@@ -8,15 +8,20 @@
 # на https://editorconfig.org и в разделе «Download a Plugin»
 # скачайте дополнение для вашего редактора.
 
-root = true
+root = true 
+# парсер не будет искать другие конфиги родительских папках
 
 [*]
 charset = utf-8
-end_of_line = lf
+end_of_line = lf  
+# Для всех файлов используем unix-совместимые переносы строк
 indent_size = 2
 indent_style = space
+# отступы в 2 пробела
 insert_final_newline = true
+#в конце файла всегда будет новая строка
 trim_trailing_whitespace = true
+# убирает пробелы с конца строк
 
 [*.md]
 trim_trailing_whitespace = false

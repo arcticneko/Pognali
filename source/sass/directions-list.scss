@@ -1,0 +1,91 @@
+.directions-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item-wrapper {
+    position: relative;
+    margin-top: 9px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__pic {
+    border-radius: 10px 10px 0px 0px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__description-wrapper {
+    background-color: var(--basic-white);
+    min-height: 89px;
+    border-radius: 10px;
+    margin-top: -12px;
+  }
+
+  &__name {
+    margin: 0;
+    padding: 0;
+    margin-top: 26px;
+    margin-left: 24px;
+  }
+
+  &__name--thailand::before {
+    position: absolute;
+    left: 24px;
+    top: 85px;
+    content: url("../img/flag-thailand.png");
+  }
+
+ &__name--france::before {
+  position: absolute;
+  left: 24px;
+  top: 85px;
+  content: url("../img/flag-france.png");
+
+  }
+
+  &__name--czech::before {
+    position: absolute;
+    left: 24px;
+    top: 85px;
+    content: url("../img/flag-czech.png");
+
+  }
+
+  &__slogan {
+    color: var(--basic-blue-semi-light);
+    margin: 0;
+    padding: 0;
+    margin-left: 24px;
+    margin-bottom: 10px;
+  }
+
+  &__people {
+    color: var(--basic-blue-semi-light);
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    bottom: 45px;
+    right: 24px;
+    font-weight: 600;
+  }
+
+  &__people::before {
+    position: absolute;
+    right: 47px;
+    bottom: -1px;
+    content: url("../img/user-liked.svg");
+  }
+
+  &__button {
+    margin: 25px;
+  }
+}

@@ -1,0 +1,74 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-around; */
+  border-radius: 25px 25px 0px 0px;
+  border: 2px solid red;  /*временно*/
+  background-color: var(--basic-white);
+
+  &__logo {
+    margin-top: 37px;
+/*     margin-left: 112px; */
+    background-image: url('/img/logo-mobile-blue@1x.png');
+    width: 100px;
+    height: 15px;
+  }
+
+  &__social {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+  }
+
+  &__social-item {
+    margin-top: 40px;
+  }
+
+  &__item-link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--basic-yellow);
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+
+  &__item-link--fb {
+    background-image: url('/img/facebook-blue.svg');
+    background-size: 25%;
+  }
+
+  &__item-link--vk {
+    background-image: url('/img/vk-blue.svg');
+    background-size: 50%;
+  }
+
+  &__item-link--instagram {
+    background-image: url('/img/instagram-blue.svg');
+    background-size: 40%;
+  }
+
+  &__developer-wrapper {
+    color: var(--special-grey-light);
+    margin-top: 37px;
+    margin-bottom: 13px;
+    min-width: 270px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--special-grey-pale);
+    padding-top: 13px;
+  }
+
+  &__developed-by {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    padding-top: 2px;
+  }
+
+/*   &__developer-logo { } */
+}

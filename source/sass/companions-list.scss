@@ -1,0 +1,199 @@
+// Начните писать стили здесь
+.companions-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item-wrapper {
+    margin-top: 9px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__item-pic {
+    border-radius: 10px 10px 0px 0px;
+    width: 270px;
+    height: 270px;
+  }
+
+  &__lvl {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--special-black-transp);
+    border-radius: 50%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    border: 4px solid #ff8d30;
+  }
+
+  &__lvl-desc {
+    display: inline;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  &__lvl-desc::before {
+    position: absolute;
+    left: 15px;
+    top: 33px;
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: var(--basic-white);
+    opacity: 0.3;
+  }
+
+  &__countries {
+    position: absolute;
+    top: 259px;
+    left: 42px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__country {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+  }
+
+  &__country--sri-lanka::after {
+    content: url("../img/flag-sri-lanka.png");
+  }
+
+  &__country--thailand::after {
+    content: url("../img/flag-thailand.png");
+  }
+
+  &__country--seychelles::after {
+    content: url("../img/flag-seychelles.png");
+  }
+
+  &__country--belgium::after {
+    content: url("../img/flag-belgium.png");
+  }
+
+  &__country--czech::after {
+    content: url("../img/flag-czech.png");
+  }
+
+  &__description {
+    width: 270px;
+    height: 158px;
+    background-color: var(--basic-white);
+    color: var(--basic-blue-light);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-top: 29px;
+    text-align: center;
+
+  }
+
+
+  &__name::before {
+    left: 59px;
+    top: -2px;
+    position: absolute;
+    content: url("../img/dot-offline.png");
+  }
+
+  &__name--online::before {
+    left: 59px;
+    top: -2px;
+    position: absolute;
+    content: url("../img/dot-online.png");
+    z-index: 1;
+  }
+
+  &__tag-list {
+    width: 188px;
+    margin: 0;
+    padding: 0;
+    margin-left: 46px;
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    color: var(--special-grey);
+  }
+
+  &__transport {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__transport-item {
+    width: 18px;
+    height: 18px;
+  }
+
+  &__transport-item--active {
+    /* изменение цвета при нажатии */
+  }
+
+  &__transport-item--plane {
+    background-image: url("../img/plane.svg");
+    background-repeat: no-repeat;
+  }
+
+  &__transport-item--bus {
+    margin-left: 13px;
+    background-image: url("../img/bus.svg");
+    background-repeat: no-repeat;
+  }
+
+  &__transport-item--bike {
+    margin-left: 13px;
+    background-image: url("../img/bike.svg");
+    background-repeat: no-repeat;
+  }
+
+  &__transport-item--walk {
+    margin-left: 13px;
+    background-image: url("../img/run.svg");
+    background-repeat: no-repeat;
+  }
+
+  &__show-all {
+    margin-top: 20px;
+  }
+}

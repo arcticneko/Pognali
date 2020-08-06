@@ -1,0 +1,31 @@
+.companions {
+  background-color: var(--basic-blue-dark);
+  color: var(--basic-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    align-self: start;
+    margin-left: 49px;
+  }
+
+  &__title-link {
+    margin-top: 10px;
+  }
+
+  &__text {
+    align-self: start;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 51px;
+  }
+
+  &__text--bold {
+    font-weight: 600;
+  }
+
+}

@@ -1,0 +1,98 @@
+.tariff {
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: var(--special-grey-light);
+  background-color: var(--basic-white-dark);
+
+  &__title {
+    position: relative;
+    margin-top: 63px;
+    margin-left: 50px;
+  }
+
+  &__title::after {
+    position: absolute;
+    content:'';
+    width: 100px;
+    height: 100px;
+    top: -12px;
+    right: -148px;
+    background-image: url('/img/rates@1x.png');
+    background-size: contain;
+
+  }
+
+  &__private-fee-list {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 49px;
+    counter-reset: my-counter;
+  }
+
+  &__private-item {
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 32px;
+  }
+
+  &__private-item::after {
+    counter-increment: my-counter;
+    content: counter(my-counter);
+    position: absolute;
+    right: -65px;
+    top: -7px;
+    color: var(--basic-white);
+    text-align: center;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 50%;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: inherit;
+  }
+
+  &__private-item:nth-child(1)::after {
+    background-color: var(--special-orange);
+  }
+
+  &__private-item:nth-child(2)::after {
+    background-color: var(--special-yellow-dark);
+  }
+
+  &__private-item:nth-child(3)::after {
+    background-color: var(--basic-yellow);
+  }
+
+  &__private-descr {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  &__private-fee {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  &__business-button-open {
+    margin: 0px;
+    font-family: 'Blogger Sans';
+    padding: 0px;
+    margin-left: 50px;
+    margin-top: 46px;
+    background-color: transparent;
+    border: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    color:  #132576;
+  }
+}
