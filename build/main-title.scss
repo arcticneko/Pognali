@@ -1,6 +1,5 @@
 .main-title {
-  margin: 0;
-  padding: 0;
+  @include reset;
   font-size: 36px;
   line-height: 40px;
   color: var(--basic-white);

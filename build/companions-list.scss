@@ -3,9 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include reset-list;
 }
 
 .companions-list__item-wrapper {
@@ -21,10 +19,11 @@
 .companions-list__item-pic {
   border-radius: 10px 10px 0 0;
   width: 270px;
-  height: 270px;
+  min-height: 270px;
 }
 
 .companions-list__lvl {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -35,20 +34,32 @@
   top: 20px;
   left: 20px;
   width: 60px;
-  height: 60px;
+  min-height: 60px;
   background-color: var(--special-black-transp);
   border-radius: 50%;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 24px;
   line-height: 24px;
-  border: 4px solid #ff8d30;
+  /* border: 4px solid #ff8d30; */
+
+  &::after {
+    position: absolute;
+    top: 0;
+  }
+
+  &--99::after {
+    content: url("../img/index-99.svg");
+  }
+
+  &--80::after {
+    content: url("../img/index-80.svg");
+  }
 }
 
 .companions-list__lvl-desc {
-  display: inline;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 14px;
 
@@ -58,7 +69,7 @@
     top: 33px;
     content: "";
     width: 30px;
-    height: 1px;
+    min-height: 1px;
     background-color: var(--basic-white);
     opacity: 0.3;
   }
@@ -67,45 +78,21 @@
 .companions-list__countries {
   position: absolute;
   top: 259px;
-  left: 42px;
+  left: 50%;
+  transform: translate(-50%, 0);
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include reset-list;
 }
 
 .companions-list__country {
-  margin: 0;
-  padding: 0;
+  @include reset;
   margin-left: 20px;
-
-  &--sri-lanka::after {
-    content: url("../img/flag-sri-lanka.png");
-  }
-
-  &--thailand::after {
-    content: url("../img/flag-thailand.png");
-  }
-
-  &--seychelles::after {
-    content: url("../img/flag-seychelles.png");
-  }
-
-  &--belgium::after {
-    content: url("../img/flag-belgium.png");
-  }
-
-  &--czech::after {
-    content: url("../img/flag-czech.png");
-  }
 }
 
 .companions-list__description {
   width: 270px;
-  height: 158px;
+  min-height: 158px;
   background-color: var(--basic-white);
   color: var(--basic-blue-light);
   display: flex;
@@ -114,8 +101,7 @@
 
 .companions-list__name {
   position: relative;
-  margin: 0;
-  padding: 0;
+  @include reset;
   margin-top: 29px;
   text-align: center;
 
@@ -123,36 +109,29 @@
     left: 59px;
     top: -2px;
     position: absolute;
-    content: url("../img/dot-offline.png");
+    content: url("../img/dot-offline.png")
   }
 
   &--online::before {
-    left: 59px;
-    top: -2px;
-    position: absolute;
     content: url("../img/dot-online.png");
-    z-index: 1;
   }
 }
 
 .companions-list__tag-list {
+  @include reset-list;
   width: 188px;
-  margin: 0;
-  padding: 0;
   margin-left: 46px;
   margin-top: 12px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  list-style: none;
   color: var(--special-grey);
 }
 
 .companions-list__transport {
+  @include reset;
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
   margin-top: 14px;
   justify-content: center;
 }
@@ -160,31 +139,28 @@
 .companions-list__transport-item {
   width: 18px;
   height: 18px;
+  background-repeat: no-repeat;
+  margin-left: 13px;
+  opacity: 0.15;
 
   &--active {
-    /* изменение цвета при нажатии. мб вопрос на консультацию */
+    opacity: 1;
   }
 
   &--plane {
     background-image: url("../img/plane.svg");
-    background-repeat: no-repeat;
+    margin-left: 0;
   }
 
   &--bus {
-    margin-left: 13px;
     background-image: url("../img/bus.svg");
-    background-repeat: no-repeat;
   }
 
   &--bike {
-    margin-left: 13px;
     background-image: url("../img/bike.svg");
-    background-repeat: no-repeat;
   }
 
   &--walk {
-    margin-left: 13px;
     background-image: url("../img/run.svg");
-    background-repeat: no-repeat;
   }
 }

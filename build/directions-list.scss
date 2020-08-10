@@ -2,9 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include reset-list;
 }
 
 .directions-list__item-wrapper {
@@ -19,8 +17,7 @@
 
 .directions-list__pic {
   border-radius: 10px 10px 0 0;
-  margin: 0;
-  padding: 0;
+  @include reset;
 }
 
 .directions-list__description-wrapper {
@@ -31,8 +28,7 @@
 }
 
 .directions-list__name {
-  margin: 0;
-  padding: 0;
+  @include reset;
   margin-top: 26px;
   margin-left: 24px;
 
@@ -60,8 +56,7 @@
 
 .directions-list__slogan {
   color: var(--basic-blue-semi-light);
-  margin: 0;
-  padding: 0;
+  @include reset;
   margin-left: 24px;
   margin-bottom: 10px;
 }
@@ -69,8 +64,7 @@
 .directions-list__people {
   color: var(--basic-blue-semi-light);
   position: absolute;
-  margin: 0;
-  padding: 0;
+  @include reset;
   text-align: right;
   bottom: 45px;
   right: 24px;

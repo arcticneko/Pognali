@@ -4,6 +4,7 @@
   --basic-white-dark: #e6e8f1;
   --basic-blue: #161c35;
   --basic-blue-dark: #192144;
+  --basic-blue-light-dark: #182044;
   --basic-blue-semi-light: rgba(22, 28, 53, 0.3);
   --basic-blue-pale: #edeff6;
   --basic-yellow: #ffd74b;
@@ -11,6 +12,7 @@
   --special-yellow-dark: #ffbd30;
   --special-yellow-gold: #ffa530;
   --special-blue-light: #dfe3f0;
+  --special-blue-dark: #121936;
   --special-grey: #0e0404;
   --special-grey-light: #444444;
   --special-grey-light-transp: rgba(68, 68, 68, 0.3);
@@ -27,8 +29,8 @@
   font-style: normal;
   font-weight: 400;
   src: local("Blogger sans"),
-    url("/fonts/bloggersans.woff2") format("woff2"),
-    url("/fonts/bloggersans.woff") format("woff");
+    url("../fonts/bloggersans.woff2") format("woff2"),
+    url("../fonts/bloggersans.woff") format("woff");
 }
 
 @font-face {
@@ -36,8 +38,8 @@
   font-style: bold;
   font-weight: 700;
   src: local("Blogger sans"),
-    url("/fonts/bloggersans-bold.woff2") format("woff2"),
-    url("/fonts/bloggersans-bold.woff") format("woff");
+    url("../fonts/bloggersans-bold.woff2") format("woff2"),
+    url("../fonts/bloggersans-bold.woff") format("woff");
 }
 
 @font-face {
@@ -45,8 +47,8 @@
   font-style: italic;
   font-weight: 700;
   src: local("Blogger sans"),
-    url("/fonts/bloggersans-bolditalic.woff2") format("woff2"),
-    url("/fonts/bloggersans-bolditalic.woff") format("woff");
+    url("../fonts/bloggersans-bolditalic.woff2") format("woff2"),
+    url("../fonts/bloggersans-bolditalic.woff") format("woff");
 }
 
 @font-face {
@@ -54,8 +56,8 @@
   font-style: italic;
   font-weight: 400;
   src: local("Blogger sans"),
-    url("/fonts/bloggersans-italic.woff2") format("woff2"),
-    url("/fonts/bloggersans-italic.woff") format("woff");
+    url("../fonts/bloggersans-italic.woff2") format("woff2"),
+    url("../fonts/bloggersans-italic.woff") format("woff");
 }
 
 @font-face {
@@ -63,8 +65,8 @@
   font-style: normal;
   font-weight: 300;
   src: local("Blogger sans"),
-    url("/fonts/bloggersans-light.woff2") format("woff2"),
-    url("/fonts/bloggersans-light.woff") format("woff");
+    url("../fonts/bloggersans-light.woff2") format("woff2"),
+    url("../fonts/bloggersans-light.woff") format("woff");
 }
 
 @font-face {
@@ -72,8 +74,8 @@
   font-style: italic;
   font-weight: 300;
   src: local("Blogger sans"),
-    url("/fonts/bloggersans-lightitalic.woff2") format("woff2"),
-    url("/fonts/bloggersans-lightitalic.woff") format("woff");
+    url("../fonts/bloggersans-lightitalic.woff2") format("woff2"),
+    url("../fonts/bloggersans-lightitalic.woff") format("woff");
 }
 
 @font-face {
@@ -81,8 +83,8 @@
   font-style: normal;
   font-weight: 600;
   src: local("Blogger sans"),
-    url("/fonts/bloggersans-medium.woff2") format("woff2"),
-    url("/fonts/bloggersans-medium.woff") format("woff");
+    url("../fonts/bloggersans-medium.woff2") format("woff2"),
+    url("../fonts/bloggersans-medium.woff") format("woff");
 }
 
 @font-face {
@@ -90,10 +92,16 @@
   font-style: italic;
   font-weight: 600;
   src: local("Blogger sans"),
-    url("/fonts/bloggersans-mediumitalic.woff2") format("woff2"),
-    url("/fonts/bloggersans-mediumitalic.woff") format("woff");
+    url("../fonts/bloggersans-mediumitalic.woff2") format("woff2"),
+    url("../fonts/bloggersans-mediumitalic.woff") format("woff");
 }
 
 .visually-hidden {
-  display: none;
+  /* display:none; не будут читать ридеры */
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
 }

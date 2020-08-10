@@ -5,7 +5,6 @@
   background-color: var(--basic-yellow);
 }
 
-
 .our-address__text-address {
   position: relative;
   width: 143px;
@@ -14,7 +13,7 @@
   margin-left: 86px;
   color: var(--basic-blue-light);
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 22px;
   text-transform: uppercase;
@@ -27,10 +26,10 @@
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    background-image: url("/img/contacts-location-yellow.svg");
+    background-image: url("../img/contacts-location-yellow.svg");
     background-repeat: no-repeat;
     background-size: 30%;
-    background-color: #121936;
+    background-color: var( --special-blue-dark);
     background-position: center;
   }
 }

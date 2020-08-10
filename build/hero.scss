@@ -19,6 +19,7 @@
 
 .hero__title {
   text-align: center;
+  z-index: 1;
 }
 
 .hero__contacts-wrapper {
@@ -28,25 +29,22 @@
 }
 
 .hero__contact-item {
-  margin: 0;
-  padding: 0;
+  @include reset;
   display: flex;
   width: 40px;
-  height: 40px;
+  min-height: 40px;
   border-radius: 50%;
   background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center center;
 
   &--phone {
     background-image: url("../img/topmenu-phone.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
     background-color: var(--special-orange);
   }
 
   &--email {
     background-image: url("../img/topmenu-mail.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
     background-color: var(--special-yellow-dark);
   }
 }

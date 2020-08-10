@@ -1,0 +1,39 @@
+@mixin reset ($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin reset-list ($margin: 0, $padding: 0, $list-style: none) {
+  margin: $margin;
+  padding: $padding;
+  list-style: $list-style;
+}
+
+@mixin radius ($element-height: 29px) {
+  content:"";
+  height: $element-height;
+  width: 100%;
+  background-color: inherit;
+  bottom: -$element-height;
+  position: absolute;
+  left: 0;
+  border-radius: 0 0 25px 25px;
+}
+
+@mixin width-container {
+  @media screen and (min-width: 320px) {
+    width: 320px;
+    min-width: 320px; /* не работает, сайт сжимается и дальше*/
+    background:gray;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    background:green;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 1440px;
+    background:blue;
+ }
+}

@@ -8,7 +8,7 @@
 
 .tariff__title {
   position: relative;
-  margin-top: 63px;
+  margin-top: 84px;
   margin-left: 50px;
 
   &::after {
@@ -18,25 +18,22 @@
     height: 100px;
     top: -12px;
     right: -148px;
-    background-image: url("/img/rates@1x.png");
+    background-image: url("../img/rates@1x.png");
     background-size: contain;
   }
 }
 
 .tariff__private-fee-list {
-  margin: 0;
-  padding: 0;
+  @include reset;
   margin-left: 49px;
   counter-reset: my-counter;
 }
 
 .tariff__private-item {
   position: relative;
-  list-style: none;
+  @include reset-list;
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
   margin-top: 32px;
 
   &::after {
@@ -70,26 +67,21 @@
   }
 }
 
-.tariff__private-descr {
-  margin: 0;
-  padding: 0;
-}
-
+.tariff__private-descr,
 .tariff__private-fee {
   margin: 0;
   padding: 0;
 }
 
 .tariff__business-button-open {
-  margin: 0;
-  padding: 0;
+  @include reset;
   font-family: "Blogger Sans", "Arial", sans-serif;
   margin-left: 50px;
   margin-top: 46px;
   background-color: transparent;
   border: none;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 16px;
   color: var(--basic-blue-bright);

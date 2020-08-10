@@ -10,16 +10,12 @@
 
 .footer__logo {
   margin-top: 37px;
-  background-image: url("/img/logo-mobile-blue@1x.png");
   width: 100px;
-  height: 15px;
 }
 
-.footer_social {
-  margin: 0;
-  padding: 0;
+.footer__social {
+  @include reset-list;
   display: flex;
-  list-style: none;
 }
 
 .footer__social-item {
@@ -29,24 +25,24 @@
 .footer__item-link {
   display: flex;
   width: 44px;
-  height: 44px;
+  min-height: 44px;
   border-radius: 50%;
   background-color: var(--basic-yellow);
   background-repeat: no-repeat;
   background-position: center;
 
   &--fb {
-    background-image: url("/img/facebook-blue.svg");
+    background-image: url("../img/facebook-blue.svg");
     background-size: 25%;
   }
 
   &--vk {
-    background-image: url("/img/vk-blue.svg");
+    background-image: url("../img/vk-blue.svg");
     background-size: 50%;
   }
 
   &--instagram {
-    background-image: url("/img/instagram-blue.svg");
+    background-image: url("../img/instagram-blue.svg");
     background-size: 40%;
   }
 }
@@ -64,7 +60,6 @@
 
 .footer__developed-by {
   display: flex;
-  padding: 0;
-  margin: 0;
+  @include reset;
   padding-top: 2px;
 }

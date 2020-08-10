@@ -1,9 +1,8 @@
 .contact-list {
   display: flex;
   flex-direction: column;
-  list-style: none;
-  margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .contact-list__contact-item-wrapper {
@@ -27,10 +26,10 @@
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    background-image: url("/img/contacts-phone-yellow.svg");
+    background-image: url("../img/contacts-phone-yellow.svg");
     background-repeat: no-repeat;
     background-size: 35%;
-    background-color: #121936;
+    background-color: var(--special-blue-dark);
     background-position: center;
   }
 
@@ -42,10 +41,10 @@
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    background-image: url("/img/contacts-mail-yellow.svg");
+    background-image: url("../img/contacts-mail-yellow.svg");
     background-repeat: no-repeat;
     background-size: 40%;
-    background-color: #121936;
+    background-color: var(--special-blue-dark);
     background-position: center;
   }
 }

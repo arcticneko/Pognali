@@ -1,15 +1,22 @@
 .page-header {
   background-color: var(--basic-blue);
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  &::after {
+    @include radius(19px);
+    background-color: var(--basic-blue);
+    border-radius: 0 0 25px 25px;
+    z-index: 1;
+  }
 }
 
 .page-header__logo {
   margin-top: 28px;
   margin-left: 24px;
-  width: 100px;
-  height: 15px;
+
 }
 
 .page-header__toggle {
@@ -25,15 +32,16 @@
 /* Cataog page */
 
 .page-header__title {
-  position: relative;
+  @include reset;
   margin-left: 25px;
-  margin-bottom: 11px;
+  margin-bottom: -5px;
   margin-top: auto;
 
   &::after {
+    z-index: 2;
     position: absolute;
-    top: 48px;
-    left: 0;
+    bottom: -21px;
+    left: 25px;
     content: "";
     width: 173px;
     height: 5px;

@@ -1,0 +1,124 @@
+.page-main {
+  color: var(--basic-blue);
+  @include width-container;
+}
+
+.page-main__hero {
+/*   width: 320px; */
+  min-height: 383px;
+}
+
+.page-main__feedback {
+/*   width: 320px; */
+  min-height: 215px;
+}
+
+.page-main__how-to-use {
+  position: relative;
+  min-height: 672px;
+/*   width: 320px; */
+
+  &::after {
+    z-index: 1;
+    @include radius;
+    background-color: var(--basic-blue-light);
+  }
+}
+
+.page-main__about-us {
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+.page-main__directions {
+  position: relative;
+  min-height: 1022px;
+/*   width: 320px; */
+
+  &::after {
+    z-index: 1;
+    @include radius;
+    }
+}
+
+.page-main__directions-list {
+  width: 270px;
+  min-height: 188px;
+  margin-top: 45px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-main__companions {
+  position: relative;
+  min-height: 1351px;
+
+  &::after {
+    z-index: 1;
+    @include radius;
+  }
+}
+
+.page-main__tariff {
+  position: relative;
+  min-height: 480px;
+
+  &::after {
+    z-index: 1;
+    @include radius;
+  }
+}
+
+.page-main__registration {
+  position: relative;
+  min-height: 536px;
+
+  &::after {
+    z-index: 1;
+    @include radius;
+  }
+}
+
+.page-main__our-address {
+  position: relative;
+  min-height: 209px;
+
+  &::after {
+    z-index: 1;
+    @include radius;
+  }
+}
+
+.page-main__map {
+  min-height: 424px;
+/*   width: 320px; */
+  background-image: url("../img/map-temporal.jpg");
+  background-size: contain;
+  margin-bottom: -105px;
+}
+
+.page-main__footer {
+  min-height: 239px;
+  border-radius: 25px 25px 0 0;
+}
+
+/* Catalog page */
+
+.page-main__companions-catalog {
+  min-height: 1824px;
+  margin-bottom: -25px;
+}
+
+.page-main__country-filter {
+  position: relative;
+  min-height: 17px;
+
+  &::after {
+    @include radius;
+    z-index: 1;
+  }
+}
+
+.page-main__filter {
+  padding-top: 50px
+}

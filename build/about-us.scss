@@ -1,7 +1,8 @@
 .about-us {
-  background-image: url("/img/about-mobile@1x.png");
+  background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center;
+  color: var(--basic-white);
 }
 
 .about-us__title {
@@ -18,6 +19,6 @@
   line-height: 22px;
 
   &--bold {
-    font-weight: bold;
+    font-weight: 700;
   }
 }
