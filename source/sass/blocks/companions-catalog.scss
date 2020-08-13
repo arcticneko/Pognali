@@ -1,0 +1,274 @@
+.companions-catalog {
+  background-color: var(--basic-blue-pale);
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  color: var(--basic-blue-light);
+}
+
+.companions-catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 270px;
+}
+
+.companions-catalog__item-wrapper {
+  position: relative;
+  background-color: var(--basic-white);
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.companions-catalog__item {
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--special-red-pink);
+  }
+
+  &--online::before {
+    content: "";
+    background-color: var(--bright-green);
+  }
+}
+
+.companions-catalog__desc-wrapper {
+  display: flex;
+  padding-left: 18px;
+}
+
+.companions-catalog__avatar-link {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: 4px;
+    left: 50px;
+    content: "";
+    width: 31px;
+    height: 31px;
+    background-image: url("../img/heart.svg");
+    background-color: var(--basic-white-gray4);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center center;
+  }
+
+  &--liked::after {
+    content: "";
+    background-image: url("../img/heart-active-red.svg");
+    background-color: var(--basic-white-pink);
+  }
+}
+
+.companions-catalog__avatar {
+  border-radius: 50%;
+}
+
+.companions-catalog__name {
+  margin: 0;
+  padding: 0;
+  margin-left: 16px;
+  text-decoration: none;
+}
+
+.companions-catalog__name-link {
+  text-decoration: none;
+}
+
+.companions-catalog__likes {
+  position: absolute;
+  top: 63px;
+  left: 104px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.companions-catalog__tag-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 18px;
+  margin-top: 13px;
+  width: 176px;
+}
+
+.companions-catalog__text {
+  padding-left: 18px;
+  margin-bottom: -8px;
+}
+
+.companions-catalog__text-inner {
+  background-color: var(--basic-white);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.companions-catalog__destinations {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-left: 18px;
+  border-top: 1px solid var(--basic-white-gray3);
+  padding-top: 24.39px;
+}
+
+.companions-catalog__destinations-item {
+  display: flex;
+  vertical-align: baseline;
+  position: relative;
+  margin-top: 12px;
+  text-transform: uppercase;
+}
+
+.companions-catalog__destinations-item:nth-child(1) {
+  margin-top: 0;
+}
+
+.companions-catalog__flag {
+  padding-right: 14px;
+}
+
+.companions-catalog__transports {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  padding-left: 18px;
+  border-top: 1px solid var(--basic-white-gray3);
+}
+
+.companions-catalog__transports-item-wrapper {
+  background-color: var(--basic-blue-pale);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-top: 21.23px;
+}
+
+.companions-catalog__transports-item {
+  min-height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+  opacity: 0.15;
+
+
+  &--active {
+    opacity: 1;
+  }
+
+  &--plane {
+    background-image: url("../img/plane.svg");
+  }
+
+  &--bus {
+    background-image: url("../img/bus.svg");
+  }
+
+  &--bike {
+    background-image: url("../img/bike.svg");
+  }
+
+  &--walk {
+    background-image: url("../img/run.svg");
+  }
+}
+
+.companions-catalog__lvl {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  /*   bottom: 78.39px;
+  right: 10px; */
+  bottom: 84px;
+  right: 27px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+
+  &::after {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    top: 0;
+    right: 0;
+    transform: translate(50%, 0);
+    /* не понимаю как зацентровать блоки svg progress bar */
+  }
+
+  &--25::after {
+    content: url("../img/catalog-25.svg");
+  }
+
+  &--50::after {
+    content: url("../img/catalog-50.svg");
+  }
+
+  &--80::after {
+    content: url("../img/catalog-80.svg");
+  }
+
+  &--99::after {
+    content: url("../img/catalog-99.svg");
+  }
+}
+
+
+.companions-catalog__lvl-text {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  /*   bottom: 131.4px; */
+  bottom: 126px;
+  right: 10px;
+}
+
+.companions-catalog__button {
+  margin-top: 13px;
+  margin-left: 18px;
+}
+
+.companions-catalog__text-btn {
+  position: relative;
+  text-decoration: none;
+  margin-top: 18px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  color: var(--basic-blue-light);
+
+  &::before {
+    content: url("../img/button-plus-blue.svg");
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    bottom: 9px;
+    left: -33px;
+  }
+}
+
+.companions-catalog__pagination {
+  width: 270px;
+  min-height: 51px;
+  margin-top: 18px;
+  margin-bottom: 46px;
+}

@@ -1,0 +1,23 @@
+.feedback {
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+}
+
+.feedback__item {
+  @include reset;
+  padding-top: 48px;
+  padding-left: 50px;
+}
+
+.feedback__text {
+  @include reset;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.feedback__text--emphasis {
+  padding-top: 18px;
+  font-weight: 700;
+}

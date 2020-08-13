@@ -32,7 +32,8 @@
     "source/*.html",
     "source/js/**/*.js",
     "source/img/**/*.svg",
-    "source/sass/**/*.scss"
+    "source/sass/**/*.scss",
+    "build/**/*.scss"
   ],
   "engines": {
     "node": "12.18.2"

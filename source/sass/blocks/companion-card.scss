@@ -1,0 +1,127 @@
+.companion-card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 35px;
+}
+
+.companion-card__avatar-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.companion-card__lvl {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 38px;
+
+  &::after {
+    position: absolute;
+    top: 0;
+  }
+
+  &--80::after {
+    content: url("../img/form-80.svg");
+  }
+}
+
+.companion-card__lvl-desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  padding-top: 6px;
+  color: var(--special-grey-light);
+
+  &::before {
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    transform: translate(-50%, 0);
+    content: "";
+    width: 51px;
+    min-height: 1px;
+    background-color: var(--special-grey-light);
+    opacity: 0.3;
+  }
+}
+
+.companion-card__avatar {
+  border-radius: 50%;
+}
+
+.companion-card__avatar-change-label {
+  margin-top: 18px;
+}
+
+.companion-card__tags {
+  @include reset;
+  margin-top: 33px;
+  border: 1px solid var(--basic-white-gray);
+  border-radius: 10px;
+}
+
+.companion-card__tags-legend {
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--basic-blue-light);
+  text-transform: uppercase;
+}
+
+.companion-card__tags-list {
+  color: var(--special-grey-light);
+  opacity: 0.6;
+  background-color: transparent;
+  border: none;
+  width: 217px;
+  resize: none;
+  overflow: hidden;
+  padding-left: 25px;
+}
+
+.companion-card__transports-list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  padding-bottom: 15.5px;
+}
+
+.companion-card__transport-wrapper {
+  display: block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%;
+  background-color: var(--basic-white);
+  text-align: center;
+}
+
+.companion-card__transports-pic {
+  width: 60%;
+  height: 60%;
+  opacity: 0.15;
+  padding-top: 6px;
+
+  &--active {
+    opacity: 1;
+  }
+}

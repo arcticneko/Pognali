@@ -1,0 +1,88 @@
+.tariff {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: var(--special-grey-light);
+  background-color: var(--basic-white-dark);
+}
+
+.tariff__title {
+  position: relative;
+  margin-top: 84px;
+  margin-left: 50px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    top: -12px;
+    right: -148px;
+    background-image: url("../img/rates@1x.png");
+    background-size: contain;
+  }
+}
+
+.tariff__private-fee-list {
+  @include reset;
+  margin-left: 49px;
+  counter-reset: my-counter;
+}
+
+.tariff__private-item {
+  @include reset-list;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+
+  &::after {
+    counter-increment: my-counter;
+    content: counter(my-counter);
+    position: absolute;
+    right: -65px;
+    top: -7px;
+    color: var(--basic-white);
+    text-align: center;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 50%;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: inherit;
+  }
+
+  &:nth-child(1)::after {
+    background-color: var(--special-orange);
+  }
+
+  &:nth-child(2)::after {
+    background-color: var(--special-yellow-dark);
+  }
+
+  &:nth-child(3)::after {
+    background-color: var(--basic-yellow);
+  }
+}
+
+.tariff__private-descr,
+.tariff__private-fee {
+  margin: 0;
+  padding: 0;
+}
+
+.tariff__business-button-open {
+  @include reset;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  margin-left: 50px;
+  margin-top: 46px;
+  background-color: transparent;
+  border: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--basic-blue-bright);
+}

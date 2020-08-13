@@ -1,0 +1,80 @@
+.registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--basic-blue-dark);
+  color: var(--basic-white);
+}
+
+.registration__title {
+  margin-top: 105px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.registration__text {
+  @include reset;
+  text-align: center;
+  width: 211px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.registration__login-link {
+  @include reset;
+  display: inline;
+  color: var(--basic-yellow);
+}
+
+.registration__login-form {
+  margin-top: 29px;
+  display: flex;
+  flex-direction: row;
+}
+
+.registration__email-field {
+  box-sizing: border-box;
+  width: 220px;
+  height: 62px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  padding-left: 25px;
+  color: var(--special-grey-light-transp);
+}
+
+.registration__button-form {
+  @include reset;
+  position: relative;
+  margin-left: -10px;
+  width: 60px;
+  height: 62px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--basic-yellow);
+
+  &::after {
+    position: absolute;
+    content: url("../img/email-arrow-blue.svg");
+    left: 50%;
+    top: 50%;
+    transform: translate(-30%, -50%);
+  }
+}
+
+.registration__text--bottom {
+  text-align: center;
+  margin-top: 29px;
+  width: 216px;
+}
+
+.registration__contacts {
+  margin-top: 30px;
+}

@@ -1,0 +1,42 @@
+.pagination {
+  box-sizing: border-box;
+  display: flex;
+  min-height: 62px;
+}
+
+.pagination__button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--basic-white);
+  flex-grow: 1;
+  text-decoration: none;
+
+  &--prev {
+    border-radius: 25px 0 0 25px;
+    margin-right: 1px;
+  }
+
+  &--prev::before {
+    content: url("../img/dropdown-blue.svg");
+    position: absolute;
+    left: 50%;
+    height: 10px;
+    width: 18px;
+    transform: rotate(90deg);
+  }
+
+  &--next {
+    border-radius: 0 25px 25px 0;
+  }
+
+  &--next::before {
+    content: url("../img/dropdown-blue.svg");
+    position: absolute;
+    right: 50%;
+    height: 10px;
+    width: 18px;
+    transform: rotate(270deg);
+  }
+}

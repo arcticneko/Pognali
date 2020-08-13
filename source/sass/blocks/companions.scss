@@ -1,0 +1,40 @@
+.companions {
+  background-color: var(--basic-blue-dark);
+  color: var(--basic-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("../img/smolov-back-mobile@1x.png"),
+    url("../img/rogovaya-back-mobile@1x.png"),
+    url("../img/back-mobile@1x.jpg");
+  background-position: top 70px right 25px, top 300px left, top 70px left;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+.companions__title {
+  align-self: start;
+  margin-top: 10px;
+}
+
+/* .companions__title-link {
+
+} */
+
+.companions__text {
+  align-self: start;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  width: 217px;
+
+  &--bold {
+    font-weight: 600;
+  }
+}
+
+.companions__show-all {
+  margin-top: 20px;
+}

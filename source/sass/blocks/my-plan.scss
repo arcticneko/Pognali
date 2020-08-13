@@ -1,0 +1,70 @@
+.my-plan {
+  border-radius: 25px 25px 0 0;
+}
+
+.my-plan__title {
+  @include reset;
+  margin-left: 25px;
+  padding-top: 28px;
+}
+
+.my-plan__list {
+  @include reset-list;
+  @include mobile-center;
+  counter-reset: my-counter;
+}
+
+.my-plan__list-item {
+  @include mobile-center;
+  position: relative;
+  width: 270;
+  min-height: 154px;
+  background-color: var(--basic-white);
+  border-radius: 10px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  padding-top: 24px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--basic-blue-light);
+
+  &::before {
+    position: absolute;
+    top: 40px;
+    left: 25px;
+    counter-increment: my-counter;
+    content: counter(my-counter);
+    font-weight: 500;
+  }
+}
+
+.my-plan__countries {
+  padding-left: 16px;
+}
+
+.my-plan__companions {
+  @include reset;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.my-plan__date {
+  @include reset;
+  margin-top: 5px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.my-plan__change-plan {
+  display: block;
+  padding-top: 24px;
+  color: var(--basic-black);
+  opacity: 0.3;
+  text-decoration: none;
+}

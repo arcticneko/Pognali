@@ -1,0 +1,6 @@
+.main-title {
+  @include reset;
+  font-size: 36px;
+  line-height: 40px;
+  color: var(--basic-white);
+}

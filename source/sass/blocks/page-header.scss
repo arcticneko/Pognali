@@ -1,0 +1,50 @@
+.page-header {
+  background-color: var(--basic-blue);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &::after {
+    @include radius(19px);
+    background-color: var(--basic-blue);
+    border-radius: 0 0 25px 25px;
+    z-index: 1;
+  }
+}
+
+.page-header__logo {
+  margin-top: 28px;
+  margin-left: 24px;
+}
+
+.page-header__toggle {
+  margin-top: 28px;
+  margin-right: 26px;
+  background-image: url("../img/menu-white.svg");
+  background-color: transparent;
+  height: 11px;
+  width: 25px;
+  border: none;
+}
+
+/* Cataog page */
+
+.page-header__title {
+  @include reset;
+  margin-left: 25px;
+  margin-bottom: -5px;
+  margin-top: auto;
+
+  &::after {
+    z-index: 2;
+    position: absolute;
+    bottom: -21px;
+    left: 25px;
+    content: "";
+    width: 173px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: var(--special-orange);
+  }
+}

@@ -1,0 +1,54 @@
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: var(--basic-blue);
+  background-image: url("../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: auto auto; /*ШВ*/
+}
+
+.hero__inner-wrapper {
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/traveller-illustration-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 90% bottom;
+}
+
+.hero__title {
+  text-align: center;
+  z-index: 1;
+}
+
+.hero__contacts-wrapper {
+  display: flex;
+  position: absolute;
+  bottom: -20px;
+}
+
+.hero__contact-item {
+  @include reset;
+  display: flex;
+  width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &--phone {
+    background-image: url("../img/topmenu-phone.svg");
+    background-color: var(--special-orange);
+  }
+
+  &--email {
+    background-image: url("../img/topmenu-mail.svg");
+    background-color: var(--special-yellow-dark);
+  }
+}
+
+.hero__auth {
+  align-self: flex-bottom;
+}

@@ -1,0 +1,39 @@
+.steps-wrapper {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  border: none;
+}
+
+.steps-wrapper__title {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--basic-blue-light);
+}
+
+.steps-wrapper__bullet-list {
+  @include reset-list;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 39px;
+  margin-left: 210px;
+  text-align: end;
+}
+
+.steps-wrapper__bullet-list-item {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-left: 16px;
+  color: var(--basic-blue-light);
+}
+
+.steps-wrapper__step-one {
+  box-sizing: border-box;
+}
