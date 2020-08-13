@@ -1,9 +1,9 @@
 .companions-list {
+  @include reset-list;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @include reset-list;
 }
 
 .companions-list__item-wrapper {
@@ -23,7 +23,6 @@
 }
 
 .companions-list__lvl {
-  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -34,14 +33,13 @@
   top: 20px;
   left: 20px;
   width: 60px;
-  min-height: 60px;
+  height: 60px;
   background-color: var(--special-black-transp);
   border-radius: 50%;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
-  /* border: 4px solid #ff8d30; */
 
   &::after {
     position: absolute;
@@ -76,13 +74,13 @@
 }
 
 .companions-list__countries {
+  @include reset-list;
   position: absolute;
   top: 259px;
   left: 50%;
   transform: translate(-50%, 0);
   display: flex;
   flex-direction: row;
-  @include reset-list;
 }
 
 .companions-list__country {
@@ -100,8 +98,8 @@
 }
 
 .companions-list__name {
-  position: relative;
   @include reset;
+  position: relative;
   margin-top: 29px;
   text-align: center;
 
@@ -109,7 +107,7 @@
     left: 59px;
     top: -2px;
     position: absolute;
-    content: url("../img/dot-offline.png")
+    content: url("../img/dot-offline.png");
   }
 
   &--online::before {

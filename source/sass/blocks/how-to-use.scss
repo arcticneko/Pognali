@@ -1,6 +1,6 @@
 .how-to-use {
-  background-image: linear-gradient(to bottom, var(--basic-blue) 70px, var(--basic-blue-light) 70px);
   @include reset;
+  background-image: linear-gradient(to bottom, var(--basic-blue) 70px, var(--basic-blue-light) 70px);
   display: flex;
   flex-direction: column;
   align-items: center;

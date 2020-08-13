@@ -30,8 +30,8 @@
 }
 
 .tariff__private-item {
-  position: relative;
   @include reset-list;
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-top: 32px;

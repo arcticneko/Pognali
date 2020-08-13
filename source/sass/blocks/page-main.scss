@@ -1,26 +1,23 @@
 .page-main {
-  color: var(--basic-blue);
   @include width-container;
+  color: var(--basic-blue);
 }
 
 .page-main__hero {
-/*   width: 320px; */
   min-height: 383px;
 }
 
 .page-main__feedback {
-/*   width: 320px; */
   min-height: 215px;
 }
 
 .page-main__how-to-use {
   position: relative;
   min-height: 672px;
-/*   width: 320px; */
 
   &::after {
-    z-index: 1;
     @include radius;
+    z-index: 1;
     background-color: var(--basic-blue-light);
   }
 }
@@ -33,12 +30,11 @@
 .page-main__directions {
   position: relative;
   min-height: 1022px;
-/*   width: 320px; */
 
   &::after {
-    z-index: 1;
     @include radius;
-    }
+    z-index: 1;
+  }
 }
 
 .page-main__directions-list {
@@ -54,8 +50,8 @@
   min-height: 1351px;
 
   &::after {
-    z-index: 1;
     @include radius;
+    z-index: 1;
   }
 }
 
@@ -64,8 +60,8 @@
   min-height: 480px;
 
   &::after {
-    z-index: 1;
     @include radius;
+    z-index: 1;
   }
 }
 
@@ -74,8 +70,8 @@
   min-height: 536px;
 
   &::after {
-    z-index: 1;
     @include radius;
+    z-index: 1;
   }
 }
 
@@ -84,14 +80,13 @@
   min-height: 209px;
 
   &::after {
-    z-index: 1;
     @include radius;
+    z-index: 1;
   }
 }
 
 .page-main__map {
   min-height: 424px;
-/*   width: 320px; */
   background-image: url("../img/map-temporal.jpg");
   background-size: contain;
   margin-bottom: -105px;
@@ -120,5 +115,9 @@
 }
 
 .page-main__filter {
-  padding-top: 50px
+  padding-top: 50px;
 }
+
+/* Form page */
+
+/* .page-main__form {}  */

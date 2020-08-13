@@ -10,7 +10,7 @@
 }
 
 @mixin radius ($element-height: 29px) {
-  content:"";
+  content: "";
   height: $element-height;
   width: 100%;
   background-color: inherit;
@@ -24,16 +24,21 @@
   @media screen and (min-width: 320px) {
     width: 320px;
     min-width: 320px; /* не работает, сайт сжимается и дальше*/
-    background:gray;
+    background: green;
   }
 
   @media screen and (min-width: 768px) {
     width: 768px;
-    background:green;
+    background: yellow;
   }
 
   @media screen and (min-width: 1440px) {
     width: 1440px;
-    background:blue;
+    background: blue;
   }
+}
+
+@mixin mobile-center {
+  padding-left: 25px;
+  padding-right: 25px;
 }

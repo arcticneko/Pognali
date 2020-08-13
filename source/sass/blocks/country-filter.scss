@@ -1,5 +1,5 @@
 .country-filter {
-  background-color: #e2e5f2;
+  background-color: var(--basic-white-gray4);
   display: flex;
 }
 
@@ -36,5 +36,3 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
-.page-main__filter {}

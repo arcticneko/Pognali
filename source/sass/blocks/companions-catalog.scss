@@ -4,7 +4,7 @@
   flex-direction: column;
   /* flex-wrap: wrap; */
   align-items: center;
-  color: #1d2e5b;
+  color: var(--basic-blue-light);
 }
 
 .companions-catalog__list {
@@ -34,12 +34,12 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: #f97676;
+    background-color: var(--special-red-pink);
   }
 
   &--online::before {
     content: "";
-    background-color: #bbf085;
+    background-color: var(--bright-green);
   }
 }
 
@@ -59,7 +59,7 @@
     width: 31px;
     height: 31px;
     background-image: url("../img/heart.svg");
-    background-color: #e2e5f2;
+    background-color: var(--basic-white-gray4);
     background-size: 40%;
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -69,7 +69,7 @@
   &--liked::after {
     content: "";
     background-image: url("../img/heart-active-red.svg");
-    background-color: #f9eaea;
+    background-color: var(--basic-white-pink);
   }
 }
 
@@ -125,7 +125,7 @@
   padding: 0;
   list-style: none;
   padding-left: 18px;
-  border-top: 1px solid #edeff6;
+  border-top: 1px solid var(--basic-white-gray3);
   padding-top: 24.39px;
 }
 
@@ -151,7 +151,7 @@
   list-style: none;
   display: flex;
   padding-left: 18px;
-  border-top: 1px solid #edeff6;
+  border-top: 1px solid var(--basic-white-gray3);
 }
 
 .companions-catalog__transports-item-wrapper {
@@ -163,10 +163,7 @@
 }
 
 .companions-catalog__transports-item {
-/*   width: 32px; */
   min-height: 32px;
-/*   border-radius: 50%;
-  background-color: var(--basic-blue-pale); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: 40%;
@@ -274,5 +271,4 @@
   min-height: 51px;
   margin-top: 18px;
   margin-bottom: 46px;
-  /* тест изменений гита */
 }

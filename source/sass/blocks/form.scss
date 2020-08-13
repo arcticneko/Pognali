@@ -1,0 +1,42 @@
+.form {
+  background-color: var(--basic-white-gray5);
+  box-sizing: border-box;
+}
+
+.form__companion-card {
+  @include mobile-center;
+  min-height: 475px;
+}
+
+.form__my-plan {
+  min-height: 483px;
+  background-color: var(--basic-white-gray6);
+}
+
+.form__steps-wrapper {
+  @include reset;
+  background-color: var(--basic-white-gray7);
+  width: 320px;
+  margin-bottom: -29px;
+
+  &::before {
+    @include radius;
+    border-radius: 25px 25px 0 0;
+    top: -29px;
+  }
+}
+
+.steps-wrapper__step-one {
+  min-height: 796px;
+}
+
+.steps-wrapper__step-two {
+  min-height: 516px;
+  margin-top: 10px;
+}
+
+.steps-wrapper__step-three {
+  margin-top: 10px;
+  min-height: 839px;
+  margin-bottom: 35px;
+}

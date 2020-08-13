@@ -15,8 +15,8 @@
 }
 
 .registration__text {
-  text-align: center;
   @include reset;
+  text-align: center;
   width: 211px;
   font-style: normal;
   font-weight: 300;
@@ -25,9 +25,9 @@
 }
 
 .registration__login-link {
+  @include reset;
   display: inline;
   color: var(--basic-yellow);
-  @include reset;;
 }
 
 .registration__login-form {
@@ -51,8 +51,8 @@
 }
 
 .registration__button-form {
-  position: relative;
   @include reset;
+  position: relative;
   margin-left: -10px;
   width: 60px;
   height: 62px;
@@ -65,7 +65,7 @@
     content: url("../img/email-arrow-blue.svg");
     left: 50%;
     top: 50%;
-    transform: translate(-30%, -50%)
+    transform: translate(-30%, -50%);
   }
 }
 

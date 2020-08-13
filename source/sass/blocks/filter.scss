@@ -1,7 +1,7 @@
 .filter {
   box-sizing: border-box;
   background-color: var(--basic-blue-pale); /*проверить цвет по фигме*/
-  color: #1d2e5b;
+  color: var(--basic-blue-light);
 }
 
 .filter__title-main {
@@ -13,7 +13,7 @@
 
 .filter__form {
   box-sizing: border-box;
-  background-color: #ffd74b;
+  background-color: var(--basic-yellow);
   margin-left: 25px;
   margin-right: 25px;
   padding-left: 25px;
@@ -26,7 +26,7 @@
   @include reset;
   position: relative;
   border: none;
-  border-top: 1px solid #f3c72b;
+  border-top: 1px solid var(--basic-yellow-orange);
 
   /*   &--lvl {
 
@@ -61,14 +61,11 @@
   padding-top: 44px;
   padding-bottom: 20px;
   padding-left: 27px;
-
-  &--open {
-
-  }
+  /* добавить модфикатор open*/
 }
 
 .filter__list-option {
-  color: #000000;
+  color: var(--basic-black);
   padding-top: 12px;
 }
 
@@ -93,11 +90,9 @@
   }
 }
 
-
-
 .filter__item-filter-list-transport {
-  display: flex;
   @include reset-list;
+  display: flex;
   padding-top: 44px;
   padding-bottom: 20px;
 }
@@ -110,7 +105,6 @@
   height: 32px;
   line-height: 32px;
   text-align: center;
-/*   vertical-align: middle; */
   border-radius: 50%;
 }
 
@@ -118,9 +112,10 @@
   width: 16px;
   height: 16px;
   padding-top: 7px;
+  opacity: 0.15;
 
-  &--inactive {
-    opacity: 0.15;
+  &--active {
+    opacity: 1;
   }
 }
 
@@ -139,7 +134,7 @@
 .filter__lvl-input {
   box-sizing: border-box;
   width: 100%;
-  border: 1px solid #cbced9;
+  border: 1px solid var(--basic-white-gray);
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -150,14 +145,14 @@
 }
 
 .filter__lvl-input--min {
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0 0 4px;
 }
 
 .filter__lvl-input--max {
   position: relative;
   margin-left: -2px;
   padding-left: 42px;
-  border-radius: 0px 4px  4px  0px;
+  border-radius: 0 4px  4px  0;
 
   &::before {
     content: "";
@@ -168,7 +163,7 @@
     padding-bottom: 5px;
     width: 16px;
     height: 11px;
-    background-color:#cbced9 ; /* не отображается */
+    background-color: var(--basic-white-gray); /* не отображается */
     z-index: 10;
   }
 }
@@ -184,12 +179,12 @@
 .filter__lvl-range-scale {
   width: 220px;
   height: 2px;
-  background: #1D2E5B;
+  background: var(--basic-blue-light);
   opacity: 0.2;
 }
 
 .filter__lvl-range-bar {
-  background: #1D2E5B;
+  background: var(--basic-blue-light);
   width: 153px;
   height: 2px;
 }
@@ -201,7 +196,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #1D2E5B;
+  background-color: var(--basic-blue-light);
 
   &--min {
     left: 67px;
@@ -212,6 +207,6 @@
   }
 }
 
-.filter__button {
+/* .filter__button {
 
-}
+} */
