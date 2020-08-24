@@ -15,6 +15,10 @@
   font-size: 24px;
   line-height: 24px;
   color: var(--basic-blue-light);
+
+  @media screen and (min-width: 768px) {
+    @include width-container (25px, 75px, 124px);
+  }
 }
 
 .steps-wrapper__bullet-list {

@@ -3,18 +3,43 @@
 
 <head>
   <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
   <title>Погнали</title>
   <link href='css/style.css' rel='stylesheet'>
 </head>
 
 <body class='page__body'>
 
-  <header class='page-header'>
-    <a class='page-header__logo logo' href='index.html' aria-label='перейти на главную страницу'>
-      <img class='logo__inner' src="img/logo-mobile-white@1x.png" width='100' height='19' alt='логотип'>
-    </a>
-    <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'></button>
-    <h1 class='page-header__title main-title'>Направления</h1>
+  <header class='page__header page-header page-header--secondary'>
+    <div class='page-header__menu-wrapper'>
+      <a class='page-header__logo logo' href='index.html' aria-label='перейти на главную страницу'>
+        <img class='logo__image' src="img/logo-mobile-white@1x.png" width='100' height='19' alt='логотип'>
+      </a>
+      <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'></button>
+      <h1 class='page-header__title main-title'>Направления</h1>
+      <nav class='page-header__nav-wrapper'>
+        <ul class='page-header__nav-list'>
+          <li class='page-header__item'>
+            <a class='page-header__link' href='#'>О сервисе</a>
+          </li>
+          <li class='page-header__item'>
+            <a class='page-header__link' href='form.html'>направления</a>
+          </li>
+          <li class='page-header__item'>
+            <a class='page-header__link' href='catalog.html'>попутчики</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class='page-header__contacts-wrapper contacts page-header__contacts-wrapper--hidden'>
+      <a class='contacts__contact-item contacts__contact-item--phone' href='tel:88005558628'
+        aria-label='наш телефон'></a>
+      <a class='contacts__contact-item contacts__contact-item--email' href='mailto:mail@htmlacademy.ru'
+        aria-label='наша почта'></a>
+      <a class='contacts__auth button' href='#'>Авторизация</a>
+    </div>
+
     <div class='header-submenu header-submenu--hidden'>
       <p class='header-submenu__logo logo'>Погнали?</p>
       <nav class='header-submenu__links-wrapper'>
@@ -60,24 +85,22 @@
     </div>
   </header>
 
-  <main class='page-main'>
+  <main class='page__main page-main'>
     <form class='page-main__form form' action='https://echo.htmlacademy.ru/' method='get'>
       <article class='form__companion-card companion-card'>
         <h2 class='visually-hidden'>Карточка клиента</h2>
-        <div class='companion-card__avatar-wrapper'>
-          <div class='companion-card__lvl companion-card__lvl--80'>
-            80
-            <span class='companion-card__lvl-desc'>
-              level
-            </span>
-          </div>
-          <img class='companion-card__avatar' alt='Аватар пользователя' width='100' height='100'
-            src='img/demin-mobile@1x-2.jpg'>
-          <label class='companion-card__avatar-change-label button button--longer' for='change-avatar'>Сменить
-            фото</label>
-          <input class='companion-card__avatar-change-input visually-hidden' type='file' name='change-avatar'
-            id='change-avatar'>
+        <div class='companion-card__lvl companion-card__lvl--80'>
+          80
+          <span class='companion-card__lvl-desc'>
+            level
+          </span>
         </div>
+        <img class='companion-card__avatar' alt='Аватар пользователя' width='100' height='100'
+          src='img/demin-mobile@1x-2.jpg'>
+        <label class='companion-card__avatar-change-label button button--longer' for='change-avatar'>Сменить
+          фото</label>
+        <input class='companion-card__avatar-change-input visually-hidden' type='file' name='change-avatar'
+          id='change-avatar'>
 
         <fieldset class='companion-card__tags'>
           <legend class='companion-card__tags-legend'>Тэги</legend>
@@ -194,16 +217,14 @@
             </label>
             <div class='step__control-combined'>
               <button class='step__btn step__btn--less' aria-label='Уменьшить количество дней'></button>
-              <input type='number' min='1' value='1' class='step__input-amount' name='days-of-trip'
-                id='days-of-trip'>
+              <input type='number' min='1' value='1' class='step__input-amount' name='days-of-trip' id='days-of-trip'>
               <button class='step__btn step__btn--more' aria-label='Увеличить количество дней'></button>
             </div>
           </div>
 
           <div class='step__is-children-wrapper'>
             <label class='step__is-children-title' for='is-children'>Можно с детьми</label>
-            <input class='step__is-children-input visually-hidden' type='checkbox' name='is-children'
-              id='is-children'>
+            <input class='step__is-children-input visually-hidden' type='checkbox' name='is-children' id='is-children'>
           </div>
 
           <div class='step__calendar-wrapper'>
@@ -225,214 +246,181 @@
               <tr class='step__calendar-table-row'>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>23
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='23-02-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='23-02-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>24
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='24-02-20'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='24-02-20' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>25
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='25-02-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='25-02-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>26
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='26-02-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='26-02-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>27
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='27-02-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='27-02-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>28
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='28-02-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='28-02-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>1
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='01-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='01-03-19' disabled>
                   </label>
                 </td>
               </tr>
               <tr class='step__calendar-table-row'>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>2
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='02-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='02-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>3
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='03-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='03-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>4
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='04-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='04-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>5
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='05-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='05-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>6
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='06-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='06-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>7
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='07-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='07-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>8
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='01-04-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='01-04-19' disabled>
                   </label>
                 </td>
               </tr>
               <tr class='step__calendar-table-row'>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>9
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='09-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='09-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>10
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='10-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='10-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>11
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='11-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='11-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>12
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='12-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='12-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>13
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='13-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='13-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>14
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='14-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='14-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>15
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='15-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='15-03-19' disabled>
                   </label>
                 </td>
               </tr>
               <tr class='step__calendar-table-row'>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>16
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='16-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='16-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>17
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='17-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='17-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>18
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='18-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='18-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>19
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='19-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='19-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>20
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='20-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='20-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>21
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='21-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='21-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>22
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='22-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='22-03-19' disabled>
                   </label>
                 </td>
               </tr>
               <tr class='step__calendar-table-row'>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>23
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='23-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='23-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>24
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='24-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='24-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--inactive'>25
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='25-03-19'
-                      disabled>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='25-03-19' disabled>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
-                  <label class='step__calendar-item-date step__calendar-item-date--current-date step__calendar-item-date--checked'>26
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='26-03-19'
-                      checked>
+                  <label
+                    class='step__calendar-item-date step__calendar-item-date--current-date step__calendar-item-date--checked'>26
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='26-03-19' checked>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--checked'>27
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='27-03-19'
-                      checked>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='27-03-19' checked>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
                   <label class='step__calendar-item-date step__calendar-item-date--checked'>28
-                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='28-03-19'
-                      checked>
+                    <input class='step__calendar-item-input visually-hidden' type='checkbox' value='28-03-19' checked>
                   </label>
                 </td>
                 <td class='step__calendar-item-wrapper'>
@@ -496,7 +484,8 @@
               <option class='step__country-to-visit-option'>Босиния и Герцеговина</option>
             </select>
             <div class='step__country-to-visit-flag-wrapper'>
-              <img class='step__country-to-visit-flag' src="img/flag-bosnia.png" width='35' height='24' alt='флаг страны'>
+              <img class='step__country-to-visit-flag' src="img/flag-bosnia.png" width='35' height='24'
+                alt='флаг страны'>
             </div>
             <button class='step__country-to-visit-del-btn del-button' aria-label='Удалить страну'></button>
           </div>
@@ -508,7 +497,8 @@
               <option class='step__country-to-visit-option'>Чехия</option>
             </select>
             <div class='step__country-to-visit-flag-wrapper'>
-              <img class='step__country-to-visit-flag' src="img/flag-czech.png" width='35' height='24' alt='флаг страны'>
+              <img class='step__country-to-visit-flag' src="img/flag-czech.png" width='35' height='24'
+                alt='флаг страны'>
             </div>
             <button class='step__country-to-visit-del-btn del-button' aria-label='Удалить страну'></button>
           </div>
@@ -538,14 +528,14 @@
             <p class='step__country-title'>Босния и Герцеговина</p>
             <img class='step__country-flag' width='35' height='24' alt='флаг страны' src="img/flag-bosnia.png">
           </div>
-            <textarea class='step__country-plan' placeholder="План действий"></textarea>
+          <textarea class='step__country-plan' placeholder="План действий"></textarea>
 
           <div class='step__country-wrapper'>
             <p class='step__country-title'>Чехия</p>
             <img class='step__country-flag' width='35' height='24' alt='флаг страны' src="img/flag-czech.png">
           </div>
-            <textarea class='step__country-plan'
-              placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+          <textarea class='step__country-plan'
+            placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
 
           <button class='step__button button button--long' type='submit'>Отправить</button>
           <a class='step__previous-step-btn text-btn' href='#step-two'>На шаг назад</a>
@@ -554,9 +544,9 @@
     </form>
   </main>
 
-  <footer class='page-main__footer footer'>
+  <footer class='page__footer footer'>
     <a class='footer__logo logo' aria-label='перейти на главную страницу' href='index.html'>
-      <img class='logo__inner' src="img/logo-mobile-blue@1x.png" width='100' height='19' alt='логотип'>
+      <img class='logo__image' src="img/logo-mobile-blue@1x.png" width='100' height='19' alt='логотип'>
     </a>
     <ul class='footer__social'>
       <li class='footer__social-item'>

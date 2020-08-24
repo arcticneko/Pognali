@@ -1,4 +1,5 @@
 .filter {
+  position: relative;
   box-sizing: border-box;
   background-color: var(--basic-blue-pale); /*проверить цвет по фигме*/
   color: var(--basic-blue-light);
@@ -9,17 +10,41 @@
   padding-top: 26px;
   padding-bottom: 23px;
   width: 145px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+
+  @media screen and (min-width: 768px) {
+    width: 480px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 191px;
+  }
 }
 
 .filter__form {
   box-sizing: border-box;
   background-color: var(--basic-yellow);
-  margin-left: 25px;
-  margin-right: 25px;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 22px;
   border-radius: 25px;
+
+  @media screen and (min-width: 768px) {
+    height: 550px;
+    width: 688px;
+    right: 60px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 285px;
+    height: 814px;
+    position: absolute;
+  }
 }
 
 .filter__filtration-wrapper {
@@ -54,6 +79,16 @@
     top: 25%;
     transform: translate(0, 50%);
   }
+
+  @media screen and (min-width: 768px) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 22px;
+  }
 }
 
 .filter__item-filter-list {
@@ -62,6 +97,21 @@
   padding-bottom: 20px;
   padding-left: 27px;
   /* добавить модфикатор open*/
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    padding-left: 120px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    display: block;
+    padding-top: 44px;
+    padding-bottom: 20px;
+    padding-left: 27px;
+  }
 }
 
 .filter__list-option {
@@ -70,6 +120,7 @@
 }
 
 .filter__list-option-label {
+  display: block;
   position: relative;
   font-style: normal;
   font-weight: 400;
@@ -88,6 +139,17 @@
     background-color: var(--basic-white);
     cursor: pointer;
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 20px;
+    min-width: 114px;
+    margin-left: 35px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-left: 0;
+  }
 }
 
 .filter__item-filter-list-transport {
@@ -95,6 +157,16 @@
   display: flex;
   padding-top: 44px;
   padding-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 120px;
+    padding-top: 0;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-left: 0;
+    padding-top: 44px;
+  }
 }
 
 .filter__list-option-label-transport {
@@ -152,7 +224,7 @@
   position: relative;
   margin-left: -2px;
   padding-left: 42px;
-  border-radius: 0 4px  4px  0;
+  border-radius: 0 4px 4px 0;
 
   &::before {
     content: "";

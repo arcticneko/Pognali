@@ -5,7 +5,6 @@
 }
 
 .page__body {
-  @include width-container;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -14,4 +13,13 @@
 .page__header {
   @include width-container;
   min-height: 95px;
+}
+
+.page__main {
+/*   @include width-container; */
+}
+
+.page__footer {
+  border: 1px solid red;
+  @include width-container;
 }

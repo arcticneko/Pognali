@@ -1,9 +1,20 @@
 .how-to-use {
-  @include reset;
-  background-image: linear-gradient(to bottom, var(--basic-blue) 70px, var(--basic-blue-light) 70px);
+  background-image: linear-gradient(
+    to bottom,
+    var(--basic-blue) 70px,
+    var(--basic-blue-light) 70px
+  );
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    background-image: none;
+    background-color: var(--basic-blue-light-dark);
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
 }
 
 .how-to-use__items-list {
@@ -14,9 +25,27 @@
   justify-content: center;
   counter-reset: my-counter;
   width: 270px;
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: -143px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 688px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    position: absolute;
+    top: -225px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 688px;
+    z-index: 1;
+  }
 }
 
 .how-to-use__item {
+  position: relative;
   margin-top: -10px;
   box-sizing: border-box;
   list-style: none;
@@ -33,28 +62,103 @@
   padding-left: 24px;
   border-radius: 10px 10px 0 0;
 
+  @media screen and (min-width: 768px) {
+    padding-top: 31px;
+    width: 365px;
+    height: 140px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 345px;
+    height: 107px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
   &::after {
     counter-increment: my-counter;
     content: counter(my-counter);
     color: var(--basic-white);
     margin: 22px 21px;
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      left: 0;
+      top: 62px;
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      left: 268px;
+      top: 4px;
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 
-  &:nth-child(1) {
+  &--first {
     background-color: var(--special-orange);
   }
 
-  &:nth-child(2) {
+  &--second {
     background-color: var(--special-yellow-gold);
   }
 
-  &:nth-child(3) {
+  &--third {
     background-color: var(--special-yellow-dark);
   }
 
-  &:nth-child(4) {
+  &--fourth {
     border-radius: 10px;
     background-color: var(--basic-yellow);
-    height: 80px;
+    min-height: 80px;
+  }
+}
+
+.how-to-use__item--first {
+  @media screen and (min-width: 768px) {
+    border-radius: 25px 0 0 0;
+  }
+
+  @media screen and (min-width: 1440px) {
+    border-radius: 25px 0 0 25px;
+  }
+}
+
+.how-to-use__item--second {
+  @media screen and (min-width: 768px) {
+    border-radius: 25px 25px 0 0;
+    margin-left: -20px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    border-radius: 25px 0 0 25px;
+    margin-left: -20px;
+  }
+}
+
+.how-to-use__item--third {
+  @media screen and (min-width: 768px) {
+    border-radius: 0 0 0 25px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    border-radius: 25px 0 0 25px;
+    margin-left: -20px;
+  }
+}
+
+.how-to-use__item--fourth {
+  @media screen and (min-width: 768px) {
+    border-radius: 0 0 25px 25px;
+    margin-left: -20px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    border-radius: 25px;
+    margin-left: -20px;
   }
 }

@@ -4,12 +4,32 @@
   align-items: start;
   color: var(--special-grey-light);
   background-color: var(--basic-white-dark);
+
+  @media screen and (min-width: 768px) {
+    background-color: #edeff6;
+    background-image: url("../img/tariff-square-tablet.png");
+    background-repeat: no-repeat;
+    background-position: top 140px right 45px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    background-color: #edeff6;
+    background-image: url("../img/tariff-square-desktop.png");
+    background-repeat: no-repeat;
+    background-position: top 135px right 280px;
+  }
 }
 
 .tariff__title {
   position: relative;
   margin-top: 84px;
-  margin-left: 50px;
+  margin-left: 25px;
+  width: 110px;
+
+  @media screen and (min-width: 768px) {
+    width: 482px;
+    align-self: center;
+  }
 
   &::after {
     position: absolute;
@@ -20,21 +40,62 @@
     right: -148px;
     background-image: url("../img/rates@1x.png");
     background-size: contain;
+
+    @media screen and (min-width: 768px) {
+      top: 314px;
+      right: -40px;
+      z-index: 2;
+    }
+
+    @media screen and (min-width: 1440px) {
+      top: 100px;
+      right: -306px;
+      display: block;
+      width: 198px;
+      height: 198px;
+    }
   }
 }
 
 .tariff__private-fee-list {
   @include reset;
-  margin-left: 49px;
   counter-reset: my-counter;
+
+  @media screen and (min-width: 320px) {
+    margin-left: 25px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 90px;
+  }
 }
 
 .tariff__private-item {
   @include reset-list;
   position: relative;
   display: flex;
-  flex-direction: column;
-  margin-top: 32px;
+  font-style: normal;
+  font-weight: 300;
+
+  @media screen and (min-width: 320px) {
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 39px;
+  }
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
+    font-size: 28px;
+    line-height: 28px;
+    border-top: 1px solid var(--basic-white-gray9);
+    border-bottom: 1px solid var(--basic-white-gray9);
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 900px;
+  }
 
   &::after {
     counter-increment: my-counter;
@@ -52,6 +113,20 @@
     font-weight: 300;
     font-size: 16px;
     font-family: inherit;
+
+    @media screen and (min-width: 768px) {
+      width: 68px;
+      height: 68px;
+      font-size: 28px;
+      line-height: 68px;
+      right: 628px;
+      top: -18px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      right: 628px;
+      top: -18px;
+    }
   }
 
   &:nth-child(1)::after {
@@ -71,18 +146,47 @@
 .tariff__private-fee {
   margin: 0;
   padding: 0;
+
+  @media screen and (min-width: 768px) {
+    line-height: 65px;
+  }
 }
 
 .tariff__business-button-open {
   @include reset;
+  /* position: relative; */
   font-family: "Blogger Sans", "Arial", sans-serif;
-  margin-left: 50px;
+  margin-left: 25px;
   margin-top: 46px;
   background-color: transparent;
   border: none;
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 16px;
   color: var(--basic-blue-bright);
+
+  @media screen and (min-width: 320px) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 90px;
+    &::before {
+      position: absolute;
+      left: 40px;
+      bottom: 0;
+      display: block;
+      content: "";
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      line-height: 68px;
+      background-color: var(--basic-white-gray8);
+      background-image: url("../img/tariff-icon.png");
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: center center;
+    }
+  }
 }

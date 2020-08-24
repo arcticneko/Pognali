@@ -1,6 +1,7 @@
 /* Общее для трех шагов*/
 
 .step {
+  @include reset;
   @include mobile-center;
   display: flex;
   flex-direction: column;
@@ -10,8 +11,7 @@
   border-radius: 10px;
   border: none;
   color: var(--basic-blue-light);
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-top: 10px;
 }
 
 .step__main-title {

@@ -1,24 +1,80 @@
 .about-us {
-  background-image: url("../img/about-mobile@1x.png");
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
   background-repeat: no-repeat;
   background-position: center;
   color: var(--basic-white);
+
+  @media screen and (min-width: 320px) {
+    background-image: url("../img/about-mobile@1x.png");
+  }
+
+  @media screen and (min-width: 768px) {
+    align-self: start;
+    background-image: url("../img/about-tablet.png");
+    background-position: top 70px right;
+    width: 105%;
+  }
+
+  @media screen and (min-width: 1440px) {
+    background-image: url("../img/about-desktop@1x.png"), url("../img/back-tablet.png");
+    background-position: top 70px right 25px, top 70px left;
+    padding-left: 70px;
+  }
 }
 
 .about-us__title {
   padding-top: 33px;
-  margin-left: 49px;
+  margin-left: 25px;
 }
 
 .about-us__text {
-  margin-left: 49px;
-  margin-right: 60px;
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
 
-  &--bold {
+  @media screen and (min-width: 320px) {
+    margin-left: 25px;
+    margin-right: 60px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+    line-height: 33px;
+    width: 309px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 28px;
+    line-height: 34px;
+    width: 619px;
+  }
+
+  &--emphasis {
     font-weight: 700;
+    @media screen and (min-width: 768px) {
+      font-size: 21px;
+      line-height: 25px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 425px;
+    }
+  }
+}
+
+.about-us__button {
+  margin-left: 25px;
+  margin-top: 31px;
+
+  @media screen and (min-width: 320px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
   }
 }

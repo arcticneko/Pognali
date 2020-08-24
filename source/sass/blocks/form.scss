@@ -1,10 +1,11 @@
 .form {
+  @include width-container (0, 0, 0);
   background-color: var(--basic-white-gray5);
   box-sizing: border-box;
 }
 
 .form__companion-card {
-  @include mobile-center;
+  @include width-container (25px, 75px, 124px);
   min-height: 475px;
 }
 
@@ -15,6 +16,7 @@
 
 .form__steps-wrapper {
   @include reset;
+  @include width-container  (25px, 75px, 124px);
   background-color: var(--basic-white-gray7);
   width: 320px;
   margin-bottom: -29px;

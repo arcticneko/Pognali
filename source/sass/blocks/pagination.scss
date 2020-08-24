@@ -1,7 +1,63 @@
 .pagination {
   box-sizing: border-box;
   display: flex;
+  justify-content: space-between;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 688px;
+    height: 100px;
+    background-color: var(--basic-white);
+    border-radius: 20px;
+    padding-left: 48px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 948px;
+  }
+}
+
+.pagination__pages-wrapper {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+
+  @media screen and (min-width: 320px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+  }
+
+  @media screen and (min-width: 1440px) {
+
+  }
+}
+
+.pagination__page-link {
+  text-decoration: none;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+
+  &--active {
+    background-color: var(--basic-yellow);
+  }
+}
+
+.pagination_button-wrapper {
+  box-sizing: border-box;
+  display: flex;
   min-height: 62px;
+  width: 270px;
 }
 
 .pagination__button {

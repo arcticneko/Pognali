@@ -1,4 +1,5 @@
 .feedback {
+  position: relative;
   background-color: var(--basic-blue);
   color: var(--basic-white);
 }
@@ -6,18 +7,70 @@
 .feedback__item {
   @include reset;
   padding-top: 48px;
-  padding-left: 50px;
+  padding-left: 25px;
+  z-index: 1;
+
+  @media screen and (min-width: 320px) {
+
+  }
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    height: 206px;
+    width: 270px;
+    background-color: transparent;
+    top: -588px;
+    left: 47px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    position: absolute;
+    height: 206px;
+    width: 270px;
+    background-color: transparent;
+    top: -588px;
+    left: 1089px;
+  }
 }
 
 .feedback__text {
   @include reset;
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
+
+  @media screen and (min-width: 320px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 .feedback__text--emphasis {
   padding-top: 18px;
   font-weight: 700;
+
+  @media screen and (min-width: 320px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 21px;
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-top: 45px;
+    font-size: 21px;
+    line-height: 24px;
+  }
 }
