@@ -1,9 +1,5 @@
 .how-to-use {
-  background-image: linear-gradient(
-    to bottom,
-    var(--basic-blue) 70px,
-    var(--basic-blue-light) 70px
-  );
+  background-image: linear-gradient(to bottom, var(--basic-blue) 70px, var(--basic-blue-light) 70px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,9 +7,6 @@
   @media screen and (min-width: 768px) {
     background-image: none;
     background-color: var(--basic-blue-light-dark);
-  }
-
-  @media screen and (min-width: 1440px) {
   }
 }
 
@@ -101,64 +94,56 @@
 
   &--first {
     background-color: var(--special-orange);
+
+    @media screen and (min-width: 768px) {
+      border-radius: 25px 0 0 0;
+    }
+
+    @media screen and (min-width: 1440px) {
+      border-radius: 25px 0 0 25px;
+    }
   }
 
   &--second {
     background-color: var(--special-yellow-gold);
+
+    @media screen and (min-width: 768px) {
+      border-radius: 25px 25px 0 0;
+      margin-left: -20px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      border-radius: 25px 0 0 25px;
+      margin-left: -20px;
+    }
   }
 
   &--third {
     background-color: var(--special-yellow-dark);
+
+    @media screen and (min-width: 768px) {
+      border-radius: 0 0 0 25px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      border-radius: 25px 0 0 25px;
+      margin-left: -20px;
+    }
   }
 
   &--fourth {
     border-radius: 10px;
     background-color: var(--basic-yellow);
     min-height: 80px;
-  }
-}
 
-.how-to-use__item--first {
-  @media screen and (min-width: 768px) {
-    border-radius: 25px 0 0 0;
-  }
+    @media screen and (min-width: 768px) {
+      border-radius: 0 0 25px 25px;
+      margin-left: -20px;
+    }
 
-  @media screen and (min-width: 1440px) {
-    border-radius: 25px 0 0 25px;
-  }
-}
-
-.how-to-use__item--second {
-  @media screen and (min-width: 768px) {
-    border-radius: 25px 25px 0 0;
-    margin-left: -20px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    border-radius: 25px 0 0 25px;
-    margin-left: -20px;
-  }
-}
-
-.how-to-use__item--third {
-  @media screen and (min-width: 768px) {
-    border-radius: 0 0 0 25px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    border-radius: 25px 0 0 25px;
-    margin-left: -20px;
-  }
-}
-
-.how-to-use__item--fourth {
-  @media screen and (min-width: 768px) {
-    border-radius: 0 0 25px 25px;
-    margin-left: -20px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    border-radius: 25px;
-    margin-left: -20px;
+    @media screen and (min-width: 1440px) {
+      border-radius: 25px;
+      margin-left: -20px;
+    }
   }
 }

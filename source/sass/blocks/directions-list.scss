@@ -20,10 +20,6 @@
   position: relative;
   margin-top: 9px;
 
-  @media screen and (min-width: 320px) {
-
-  }
-
   @media screen and (min-width: 768px) {
     width: 616px;
     height: 140px;
@@ -47,9 +43,9 @@
     height: 100%;
   }
 
-  @media screen and (min-width: 1440px) {
+  /* @media screen and (min-width: 1440px) {
 
-  }
+  } */
 }
 
 .directions-list__pic {
@@ -72,9 +68,9 @@
     border-radius: 10px 0 0 10px;
   }
 
-  @media screen and (min-width: 1440px) {
+  /* @media screen and (min-width: 1440px) {
 
-  }
+  } */
 }
 
 .directions-list__name {

@@ -15,11 +15,7 @@
   min-height: 95px;
 }
 
-.page__main {
-/*   @include width-container; */
-}
-
 .page__footer {
-  border: 1px solid red;
   @include width-container;
+  border: 1px solid red;
 }

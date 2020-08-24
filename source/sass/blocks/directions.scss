@@ -29,6 +29,7 @@
   @include reset;
   margin-left: 25px;
   padding-top: 149px;
+
   @media screen and (min-width: 1440px) {
     padding-top: 180px;
   }
@@ -57,9 +58,11 @@
 
 .directions__directions-list {
   @include reset-list;
+
   @media screen and (min-width: 768px) {
     padding-left: 38px;
   }
+
   @media screen and (min-width: 1440px) {
     padding-top: 180px;
   }
