@@ -1,18 +1,22 @@
 .tariff {
+  background-color: var(--basic-white-dark);
+}
+
+.tariff__container {
   display: flex;
   flex-direction: column;
   align-items: start;
   color: var(--special-grey-light);
-  background-color: var(--basic-white-dark);
+  background-color: inherit;
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     background-color: #edeff6;
     background-image: url("../img/tariff-square-tablet.png");
     background-repeat: no-repeat;
     background-position: top 140px right 45px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     background-color: #edeff6;
     background-image: url("../img/tariff-square-desktop.png");
     background-repeat: no-repeat;
@@ -26,7 +30,7 @@
   margin-left: 25px;
   width: 110px;
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 482px;
     align-self: center;
   }
@@ -41,13 +45,13 @@
     background-image: url("../img/rates@1x.png");
     background-size: contain;
 
-    @media screen and (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       top: 314px;
       right: -40px;
       z-index: 2;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media (min-width: $desktop-width) {
       top: 100px;
       right: -306px;
       display: block;
@@ -61,11 +65,11 @@
   @include reset;
   counter-reset: my-counter;
 
-  @media screen and (min-width: 320px) {
+  @media (min-width: 320px) {
     margin-left: 25px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     margin-left: 90px;
   }
 }
@@ -76,15 +80,12 @@
   display: flex;
   font-style: normal;
   font-weight: 300;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 39px;
 
-  @media screen and (min-width: 320px) {
-    flex-direction: column;
-    font-size: 16px;
-    line-height: 16px;
-    margin-top: 39px;
-  }
-
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     width: 600px;
@@ -94,7 +95,7 @@
     border-bottom: 1px solid var(--basic-white-gray9);
   }
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     width: 900px;
   }
 
@@ -115,7 +116,7 @@
     font-size: 16px;
     font-family: inherit;
 
-    @media screen and (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       width: 68px;
       height: 68px;
       font-size: 28px;
@@ -124,7 +125,7 @@
       top: -18px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media (min-width: $desktop-width) {
       right: 628px;
       top: -18px;
     }
@@ -148,7 +149,7 @@
   margin: 0;
   padding: 0;
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     line-height: 65px;
   }
 }
@@ -164,13 +165,10 @@
   font-style: normal;
   font-weight: 700;
   color: var(--basic-blue-bright);
+  font-size: 16px;
+  line-height: 16px;
 
-  @media screen and (min-width: 320px) {
-    font-size: 16px;
-    line-height: 16px;
-  }
-
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
     padding-left: 90px;

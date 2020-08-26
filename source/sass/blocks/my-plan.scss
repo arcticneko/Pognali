@@ -1,6 +1,9 @@
-.my-plan {
+.my-plan__container {
   @include width-container (25px, 75px, 124px);
-  border-radius: 25px 25px 0 0;
+
+  @media (min-width: $desktop-width) {
+    padding-right: 58px;
+  }
 }
 
 .my-plan__title {
@@ -17,7 +20,6 @@
 .my-plan__list-item {
   padding-left: 25px;
   position: relative;
-  width: 270;
   min-height: 154px;
   background-color: var(--basic-white);
   border-radius: 10px;

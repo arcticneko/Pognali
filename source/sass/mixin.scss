@@ -44,6 +44,33 @@
   }
 }
 
+@mixin width-container-narrow ($padding-mobile: 25px, $padding-tablet: 40px, $padding-desktop: 60px) {
+  @media screen and (min-width: 320px) {
+    width: 320px;
+    min-width: 320px;
+    padding: 0 $padding-mobile;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 618px;
+    padding: 0 $padding-tablet;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 1320px;
+    padding: 0 $padding-desktop;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-top: 44px;
+  }
+}
+
 @mixin mobile-center {
   padding-left: 25px;
   padding-right: 25px;

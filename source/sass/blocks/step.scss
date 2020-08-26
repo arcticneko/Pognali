@@ -12,6 +12,10 @@
   border: none;
   color: var(--basic-blue-light);
   margin-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 30px;
+  }
 }
 
 .step__main-title {

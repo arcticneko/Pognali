@@ -5,7 +5,7 @@
   align-items: center;
   color: var(--basic-blue-light);
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     align-items: end;
   }
 }
@@ -14,16 +14,13 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 270px;
 
-  @media screen and (min-width: 320px) {
-    width: 270px;
-  }
-
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 688px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     width: 951px;
   }
 }
@@ -55,15 +52,6 @@
     content: "";
     background-color: var(--bright-green);
   }
-
-  @media screen and (min-width: 768px) {
-    /* display: flex;
-    flex-direction: row; */
-  }
-
-  /* @media screen and (min-width: 1440px) {
-
-  } */
 }
 
 .companions-catalog__desc-wrapper {
@@ -109,6 +97,7 @@
 
 .companions-catalog__name-link {
   text-decoration: none;
+  color: var(--basic-blue-light);
 }
 
 .companions-catalog__likes {
@@ -151,7 +140,7 @@
   border-top: 1px solid var(--basic-white-gray3);
   padding-top: 24px;
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 132px 132px 132px;
     grid-gap: 10px;
@@ -165,7 +154,7 @@
   margin-top: 12px;
   text-transform: uppercase;
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     margin-top: 0;
   }
 }
@@ -194,7 +183,7 @@
   border-radius: 50%;
   margin-top: 21.23px;
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     background-color: transparent;
   }
 }

@@ -4,19 +4,16 @@
   align-items: start;
   background-color: var(--basic-yellow);
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     justify-content: center;
   }
 }
 
 .our-address__description {
   display: flex;
+  flex-direction: column;
 
-  @media screen and (min-width: 320px) {
-    flex-direction: column;
-  }
-
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
@@ -34,14 +31,11 @@
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
+  width: 143px;
+  font-size: 16px;
+  line-height: 22px;
 
-  @media screen and (min-width: 320px) {
-    width: 143px;
-    font-size: 16px;
-    line-height: 22px;
-  }
-
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 430px;
     font-size: 28px;
     line-height: 28px;
@@ -67,7 +61,7 @@
 .our-address__button {
   margin-top: 32px;
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     margin-left: 35px;
   }
 }

@@ -16,7 +16,7 @@
   line-height: 24px;
   color: var(--basic-blue-light);
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     @include width-container (25px, 75px, 124px);
   }
 }

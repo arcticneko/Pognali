@@ -1,3 +1,4 @@
+
 .companion-card {
   display: flex;
   flex-direction: row;
@@ -5,17 +6,12 @@
   padding-top: 35px;
   justify-content: space-around;
   align-items: center;
+  background-color: var(--basic-white);
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
   }
 }
-
-/* .companion-card__avatar-wrapper {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-} */
 
 .companion-card__lvl {
   display: flex;
@@ -44,7 +40,7 @@
     content: url("../img/form-80.svg");
   }
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     order: -5;
   }
 }
@@ -78,7 +74,7 @@
   margin-top: 18px;
   border: 1px solid red;
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 618px;
   }
 }
@@ -91,8 +87,12 @@
 }
 
 .companion-card__tags--transport {
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     order: -4;
+    width: 308px;
+    position: absolute;
+    top: -83px;
+    left: 226px;
   }
 }
 
@@ -118,7 +118,8 @@
   overflow: hidden;
   padding-left: 25px;
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
     width: 618px;
     min-height: 105px;
     padding-top: 36px;

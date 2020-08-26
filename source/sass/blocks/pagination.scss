@@ -7,31 +7,27 @@
   font-size: 20px;
   line-height: 20px;
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 688px;
-    height: 100px;
+    min-height: 100px;
     background-color: var(--basic-white);
     border-radius: 20px;
     padding-left: 48px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     width: 948px;
   }
 }
 
 .pagination__pages-wrapper {
   @include reset-list;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-items: center;
+  display: none;
 
-  @media screen and (min-width: 320px) {
-    display: none;
-  }
-
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
   }
 }
 
@@ -43,6 +39,7 @@
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  color: var(--basic-blue-light);
 
   &--active {
     background-color: var(--basic-yellow);

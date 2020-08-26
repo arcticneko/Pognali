@@ -1,17 +1,21 @@
 .directions {
+  background-color: var(--basic-blue-pale);
+}
+
+.directions__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--basic-blue-pale);
+  background-color: inherit;
   color: var(--basic-blue);
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     background-image: url("../img/flags-back@1x.png"), url("../img/directions-square.png");
     background-repeat: no-repeat no-repeat;
     background-position: top 150px right 40px, top 500px left 40px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     flex-direction: row-reverse;
     justify-content: space-between;
     background-position: top 110px right 60px, top 110px left 40px;
@@ -19,7 +23,7 @@
 }
 
 .directions__desc-wrapper {
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     width: 378px;
     padding-right: 180px;
   }
@@ -30,7 +34,7 @@
   margin-left: 25px;
   padding-top: 149px;
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     padding-top: 180px;
   }
 }
@@ -42,14 +46,11 @@
   margin-left: 25px;
   font-style: normal;
   font-weight: 300;
+  width: 216px;
+  font-size: 16px;
+  line-height: 22px;
 
-  @media screen and (min-width: 320px) {
-    width: 216px;
-    font-size: 16px;
-    line-height: 22px;
-  }
-
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 378px;
     font-size: 28px;
     line-height: 33px;
@@ -59,11 +60,11 @@
 .directions__directions-list {
   @include reset-list;
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     padding-left: 38px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     padding-top: 180px;
   }
 }
@@ -72,7 +73,7 @@
   align-self: center;
   margin-top: 20px;
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     position: absolute;
     bottom: 138px;
     right: 302px;

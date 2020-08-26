@@ -3,8 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     background-image: none;
     background-color: var(--basic-blue-light-dark);
   }
@@ -19,17 +20,18 @@
   counter-reset: my-counter;
   width: 270px;
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     position: absolute;
-    top: -143px;
+    top: -259px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 688px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     position: absolute;
     top: -225px;
+    left: 350px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 688px;
@@ -55,7 +57,7 @@
   padding-left: 24px;
   border-radius: 10px 10px 0 0;
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     padding-top: 31px;
     width: 365px;
     height: 140px;
@@ -63,7 +65,7 @@
     line-height: 24px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     width: 345px;
     height: 107px;
     font-size: 24px;
@@ -76,7 +78,7 @@
     color: var(--basic-white);
     margin: 22px 21px;
 
-    @media screen and (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       position: absolute;
       left: 0;
       top: 62px;
@@ -84,7 +86,7 @@
       line-height: 30px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media (min-width: $desktop-width) {
       left: 268px;
       top: 4px;
       font-size: 24px;
@@ -95,11 +97,11 @@
   &--first {
     background-color: var(--special-orange);
 
-    @media screen and (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       border-radius: 25px 0 0 0;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media (min-width: $desktop-width) {
       border-radius: 25px 0 0 25px;
     }
   }
@@ -107,12 +109,12 @@
   &--second {
     background-color: var(--special-yellow-gold);
 
-    @media screen and (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       border-radius: 25px 25px 0 0;
       margin-left: -20px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media (min-width: $desktop-width) {
       border-radius: 25px 0 0 25px;
       margin-left: -20px;
     }
@@ -121,11 +123,11 @@
   &--third {
     background-color: var(--special-yellow-dark);
 
-    @media screen and (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       border-radius: 0 0 0 25px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media (min-width: $desktop-width) {
       border-radius: 25px 0 0 25px;
       margin-left: -20px;
     }
@@ -136,12 +138,12 @@
     background-color: var(--basic-yellow);
     min-height: 80px;
 
-    @media screen and (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       border-radius: 0 0 25px 25px;
       margin-left: -20px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media (min-width: $desktop-width) {
       border-radius: 25px;
       margin-left: -20px;
     }

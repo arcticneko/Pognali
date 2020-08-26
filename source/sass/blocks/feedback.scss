@@ -10,7 +10,7 @@
   padding-left: 25px;
   z-index: 1;
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     position: absolute;
     height: 206px;
     width: 270px;
@@ -19,7 +19,7 @@
     left: 47px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     position: absolute;
     height: 206px;
     width: 270px;
@@ -33,18 +33,15 @@
   @include reset;
   font-style: normal;
   font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
 
-  @media screen and (min-width: 320px) {
-    font-size: 16px;
-    line-height: 22px;
-  }
-
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 28px;
     line-height: 33px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     font-size: 28px;
     line-height: 33px;
   }
@@ -53,18 +50,15 @@
 .feedback__text--emphasis {
   padding-top: 18px;
   font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
 
-  @media screen and (min-width: 320px) {
-    font-size: 16px;
-    line-height: 22px;
-  }
-
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 21px;
     line-height: 24px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     padding-top: 45px;
     font-size: 21px;
     line-height: 24px;

@@ -1,24 +1,29 @@
 .footer {
+  &--secondary {
+    background-color: var(--basic-white-gray7);
+  }
+}
+
+.footer__container {
+  box-sizing: border-box;
   display: flex;
   border-radius: 25px 25px 0 0;
   background-color: var(--basic-white);
   z-index: 1;
+  flex-direction: column;
+  align-items: center;
 
-  @media screen and (min-width: 320px) {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 140px;
+    min-height: 140px;
     border-radius: 35px 35px 0 0;
   }
 
-  @media screen and (min-width: 1440px) {
-    height: 154px;
+  @media (min-width: $desktop-width) {
+    min-height: 154px;
   }
 }
 
@@ -42,13 +47,10 @@
   background-color: var(--basic-yellow);
   background-repeat: no-repeat;
   background-position: center;
+  width: 44px;
+  height: 44px;
 
-  @media screen and (min-width: 320px) {
-    width: 44px;
-    height: 44px;
-  }
-
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 62px;
     height: 62px;
   }
@@ -79,14 +81,11 @@
   padding-top: 13px;
   font-style: normal;
   font-weight: 400;
+  width: 270px;
+  font-size: 16px;
+  line-height: 16px;
 
-  @media screen and (min-width: 320px) {
-    width: 270px;
-    font-size: 16px;
-    line-height: 16px;
-  }
-
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 160px;
     border-top: none;
     font-size: 20px;

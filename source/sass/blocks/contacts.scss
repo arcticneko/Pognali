@@ -25,25 +25,21 @@
     background-color: var(--special-yellow-dark);
   }
 
-  @media screen and (min-width: 320px) {
-    display: flex;
-  }
-
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     display: flex;
   }
 }
 
 .contacts__auth {
-  @media screen and (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     display: block;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
 
     display: block;
   }
