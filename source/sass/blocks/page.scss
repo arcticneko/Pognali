@@ -5,13 +5,16 @@
 }
 
 .page__body {
-  @include width-container;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 
 .page__header {
-  @include width-container;
+  /* @include width-container; */ /* new */
   min-height: 95px;
+}
+
+.page__footer {
+  /* @include width-container; */
 }

@@ -2,9 +2,12 @@
   background-color: var(--basic-blue-pale);
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   align-items: center;
   color: var(--basic-blue-light);
+
+  @media (min-width: $desktop-width) {
+    align-items: end;
+  }
 }
 
 .companions-catalog__list {
@@ -12,16 +15,24 @@
   padding: 0;
   list-style: none;
   width: 270px;
+
+  @media (min-width: $tablet-width) {
+    width: 688px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 951px;
+  }
 }
 
 .companions-catalog__item-wrapper {
-  position: relative;
   background-color: var(--basic-white);
   margin-top: 10px;
   border-radius: 20px;
 }
 
 .companions-catalog__item {
+  position: relative;
   box-sizing: border-box;
   padding-top: 15px;
   padding-bottom: 22px;
@@ -86,6 +97,7 @@
 
 .companions-catalog__name-link {
   text-decoration: none;
+  color: var(--basic-blue-light);
 }
 
 .companions-catalog__likes {
@@ -126,7 +138,13 @@
   list-style: none;
   padding-left: 18px;
   border-top: 1px solid var(--basic-white-gray3);
-  padding-top: 24.39px;
+  padding-top: 24px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 132px 132px 132px;
+    grid-gap: 10px;
+  }
 }
 
 .companions-catalog__destinations-item {
@@ -135,6 +153,10 @@
   position: relative;
   margin-top: 12px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .companions-catalog__destinations-item:nth-child(1) {
@@ -160,6 +182,10 @@
   height: 32px;
   border-radius: 50%;
   margin-top: 21.23px;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+  }
 }
 
 .companions-catalog__transports-item {

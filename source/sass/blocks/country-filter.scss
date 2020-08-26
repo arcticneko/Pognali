@@ -8,7 +8,7 @@
   position: relative;
   padding-top: 33px;
   padding-bottom: 38px;
-  padding-left: 52px;
+  padding-left: 27px;
   text-transform: uppercase;
   font-style: normal;
   font-weight: 700;
@@ -18,7 +18,7 @@
   &::before {
     content: "";
     position: absolute;
-    left: 25px;
+    left: 0;
     bottom: 42px;
     width: 15px;
     height: 10px;

@@ -37,5 +37,8 @@
   ],
   "engines": {
     "node": "12.18.2"
+  },
+  "dependencies": {
+    "jshint": "^2.12.0"
   }
 }

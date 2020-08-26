@@ -1,26 +1,54 @@
 .companions {
   background-color: var(--basic-blue-dark);
+}
+
+.companions__container {
+  background-color: inherit;
   color: var(--basic-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  background-image: url("../img/smolov-back-mobile@1x.png"),
-    url("../img/rogovaya-back-mobile@1x.png"),
-    url("../img/back-mobile@1x.jpg");
+  border: 1px solid red;
+  background-image: url("../img/smolov-back-mobile@1x.png"), url("../img/rogovaya-back-mobile@1x.png"), url("../img/back-mobile@1x.jpg");
   background-position: top 70px right 25px, top 300px left, top 70px left;
   background-repeat: no-repeat, no-repeat, no-repeat;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/rogovaya-back-tablet@1x.png"), url("../img/smolov-back-desktop@1x.png"), url("../img/back-tablet.png");
+    background-position: top 70px right 25px, top 300px left 40px, top 95px left 60px;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 750px;
+    padding-top: 100px;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+
+    background-image: url("../img/rogovaya-back-tablet@1x.png"), url("../img/smolov-back-desktop@1x.png"), url("../img/back-tablet.png");
+    background-position: bottom 80px left 190px, bottom 474px left 547px, top 70px left 40px;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+}
+
+.companions__desc-wraper {
+  @media (min-width: $tablet-width) {
+    align-self: end;
+    padding-left: 35px;
+    padding-top: 208px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
 }
 
 .companions__title {
   align-self: start;
   margin-top: 10px;
 }
-
-/* .companions__title-link {
-
-} */
 
 .companions__text {
   align-self: start;
@@ -30,11 +58,25 @@
   line-height: 22px;
   width: 217px;
 
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 34px;
+    width: 427px;
+  }
+
   &--bold {
     font-weight: 600;
+    font-size: 21px;
+    line-height: 24px;
   }
 }
 
 .companions__show-all {
   margin-top: 20px;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    left: 150px;
+    bottom: 50px;
+  }
 }

@@ -1,18 +1,45 @@
 .directions-list {
-  @include reset-list;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 562px;
+    height: 451px;
+  }
 }
 
 .directions-list__item-wrapper {
   position: relative;
   margin-top: 9px;
+
+  @media (min-width: $tablet-width) {
+    width: 616px;
+    height: 140px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 559px;
+  }
 }
 
 .directions-list__item {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* @media (min-width: $desktop-width) {
+
+  } */
 }
 
 .directions-list__pic {
@@ -25,12 +52,27 @@
   min-height: 89px;
   border-radius: 10px;
   margin-top: -12px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+
+  /* @media (min-width: $desktop-width) {
+
+  } */
 }
 
 .directions-list__name {
   @include reset;
   margin-top: 26px;
   margin-left: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
 
   &--thailand::before {
     position: absolute;
@@ -59,6 +101,11 @@
   color: var(--basic-blue-semi-light);
   margin-left: 24px;
   margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .directions-list__people {
@@ -69,6 +116,11 @@
   bottom: 45px;
   right: 24px;
   font-weight: 600;
+
+  @media (min-width: $tablet-width) {
+    bottom: 27px;
+    right: 507px;
+  }
 
   &::before {
     position: absolute;

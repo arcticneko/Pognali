@@ -1,0 +1,9 @@
+.container {
+  @include width-container;
+  position: relative;
+}
+
+.container-narrow {
+  @include width-container-narrow (25px, 75px, 160px);
+  position: relative;
+}

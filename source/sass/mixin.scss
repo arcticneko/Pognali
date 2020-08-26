@@ -20,21 +20,54 @@
   border-radius: 0 0 25px 25px;
 }
 
-@mixin width-container {
+@mixin width-container ($padding-mobile: 25px, $padding-tablet: 40px, $padding-desktop: 60px) {
   @media screen and (min-width: 320px) {
     width: 320px;
-    min-width: 320px; /* не работает, сайт сжимается и дальше*/
-    background: green;
+    min-width: 320px;
+    padding: 0 $padding-mobile;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 
   @media screen and (min-width: 768px) {
     width: 768px;
-    background: yellow;
+    padding: 0 $padding-tablet;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 
   @media screen and (min-width: 1440px) {
     width: 1440px;
-    background: blue;
+    padding: 0 $padding-desktop;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+
+@mixin width-container-narrow ($padding-mobile: 25px, $padding-tablet: 40px, $padding-desktop: 60px) {
+  @media screen and (min-width: 320px) {
+    width: 320px;
+    min-width: 320px;
+    padding: 0 $padding-mobile;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 618px;
+    padding: 0 $padding-tablet;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 1320px;
+    padding: 0 $padding-desktop;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-top: 44px;
   }
 }
 

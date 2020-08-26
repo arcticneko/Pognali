@@ -1,39 +1,76 @@
 .page-main {
-  @include width-container;
+  position: relative;
+  box-sizing: border-box;
   color: var(--basic-blue);
 }
 
 .page-main__hero {
+  /* @include width-container; */
   min-height: 383px;
 }
 
 .page-main__feedback {
+  /* @include width-container; */
   min-height: 215px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 0;
+  }
 }
 
 .page-main__how-to-use {
+  /* @include width-container; */
   position: relative;
   min-height: 672px;
+  background-color: var(--basic-blue-light);
 
   &::after {
     @include radius;
     z-index: 1;
-    background-color: var(--basic-blue-light);
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 921px;
+    padding-top: 140px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    height: 750px;
   }
 }
 
 .page-main__about-us {
   box-sizing: border-box;
+  z-index: 1;
   min-height: 100%;
+
+  @media (min-width: $tablet-width) {
+    height: 921px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 660px;
+    padding-top: 70px;
+  }
 }
 
 .page-main__directions {
+  /* @include width-container; */
   position: relative;
-  min-height: 1022px;
+  /* min-height: 1022px; */
 
   &::after {
     @include radius;
     z-index: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 770px;
   }
 }
 
@@ -46,8 +83,17 @@
 }
 
 .page-main__companions {
+  /* @include width-container; */
   position: relative;
   min-height: 1351px;
+
+  @media (min-width: $tablet-width) {
+    min-height: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: auto;
+  }
 
   &::after {
     @include radius;
@@ -56,6 +102,7 @@
 }
 
 .page-main__tariff {
+  /* @include width-container; */
   position: relative;
   min-height: 480px;
 
@@ -66,6 +113,7 @@
 }
 
 .page-main__registration {
+  /* @include width-container; */
   position: relative;
   min-height: 536px;
 
@@ -76,6 +124,7 @@
 }
 
 .page-main__our-address {
+  /* @include width-container; */
   position: relative;
   min-height: 209px;
 
@@ -86,10 +135,19 @@
 }
 
 .page-main__map {
+  /* @include width-container; */
   min-height: 424px;
-  background-image: url("../img/map-temporal.jpg");
-  background-size: contain;
+  background-repeat: no-repeat;
   margin-bottom: -105px;
+  background-image: url("../img/map-mobile.jpg");
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/map-tablet.jpg");
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/map-desktop.jpg");
+  }
 }
 
 .page-main__footer {
@@ -100,11 +158,13 @@
 /* Catalog page */
 
 .page-main__companions-catalog {
+  /* @include width-container; */
   min-height: 1824px;
   margin-bottom: -25px;
 }
 
 .page-main__country-filter {
+  /* @include width-container; */
   position: relative;
   min-height: 17px;
 
@@ -115,9 +175,6 @@
 }
 
 .page-main__filter {
+  /* @include width-container; */
   padding-top: 50px;
 }
-
-/* Form page */
-
-/* .page-main__form {}  */

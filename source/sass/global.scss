@@ -1,4 +1,5 @@
 //Variables//
+
 :root {
   --bright-green: #bbf085;
   --basic-white: #ffffff;
@@ -10,6 +11,8 @@
   --basic-white-gray5: #e5e5e5;
   --basic-white-gray6: #a9adb9;
   --basic-white-gray7: #d4d9eb;
+  --basic-white-gray8: #e2e5f2;
+  --basic-white-gray9: #e1e3e9;
   --basic-white-pink: #e2e5f2;
   --basic-blue: #161c35;
   --basic-blue-dark: #192144;
@@ -35,6 +38,18 @@
   --special-orange-light: #ff5c23;
   --basic-black: #000000;
   --special-black-transp: rgba(0, 0, 0, 0.6);
+}
+
+// Viewports
+
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+//
+
+img {
+  max-width: 100%;
 }
 
 @font-face {

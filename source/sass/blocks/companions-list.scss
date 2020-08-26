@@ -1,13 +1,21 @@
 .companions-list {
   @include reset-list;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+  }
 }
 
 .companions-list__item-wrapper {
   margin-top: 9px;
+
+  @media (min-width: $desktop-width) {
+    width: 285px;
+    height: 483px;
+  }
 }
 
 .companions-list__item {
@@ -95,6 +103,7 @@
   color: var(--basic-blue-light);
   display: flex;
   flex-direction: column;
+  border-radius: 0 0 10px 10px;
 }
 
 .companions-list__name {

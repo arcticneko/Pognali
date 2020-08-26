@@ -1,26 +1,81 @@
 .directions {
+  background-color: var(--basic-blue-pale);
+}
+
+.directions__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--basic-blue-pale);
+  background-color: inherit;
   color: var(--basic-blue);
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/flags-back@1x.png"), url("../img/directions-square.png");
+    background-repeat: no-repeat no-repeat;
+    background-position: top 150px right 40px, top 500px left 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-position: top 110px right 60px, top 110px left 40px;
+  }
 }
 
-.directions__title-link {
-  /* align-self: flex-start; */
-  margin-left: 50px;
+.directions__desc-wrapper {
+  @media (min-width: $desktop-width) {
+    width: 378px;
+    padding-right: 180px;
+  }
+}
+
+.directions__title {
+  @include reset;
+  margin-left: 25px;
+  padding-top: 149px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 180px;
+  }
 }
 
 .directions__text {
-  width: 216px;
-  margin-left: 49px;
+  @include reset;
+  padding-top: 57px;
+  padding-bottom: 104px;
+  margin-left: 25px;
   font-style: normal;
   font-weight: 300;
+  width: 216px;
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: $tablet-width) {
+    width: 378px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+.directions__directions-list {
+  @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 180px;
+  }
 }
 
 .directions__button {
   align-self: center;
   margin-top: 20px;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 138px;
+    right: 302px;
+  }
 }

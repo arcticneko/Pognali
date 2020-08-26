@@ -1,13 +1,16 @@
+
 .companion-card {
   display: flex;
-  flex-direction: column;
-  padding-top: 35px;
-}
-
-.companion-card__avatar-wrapper {
-  display: flex;
-  justify-content: space-around;
+  flex-direction: row;
   flex-wrap: wrap;
+  padding-top: 35px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--basic-white);
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .companion-card__lvl {
@@ -35,6 +38,10 @@
 
   &--80::after {
     content: url("../img/form-80.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    order: -5;
   }
 }
 
@@ -65,6 +72,11 @@
 
 .companion-card__avatar-change-label {
   margin-top: 18px;
+  border: 1px solid red;
+
+  @media (min-width: $tablet-width) {
+    width: 618px;
+  }
 }
 
 .companion-card__tags {
@@ -72,6 +84,16 @@
   margin-top: 33px;
   border: 1px solid var(--basic-white-gray);
   border-radius: 10px;
+}
+
+.companion-card__tags--transport {
+  @media (min-width: $tablet-width) {
+    order: -4;
+    width: 308px;
+    position: absolute;
+    top: -83px;
+    left: 226px;
+  }
 }
 
 .companion-card__tags-legend {
@@ -95,6 +117,18 @@
   resize: none;
   overflow: hidden;
   padding-left: 25px;
+
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    width: 618px;
+    min-height: 105px;
+    padding-top: 36px;
+    padding-left: 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .companion-card__transports-list {
