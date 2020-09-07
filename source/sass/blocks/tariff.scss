@@ -13,26 +13,32 @@
     background-color: #edeff6;
     background-image: url("../img/tariff-square-tablet.png");
     background-repeat: no-repeat;
-    background-position: top 140px right 45px;
+    background-position: top 206px right 40px;
   }
 
   @media (min-width: $desktop-width) {
-    background-color: #edeff6;
+    background-color: inherit;
     background-image: url("../img/tariff-square-desktop.png");
     background-repeat: no-repeat;
-    background-position: top 135px right 280px;
+    background-position: top 291px right 244px;
   }
 }
 
 .tariff__title {
   position: relative;
-  margin-top: 84px;
+  margin-top: 80px;
   margin-left: 25px;
   width: 110px;
 
   @media (min-width: $tablet-width) {
     width: 482px;
     align-self: center;
+    margin-top: 125px;
+    margin-left: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 159px;
   }
 
   &::after {
@@ -40,20 +46,20 @@
     content: "";
     width: 100px;
     height: 100px;
-    top: -12px;
-    right: -148px;
+    top: -15px;
+    right: -135px;
     background-image: url("../img/rates@1x.png");
     background-size: contain;
 
     @media (min-width: $tablet-width) {
-      top: 314px;
-      right: -40px;
+      top: 340px;
+      right: -55px;
       z-index: 2;
     }
 
     @media (min-width: $desktop-width) {
-      top: 100px;
-      right: -306px;
+      top: 185px;
+      right: -343px;
       display: block;
       width: 198px;
       height: 198px;
@@ -64,13 +70,24 @@
 .tariff__private-fee-list {
   @include reset;
   counter-reset: my-counter;
-
-  @media (min-width: 320px) {
-    margin-left: 25px;
-  }
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 13px;
+  margin-top: 22px;
+  box-sizing: border-box;
+  margin-left: 24px;
+  width: 200px;
 
   @media (min-width: $tablet-width) {
     margin-left: 90px;
+    margin-top: 39px;
+    margin-bottom: 30px;
+    gap: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 161px;
+    margin-top: 97px;
   }
 }
 
@@ -83,28 +100,36 @@
   flex-direction: column;
   font-size: 16px;
   line-height: 16px;
-  margin-top: 39px;
+  padding-top: 13px;
+  border-top: 1px solid red;
+  /* border-top: 1px solid var(--basic-white-gray9); */
+
+
+  &:last-child {
+    padding-bottom: 15px;
+    border-bottom: 1px solid red;
+    /* border-bottom: 1px solid var(--basic-white-gray9); */
+  }
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    width: 600px;
+    width: 564px;
     font-size: 28px;
     line-height: 28px;
-    border-top: 1px solid var(--basic-white-gray9);
-    border-bottom: 1px solid var(--basic-white-gray9);
+    padding-top: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 900px;
+    width: 814px;
   }
 
   &::after {
     counter-increment: my-counter;
     content: counter(my-counter);
     position: absolute;
-    right: -65px;
-    top: -7px;
+    right: -45px;
+    top: 4px;
     color: var(--basic-white);
     text-align: center;
     width: 34px;
@@ -121,13 +146,13 @@
       height: 68px;
       font-size: 28px;
       line-height: 68px;
-      right: 628px;
-      top: -18px;
+      right: 586px;
+      top: 0;
     }
 
     @media (min-width: $desktop-width) {
-      right: 628px;
-      top: -18px;
+      right: 837px;
+      top: 2px;
     }
   }
 
@@ -148,18 +173,30 @@
 .tariff__private-fee {
   margin: 0;
   padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 
   @media (min-width: $tablet-width) {
-    line-height: 65px;
+    line-height: 28px;
+  }
+}
+
+.tariff__private-fee {
+  padding-top: 7px;
+  padding-bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
   }
 }
 
 .tariff__business-button-open {
   @include reset;
-  /* position: relative; */
+  position: relative;
   font-family: "Blogger Sans", "Arial", sans-serif;
   margin-left: 25px;
-  margin-top: 46px;
+  margin-top: 28px;
+  margin-bottom: 11px;
   background-color: transparent;
   border: none;
   font-style: normal;
@@ -171,12 +208,14 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
-    padding-left: 90px;
+    margin-top: 30px;
+    margin-left: 90px;
+    margin-bottom: 31px;
 
     &::before {
       position: absolute;
-      left: 40px;
-      bottom: 0;
+      left: -90px;
+      bottom: -26px;
       display: block;
       content: "";
       width: 68px;
@@ -188,6 +227,17 @@
       background-repeat: no-repeat;
       background-size: auto;
       background-position: center center;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 160px;
+    margin-bottom: 134px;
+    margin-top: 32px;
+
+    &::before {
+      left: -89px;
+      bottom: -23px;
     }
   }
 }

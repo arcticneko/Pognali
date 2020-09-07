@@ -10,15 +10,16 @@
   color: var(--basic-blue);
 
   @media (min-width: $tablet-width) {
-    background-image: url("../img/flags-back@1x.png"), url("../img/directions-square.png");
+    background-image: url("../img/flags-back@1x.png"),
+      url("../img/directions-square.png");
     background-repeat: no-repeat no-repeat;
-    background-position: top 150px right 40px, top 500px left 40px;
+    background-position: top 135px right 39px, top 462px left 40px;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: row-reverse;
     justify-content: space-between;
-    background-position: top 110px right 60px, top 110px left 40px;
+    background-position: top 135px right 58px, top 136px left 60px;
   }
 }
 
@@ -32,28 +33,48 @@
 .directions__title {
   @include reset;
   margin-left: 25px;
-  padding-top: 149px;
+  padding-top: 67px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 32px;
+    padding-top: 124px;
+  }
 
   @media (min-width: $desktop-width) {
-    padding-top: 180px;
+    padding-top: 209px;
+    padding-left: 7px;
   }
 }
 
 .directions__text {
   @include reset;
-  padding-top: 57px;
-  padding-bottom: 104px;
-  margin-left: 25px;
+  padding-top: 17px;
+  padding-bottom: 53px;
+  margin-left: 24px;
   font-style: normal;
   font-weight: 300;
-  width: 216px;
+  width: 200px;
   font-size: 16px;
   line-height: 22px;
+
+  br {
+    display: none;
+  }
 
   @media (min-width: $tablet-width) {
     width: 378px;
     font-size: 28px;
     line-height: 33px;
+    padding-top: 59px;
+    margin-left: 35px;
+
+    br {
+      display: inline;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 40px;
   }
 }
 
@@ -71,11 +92,23 @@
 
 .directions__button {
   align-self: center;
-  margin-top: 20px;
+  margin-top: 26px;
+  margin-bottom: 7px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 45px;
+    margin-bottom: 25px;
+  }
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    bottom: 138px;
     right: 302px;
+    bottom: 58px;
   }
 }

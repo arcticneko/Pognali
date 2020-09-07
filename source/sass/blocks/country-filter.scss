@@ -1,38 +1,138 @@
 .country-filter {
   background-color: var(--basic-white-gray4);
   display: flex;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-radius: 0 0 55px 55px;
+  }
+}
+
+.country-filter__container {
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    min-height: 194px;
+  }
+}
+
+.country-filter__controls {
+  @include reset-list;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-top: 50px;
+    padding-top: 65px;
+    padding-left: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 12px;
+    padding-top: 64px;
+  }
+}
+
+.country-filter__controls-wrapper:last-child {
+  margin-left: 40px;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 340px;
+  }
+}
+
+.country-filter__world-toggle {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #192144;
+    opacity: 0.3;
+    text-transform: uppercase;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    margin-left: 17px;
+  }
+
+  &--active {
+    opacity: 1;
+  }
+
+  &--show-all {
+    opacity: 1;
+  }
 }
 
 .country-filter__title-main {
   @include reset;
   position: relative;
-  padding-top: 33px;
-  padding-bottom: 38px;
-  padding-left: 27px;
+  margin-top: 39px;
+  margin-bottom: 16px;
+  margin-left: 27px;
   text-transform: uppercase;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
 
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 115px;
+    margin-left: 65px;
+  }
+
   &::before {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: 42px;
+    left: -27px;
+    bottom: 4px;
     width: 15px;
     height: 10px;
     background-image: url("../img/filter-blue.svg");
+
+    @media (min-width: $desktop-width) {
+      left: -45px;
+      bottom: 46px;
+      width: 23px;
+      height: 15px;
+      background-image: url("../img/filter-blue-big.svg");
+    }
   }
 }
 
 .country-filter__toggle {
   width: 17px;
-  margin-left: 24px;
-  margin-bottom: 7px;
+  margin-left: 28px;
+  margin-top: 23px;
   border: none;
   background-color: transparent;
   background-image: url("../img/dots-blue.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 59px;
+    background-image: url("../img/dots-blue-big.svg");
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }

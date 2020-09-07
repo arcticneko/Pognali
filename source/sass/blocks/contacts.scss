@@ -31,16 +31,21 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    width: 50px;
+    min-height: 50px;
   }
 }
 
 .contacts__auth {
   @media (min-width: $tablet-width) {
     display: block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: $desktop-width) {
-
     display: block;
   }
 }

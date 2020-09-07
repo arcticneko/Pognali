@@ -4,7 +4,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  border: 2px solid rgb(0, 255, 8);
   background-color: var(--basic-blue);
 
   &::after {
@@ -25,18 +24,6 @@
     min-height: 100px;
     justify-content: start;
   }
-
-  &--secondary {
-    min-height: 145px;
-
-    @media (min-width: $tablet-width) {
-      min-height: 350px;
-    }
-
-    @media (min-width: $desktop-width) {
-      min-height: 350px;
-    }
-  }
 }
 
 .page-header__menu-wrapper {
@@ -46,6 +33,7 @@
 
   @media (min-width: $tablet-width) {
     width: 357px;
+    align-items: center;
   }
 
   @media (min-width: $desktop-width) {
@@ -54,17 +42,31 @@
 }
 
 .page-header__logo {
-  margin-top: 28px;
+  margin-top: 27px;
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 47px;
+    margin-bottom: 18px;
+  }
 }
 
 .page-header__toggle {
-  margin-top: 28px;
+  margin-top: 32px;
   background-image: url("../img/menu-white.svg");
   background-color: transparent;
   background-repeat: no-repeat;
   height: 11px;
   width: 25px;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 
   @media (min-width: $desktop-width) {
     display: none;
@@ -85,6 +87,22 @@
   }
 }
 
+.page-header__nav-list {
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 2px;
+      top: 37px;
+      left: -65px;
+      background-color: var(--basic-white);
+    }
+  }
+}
+
 .page-header__link {
   display: block;
   margin-top: 28px;
@@ -95,7 +113,15 @@
   line-height: 20px;
   text-transform: uppercase;
   color: var(--basic-white);
-  padding-left: 34px;
+  margin-left: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 34px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 40px;
+  }
 }
 
 .page-header__contacts-wrapper {
@@ -104,14 +130,14 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    bottom: 245px;
+    bottom: 260px;
     right: 40px;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 46px;
-    right: 60px;
+    top: 74px;
+    right: 58px;
   }
 
   &--hidden {
@@ -125,18 +151,80 @@
 
 /* Cataog page */
 
+/* Header secondary */
+.page-header--secondary {
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    min-height: 295px;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      @include radius(55px, 55px);
+    }
+  }
+}
+
+.page-header--secondary .page-header__logo {
+  margin-bottom: 83px;
+  margin-top: 19px;
+  margin-left: -4px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 45px;
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 47px;
+  }
+}
+
+.page-header--secondary .page-header__contacts-wrapper {
+  top: 64px;
+  /* display: none; */
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    top: 73px;
+    right: 60px;
+  }
+}
+
+.page-header--secondary .page-header__toggle {
+  margin-top: 23px;
+  margin-right: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -41px;
+    margin-right: 0;
+  }
+}
+
+.page-header--secondary .page-header__link {
+  margin-left: 40px;
+  margin-top: -28px;
+}
+
+.page-header--secondary .page-header__nav-list::before {
+  top: -19px;
+  left: -65px;
+}
+
 .page-header__title {
   @include reset;
   margin-bottom: -5px;
   position: absolute;
-  top: 96px;
-  left: 25px;
   font-size: 36px;
   line-height: 36px;
+  z-index: 2;
+  top: 93px;
+  left: 21px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 242px;
+    top: 238px;
     left: 74px;
     font-size: 60px;
     line-height: 20px;
@@ -144,7 +232,7 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 242px;
+    top: 239px;
     left: 126px;
   }
 
@@ -152,12 +240,19 @@
     z-index: 2;
     position: absolute;
     bottom: -17px;
-    left: 2px;
+    left: 0;
     content: "";
     width: 173px;
     height: 5px;
     border-radius: 3px;
     background-color: var(--special-orange);
+
+    @media (min-width: $tablet-width) {
+      left: 3px;
+      width: 288px;
+      height: 8px;
+      bottom: -97px;
+    }
   }
 }
 
@@ -174,10 +269,16 @@
   font-size: 20px;
   line-height: 20px;
 
-  @media (min-width: $desktop-width) {
-    dispay: flex;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    bottom: 32px;
+    right: 74px;
   }
 
+  @media (min-width: $desktop-width) {
+    bottom: 32px;
+    right: 123px;
+  }
 
   &::after {
     content: "";

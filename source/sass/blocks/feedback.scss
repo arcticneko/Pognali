@@ -6,7 +6,7 @@
 
 .feedback__item {
   @include reset;
-  padding-top: 48px;
+  padding-top: 50px;
   padding-left: 25px;
   z-index: 1;
 
@@ -15,8 +15,12 @@
     height: 206px;
     width: 270px;
     background-color: transparent;
-    top: -588px;
-    left: 47px;
+    top: -555px;
+    left: 48px;
+
+    br {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -24,8 +28,8 @@
     height: 206px;
     width: 270px;
     background-color: transparent;
-    top: -588px;
-    left: 1089px;
+    top: -584px;
+    left: 1069px;
   }
 }
 
@@ -56,6 +60,7 @@
   @media (min-width: $tablet-width) {
     font-size: 21px;
     line-height: 24px;
+    padding-top: 45px;
   }
 
   @media (min-width: $desktop-width) {

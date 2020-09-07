@@ -7,10 +7,18 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 175px;
+  }
 }
 
 .companions-list__item-wrapper {
   margin-top: 9px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 14px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 285px;
@@ -27,7 +35,12 @@
 .companions-list__item-pic {
   border-radius: 10px 10px 0 0;
   width: 270px;
-  min-height: 270px;
+  height: 270px;
+
+  @media (min-width: $tablet-width) {
+    width: 285px;
+    height: 285px;
+  }
 }
 
 .companions-list__lvl {
@@ -38,8 +51,8 @@
   align-items: center;
   position: absolute;
   text-align: center;
-  top: 20px;
-  left: 20px;
+  top: 18px;
+  left: 17px;
   width: 60px;
   height: 60px;
   background-color: var(--special-black-transp);
@@ -48,6 +61,11 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    top: 21px;
+    left: 22px;
+  }
 
   &::after {
     position: absolute;
@@ -89,11 +107,15 @@
   transform: translate(-50%, 0);
   display: flex;
   flex-direction: row;
+
+  @media (min-width: $tablet-width) {
+    top: 272px;
+    left: 50%;
+  }
 }
 
 .companions-list__country {
   @include reset;
-  margin-left: 20px;
 }
 
 .companions-list__description {
@@ -104,43 +126,96 @@
   display: flex;
   flex-direction: column;
   border-radius: 0 0 10px 10px;
+
+  @media (min-width: $tablet-width) {
+    width: 285px;
+    border-radius: 0 0 18px 18px;
+  }
+}
+
+.companions-list__flag {
+  margin-left: 20px;
 }
 
 .companions-list__name {
   @include reset;
   position: relative;
-  margin-top: 29px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
   text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 22px;
+    margin-top: 29px;
+    margin-left: 68px;
+  }
 
   &::before {
-    left: 59px;
+    left: -16px;
     top: -2px;
     position: absolute;
     content: url("../img/dot-offline.png");
+
+    @media (min-width: $tablet-width) {
+      left: -22px;
+      top: -2px;
+      content: url("../img/dot-offline-big.png");
+    }
   }
 
   &--online::before {
     content: url("../img/dot-online.png");
+
+    @media (min-width: $tablet-width) {
+      content: url("../img/dot-online-big.png");
+    }
   }
 }
 
 .companions-list__tag-list {
   @include reset-list;
   width: 188px;
-  margin-left: 46px;
-  margin-top: 12px;
+  margin-left: 39px;
+  margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   color: var(--special-grey);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+    width: 260px;
+    margin-left: 9px;
+    margin-top: 24px;
+  }
+}
+
+.companions-list__tag-item {
+  padding-left: 6px;
 }
 
 .companions-list__transport {
   @include reset;
   list-style: none;
   display: flex;
-  margin-top: 14px;
+  margin-top: 19px;
   justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 27px;
+    margin-bottom: 32px;
+  }
 }
 
 .companions-list__transport-item {

@@ -1,18 +1,10 @@
-.footer {
-  &--secondary {
-    background-color: var(--basic-white-gray7);
-  }
-}
-
 .footer__container {
   box-sizing: border-box;
   display: flex;
-  border-radius: 25px 25px 0 0;
-  background-color: var(--basic-white);
+  background-color: transparent;
   z-index: 1;
   flex-direction: column;
   align-items: center;
-
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -29,16 +21,30 @@
 
 .footer__logo {
   margin-top: 37px;
-  width: 100px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 5px;
+  }
 }
 
 .footer__social {
   @include reset-list;
   display: flex;
-}
+  margin-top: 33px;
 
-.footer__social-item {
-  margin-top: 40px;
+  @media (min-width: $tablet-width) {
+    margin-top: 15px;
+    margin-right: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 4px;
+    margin-right: 52px;
+  }
 }
 
 .footer__item-link {
@@ -73,12 +79,11 @@
 
 .footer__developer-wrapper {
   color: var(--special-grey-light);
-  margin-top: 37px;
+  margin-top: 50px;
   margin-bottom: 13px;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid var(--special-grey-pale);
-  padding-top: 13px;
   font-style: normal;
   font-weight: 400;
   width: 270px;
@@ -86,15 +91,44 @@
   line-height: 16px;
 
   @media (min-width: $tablet-width) {
-    width: 160px;
+    width: 153px;
     border-top: none;
     font-size: 20px;
     line-height: 20px;
+    margin-top: 22px;
+  }
+}
+
+.footer__developer-link {
+  @media (min-width: $tablet-width) {
+    margin-top: 6px;
   }
 }
 
 .footer__developed-by {
   @include reset;
   display: flex;
-  padding-top: 2px;
+  padding-top: 7px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 5px;
+  }
+}
+
+.footer {
+  &--secondary {
+    margin-top: 0;
+    border-radius: 25px 25px 0 0;
+    background-color: var(--basic-white);
+    z-index: 1;
+
+    @media (min-width: $tablet-width) {
+      border-radius: 55px 55px 0 0;
+    }
+  }
 }

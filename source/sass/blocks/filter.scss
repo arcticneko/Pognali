@@ -3,11 +3,12 @@
   box-sizing: border-box;
   background-color: var(--basic-blue-pale); /*проверить цвет по фигме*/
   color: var(--basic-blue-light);
+  z-index: 1;
 }
 
 .filter__title-main {
   @include reset;
-  padding-top: 26px;
+  padding-top: 24px;
   padding-bottom: 23px;
   width: 145px;
   font-style: normal;
@@ -19,10 +20,16 @@
     width: 480px;
     font-size: 30px;
     line-height: 30px;
+    padding-top: 35px;
+    padding-left: 9px;
+    padding-bottom: 66px;
   }
 
   @media (min-width: $desktop-width) {
     width: 191px;
+    padding-top: 44px;
+    padding-left: 21px;
+    padding-bottom: 25px;
   }
 }
 
@@ -32,11 +39,14 @@
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 22px;
-  border-radius: 25px;
+  border-radius: 20px;
 
   @media (min-width: $tablet-width) {
     min-height: 550px;
     width: 688px;
+    margin-top: 22px;
+    /* border-top: 1px solid var(--basic-yellow-orange);
+    border-bottom: 1px solid var(--basic-yellow-orange); */
   }
 
   @media (min-width: $desktop-width) {
@@ -44,6 +54,7 @@
     min-height: 814px;
     position: absolute;
     right: 60px;
+    top: 2629px;
   }
 }
 
@@ -53,6 +64,10 @@
   border: none;
   border-top: 1px solid var(--basic-yellow-orange);
 
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+
   /*   &--lvl {
 
   } */
@@ -60,13 +75,29 @@
 
 .filter__title {
   position: absolute;
-  top: 10px;
+  top: 12px;
+  left: -1px;
   background-color: transparent;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    top: 10px;
+    left: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 22px;
+    top: 9px;
+    left: 21px;
+  }
 
   &::after {
     content: "";
@@ -75,48 +106,76 @@
     background-image: url("../img/dropdown-blue.svg");
     background-repeat: no-repeat;
     position: absolute;
-    left: 219px;
+    left: 211px;
     top: 25%;
     transform: translate(0, 50%);
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      left: 182px;
+    }
   }
 
-  @media (min-width: $tablet-width) {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 20px;
-  }
+  &--transport {
+    @media (min-width: $tablet-width) {
+      top: 19px;
+    }
 
-  @media (min-width: $desktop-width) {
-    line-height: 22px;
+    @media (min-width: $desktop-width) {
+      top: 9px;
+    }
   }
+}
+
+.filter__item-filter-list-wrapper {
+  min-height: 39px;
 }
 
 .filter__item-filter-list {
   @include reset-list;
-  padding-top: 44px;
-  padding-bottom: 20px;
+  padding-top: 32px;
+  padding-bottom: 16px;
   padding-left: 27px;
-  /* добавить модфикатор open*/
+  min-height: 39px;
+  display: none;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding-top: 0;
-    padding-bottom: 20px;
-    padding-left: 120px;
+    padding-bottom: 11px;
+    padding-left: 116px;
   }
 
   @media (min-width: $desktop-width) {
-    display: block;
-    padding-top: 44px;
-    padding-bottom: 20px;
-    padding-left: 27px;
+    display: none;
+    padding-top: 42px;
+    padding-bottom: 25px;
+    padding-left: 59px;
+  }
+
+  &--open {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+    }
   }
 }
 
 .filter__list-option {
   color: var(--basic-black);
-  padding-top: 12px;
+  padding-top: 11px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 19px;
+  }
 }
 
 .filter__list-option-label {
@@ -131,20 +190,27 @@
     box-sizing: border-box;
     content: "";
     position: absolute;
-    left: -25px;
+    left: -27px;
     top: 0;
     width: 18px;
     height: 18px;
     border-radius: 4px;
     background-color: var(--basic-white);
     cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      left: -37px;
+      top: -2px;
+      width: 24px;
+      height: 24px;
+    }
   }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
     min-width: 114px;
-    margin-left: 35px;
+    margin-left: 56px;
   }
 
   @media (min-width: $desktop-width) {
@@ -155,17 +221,21 @@
 .filter__item-filter-list-transport {
   @include reset-list;
   display: flex;
-  padding-top: 44px;
-  padding-bottom: 20px;
+  padding-top: 35px;
+  padding-bottom: 18px;
+  margin-left: -1px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 120px;
+    padding-left: 130px;
     padding-top: 0;
+    margin-top: -6px;
+    padding-bottom: 15px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 0;
-    padding-top: 44px;
+    padding-left: 20px;
+    padding-top: 38px;
+    padding-bottom: 24px;
   }
 }
 
@@ -178,13 +248,25 @@
   line-height: 32px;
   text-align: center;
   border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
 }
 
 .filter__transport-pic {
   width: 16px;
   height: 16px;
-  padding-top: 7px;
+  padding-top: 8px;
   opacity: 0.15;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+    padding-top: 12px;
+    padding-right: 2px;
+  }
 
   &--active {
     opacity: 1;
@@ -192,10 +274,55 @@
 }
 
 .filter__lvl-range-wrapper {
+  position: relative;
   display: flex;
-  height: 34px;
-  padding-top: 41px;
+  box-sizing: border-box;
+  height: 35px;
+  margin-top: 41px;
   border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    width: 148px;
+    height: 46px;
+    padding-top: 0;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-bottom: 1px;
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 50px;
+    margin-left: 22px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/lvl-separator.svg");
+    background-repeat: no-repeat;
+    height: 33px;
+    width: 16px;
+    top: 1px;
+    left: 102px;
+    background-color: var(--basic-white);
+    z-index: 1;
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/lvl-separator-tab.svg");
+      top: 1px;
+      left: 66px;
+      height: 44px;
+      width: 23px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 85px;
+    }
+  }
 }
 
 .filter__lvl-range {
@@ -205,7 +332,7 @@
 
 .filter__lvl-input {
   box-sizing: border-box;
-  width: 100%;
+  width: 110px;
   border: 1px solid var(--basic-white-gray);
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
@@ -214,6 +341,21 @@
   line-height: 13px;
   color: var(--basic-blue);
   padding-left: 48px;
+  /* padding-top: 5px; */
+
+  @media (min-width: $tablet-width) {
+    width: 74px;
+    font-size: 20px;
+    line-height: 20px;
+    font-style: normal;
+    font-weight: 500;
+    padding-left: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 96px;
+    padding-left: 39px;
+  }
 }
 
 .filter__lvl-input--min {
@@ -222,30 +364,28 @@
 
 .filter__lvl-input--max {
   position: relative;
-  margin-left: -2px;
-  padding-left: 42px;
+  /* padding-left: 43px; */
   border-radius: 0 4px 4px 0;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 16px;
-    height: 11px;
-    background-color: var(--basic-white-gray); /* не отображается */
-    z-index: 10;
-  }
 }
 
 /* Range filter*/
 
 .filter__lvl-range-controls {
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    top: -51px;
+    left: 139px;
+    width: 280px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 10px;
+    left: 24px;
+    width: 190px;
+  }
 }
 
 .filter__lvl-range-scale {
@@ -253,32 +393,78 @@
   height: 2px;
   background: var(--basic-blue-light);
   opacity: 0.2;
+
+  @media (min-width: $tablet-width) {
+    width: 275px;
+    height: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 190px;
+  }
 }
 
 .filter__lvl-range-bar {
   background: var(--basic-blue-light);
   width: 153px;
   height: 2px;
+
+  @media (min-width: $tablet-width) {
+    height: 3px;
+  }
 }
 
 .filter__lvl-range-toggle {
   position: absolute;
-  top: 16px;
+  top: 21px;
   cursor: pointer;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: var(--basic-blue-light);
 
+  @media (min-width: $tablet-width) {
+    width: 13px;
+    height: 13px;
+    top: 20px;
+  }
+
   &--min {
     left: 67px;
+
+    @media (min-width: $tablet-width) {
+      left: 65px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 57px;
+    }
   }
 
   &--max {
     left: 210px;
+
+    @media (min-width: $tablet-width) {
+      left: 266px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 176px;
+    }
   }
 }
 
-/* .filter__button {
+.filter__button {
+  margin-left: -5px;
 
-} */
+  @media (min-width: $tablet-width) {
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 23px;
+    margin-top: 27px;
+  }
+}
