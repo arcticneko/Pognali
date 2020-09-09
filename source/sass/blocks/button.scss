@@ -183,6 +183,38 @@
     }
   }
 
+  &--long-fat {
+    width: 230px;
+    font-family: inherit;
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 17px;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+      width: 284px;
+      padding-top: 27px;
+      padding-bottom: 29px;
+      font-size: 24px;
+      line-height: 24px;
+      text-transform: initial;
+      border-radius: 20px;
+      padding-right: 41px;
+
+      &::after {
+        display: block;
+        position: absolute;
+        right: 37px;
+        top: calc(45% - 9px);
+        height: 11px;
+        width: 10px;
+        content: url("../img/triangle-arrow-right-blue.svg");
+      }
+    }
+  }
+
   &--bright {
     width: 230px;
     font-family: inherit;
@@ -207,20 +239,27 @@
     width: 270px;
     font-family: inherit;
     background-color: var(--special-blue-light);
-  }
+    color: var(--basic-blue);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    padding-top: 10px;
+    letter-spacing: 0.02em;
 
-  /* &--long-full {
     @media (min-width: $tablet-width) {
-      width: 616px;
-      font-size: 24px;
-      line-height: 24px;
-      padding-top: 28px;
-      padding-bottom: 28px;
+      width: 618px;
+      border-radius: 10px;
+      padding-top: 20px;
+      padding-bottom: 22px;
+      letter-spacing: 0.1em;
     }
 
     @media (min-width: $desktop-width) {
-      width: 280px;
-      padding-left: 36px;
+      width: 190px;
+      border-radius: 0 0 10px 10px;
+      letter-spacing: 0;
+      padding-right: 5px;
     }
-  } */
+  }
 }

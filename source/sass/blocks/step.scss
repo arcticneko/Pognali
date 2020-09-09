@@ -3,10 +3,10 @@
 .step {
   @include reset;
   @include mobile-center;
+  position: relative;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  position: relative;
   background: var(--basic-white);
   border-radius: 10px;
   border: none;
@@ -15,52 +15,233 @@
 
   @media (min-width: $tablet-width) {
     border-radius: 30px;
+    padding-left: 44px;
+    padding-right: 43px;
+    margin-top: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 30px;
+    margin-bottom: 45px;
+    border-radius: 60px;
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}
+
+.step__reqiurements-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--basic-white-gray9);
+    border-bottom: 1px solid var(--basic-white-gray9);
+    /* height: 217px; */
+    margin-top: 0;
+    padding-top: 30px;
+    padding-bottom: 32px;
   }
 }
 
 .step__main-title {
+  /*<legend>*/
   position: absolute;
-  top: 45px;
-  left: 25px;
+  top: 52px;
+  left: 22px;
   display: block;
   margin-top: -30px;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    top: 75px;
+    left: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 128px;
+    left: 157px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .step__text {
-  padding-top: 60px;
+  padding-top: 63px;
+  margin-bottom: -3px;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 133px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 148px;
+    padding-bottom: 59px;
+
+    br {
+      display: initial;
+    }
+  }
 }
 
-.step__button { /* не бьется длина */
-  margin-top: 10px;
-  width: 220px;
+.step__button {
+  margin-top: 22px;
+  margin-left: -3px;
+  margin-right: -7px;
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 47px;
+    margin-left: 0;
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 57px;
+    margin-bottom: 105px;
+  }
+
+  &--last {
+    @media (min-width: $tablet-width) {
+      margin-top: 69px;
+      margin-bottom: 34px;
+    }
+  }
 }
 
 /* Первый шаг */
+
+.step__companions-wrapper {
+  /*people*/
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    border-top: 1px solid var(--basic-white-gray9);
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: baseline;
+    width: 400px;
+    padding-top: 0;
+  }
+
+  &--people {
+    @media (min-width: $tablet-width) {
+      order: -2;
+      /* margin-top: 42px; */
+    }
+
+    @media (min-width: $desktop-width) {
+      order: -2;
+      position: relative;
+      /* padding-top: 0; */
+      margin-bottom: 14px;
+    }
+  }
+
+  &--days {
+    /* @media (min-width: $tablet-width) {
+      border-top: 1px solid var(--basic-white-gray9);
+    } */
+
+    @media (min-width: $desktop-width) {
+      order: 0;
+      position: relative;
+      /* padding-top: 0; */
+    }
+  }
+}
 
 .step__title {
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
-  padding-top: 21px;
+  padding-top: 22px;
   padding-bottom: 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.11em;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    padding-top: 24px;
+    margin-left: -2px;
+    letter-spacing: 0.12em;
+  }
+
+  @media (min-width: $desktop-width) {
+    letter-spacing: 0.03em;
+    padding-top: 24px;
+    padding-left: 2px;
+  }
 }
 
 .step__title-desc {
   color: var(--basic-blue-light);
   opacity: 0.3;
+  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.12em;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    opacity: 1;
+    letter-spacing: 0;
+    top: 25px;
+    left: 437px;
+    color: var(--basic-blue-light);
+  }
 }
 
 .step__control-combined {
   position: relative;
   width: 220px;
   height: 43px;
+
+  @media (min-width: $tablet-width) {
+    width: 532px;
+    height: 70px;
+    margin-top: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 180px;
+    margin-top: 0;
+  }
 }
 
 .step__btn {
@@ -73,6 +254,11 @@
   background-size: 35%;
   opacity: 0.25;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    width: 61px;
+    height: 100%;
+  }
 
   &--less {
     background-image: url("../img/qty-minus-mobile.svg");
@@ -93,20 +279,68 @@
   border: 1px solid var(--basic-white-gray);
   border-radius: 4px;
   padding-left: 106px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 259px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 82px;
+    padding-bottom: 3px;
+  }
 }
 
 .step__is-children-wrapper {
   display: flex;
-  padding-top: 28px;
+  padding-top: 22px;
   align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 15px;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    order: -1;
+    text-transform: uppercase;
+    padding-top: 24px;
+    padding-bottom: 27px;
+    letter-spacing: 0.12em;
+  }
+
+  @media (min-width: $desktop-width) {
+    white-space: nowrap;
+
+    @include reset;
+    order: -1;
+    position: absolute;
+    top: 46px;
+    left: 757px;
+  }
 
   &::before {
     content: "";
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     border-radius: 4px;
     border: 1px solid var(--basic-white-gray);
     margin-right: 13px;
+
+    @media (min-width: $tablet-width) {
+      width: 34px;
+      height: 34px;
+      margin-right: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 24px;
+    }
   }
 }
 
@@ -116,15 +350,24 @@
   align-items: center;
   position: relative;
   width: 220px;
-  height: 49px;
+  min-height: 45px;
+
+  @media (min-width: $tablet-width) {
+    width: 532px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .step__calendar-title {
   @include reset;
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   padding-top: 11px;
+  padding-bottom: 12px;
   text-align: center;
   border-top: 1px solid var(--basic-white-gray2);
   border-bottom: 1px solid var(--basic-white-gray2);
@@ -132,6 +375,14 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    text-align: center;
+  }
 }
 
 .step__calendar-btn {
@@ -145,56 +396,161 @@
   height: 21px;
   border: none;
 
+  @media (min-width: $tablet-width) {
+    width: 51px;
+    height: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 20px;
+  }
+
   &--less {
     left: 0;
     background-image: url("../img/month-arrow-left.svg");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/month-arrow-left-fat.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/month-arrow-left-des.svg");
+    }
   }
 
   &--more {
     right: 0;
     background-image: url("../img/month-arrow-right.svg");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/month-arrow-right-fat.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/month-arrow-right-des.svg");
+    }
   }
 }
 
 .step__calendar-wrapper {
-  margin-top: 24px;
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -1px;
+  }
 }
 
 .step__calendar-table {
   @include reset;
+  box-sizing: border-box;
   border-collapse: collapse;
+  margin-top: 15px;
+
+  @media (min-width: $tablet-width) {
+    /*     width: 530px;
+    height: 409px; */
+    margin-top: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 23px;
+  }
 }
 
-.step__calendar-item-head {
+.step__calendar-item-head-wrapper {
   width: 30px;
   height: 30px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  padding-left: 5px;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 16px;
+    text-align: start;
+  }
 
   &--weekend {
     color: var(--special-orange-light);
+  }
+
+  &--full {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: inline;
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+}
+
+.step__calendar-item-head {
+  &--short {
+    @media (min-width: $tablet-width) {
+      display: none;
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+
+  &--full {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: inline;
+      font-size: 18px;
+      line-height: 18px;
+    }
   }
 }
 
 .step__calendar-item-wrapper {
   @include reset;
+  box-sizing: border-box;
   border: 1px solid var(--basic-white-gray2);
   border-collapse: collapse;
-  width: 30px;
-  height: 30px;
+  /* width: 30px;
+  height: 30px; */
   line-height: 30px;
 }
 
 .step__calendar-item-date {
   @include reset;
+  box-sizing: border-box;
+  font-family: inherit;
   display: block;
   height: 30px;
+  width: 30px;
   text-align: center;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  /* line-height: 30px; */
+  vertical-align: middle;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+    width: 75px;
+    height: 68px;
+    /* line-height: 69px; */
+    padding-top: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    padding-left: 15px;
+    width: 142px;
+    height: 70px;
+    /* line-height: auto; */
+    padding-top: 12px;
+  }
 
   /* Неактивная дата */
   &--inactive {
@@ -204,8 +560,11 @@
 
   /* Текущая дата */
   &--current-date {
-    box-sizing: border-box;
     border: 2px solid var(--special-orange-light);
+
+    @media (min-width: $tablet-width) {
+      border: 4px solid var(--special-orange-light);
+    }
   }
 
   /* Выбранная дата, toggle по состоянию input'a. через JS */
@@ -213,12 +572,22 @@
     font-weight: 500;
     background-color: var(--basic-blue-light);
     color: var(--basic-white);
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      /* line-height: 20px; */
+    }
   }
 
   /* Будущая дата */
   &--future {
     font-weight: 500;
     background: var(--basic-white-gray3);
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      /* line-height: 20px; */
+    }
   }
 }
 
@@ -230,6 +599,14 @@
   display: flex;
   height: 42px;
   width: 100%;
+  margin-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    height: auto;
+
+    @include reset;
+    margin-bottom: 15px;
+  }
 
   &::after {
     position: absolute;
@@ -240,13 +617,18 @@
     width: 8px;
     height: 11px;
     background-image: url("../img/country-arrow-down.svg");
+    z-index: 2;
     /* стрелка вниз*/
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 
   &::before {
     position: absolute;
-    top: 18px;
-    right: 66px;
+    top: 19px;
+    left: 142px;
     display: block;
     content: "";
     width: 11px;
@@ -255,6 +637,14 @@
     background-repeat: no-repeat;
     opacity: 0.3;
     /* галка вниз */
+
+    @media (min-width: $tablet-width) {
+      top: 31px;
+      left: 324px;
+      width: 20px;
+      height: 11px;
+      background-image: url("../img/dropdown-form-big.png");
+    }
   }
 
   &--add::after {
@@ -262,7 +652,31 @@
   }
 
   &--add::before {
-    right: 15px;
+    top: 15px;
+    left: 192px;
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/plus-little.svg");
+    opacity: 1;
+
+    @media (min-width: $tablet-width) {
+      left: 322px;
+      top: 24px;
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/plus-medium.svg");
+      opacity: 0.3;
+    }
+  }
+
+  &--new {
+    &::before {
+      left: 194px;
+
+      @media (min-width: $tablet-width) {
+        left: 324px;
+      }
+    }
   }
 }
 
@@ -281,8 +695,10 @@
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-blue-light);
-  letter-spacing: 0.09em;
+  letter-spacing: 0.1em;
   appearance: none;
+  z-index: 3;
+  background-color: transparent;
   /* ПСЕВДОЭЛЕМЕНТ У SELECT НЕ РАБОТАЕТ */
 }
 
@@ -296,7 +712,27 @@
   vertical-align: middle;
   border: 1px solid var(--basic-white-gray);
   border-radius: 4px;
-  margin-left: -2px;
+  margin-left: -1px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 420px;
+    top: 15px;
+    width: auto;
+    border: none;
+    margin-top: -5px;
+  }
+}
+
+.step__country-to-visit-flag {
+  padding-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    width: 70px;
+    height: 47px;
+    padding-top: 11px;
+    padding-right: 31px;
+  }
 }
 
 .step__country-to-visit-del-btn {
@@ -310,12 +746,25 @@
   background-color: var(--basic-white-gray3);
   border: none;
 
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    top: 32px;
+    right: 12px;
+  }
+
   &::after {
     display: block;
     content: "";
     width: 9px;
     height: 9px;
     background-image: url("../img/close-gray.svg");
+
+    @media (min-width: $tablet-width) {
+      width: 19px;
+      height: 18px;
+      background-image: url("../img/cross-small.svg");
+      opacity: 0.1;
+    }
   }
 }
 
@@ -328,12 +777,13 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--basic-blue);
   font-family: inherit;
   padding-left: 10px;
   appearance: none;
+  background-color: transparent;
 
   &::after {
     display: block;
@@ -353,17 +803,46 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--basic-blue);
   font-family: inherit;
-  padding-left: 10px;
+  padding-left: 12px;
   appearance: none;
 
   &::after {
     display: none;
   }
 }
+
+/* модификация шаг 2 для tablet*/
+
+.step__country-to-visit-general-wrapper {
+  @media (min-width: $tablet-width) {
+    margin-top: 38px;
+    padding-top: 42px;
+    /* width: 395px; */
+    border-top: 1px solid #e1e3e9;
+  }
+}
+
+.step__country-to-visit-select,
+.step__country-to-visit-new-select,
+.step__country-to-add-select {
+  @media (min-width: $tablet-width) {
+    width: 369px;
+    height: 70px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    padding-left: 25px;
+    font-family: inherit;
+  }
+}
+
+/* модификация шаг 2 для tablet*/
 
 .step__country-to-visit-new-del-btn {
   position: absolute;
@@ -376,18 +855,32 @@
   background-color: var(--basic-white-gray3);
   border: none;
 
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    top: 32px;
+    right: 12px;
+  }
+
   &::after {
     display: block;
     content: "";
     width: 9px;
     height: 9px;
     background-image: url("../img/close-gray.svg");
+
+    @media (min-width: $tablet-width) {
+      width: 19px;
+      height: 18px;
+      background-image: url("../img/cross-small.svg");
+      opacity: 0.1;
+    }
   }
 }
 
 .step__previous-step-btn {
   @include reset;
-  margin-top: 13px;
+  margin-top: -10px;
+  margin-bottom: 11px;
   text-align: center;
   text-decoration: none;
   color: var(--basic-blue-light);
@@ -397,6 +890,28 @@
   line-height: 30px;
   letter-spacing: 0.01em;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 430px;
+    bottom: 72px;
+    font-size: 24px;
+    line-height: 22px;
+    text-transform: initial;
+    letter-spacing: 0;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url("../img/arrow-left-step-mid.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      left: -35px;
+      top: 2px;
+    }
+  }
 }
 
 /* Третий шаг */
@@ -412,30 +927,75 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding-left: 0;
+    margin-top: 37px;
+    margin-left: -4px;
+    padding-top: 10px;
+    margin-bottom: 23px;
+  }
+
+  &--bordered {
+    @media (min-width: $tablet-width) {
+      border-top: 1px solid var(--basic-white-gray9);
+    }
+  }
 }
 
 .step__country-title {
-  font-style: 400;
+  @include reset;
+  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
   font-family: inherit;
   color: var(--basic-blue-light);
+  margin-top: 24px;
+  margin-left: 3px;
+  margin-bottom: 18px;
+  letter-spacing: 0.01em;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+}
+
+.step__country-flag {
+  margin-top: 7px;
 }
 
 .step__country-plan {
   box-sizing: border-box;
-  padding-left: 14px;
+  padding-left: 13px;
+  padding-top: 10px;
   width: 220px;
   height: 220px;
   resize: none;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 5px;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   color: var(--special-grey-light);
-  opacity: 0.3;
+  /* opacity: 0.3; */
+  border: 1px solid var(--basic-white-gray);
+
+  @media (min-width: $tablet-width) {
+    width: 500px;
+    height: 140px;
+    font-size: 20px;
+    line-height: 20px;
+    /* color: #444444;
+    opacity: 0.3; */
+    padding-left: 18px;
+    padding-top: 15px;
+    margin-bottom: -21px;
+  }
 }

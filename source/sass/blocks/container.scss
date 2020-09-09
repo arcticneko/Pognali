@@ -4,6 +4,6 @@
 }
 
 .container-narrow {
-  @include width-container-narrow (25px, 75px, 160px);
+  @include width-container-narrow (0, 0, 0);
   position: relative;
 }

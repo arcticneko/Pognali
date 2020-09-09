@@ -44,14 +44,14 @@
   }
 }
 
-@mixin width-container-narrow ($padding-mobile: 25px, $padding-tablet: 40px, $padding-desktop: 60px) {
+@mixin width-container-narrow ($padding-mobile: 0, $padding-tablet: 0, $padding-desktop: 0) {
   @media screen and (min-width: 320px) {
-    width: 320px;
-    min-width: 320px;
+    width: 270px;
+    min-width: 270px;
     padding: 0 $padding-mobile;
     margin: 0 auto;
     box-sizing: border-box;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   @media screen and (min-width: 768px) {
@@ -59,7 +59,7 @@
     padding: 0 $padding-tablet;
     margin: 0 auto;
     box-sizing: border-box;
-    margin-top: 10px;
+    margin-top: 37px;
   }
 
   @media screen and (min-width: 1440px) {

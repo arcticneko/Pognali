@@ -6,13 +6,12 @@
 
 .form__companion-card {
   /* @include width-container (25px, 75px, 124px); */
-  min-height: 475px;
+  /* min-height: 475px; */
 }
 
 .form__my-plan {
-  position: relative;
-  min-height: 483px;
-  background-color: var(--basic-white-gray6);
+
+  /* min-height: 483px; */
 
   &::before {
     @include radius;
@@ -26,26 +25,16 @@
   /* @include width-container  (25px, 75px, 124px); */
   background-color: var(--basic-white-gray7);
   /* width: 320px; */
-  padding-bottom: 29px;
+  padding-bottom: 9px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 27px;
+  }
+
 
   &::before {
     @include radius;
     border-radius: 25px 25px 0 0;
     top: -29px;
   }
-}
-
-.steps-wrapper__step-one {
-  min-height: 796px;
-}
-
-.steps-wrapper__step-two {
-  min-height: 516px;
-  margin-top: 10px;
-}
-
-.steps-wrapper__step-three {
-  margin-top: 10px;
-  min-height: 839px;
-  margin-bottom: 35px;
 }
