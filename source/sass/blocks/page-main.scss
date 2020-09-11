@@ -72,6 +72,8 @@
 
 .page-main__directions {
   position: relative;
+  margin-top: -30px;
+  padding-top: 30px;
 
   &::after {
     @include radius;
@@ -86,7 +88,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: -47px;
+    margin-top: -77px;
   }
 }
 
@@ -154,15 +156,17 @@
 }
 
 .page-main__map {
-  min-height: 290px;
+  min-height: 320px;
   background-repeat: no-repeat;
   background-image: url("../img/map-mobile.jpg");
 
   @media (min-width: $tablet-width) {
+    min-height: 550px;
     background-image: url("../img/map-tablet.jpg");
   }
 
   @media (min-width: $desktop-width) {
+    min-height: 482px;
     background-image: url("../img/map-desktop.jpg");
   }
 }

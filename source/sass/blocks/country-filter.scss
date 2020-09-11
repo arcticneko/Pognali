@@ -3,7 +3,7 @@
   display: flex;
 
   @media (min-width: $tablet-width) {
-    border-radius: 29px;
+    border-radius: 0 0 29px 29px;
   }
 
   @media (min-width: $desktop-width) {

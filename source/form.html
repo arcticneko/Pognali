@@ -30,9 +30,9 @@
   <script src="pixel-glass/script.js"></script>
 </head>
 
-<body class='page__body'>
+<body class='page__body page__body--third'>
 
-  <header class='page__header page-header page-header--secondary'>
+  <header class='page__header page-header page-header--secondary page-header--secondary-fix'>
     <div class='page-header__container container'>
       <div class='page-header__menu-wrapper'>
         <a class='page-header__logo logo' href='index.html' aria-label='перейти на главную страницу'>
@@ -230,7 +230,7 @@
         <div class='steps-wrapper__container-narrow container-narrow'>
           <ul class='steps-wrapper__bullet-list'>
             <!-- список буллетов, чтобы смог прочесть скрин ридер -->
-            <li class='steps-wrapper__bullet-list-item steps-wrapper__bullet-list-item--actice'>
+            <li class='steps-wrapper__bullet-list-item steps-wrapper__bullet-list-item--active'>
               <span class='visually-hidden'>Шаг 1. Даты пребывания</span>
             </li>
             <li class='steps-wrapper__bullet-list-item'>
@@ -242,12 +242,21 @@
           </ul>
 
           <fieldset class='steps-wrapper__step-one step' id='step-one'>
+            <ul class='step__navi-list'>
+              <li class='step__navi-list-item step__navi-list-item--active'>
+                <span class='step__navi-list-item-txt'>Даты</span>
+              </li>
+              <li class='step__navi-list-item'>
+                <span class='step__navi-list-item-txt'>Маршрут</span>
+              </li>
+              <li class='step__navi-list-item'>
+                <span class='step__navi-list-item-txt'>Развлечения</span>
+              </li>
+            </ul>
             <legend class='step__main-title step-title'>Шаг 1. <br>Даты пребывания</legend>
             <p class='step__text step-text'>Укажите предпочтительное количество попутчиков, которых<br> вы&nbsp;хотели
               бы
               позвать в поездку и ее предполагаемую длительность.</p>
-
-
             <div class='step__reqiurements-wrapper'>
               <div class='step__companions-wrapper step__companions-wrapper--people'>
                 <label class='step__title' for='companions-quantity'>Ищу попутчиков:
@@ -577,6 +586,17 @@
           </fieldset>
 
           <fieldset class='steps-wrapper__step-two step' id='step-two'>
+            <ul class='step__navi-list'>
+              <li class='step__navi-list-item'>
+                <span class='step__navi-list-item-txt'>Даты</span>
+              </li>
+              <li class='step__navi-list-item step__navi-list-item--active'>
+                <span class='step__navi-list-item-txt'>Маршрут</span>
+              </li>
+              <li class='step__navi-list-item'>
+                <span class='step__navi-list-item-txt'>Развлечения</span>
+              </li>
+            </ul>
             <legend class='step__main-title step-title'>Шаг 2. <br>Маршрут</legend>
             <p class='step__text step-text'>Укажите страны, которые вы хотели посетить. <br>Это может быть одна или
               сразу
@@ -588,14 +608,16 @@
                 <label class='step__country-to-visit-label visually-hidden' for='country-to-visit-one'>
                   <span class='visually-hidden'>Первая страна для визита</span>
                 </label>
-                <select class='step__country-to-visit-select' name='country-to-visit-one' id='country-to-visit-one'>
-                  <option class='step__country-to-visit-option'>Босиния и Герцеговина</option>
-                </select>
+                <div class='step__country-to-visit-select-wrapper'>
+                  <select class='step__country-to-visit-select' name='country-to-visit-one' id='country-to-visit-one'>
+                    <option class='step__country-to-visit-option'>Босния и Герцеговина</option>
+                  </select>
+                </div>
                 <div class='step__country-to-visit-flag-wrapper'>
                   <picture class='flag-wrapper'>
                     <source srcset="img/flag-bosnia-big.png" media="(min-width: 768px)">
                     <img class='step__country-to-visit-flag' src="img/flag-bosnia.png" width='35' height='24'
-                    alt='флаг страны'>
+                      alt='флаг страны'>
                   </picture>
                 </div>
                 <button class='step__country-to-visit-del-btn del-button' aria-label='Удалить страну'></button>
@@ -604,13 +626,15 @@
                 <label class='step__country-to-visit-label visually-hidden' for='country-to-visit-two'>
                   <span class='visually-hidden'>Вторая страна для визита</span>
                 </label>
-                <select class='step__country-to-visit-select' name='country-to-visit-two' id='country-to-visit-two'>
-                  <option class='step__country-to-visit-option'>Чехия</option>
-                </select>
+                <div class='step__country-to-visit-select-wrapper'>
+                  <select class='step__country-to-visit-select' name='country-to-visit-two' id='country-to-visit-two'>
+                    <option class='step__country-to-visit-option'>Чехия</option>
+                  </select>
+                </div>
                 <div class='step__country-to-visit-flag-wrapper'>
                   <picture class='flag-wrapper'>
                     <source srcset="img/flag-czech-big.png" media="(min-width: 768px)">
-                      <img class='step__country-to-visit-flag' src="img/flag-czech.png" width='35' height='24'
+                    <img class='step__country-to-visit-flag' src="img/flag-czech.png" width='35' height='24'
                       alt='флаг страны'>
                   </picture>
                 </div>
@@ -618,17 +642,22 @@
               </div>
               <div class='step__country-to-visit-wrapper step__country-to-visit-wrapper--new'>
                 <label class='step__country-to-visit-new-label visually-hidden' for='country-to-visit-new'></label>
-                <select class='step__country-to-visit-new-select' name='country-to-visit-new' id='country-to-visit-new'>
-                  <option class='step__country-to-visit-new-option'>Выберите страну</option>
-                </select>
+                <div class='step__country-to-visit-select-wrapper step__country-to-visit-select-wrapper--transp'>
+                  <select class='step__country-to-visit-new-select' name='country-to-visit-new'
+                    id='country-to-visit-new'>
+                    <option class='step__country-to-visit-new-option'>Выберите страну</option>
+                  </select>
+                </div>
                 <button class='step__country-to-visit-new-del-btn del-button' aria-label='Удалить страну'></button>
               </div>
               <div class='step__country-to-visit-wrapper step__country-to-visit-wrapper--add'>
                 <label class='step__country-to-add-label visually-hidden' for='add-country'></label>
-                <select class='step__country-to-add-select' name='add-country' id='add-country'>
-                  <option class='step__country-to-add-option'>Добавить страну</option>
-                  <!-- тз: функциональность добавлять не нужно -->
-                </select>
+                <div class='step__country-to-visit-select-wrapper step__country-to-visit-select-wrapper--transp-pro'>
+                  <select class='step__country-to-add-select' name='add-country' id='add-country'>
+                    <option class='step__country-to-add-option'>Добавить страну</option>
+                    <!-- тз: функциональность добавлять не нужно -->
+                  </select>
+                </div>
               </div>
             </div>
 
@@ -637,8 +666,21 @@
           </fieldset>
 
           <fieldset class='steps-wrapper__step-three step' id='step-three'>
+            <ul class='step__navi-list'>
+              <li class='step__navi-list-item'>
+                <span class='step__navi-list-item-txt'>Даты</span>
+              </li>
+              <li class='step__navi-list-item'>
+                <span class='step__navi-list-item-txt'>Маршрут</span>
+              </li>
+              <li class='step__navi-list-item step__navi-list-item--active'>
+                <span class='step__navi-list-item-txt'>Развлечения</span>
+              </li>
+            </ul>
             <legend class='step__main-title step-title'>Шаг 3. <br>Развлечения</legend>
-            <p class='step__text step-text'>Наконец, расскажите о своих планах времяпровождения. Можно писать в
+
+
+            <p class='step__text step-text'>Наконец, расскажите о своих планах времяпровождения. <br>Можно писать в
               свободной форме и ставить тэги.</p>
             <div class='step__country-wrapper step__country-wrapper--bordered'>
               <p class='step__country-title'>Босния и Герцеговина</p>
@@ -649,7 +691,7 @@
               <picture class='step__flag-wrapper'>
                 <source srcset="img/flag-bosnia-big.png" media="(min-width: 768px)">
                 <img class='step__country-to-visit-flag' src="img/flag-bosnia.png" width='35' height='24'
-                alt='флаг страны'>
+                  alt='флаг страны'>
               </picture>
             </div>
             <textarea class='step__country-plan' placeholder="План действий"></textarea>
@@ -657,7 +699,7 @@
               <p class='step__country-title'>Чехия</p>
               <picture class='step__flag-wrapper'>
                 <source srcset="img/flag-czech-big.png" media="(min-width: 768px)">
-                  <img class='step__country-to-visit-flag' alt='флаг страны' src="img/flag-czech.png">
+                <img class='step__country-to-visit-flag' alt='флаг страны' src="img/flag-czech.png">
               </picture>
             </div>
             <textarea class='step__country-plan'

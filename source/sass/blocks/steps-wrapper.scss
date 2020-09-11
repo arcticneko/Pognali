@@ -1,8 +1,8 @@
 .steps-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  position: relative;
   border: none;
 }
 
@@ -31,12 +31,22 @@
 }
 
 .steps-wrapper__bullet-list {
+  position: absolute;
+
   @include reset-list;
   display: flex;
-  margin-top: 5px;
-  /* margin-bottom: 39px; */
-  margin-left: 210px;
   text-align: end;
+  right: 18px;
+  top: -44px;
+
+  @media (min-width: $tablet-width) {
+    right: -2px;
+    top: -79px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .steps-wrapper__bullet-list-item {
@@ -45,13 +55,23 @@
   height: 5px;
   border-radius: 50%;
   margin-left: 16px;
-  color: var(--basic-blue-light);
+  background-color: var(--basic-blue-light);
   opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    width: 6px;
+    height: 6px;
+    margin-left: 29px;
+  }
+
+
 
   &--active {
     color: var(--basic-blue-light);
     opacity: 1;
   }
+
+
 }
 
 .steps-wrapper__step-one {
@@ -59,16 +79,14 @@
 }
 
 .steps-wrapper__step-two {
-  /* min-height: 516px; */
   margin-top: 10px;
 }
 
-/* .steps-wrapper__step-two {
+.steps-wrapper__step-two {
   @media (min-width: $desktop-width) {
-    margin-top: 49px;
-    padding-bottom: 20px;
+    margin-bottom: 45px;
   }
-} */
+}
 
 
 .steps-wrapper .steps-wrapper__step-three {
@@ -78,6 +96,12 @@
   @media (min-width: $tablet-width) {
     margin-top: 49px;
     padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    padding-bottom: 71px;
+    margin-bottom: 45px;
   }
 
   &::after {
@@ -95,6 +119,10 @@
       top: 281px;
       left: 564px;
       background-repeat: no-repeat;
+    }
+    @media (min-width: $desktop-width) {
+      top: 360px;
+      left: 927px;
     }
   }
 }

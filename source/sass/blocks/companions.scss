@@ -9,7 +9,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
   background-image: url("../img/smolov-back-mobile@1x.png"),
     url("../img/rogovaya-back-mobile@1x.png"),
     url("../img/back-mobile@1x.jpg");
@@ -94,7 +93,7 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 57px;
-    margin-left: -29px;
+    margin-left: -27px;
   }
 
   &--bold {
@@ -130,15 +129,20 @@
 
 .companions__show-all {
   margin-top: 19px;
+  margin-bottom: 3px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 78px;
-    margin-bottom: 33px;
+    margin-top: 80px;
+    margin-bottom: 31px;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    left: 130px;
-    bottom: 44px;
+    left: 131px;
+    bottom: 47px;
+    /*fix макета:*/
+    width: 280px;
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
 }

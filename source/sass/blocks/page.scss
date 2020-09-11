@@ -8,13 +8,33 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  background-color: rebeccapurple;
+
+  &--index {
+    background-color: var(--basic-blue-light-dark);
+  }
+
+  &--secondary {
+    background-color: var(--basic-blue-pale);
+  }
+
+  &--third {
+    background-color: var(--basic-white-gray7);
+  }
 }
 
-.page__header {
-  /* @include width-container; */ /* new */
-  /* min-height: 95px; */
+.page__header-submenu {
+  display: none; /*мы тут*/
+  position: absolute;
+  background-color: var(--basic-white);
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  &--nojs {
+    display: block;
+  }
 }
 
 .page__footer {
-  /* margin-top: -133px; */
+  margin-top: -30px;
 }

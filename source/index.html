@@ -11,7 +11,7 @@
     HTML {
       background-repeat: no-repeat;
       background-position: 50% 0;
-      background-image: url("img/pixel-glass/index-mob.png");
+      background-image: url("img/pixel-glass/index-mob-modal.png");
     }
 
     @media (min-width: 768px) {
@@ -30,7 +30,7 @@
   <script src="pixel-glass/script.js"></script>
 </head>
 
-<body class='page__body'>
+<body class='page__body page__body--index'>
 
   <header class='page__header page-header'>
     <div class='page-header__container container'>
@@ -42,7 +42,7 @@
             <img class='logo__image' src="img/logo-mobile-white@1x.png" alt='логотип'>
           </picture>
         </a>
-        <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'></button>
+        <button class='page-header__toggle page-header__toggle--opene!!!' aria-label='Открыть/Закрыть главное меню'></button>
         <nav class='page-header__nav-wrapper'>
           <ul class='page-header__nav-list'>
             <li class='page-header__item'>
@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <div class='header-submenu header-submenu--hidden'>
+    <div class='page__header-submenu header-submenu header-submenu--nojs'>
       <p class='header-submenu__logo logo logo--dark'>Погнали?</p>
       <nav class='header-submenu__nav-wrapper'>
         <ul class='header-submenu__nav-list'>
@@ -203,7 +203,7 @@
               <div class='directions-list__description-wrapper'>
                 <h3 class='directions-list__name directions-list__name--czech'>Чехия</h3>
                 <p class='directions-list__slogan'>Закоулки старой <br>Европы</p>
-                <p class='directions-list__people'>5326</p>
+                <p class='directions-list__people directions-list__people'>5326</p>
               </div>
             </article>
           </li>
@@ -377,7 +377,7 @@
           <input type='email' name='email' id='email' placeholder='E-mail' class='registration__email-field'>
           <label for='email' class='visually-hidden'>Почта клиента</label>
           <button type='submit' value='Отправить' class='registration__button-form'
-            aria-label='подтвердить регистрацию'></button>
+            aria-label='подтвердить регистрацию'><span class='registration__button-form-text'>Регистрация</span></button>
         </form>
 
         <p class='registration__text registration__text--bottom'>Остались вопросы? Мы&nbsp;с&nbsp;радостью&nbsp;на них
@@ -417,7 +417,7 @@
         <picture class='logo__wrapper'>
           <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
           <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px)">
-            <img class='logo__image' src="img/logo-mobile-blue@1x.png" alt='логотип'>
+          <img class='logo__image' src="img/logo-mobile-blue@1x.png" alt='логотип'>
         </picture>
       </a>
       <ul class='footer__social'>

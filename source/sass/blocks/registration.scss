@@ -56,9 +56,15 @@
   display: flex;
   flex-direction: row;
 
-
   @media (min-width: $tablet-width) {
     margin-bottom: 27px;
+    margin-top: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 28px;
+    margin-top: 28px;
+    margin-left: 0;
   }
 }
 
@@ -99,6 +105,8 @@
   border-radius: 10px;
   border: none;
   background-color: var(--basic-yellow);
+  font-family: inherit;
+  text-align: left;
 
   @media (min-width: $tablet-width) {
     width: 80px;
@@ -107,15 +115,37 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 330px;
+    width: 325px;
   }
 
   &::after {
     position: absolute;
     content: url("../img/email-arrow-blue.svg");
-    left: 50%;
+    left: 26px;
     top: 50%;
-    transform: translate(-30%, -50%);
+    transform: translate(0, -50%);
+
+    @media (min-width: $tablet-width) {
+      left: 35px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 278px;
+    }
+  }
+}
+
+.registration__button-form-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--basic-blue-light);
+    padding-left: 36px;
   }
 }
 
@@ -123,14 +153,17 @@
   text-align: center;
   margin-top: 29px;
   width: 216px;
+  letter-spacing: 0.01em;
+  margin-left: 4px;
 
   @media (min-width: $tablet-width) {
     width: 614px;
+    margin-left: 8px;
   }
 
   @media (min-width: $desktop-width) {
     width: 614px;
-    margin-left: -22px;
+    margin-left: -10px;
     margin-top: 40px;
   }
 }

@@ -88,6 +88,10 @@
     content: "";
     background-color: var(--bright-green);
   }
+
+  &--fix::before {
+    left: 502px;
+  }
 }
 
 .companions-catalog__desc-wrapper {
@@ -309,9 +313,6 @@
   margin-bottom: -4px;
 
   @media (min-width: $tablet-width) {
-    /* display: grid;
-    grid-template-columns: 132px 132px 132px;
-    grid-gap: 10px; */
     display: flex;
     padding-top: 33px;
     padding-left: 37px;
@@ -352,8 +353,8 @@
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    line-height: 20px;
-    padding-right: 30px;
+    line-height: 24px;
+    padding-right: 28px;
   }
 }
 
@@ -458,37 +459,66 @@
 
   @media (min-width: $tablet-width) {
     left: 621px;
-    bottom: 129px;
+    top: 180px;
   }
 
   @media (min-width: $desktop-width) {
     left: 863px;
-    bottom: 50px;
+    top: 195px;
   }
 
   &::after {
     position: absolute;
     height: 43px;
-    top: 0;
-    right: 0;
     transform: translate(50%, 0);
     width: 26px;
+    top: -13px;
   }
 
-  &--25::after {
-    content: url("../img/catalog-25.svg");
+  &--25 {
+    &::after {
+      content: url("../img/catalog-25.svg");
+      right: 1px;
+
+      @media (min-width: $tablet-width) {
+        content: url("../img/catalog-25-big.svg");
+      }
+    }
   }
 
-  &--50::after {
-    content: url("../img/catalog-50.svg");
+  &--50 {
+    &::after {
+      content: url("../img/catalog-50.svg");
+      right: 1px;
+
+      @media (min-width: $tablet-width) {
+        content: url("../img/catalog-50-big.svg");
+      }
+    }
   }
 
-  &--80::after {
-    content: url("../img/catalog-80.svg");
+  &--80 {
+    &::after {
+      content: url("../img/catalog-80.svg");
+      right: 23px;
+
+      @media (min-width: $tablet-width) {
+        content: url("../img/catalog-80-big.svg");
+        right: 31px;
+      }
+    }
   }
 
-  &--99::after {
+  &--99 {
+    &::after {
     content: url("../img/catalog-99.svg");
+    right: 27px;
+
+      @media (min-width: $tablet-width) {
+        content: url("../img/catalog-99-big.svg");
+        right: 31px;
+      }
+    }
   }
 }
 
@@ -508,9 +538,9 @@
     top: -1px;
     content: "";
     width: 31px;
-    min-height: 1px;
+    height: 1px;
     opacity: 0.1;
-    border: 1px solid var(--basic-black);
+    background-color: var(--basic-black);
   }
 
   @media (min-width: $tablet-width) {
@@ -540,6 +570,20 @@
   @media (min-width: $desktop-width) {
     bottom: 47px;
     left: 318px;
+  }
+
+  &--fix {
+    position: relative;
+    bottom: -6px;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      bottom: 109px;
+    }
+
+    @media (min-width: $desktop-width) {
+      bottom: 47px;
+    }
   }
 }
 

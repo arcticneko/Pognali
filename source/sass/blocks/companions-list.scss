@@ -2,6 +2,7 @@
   @include reset-list;
   display: grid;
 
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -10,6 +11,9 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 175px;
+    grid-gap: 60px;
+    position: relative;
+    left: 65px;
   }
 }
 
@@ -38,6 +42,7 @@
   height: 270px;
 
   @media (min-width: $tablet-width) {
+    border-radius: 20px 20px 0 0;
     width: 285px;
     height: 285px;
   }
@@ -107,6 +112,7 @@
   transform: translate(-50%, 0);
   display: flex;
   flex-direction: row;
+  gap: 20px;
 
   @media (min-width: $tablet-width) {
     top: 272px;
@@ -133,10 +139,6 @@
   }
 }
 
-.companions-list__flag {
-  margin-left: 20px;
-}
-
 .companions-list__name {
   @include reset;
   position: relative;
@@ -157,24 +159,29 @@
   }
 
   &::before {
-    left: -16px;
-    top: -2px;
+    content: "";
+    left: -15px;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
     position: absolute;
-    content: url("../img/dot-offline.png");
+    background-color: var(--special-red-pink);
 
     @media (min-width: $tablet-width) {
       left: -22px;
-      top: -2px;
-      content: url("../img/dot-offline-big.png");
+      top: 9px;
+      width: 8px;
+      height: 8px;
     }
   }
 
   &--online::before {
-    content: url("../img/dot-online.png");
+    background-color: var(--special-green);
 
-    @media (min-width: $tablet-width) {
+    /* @media (min-width: $tablet-width) {
       content: url("../img/dot-online-big.png");
-    }
+    } */
   }
 }
 
@@ -207,22 +214,25 @@
 
 .companions-list__transport {
   @include reset;
+  align-self: center;
+  /* width: 120px; */
+  min-height: 25px;
   list-style: none;
   display: flex;
-  margin-top: 19px;
-  justify-content: center;
+  margin-top: 17px;
+  margin-left: 7px;
+  justify-content: space-between;
 
   @media (min-width: $tablet-width) {
     margin-top: 27px;
-    margin-bottom: 32px;
+    margin-bottom: 26px;
   }
 }
 
 .companions-list__transport-item {
-  width: 18px;
-  height: 18px;
+  width: 25px;
+  height: 25px;
   background-repeat: no-repeat;
-  margin-left: 13px;
   opacity: 0.15;
 
   &--active {
@@ -230,19 +240,22 @@
   }
 
   &--plane {
-    background-image: url("../img/plane.svg");
+    background-image: url("../img/plane2.svg");
     margin-left: 0;
   }
 
   &--bus {
-    background-image: url("../img/bus.svg");
+    background-image: url("../img/bus2.svg");
+    margin-left: 10px;
   }
 
   &--bike {
-    background-image: url("../img/bike.svg");
+    background-image: url("../img/bike2.svg");
+    margin-left: 4px;
   }
 
   &--walk {
-    background-image: url("../img/run.svg");
+    background-image: url("../img/run2.svg");
+    margin-left: 10px;
   }
 }

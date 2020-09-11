@@ -1,5 +1,5 @@
 .tariff {
-  background-color: var(--basic-white-dark);
+  background-color: var(--basic-blue-pale);
 }
 
 .tariff__container {
@@ -101,14 +101,12 @@
   font-size: 16px;
   line-height: 16px;
   padding-top: 13px;
-  border-top: 1px solid red;
-  /* border-top: 1px solid var(--basic-white-gray9); */
+  border-top: 1px solid var(--basic-white-gray9);
 
 
   &:last-child {
     padding-bottom: 15px;
-    border-bottom: 1px solid red;
-    /* border-bottom: 1px solid var(--basic-white-gray9); */
+    border-bottom: 1px solid var(--basic-white-gray9);
   }
 
   @media (min-width: $tablet-width) {
