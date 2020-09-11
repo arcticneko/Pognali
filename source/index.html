@@ -42,7 +42,7 @@
             <img class='logo__image' src="img/logo-mobile-white@1x.png" alt='логотип'>
           </picture>
         </a>
-        <button class='page-header__toggle page-header__toggle--opene!!!' aria-label='Открыть/Закрыть главное меню'></button>
+        <button class='page-header__toggle page-header__toggle--opened' aria-label='Открыть/Закрыть главное меню'></button>
         <nav class='page-header__nav-wrapper'>
           <ul class='page-header__nav-list'>
             <li class='page-header__item'>
@@ -67,7 +67,14 @@
       </div>
     </div>
 
-    <div class='page__header-submenu header-submenu header-submenu--nojs'>
+    <div class='page-header__header-submenu header-submenu header-submenu--nojs'>
+      <a class='header-submenu__logo logo' aria-label='перейти на главную страницу'>
+        <picture class='logo__wrapper'>
+          <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
+          <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px)">
+          <img class='logo__image' src="img/logo-mobile-blue@1x.png" alt='логотип'>
+        </picture>
+      </a>
       <p class='header-submenu__logo logo logo--dark'>Погнали?</p>
       <nav class='header-submenu__nav-wrapper'>
         <ul class='header-submenu__nav-list'>
@@ -82,7 +89,7 @@
           </li>
         </ul>
       </nav>
-      <a class='header-submenu__button' href='#'>Авторизация</a>
+      <a class='header-submenu__button header-submenu__button button button--long-fat button--long-fat-subb' href='#'>Авторизация</a>
 
       <ul class='header-submenu__contacts contact-list'>
         <li class='contact-list__contact-item-wrapper'>

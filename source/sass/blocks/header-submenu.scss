@@ -7,3 +7,83 @@
     margin: -1px;
   }
 }
+
+.header-submenu {
+  display: none;
+  z-index: 4;
+  width: 320px;
+  min-height: 568px;
+  position: absolute;
+  background-color: var(--basic-white);
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  border: 1px solid var(--basic-black);
+
+  &--nojs {
+    display: block;
+  }
+}
+
+.header-submenu__logo {
+  display: block;
+  padding-top: 26px;
+  padding-left: 23px;
+}
+
+.header-submenu__nav-wrapper {
+  margin-top: -12px;
+}
+
+.header-submenu__nav-list {
+  @include reset-list;
+  font-style: normal;
+  font-weight: 600; /* не по макету. подобрано*/
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header-submenu__link {
+  text-decoration: none;
+  color: #192144;
+}
+
+.header-submenu__button {
+  width: 270px;
+  margin-top: 54px;
+  margin-left: 25px;
+  margin-bottom: 64px;
+}
+
+.header-submenu__contacts {
+  margin-left: 86px;
+  margin-bottom: 10px;
+}
+
+.header-submenu__contacts .contact-list__item {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  color: #192144;
+
+  &--phone {
+    &::before {
+      top: -14px;
+    }
+  }
+
+  &--email {
+    &::before {
+      top: -14px;
+    }
+  }
+}
+
+.header-submenu__contacts .contact-list__contact-item-wrapper:nth-child(2) {
+  margin-top: 26px;
+}

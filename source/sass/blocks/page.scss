@@ -23,18 +23,6 @@
   }
 }
 
-.page__header-submenu {
-  display: none; /*мы тут*/
-  position: absolute;
-  background-color: var(--basic-white);
-  left: 50%;
-  transform: translate(-50%, 0);
-
-  &--nojs {
-    display: block;
-  }
-}
-
 .page__footer {
   margin-top: -30px;
 }
