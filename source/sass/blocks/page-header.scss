@@ -103,7 +103,7 @@
       width: 60px;
       height: 2px;
       top: 37px;
-      left: -65px;
+      left: -70px;
       background-color: var(--basic-white);
     }
   }
@@ -126,7 +126,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-left: 40px;
+    font-weight: 600; /*не по макету. подобрано*/
   }
 }
 

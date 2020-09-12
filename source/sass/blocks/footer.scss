@@ -44,7 +44,6 @@
 
 .footer__social {
   @include reset-list;
-  display: flex;
   margin-top: 33px;
 
   @media (min-width: $tablet-width) {
@@ -55,36 +54,6 @@
   @media (min-width: $desktop-width) {
     margin-top: 4px;
     margin-right: 52px;
-  }
-}
-
-.footer__item-link {
-  display: flex;
-  border-radius: 50%;
-  background-color: var(--basic-yellow);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 44px;
-  height: 44px;
-
-  @media (min-width: $tablet-width) {
-    width: 62px;
-    height: 62px;
-  }
-
-  &--fb {
-    background-image: url("../img/facebook-blue.svg");
-    background-size: 25%;
-  }
-
-  &--vk {
-    background-image: url("../img/vk-blue.svg");
-    background-size: 50%;
-  }
-
-  &--instagram {
-    background-image: url("../img/instagram-blue.svg");
-    background-size: 40%;
   }
 }
 

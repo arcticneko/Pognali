@@ -4,15 +4,15 @@
   padding: 0;
   list-style: none;
 
-  @media (min-width: $tablet-width) {
+  /* @media (min-width: $tablet-width) {
     align-self: end;
     margin-left: 126px;
-  }
+  } */
 
   @media (min-width: $desktop-width) {
-    margin-left: 117px;
+/*     margin-left: 117px;
     margin-top: 44px;
-    margin-bottom: 78px;
+    margin-bottom: 78px; */
     justify-content: center;
     align-self: center;
     flex-direction: row;

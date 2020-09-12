@@ -16,13 +16,13 @@
 
     @media (min-width: 768px) {
       HTML {
-        background-image: url("img/pixel-glass/index-tab.png");
+        background-image: url("img/pixel-glass/index-tab-modal.png");
       }
     }
 
     @media (min-width: 1440px) {
       HTML {
-        background-image: url("img/pixel-glass/index-desktop.png");
+        background-image: url("img/pixel-glass/index-desktop-modal.png");
       }
     }
   </style>
@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <div class='page-header__header-submenu header-submenu header-submenu--nojs'>
+    <div class='page-header__header-submenu header-submenu'>
       <a class='header-submenu__logo logo' aria-label='перейти на главную страницу'>
         <picture class='logo__wrapper'>
           <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
@@ -93,27 +93,28 @@
 
       <ul class='header-submenu__contacts contact-list'>
         <li class='contact-list__contact-item-wrapper'>
-          <a class='contact-list__item contact-list__item--phone' href='tel:88005558628' aria-label='наш телефон'>8 800
-            555-86-28</a>
+          <a class='contact-list__item contact-list__item--phone' href='tel:88005558628' aria-label='наш телефон'>
+            <span class='contact-list__descr'>8 800 555-86-28</span>
+          </a>
         </li>
         <li class='contact-list__contact-item-wrapper'>
-          <a class='contact-list__item contact-list__item--email' href='mailto:mail@htmlacademy.ru'
-            aria-label='наша почта'>mail@htmlacademy.ru</a>
+          <a class='contact-list__item contact-list__item--email' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>
+            <span class='contact-list__descr'>mail@htmlacademy.ru</span>
+          </a>
         </li>
       </ul>
-
-      <ul class='header-submenu__social'>
-        <li class='header-submenu__social-item-wrapper'>
-          <a href='#' class='header-submenu__social-item header-submenu__social-item--fb'
-            aria-label='Перейти на нашу страницу в Facebook'></a>
+      <ul class='header-submenu__social social'>
+        <li class='social__social-item'>
+          <a class='social__item-link social__item-link--sub social__item-link--fb' href='#'
+            aria-label='перейти на нашу страницу в Facebook'></a>
         </li>
-        <li class='header-submenu__social-item-wrapper'>
-          <a href='#' class='header-submenu__social-item header-submenu__social-item--vk'
-            aria-label='Перейти на нашу страницу в Vkontakte'></a>
+        <li class='social__social-item'>
+          <a class='social__item-link social__item-link--sub social__item-link--vk' href='#'
+            aria-label='перейти на нашу страницу в Vkontakte'></a>
         </li>
-        <li class='header-submenu__social-item-wrapper'>
-          <a href='#' class='header-submenu__social-item header-submenu__social-item--instagram'
-            aria-label='Перейти на нашу страницу в Instagram'></a>
+        <li class='social__social-item'>
+          <a class='social__item-link social__item-link--sub social__item-link--disabled social__item-link--instagram' href='#'
+            aria-label='перейти на нашу страницу в Instagram'></a>
         </li>
       </ul>
     </div>
@@ -427,17 +428,17 @@
           <img class='logo__image' src="img/logo-mobile-blue@1x.png" alt='логотип'>
         </picture>
       </a>
-      <ul class='footer__social'>
-        <li class='footer__social-item'>
-          <a class='footer__item-link footer__item-link--fb' href='#'
+      <ul class='footer__social social'>
+        <li class='social__social-item'>
+          <a class='social__item-link social__item-link--fb' href='#'
             aria-label='перейти на нашу страницу в Facebook'></a>
         </li>
-        <li class='footer__social-item'>
-          <a class='footer__item-link footer__item-link--vk' href='#'
+        <li class='social__social-item'>
+          <a class='social__item-link social__item-link--vk' href='#'
             aria-label='перейти на нашу страницу в Vkontakte'></a>
         </li>
-        <li class='footer__social-item'>
-          <a class='footer__item-link footer__item-link--instagram' href='#'
+        <li class='social__social-item'>
+          <a class='social__item-link social__item-link--instagram' href='#'
             aria-label='перейти на нашу страницу в Instagram'></a>
         </li>
       </ul>
