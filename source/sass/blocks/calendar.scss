@@ -1,0 +1,198 @@
+.calendar__letters-wrapper {
+  @include reset-list;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+  width: 230px;
+  height: 203px;
+  border-collapse: collapse;
+  margin-left: 27px;
+  margin-top: 140px;
+  position: initial;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 14px;
+    margin-top: 122px;
+    width: 400px;
+    height: 340px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -68px;
+    margin-top: 135px;
+    width: 1280px;
+  }
+}
+
+.calendar__letter-wrapper {
+  @include reset;
+  width: 43px;
+  height: 40px;
+  border: 1px solid var(--basic-white-gray);
+  /* outline-offset: 1px; */
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--basic-white);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 39px;
+  margin-left: -1px;
+  margin-top: -1px;
+
+  &--active {
+    background-color: var(--basic-blue-light);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 60px;
+    width: 78px;
+    height: 84px;
+    background-color: transparent;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 251px;
+    height: auto;
+  }
+}
+
+.calendar__letter {
+  text-decoration: none;
+  color: var(--basic-blue-light);
+  padding: 12px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+/* .calendar__letter-wrapper--active .calendar__letter */
+.calendar__letter-wrapper--active .calendar__letter {
+  color: var(--basic-white);
+
+  @media (min-width: $tablet-width) {
+    color: var(--basic-blue-light);
+  }
+}
+
+.calendar__country-list {
+  display: none;
+
+  @include reset-list;
+  text-align: left;
+  flex-direction: column;
+  position: absolute;
+  top: 217px;
+  left: 52px;
+
+  @media (min-width: $tablet-width) {
+    top: -3px;
+    left: 518px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: initial;
+    display: flex;
+    margin-left: 105px;
+    margin-top: 31px;
+  }
+
+  &--active {
+    display: flex;
+  }
+
+  /* @media (min-width: $desktop-width) {
+    display: flex;
+  } */
+}
+
+.calendar__country-link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--basic-white-gray);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.calendar__country-list-item {
+  line-height: 22px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 4px;
+  }
+}
+
+.calendar__button {
+  position: relative;
+  text-align: left;
+  padding-left: 110px;
+  margin-top: 286px;
+  border: none;
+  background: var(--basic-white-gray11);
+  border-radius: 20px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--basic-blue-dark);
+  width: 270px;
+
+  @media (min-width: $tablet-width) {
+    width: 615px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 119px;
+    margin-left: 35px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 285px;
+    letter-spacing: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    width: 1320px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    bottom: -2166px;
+    left: 23px;
+    padding-left: 635px;
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    left: 85px;
+    top: 12px;
+    content: "";
+    background-image: url("../img/cross-menu-cat.svg");
+
+    @media (min-width: $tablet-width) {
+      width: 25px;
+      height: 25px;
+      left: 242px;
+      top: 39px;
+      background-image: url("../img/toggle-cross-blue.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 594px;
+    }
+  }
+}

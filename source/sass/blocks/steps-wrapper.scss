@@ -64,14 +64,10 @@
     margin-left: 29px;
   }
 
-
-
   &--active {
     color: var(--basic-blue-light);
     opacity: 1;
   }
-
-
 }
 
 .steps-wrapper__step-one {
@@ -80,14 +76,11 @@
 
 .steps-wrapper__step-two {
   margin-top: 10px;
-}
 
-.steps-wrapper__step-two {
   @media (min-width: $desktop-width) {
     margin-bottom: 45px;
   }
 }
-
 
 .steps-wrapper .steps-wrapper__step-three {
   position: relative;
@@ -120,6 +113,7 @@
       left: 564px;
       background-repeat: no-repeat;
     }
+
     @media (min-width: $desktop-width) {
       top: 360px;
       left: 927px;

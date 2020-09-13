@@ -61,10 +61,6 @@
   z-index: 1;
   min-height: 100%;
 
-  @media (min-width: $tablet-width) {
-    /* height: 921px; */
-  }
-
   @media (min-width: $desktop-width) {
     padding-top: 70px;
   }

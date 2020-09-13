@@ -12,12 +12,12 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    height: 206px;
     width: 270px;
     background-color: transparent;
     top: -555px;
     left: 48px;
     z-index: 3;
+    padding-top: 43px;
 
     br {
       display: none;
@@ -26,10 +26,8 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    height: 206px;
-    width: 270px;
     background-color: transparent;
-    top: -584px;
+    top: -575px;
     left: 1069px;
   }
 }

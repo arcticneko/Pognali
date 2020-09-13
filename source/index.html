@@ -32,59 +32,62 @@
 
 <body class='page__body page__body--index'>
 
-  <header class='page__header page-header page-header--opened'>
-    <div class='page-header__height-container'></div>
-    <div class='page-header__container container'>
-      <div class='page-header__menu-wrapper'>
-        <a class='page-header__logo logo' aria-label='перейти на главную страницу'>
-          <picture class='logo__wrapper'>
-            <source srcset="img/logo-desktop-white@1x.png" media="(min-width: 1440px)">
-            <source srcset="img/logo-tablet-white@1x.png" media="(min-width: 768px)">
-            <img class='logo__image' src="img/logo-mobile-white@1x.png" alt='логотип'>
-          </picture>
-        </a>
-        <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'></button>
-        <nav class='page-header__nav-wrapper'>
-          <ul class='page-header__nav-list'>
-            <li class='page-header__item'>
-              <a class='page-header__link' href='#'>О сервисе</a>
-            </li>
-            <li class='page-header__item'>
-              <a class='page-header__link' href='form.html'>направления</a>
-            </li>
-            <li class='page-header__item'>
-              <a class='page-header__link' href='catalog.html'>попутчики</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class='page-header__contacts-wrapper contacts'>
-        <div class='contacts__inner-wrapper'>
-          <a class='contacts__contact-item contacts__contact-item--phone' href='tel:88005558628' aria-label='наш телефон'>
-            <span class='contacts__descr'>8 800 555-86-28</span>
+  <header class='page__header'>
+    <div class='page-header page-header--opened'>
+      <div class='page-header__container container'>
+        <div class='page-header__menu-wrapper'>
+          <a class='page-header__logo logo' aria-label='перейти на главную страницу'>
+            <picture class='logo__wrapper'>
+              <source srcset="img/logo-desktop-white@1x.png" media="(min-width: 1440px)">
+              <source srcset="img/logo-tablet-white@1x.png" media="(min-width: 768px)">
+              <img class='logo__image' src="img/logo-mobile-white@1x.png" alt='логотип'>
+            </picture>
           </a>
-          <a class='contacts__contact-item contacts__contact-item--email' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>
-            <span class='contacts__descr'>mail@htmlacademy.ru</span>
-          </a>
+          <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'></button>
+          <nav class='page-header__nav-wrapper'>
+            <ul class='page-header__nav-list'>
+              <li class='page-header__item'>
+                <a class='page-header__link' href='#'>О сервисе</a>
+              </li>
+              <li class='page-header__item'>
+                <a class='page-header__link' href='form.html'>направления</a>
+              </li>
+              <li class='page-header__item'>
+                <a class='page-header__link' href='catalog.html'>попутчики</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <a class='contacts__auth button' href='#'>Авторизация</a>
-      </div>
 
-      <ul class='page-header__social social'>
-        <li class='social__social-item'>
-          <a class='social__item-link social__item-link--sub social__item-link--fb' href='#'
-            aria-label='перейти на нашу страницу в Facebook'></a>
-        </li>
-        <li class='social__social-item'>
-          <a class='social__item-link social__item-link--sub social__item-link--vk' href='#'
-            aria-label='перейти на нашу страницу в Vkontakte'></a>
-        </li>
-        <li class='social__social-item'>
-          <a class='social__item-link social__item-link--sub social__item-link--disabled social__item-link--instagram' href='#'
-            aria-label='перейти на нашу страницу в Instagram'></a>
-        </li>
-      </ul>
+        <div class='page-header__contacts-wrapper contacts'>
+          <div class='contacts__inner-wrapper'>
+            <a class='contacts__contact-item contacts__contact-item--phone' href='tel:88005558628'
+              aria-label='наш телефон'>
+              <span class='contacts__descr'>8 800 555-86-28</span>
+            </a>
+            <a class='contacts__contact-item contacts__contact-item--email' href='mailto:mail@htmlacademy.ru'
+              aria-label='наша почта'>
+              <span class='contacts__descr'>mail@htmlacademy.ru</span>
+            </a>
+          </div>
+          <a class='contacts__auth button' href='#'>Авторизация</a>
+        </div>
+
+        <ul class='page-header__social social'>
+          <li class='social__social-item'>
+            <a class='social__item-link social__item-link--sub social__item-link--fb' href='#'
+              aria-label='перейти на нашу страницу в Facebook'></a>
+          </li>
+          <li class='social__social-item'>
+            <a class='social__item-link social__item-link--sub social__item-link--vk' href='#'
+              aria-label='перейти на нашу страницу в Vkontakte'></a>
+          </li>
+          <li class='social__social-item'>
+            <a class='social__item-link social__item-link--sub social__item-link--disabled social__item-link--instagram'
+              href='#' aria-label='перейти на нашу страницу в Instagram'></a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -338,7 +341,7 @@
               <p class='tariff__business-fee'>Индивидуально</p>
             </li>
           </ol>
-          <a class='tariff__business-button-close'>Закрыть окно</a>
+          <button class='tariff__business-button-close'>Закрыть окно</button>
         </div>
       </div>
     </section>
@@ -353,7 +356,8 @@
           <input type='email' name='email' id='email' placeholder='E-mail' class='registration__email-field'>
           <label for='email' class='visually-hidden'>Почта клиента</label>
           <button type='submit' value='Отправить' class='registration__button-form'
-            aria-label='подтвердить регистрацию'><span class='registration__button-form-text'>Регистрация</span></button>
+            aria-label='подтвердить регистрацию'><span
+              class='registration__button-form-text'>Регистрация</span></button>
         </form>
 
         <p class='registration__text registration__text--bottom'>Остались вопросы? Мы&nbsp;с&nbsp;радостью&nbsp;на них

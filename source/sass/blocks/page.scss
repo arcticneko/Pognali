@@ -4,6 +4,18 @@
   color: var(--basic-white);
 }
 
+.page__header {
+  min-height: 91px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 350px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 103px;
+  }
+}
+
 .page__body {
   margin: 0 auto;
   display: flex;

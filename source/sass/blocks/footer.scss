@@ -6,12 +6,22 @@
   @media (min-width: $tablet-width) {
     border-radius: 40px 40px 0 0;
   }
+
+  &--secondary {
+    margin-top: 0;
+    border-radius: 25px 25px 0 0;
+    background-color: var(--basic-white);
+    z-index: 1;
+
+    @media (min-width: $tablet-width) {
+      border-radius: 55px 55px 0 0;
+    }
+  }
 }
 
 .footer__container {
   box-sizing: border-box;
   display: flex;
-  background-color: transparent;
   z-index: 1;
   flex-direction: column;
   align-items: center;
@@ -22,7 +32,6 @@
     justify-content: space-between;
     align-items: center;
     min-height: 140px;
-
   }
 
   @media (min-width: $desktop-width) {
@@ -112,18 +121,5 @@
   @media (min-width: $desktop-width) {
     padding-top: 0;
     margin-top: -6px;
-  }
-}
-
-.footer {
-  &--secondary {
-    margin-top: 0;
-    border-radius: 25px 25px 0 0;
-    background-color: var(--basic-white);
-    z-index: 1;
-
-    @media (min-width: $tablet-width) {
-      border-radius: 55px 55px 0 0;
-    }
   }
 }

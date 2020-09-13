@@ -511,8 +511,8 @@
 
   &--99 {
     &::after {
-    content: url("../img/catalog-99.svg");
-    right: 27px;
+      content: url("../img/catalog-99.svg");
+      right: 27px;
 
       @media (min-width: $tablet-width) {
         content: url("../img/catalog-99-big.svg");
