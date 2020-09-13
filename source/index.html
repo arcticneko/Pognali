@@ -32,7 +32,8 @@
 
 <body class='page__body page__body--index'>
 
-  <header class='page__header page-header'>
+  <header class='page__header page-header page-header--opened'>
+    <div class='page-header__height-container'></div>
     <div class='page-header__container container'>
       <div class='page-header__menu-wrapper'>
         <a class='page-header__logo logo' aria-label='перейти на главную страницу'>
@@ -42,7 +43,7 @@
             <img class='logo__image' src="img/logo-mobile-white@1x.png" alt='логотип'>
           </picture>
         </a>
-        <button class='page-header__toggle page-header__toggle--opened' aria-label='Открыть/Закрыть главное меню'></button>
+        <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'></button>
         <nav class='page-header__nav-wrapper'>
           <ul class='page-header__nav-list'>
             <li class='page-header__item'>
@@ -59,51 +60,18 @@
       </div>
 
       <div class='page-header__contacts-wrapper contacts'>
-        <a class='contacts__contact-item contacts__contact-item--phone' href='tel:88005558628'
-          aria-label='наш телефон'></a>
-        <a class='contacts__contact-item contacts__contact-item--email' href='mailto:mail@htmlacademy.ru'
-          aria-label='наша почта'></a>
+        <div class='contacts__inner-wrapper'>
+          <a class='contacts__contact-item contacts__contact-item--phone' href='tel:88005558628' aria-label='наш телефон'>
+            <span class='contacts__descr'>8 800 555-86-28</span>
+          </a>
+          <a class='contacts__contact-item contacts__contact-item--email' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>
+            <span class='contacts__descr'>mail@htmlacademy.ru</span>
+          </a>
+        </div>
         <a class='contacts__auth button' href='#'>Авторизация</a>
       </div>
-    </div>
 
-    <div class='page-header__header-submenu header-submenu'>
-      <a class='header-submenu__logo logo' aria-label='перейти на главную страницу'>
-        <picture class='logo__wrapper'>
-          <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
-          <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px)">
-          <img class='logo__image' src="img/logo-mobile-blue@1x.png" alt='логотип'>
-        </picture>
-      </a>
-      <p class='header-submenu__logo logo logo--dark'>Погнали?</p>
-      <nav class='header-submenu__nav-wrapper'>
-        <ul class='header-submenu__nav-list'>
-          <li class='header-submenu__item'>
-            <a class='header-submenu__link' href='#'>О сервисе</a>
-          </li>
-          <li class='header-submenu__item'>
-            <a class='header-submenu__link' href='form.html'>направления</a>
-          </li>
-          <li class='header-submenu__item'>
-            <a class='header-submenu__link' href='catalog.html'>попутчики</a>
-          </li>
-        </ul>
-      </nav>
-      <a class='header-submenu__button header-submenu__button button button--long-fat button--long-fat-subb' href='#'>Авторизация</a>
-
-      <ul class='header-submenu__contacts contact-list'>
-        <li class='contact-list__contact-item-wrapper'>
-          <a class='contact-list__item contact-list__item--phone' href='tel:88005558628' aria-label='наш телефон'>
-            <span class='contact-list__descr'>8 800 555-86-28</span>
-          </a>
-        </li>
-        <li class='contact-list__contact-item-wrapper'>
-          <a class='contact-list__item contact-list__item--email' href='mailto:mail@htmlacademy.ru' aria-label='наша почта'>
-            <span class='contact-list__descr'>mail@htmlacademy.ru</span>
-          </a>
-        </li>
-      </ul>
-      <ul class='header-submenu__social social'>
+      <ul class='page-header__social social'>
         <li class='social__social-item'>
           <a class='social__item-link social__item-link--sub social__item-link--fb' href='#'
             aria-label='перейти на нашу страницу в Facebook'></a>
@@ -349,29 +317,29 @@
           </li>
         </ol>
         <button class='tariff__business-button-open'>Показать тарифы для бизнеса</button>
-      </div>
 
-      <div class='tariff__business visually-hidden'>
-        <h2 class='tariff__business-title page-main-subtitle'>Бизнес тарифы</h2>
-        <ol class='tariff__business-fee-list'>
-          <li class='tariff__business-item'>
-            <p class='tariff__business-descr'>Реклама у блоггера</p>
-            <p class='tariff__business-fee'>300 000 руб./пост</p>
-          </li>
-          <li class='tariff__business-item'>
-            <p class='tariff__business-descr'>Накрутка подписчиков</p>
-            <p class='tariff__business-fee'>от 1 руб./шт.</p>
-          </li>
-          <li class='tariff__business-item'>
-            <p class='tariff__business-descr'>Лайки от ботов</p>
-            <p class='tariff__business-fee'>от 20 коп./лайк</p>
-          </li>
-          <li class='tariff__business-item'>
-            <p class='tariff__business-descr'>Ваш продакт-плейсмент</p>
-            <p class='tariff__business-fee'>Индивидуально</p>
-          </li>
-        </ol>
-        <a class='tariff__business-button-close'>Закрыть окно</a>
+        <div class='tariff__business'>
+          <h2 class='tariff__business-title page-main-subtitle'>Бизнес-тарифы</h2>
+          <ol class='tariff__business-fee-list'>
+            <li class='tariff__business-item'>
+              <p class='tariff__business-descr'>Реклама у блоггера</p>
+              <p class='tariff__business-fee'>300 000 руб./пост</p>
+            </li>
+            <li class='tariff__business-item'>
+              <p class='tariff__business-descr'>Накрутка подписчиков</p>
+              <p class='tariff__business-fee'>от 1 руб./шт.</p>
+            </li>
+            <li class='tariff__business-item'>
+              <p class='tariff__business-descr'>Лайки от ботов</p>
+              <p class='tariff__business-fee'>от 20 коп./лайк</p>
+            </li>
+            <li class='tariff__business-item'>
+              <p class='tariff__business-descr'>Ваш продакт-плейсмент</p>
+              <p class='tariff__business-fee'>Индивидуально</p>
+            </li>
+          </ol>
+          <a class='tariff__business-button-close'>Закрыть окно</a>
+        </div>
       </div>
     </section>
 

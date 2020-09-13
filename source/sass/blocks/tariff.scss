@@ -1,5 +1,6 @@
 .tariff {
   background-color: var(--basic-blue-pale);
+  position: relative;
 }
 
 .tariff__container {
@@ -102,7 +103,6 @@
   line-height: 16px;
   padding-top: 13px;
   border-top: 1px solid var(--basic-white-gray9);
-
 
   &:last-child {
     padding-bottom: 15px;
@@ -237,5 +237,144 @@
       left: -89px;
       bottom: -23px;
     }
+  }
+}
+
+/* Modal. Бизнес тарифы */
+
+.tariff__business {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--basic-white);
+  left: 50%;
+  top: 18px;
+  transform: translate(-50%, 0);
+  text-align: left;
+  width: 270px;
+  height: 443px;
+  z-index: 2;
+  border-radius: 20px;
+  box-shadow: 0px 2px 8px var(--shadow-modal);
+
+  @media (min-width: $tablet-width) {
+    width: 688px;
+    top: 54px;
+    padding-bottom: 83px;
+    box-shadow: 0px 4px 22px var(--shadow-modal);
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 165px;
+    width: 750px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 22px var(--shadow-modal);
+  }
+
+  &--closed {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+  }
+}
+
+.tariff__business-title {
+  margin-left: 52px;
+  margin-top: 32px;
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 50px;
+    margin-left: 188px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 222px;
+  }
+}
+
+.tariff__business-fee-list {
+  @include reset-list;
+  width: 219px;
+  align-self: center;
+  border-bottom: 1px solid var(--basic-white-gray9);
+
+  @media (min-width: $tablet-width) {
+    width: 506px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 630px;
+  }
+}
+
+.tariff__business-item {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--basic-white-gray9);
+  padding-top: 11px;
+  padding-bottom: 10px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--special-grey-light);
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 22px;
+    line-height: 28px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+}
+
+.tariff__business-descr {
+  @include reset;
+}
+
+.tariff__business-fee {
+  @include reset;
+  padding-right: 2px;
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+  }
+}
+
+.tariff__business-button-close {
+  width: 100%;
+  text-align: center;
+  margin-top: 35px;
+  align-self: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 21px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  color: var(--basic-blue-light);
+  margin-bottom: 0;
+  background-color: var(--basic-white-gray10);
+  border-radius: 0 0 20px 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 52px;
+    padding-top: 41px;
+    padding-bottom: 46px;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: initial;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 52px;
+    padding-top: 39px;
   }
 }

@@ -11,6 +11,11 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 6px;
+  }
+
 }
 
 .companion-card__lvl {
@@ -40,7 +45,7 @@
   @media (min-width: $desktop-width) {
     color: var(--basic-white);
     top: -216px;
-    left: 127px;
+    left: 50px;
   }
 
   &::after {
@@ -195,7 +200,20 @@
 
   &--tags {
     @media (min-width: $tablet-width) {
+      text-align: center;
+    }
+
+    @media (min-width: $desktop-width) {
       text-align: right;
+    }
+  }
+
+  &--tags-abs {
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      right: 29px;
+      top: -11px;
+      background-color: var(--basic-blue-pale);
     }
   }
 }
@@ -229,6 +247,12 @@
     font-size: 20px;
     line-height: 22px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 731px;
+    min-height: 88px;
+  }
+
 }
 
 .companion-card__transports-list {
