@@ -4,14 +4,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  border: 2px solid rgb(0, 255, 8);
   background-color: var(--basic-blue);
 
   &::after {
     @include radius(19px);
     background-color: inherit;
     border-radius: 0 0 25px 25px;
-    z-index: 1;
   }
 
   @media (min-width: $tablet-width) {
@@ -25,18 +23,6 @@
     min-height: 100px;
     justify-content: start;
   }
-
-  &--secondary {
-    min-height: 145px;
-
-    @media (min-width: $tablet-width) {
-      min-height: 350px;
-    }
-
-    @media (min-width: $desktop-width) {
-      min-height: 350px;
-    }
-  }
 }
 
 .page-header__menu-wrapper {
@@ -46,6 +32,7 @@
 
   @media (min-width: $tablet-width) {
     width: 357px;
+    align-items: center;
   }
 
   @media (min-width: $desktop-width) {
@@ -54,17 +41,38 @@
 }
 
 .page-header__logo {
-  margin-top: 28px;
+  margin-top: 27px;
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 47px;
+    margin-bottom: 0;
+  }
 }
 
 .page-header__toggle {
-  margin-top: 28px;
+  margin-top: 32px;
   background-image: url("../img/menu-white.svg");
   background-color: transparent;
   background-repeat: no-repeat;
   height: 11px;
   width: 25px;
   border: none;
+  z-index: 5;
+
+  &--opened {
+    background-image: url("../img/toggle-cross.svg");
+    height: 19px;
+    margin-top: 25px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 
   @media (min-width: $desktop-width) {
     display: none;
@@ -85,6 +93,22 @@
   }
 }
 
+.page-header__nav-list {
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 2px;
+      top: 54px;
+      left: -70px;
+      background-color: var(--basic-white);
+    }
+  }
+}
+
 .page-header__link {
   display: block;
   margin-top: 28px;
@@ -95,7 +119,16 @@
   line-height: 20px;
   text-transform: uppercase;
   color: var(--basic-white);
-  padding-left: 34px;
+  margin-left: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 34px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 44px;
+    font-weight: 600; /*не по макету. подобрано*/
+  }
 }
 
 .page-header__contacts-wrapper {
@@ -104,18 +137,20 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    bottom: 245px;
+    bottom: 260px;
     right: 40px;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 46px;
-    right: 60px;
+    top: 74px;
+    right: 58px;
   }
 
   &--hidden {
-    display: none;
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
 
     @media (min-width: $tablet-width) {
       display: flex;
@@ -123,20 +158,97 @@
   }
 }
 
+.contacts__inner-wrapper {
+  display: flex;
+}
+
 /* Cataog page */
+
+/* Header secondary */
+.page-header--secondary {
+  z-index: 3;
+
+  @media (min-width: $tablet-width) {
+    min-height: 295px;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      @include radius(55px, 55px);
+    }
+  }
+}
+
+.page-header--secondary-fix {
+  padding-left: 8px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+  }
+}
+
+.page-header--secondary .page-header__logo {
+  margin-bottom: 83px;
+  margin-top: 19px;
+  margin-left: -4px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 45px;
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 47px;
+  }
+}
+
+.page-header--secondary .page-header__contacts-wrapper {
+  top: 64px;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 73px;
+    right: 60px;
+  }
+}
+
+.page-header--secondary .page-header__toggle {
+  margin-top: 23px;
+  margin-right: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -41px;
+    margin-right: 0;
+  }
+}
+
+.page-header--secondary .page-header__link {
+  margin-left: 40px;
+  margin-top: -28px;
+}
+
+.page-header--secondary .page-header__nav-list::before {
+  top: -19px;
+  left: -65px;
+}
 
 .page-header__title {
   @include reset;
   margin-bottom: -5px;
   position: absolute;
-  top: 96px;
-  left: 25px;
   font-size: 36px;
   line-height: 36px;
+  z-index: 2;
+  top: 93px;
+  left: 21px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 242px;
+    top: 238px;
     left: 74px;
     font-size: 60px;
     line-height: 20px;
@@ -144,20 +256,27 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 242px;
+    top: 239px;
     left: 126px;
   }
 
   &::after {
-    z-index: 2;
+    z-index: 4;
     position: absolute;
     bottom: -17px;
-    left: 2px;
+    left: 0;
     content: "";
-    width: 173px;
+    width: 100%;
     height: 5px;
     border-radius: 3px;
     background-color: var(--special-orange);
+
+    @media (min-width: $tablet-width) {
+      left: 3px;
+      /* width: 288px; */
+      height: 8px;
+      bottom: -97px;
+    }
   }
 }
 
@@ -174,10 +293,16 @@
   font-size: 20px;
   line-height: 20px;
 
-  @media (min-width: $desktop-width) {
-    dispay: flex;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    bottom: 32px;
+    right: 74px;
   }
 
+  @media (min-width: $desktop-width) {
+    bottom: 32px;
+    right: 123px;
+  }
 
   &::after {
     content: "";
@@ -187,5 +312,310 @@
     background-image: url("../img/arrow-bend.png");
     background-repeat: no-repeat;
     margin-left: 28px;
+  }
+}
+
+/* modal menu header*/
+
+.page__header .page-header__social {
+  display: none;
+}
+
+.header-submenu--json { /*добавляется при работающем js*/
+  display: none;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.page-header--opened {
+  box-sizing: border-box;
+  z-index: 4;
+  width: 320px;
+  position: absolute;
+  background-color: var(--basic-white);
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  border: 1px solid var(--basic-black);
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    top: 751px;
+    min-height: 90px;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.page-header--opened .page-header__menu-wrapper {
+  flex-wrap: wrap;
+}
+
+.page-header--opened .page-header__logo {
+  display: block;
+  margin-top: 26px;
+  margin-left: -1px;
+  /* padding-top: 26px;
+  padding-left: 23px; */
+
+  @media (min-width: $tablet-width) {
+    padding-top: 20px;
+    padding-left: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include reset;
+    padding-top: 20px;
+    padding-left: 2px;
+    width: 250px;
+    margin-top: 0;
+    margin-bottom: 14px;
+  }
+}
+
+.page-header--opened .page-header__toggle {
+  background-image: url("../img/toggle-cross.svg");
+  height: 19px;
+  margin-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.page-header--opened .page-header__nav-list {
+  display: block;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+
+  &::before {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.page-header--opened .page-header__nav-wrapper {
+  display: block;
+  /* margin-top: -12px; */
+  margin-left: 39px;
+  margin-top: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: -40px;
+    margin-top: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.page-header--opened .page-header__link {
+  @include reset-list;
+  font-style: normal;
+  font-weight: 600; /* не по макету. подобрано*/
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--basic-blue-dark);
+
+  @media (min-width: $tablet-width) {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 71px;
+    text-align: left;
+    margin-left: 97px;
+    /* padding-top: 5px; */
+    /* margin-bottom: 154px; */
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    font-weight: 600; /* не по макету. подобрано*/
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 34px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 44px;
+      height: 2px;
+      top: 9px;
+      left: -54px;
+      background-color: var(--basic-blue-dark);
+    }
+  }
+}
+
+.page-header--opened .page-header__contacts-wrapper {
+  position: initial;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-header--opened .contacts {
+  /* margin-left: 86px;
+  margin-bottom: 42px;
+ */
+  @media (min-width: $tablet-width) {
+    margin-left: 58px;
+    margin-top: 144px;
+    margin-bottom: 112px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    margin: 0;
+    top: -33px;
+    right: 60px;
+  }
+}
+
+.page-header--opened .contacts__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: -11px;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.page-header--opened .contacts__contact-item {
+  white-space: nowrap;
+  width: 45px;
+  height: 45px;
+  text-transform: uppercase;
+  color: var(--basic-blue-dark);
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: var(--special-blue-dark);
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 28px;
+    width: 68px;
+    height: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 50px;
+    height: 50px;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--phone {
+    background-image: url("../img/contacts-phone-yellow.svg");
+    background-size: 35%;
+
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/topmenu-phone.svg");
+      background-color: var(--special-orange);
+    }
+  }
+
+  &--email {
+    background-image: url("../img/contacts-mail-yellow.svg");
+    background-size: 30%;
+
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/topmenu-mail.svg");
+      background-color: var(--special-yellow-dark);
+    }
+  }
+}
+
+.page-header--opened .contacts__descr {
+  display: block;
+  margin-left: 60px;
+  margin-top: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 90px;
+    margin-top: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.page-header--opened .contacts__auth {
+  display: block;
+  order: -1;
+  width: 270px;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 77px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-top: 54px;
+  /* margin-left: 24px; */
+  margin-bottom: 64px;
+
+  &::after {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 188px;
+    padding-top: 14px;
+    padding-bottom: 16px;
+    padding-left: 30px;
+    font-size: 20px;
+    line-height: 20px;
+    border-radius: 25px;
+    top: -14px;
+    right: 40px;
+    font-weight: 700; /* не по макету. подобрано*/
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
+    position: initial;
+  }
+}
+
+.page-header--opened .page-header__social {
+  @include reset;
+  display: flex;
+  margin-left: 69px;
+  margin-top: 28px;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 74px;
+    margin-left: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }

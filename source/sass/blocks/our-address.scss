@@ -23,9 +23,8 @@
 
 .our-address__text-address {
   position: relative;
-
   text-align: left;
-  margin-top: 58px;
+  margin-top: 60px;
   margin-left: 61px;
   color: var(--basic-blue-light);
   font-style: normal;
@@ -40,6 +39,13 @@
     font-size: 28px;
     line-height: 28px;
     align-self: center;
+    margin-top: 122px;
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 108px;
+    margin-left: 270px;
   }
 
   &::before {
@@ -55,13 +61,37 @@
     background-size: 30%;
     background-color: var(--special-blue-dark);
     background-position: center;
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/contacts-location-yellow-big.svg");
+      height: 68px;
+      width: 68px;
+      bottom: -21px;
+      left: -93px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 90px;
+      width: 90px;
+      bottom: -31px;
+      left: -120px;
+    }
   }
 }
 
 .our-address__button {
-  margin-top: 32px;
+  margin-top: 34px;
+  margin-bottom: 6px;
 
   @media (min-width: $tablet-width) {
     margin-left: 35px;
+    margin-top: 64px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    margin-top: 115px;
+    margin-bottom: 5px;
   }
 }

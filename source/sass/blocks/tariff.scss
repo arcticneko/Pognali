@@ -1,5 +1,6 @@
 .tariff {
-  background-color: var(--basic-white-dark);
+  background-color: var(--basic-blue-pale);
+  position: relative;
 }
 
 .tariff__container {
@@ -10,29 +11,35 @@
   background-color: inherit;
 
   @media (min-width: $tablet-width) {
-    background-color: #edeff6;
+    background-color: var(--basic-white-gray3);
     background-image: url("../img/tariff-square-tablet.png");
     background-repeat: no-repeat;
-    background-position: top 140px right 45px;
+    background-position: top 206px right 40px;
   }
 
   @media (min-width: $desktop-width) {
-    background-color: #edeff6;
+    background-color: inherit;
     background-image: url("../img/tariff-square-desktop.png");
     background-repeat: no-repeat;
-    background-position: top 135px right 280px;
+    background-position: top 291px right 244px;
   }
 }
 
 .tariff__title {
   position: relative;
-  margin-top: 84px;
+  margin-top: 80px;
   margin-left: 25px;
   width: 110px;
 
   @media (min-width: $tablet-width) {
     width: 482px;
     align-self: center;
+    margin-top: 125px;
+    margin-left: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 159px;
   }
 
   &::after {
@@ -40,20 +47,20 @@
     content: "";
     width: 100px;
     height: 100px;
-    top: -12px;
-    right: -148px;
+    top: -15px;
+    right: -135px;
     background-image: url("../img/rates@1x.png");
     background-size: contain;
 
     @media (min-width: $tablet-width) {
-      top: 314px;
-      right: -40px;
+      top: 340px;
+      right: -55px;
       z-index: 2;
     }
 
     @media (min-width: $desktop-width) {
-      top: 100px;
-      right: -306px;
+      top: 185px;
+      right: -343px;
       display: block;
       width: 198px;
       height: 198px;
@@ -64,13 +71,24 @@
 .tariff__private-fee-list {
   @include reset;
   counter-reset: my-counter;
-
-  @media (min-width: 320px) {
-    margin-left: 25px;
-  }
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 13px;
+  margin-top: 22px;
+  box-sizing: border-box;
+  margin-left: 24px;
+  width: 200px;
 
   @media (min-width: $tablet-width) {
     margin-left: 90px;
+    margin-top: 39px;
+    margin-bottom: 30px;
+    gap: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 161px;
+    margin-top: 97px;
   }
 }
 
@@ -83,28 +101,33 @@
   flex-direction: column;
   font-size: 16px;
   line-height: 16px;
-  margin-top: 39px;
+  padding-top: 13px;
+  border-top: 1px solid var(--basic-white-gray9);
+
+  &:last-child {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--basic-white-gray9);
+  }
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    width: 600px;
+    width: 564px;
     font-size: 28px;
     line-height: 28px;
-    border-top: 1px solid var(--basic-white-gray9);
-    border-bottom: 1px solid var(--basic-white-gray9);
+    padding-top: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 900px;
+    width: 814px;
   }
 
   &::after {
     counter-increment: my-counter;
     content: counter(my-counter);
     position: absolute;
-    right: -65px;
-    top: -7px;
+    right: -45px;
+    top: 4px;
     color: var(--basic-white);
     text-align: center;
     width: 34px;
@@ -121,13 +144,13 @@
       height: 68px;
       font-size: 28px;
       line-height: 68px;
-      right: 628px;
-      top: -18px;
+      right: 586px;
+      top: 0;
     }
 
     @media (min-width: $desktop-width) {
-      right: 628px;
-      top: -18px;
+      right: 837px;
+      top: 2px;
     }
   }
 
@@ -148,18 +171,30 @@
 .tariff__private-fee {
   margin: 0;
   padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 
   @media (min-width: $tablet-width) {
-    line-height: 65px;
+    line-height: 28px;
+  }
+}
+
+.tariff__private-fee {
+  padding-top: 7px;
+  padding-bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
   }
 }
 
 .tariff__business-button-open {
   @include reset;
-  /* position: relative; */
+  position: relative;
   font-family: "Blogger Sans", "Arial", sans-serif;
   margin-left: 25px;
-  margin-top: 46px;
+  margin-top: 28px;
+  margin-bottom: 11px;
   background-color: transparent;
   border: none;
   font-style: normal;
@@ -171,12 +206,14 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
-    padding-left: 90px;
+    margin-top: 30px;
+    margin-left: 90px;
+    margin-bottom: 31px;
 
     &::before {
       position: absolute;
-      left: 40px;
-      bottom: 0;
+      left: -90px;
+      bottom: -26px;
       display: block;
       content: "";
       width: 68px;
@@ -189,5 +226,157 @@
       background-size: auto;
       background-position: center center;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 160px;
+    margin-bottom: 134px;
+    margin-top: 32px;
+
+    &::before {
+      left: -89px;
+      bottom: -23px;
+    }
+  }
+}
+
+/* Modal. Бизнес тарифы */
+
+.tariff__business {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--basic-white);
+  left: 50%;
+  top: 18px;
+  transform: translate(-50%, 0);
+  text-align: left;
+  width: 270px;
+  min-height: 443px;
+  z-index: 2;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px var(--shadow-modal);
+
+  @media (min-width: $tablet-width) {
+    width: 688px;
+    top: 54px;
+    /* padding-bottom: 83px; */
+    box-shadow: 0 4px 22px var(--shadow-modal);
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 165px;
+    width: 750px;
+    border-radius: 30px;
+    box-shadow: 0 4px 22px var(--shadow-modal);
+  }
+
+  &--closed {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+  }
+}
+
+.tariff__business-title {
+  margin-left: 52px;
+  margin-top: 32px;
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 50px;
+    margin-left: 188px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 222px;
+  }
+}
+
+.tariff__business-fee-list {
+  @include reset-list;
+  width: 219px;
+  align-self: center;
+  border-bottom: 1px solid var(--basic-white-gray9);
+
+  @media (min-width: $tablet-width) {
+    width: 506px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 630px;
+  }
+}
+
+.tariff__business-item {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--basic-white-gray9);
+  padding-top: 11px;
+  padding-bottom: 10px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--special-grey-light);
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 22px;
+    line-height: 28px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+}
+
+.tariff__business-descr {
+  @include reset;
+}
+
+.tariff__business-fee {
+  @include reset;
+  padding-right: 2px;
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+  }
+}
+
+.tariff__business-button-close {
+  width: 100%;
+  text-align: center;
+  margin-top: 35px;
+  align-self: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 21px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  color: var(--basic-blue-light);
+  margin-bottom: 0;
+  background-color: var(--basic-white-gray10);
+  border-radius: 0 0 20px 20px;
+  border: none;
+  font-family: inherit;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 52px;
+    padding-top: 41px;
+    padding-bottom: 46px;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: initial;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 52px;
+    padding-top: 39px;
   }
 }

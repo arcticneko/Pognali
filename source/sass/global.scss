@@ -5,6 +5,7 @@
   --basic-white: #ffffff;
   --basic-white-dark: #e6e8f1;
   --basic-white-gray: #cbced9;
+  --basic-white-gray-transp: rgba(203, 206, 217, 0.3);
   --basic-white-gray2: #d6d9e6;
   --basic-white-gray3: #edeff6;
   --basic-white-gray4: #e2e5f2;
@@ -13,6 +14,8 @@
   --basic-white-gray7: #d4d9eb;
   --basic-white-gray8: #e2e5f2;
   --basic-white-gray9: #e1e3e9;
+  --basic-white-gray10: #f3f4f8;
+  --basic-white-gray11: #d6daed;
   --basic-white-pink: #e2e5f2;
   --basic-blue: #161c35;
   --basic-blue-dark: #192144;
@@ -34,10 +37,14 @@
   --basic-blue-light-transp: rgb(11%, 18%, 36%, 0.15);
   --special-red: #f47e7e;
   --special-red-pink: #f97676;
+  --special-green: #81e31e;
   --special-orange: #ff8d30;
   --special-orange-light: #ff5c23;
   --basic-black: #000000;
   --special-black-transp: rgba(0, 0, 0, 0.6);
+  --shadow-modal: rgba(29, 46, 91, 0.14);
+  --shadow-modal2: rgba(212, 217, 235, 0.25);
+  --shadow-modal2-light: rgba(54, 80, 148, 0.18);
 }
 
 // Viewports

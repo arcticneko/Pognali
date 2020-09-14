@@ -6,83 +6,88 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <title>Погнали</title>
   <link href='css/style.css' rel='stylesheet'>
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-image: url("img/pixel-glass/index-mob-modal.png");
+    }
+
+    @media (min-width: 768px) {
+      HTML {
+        background-image: url("img/pixel-glass/index-tab-modal.png");
+      }
+    }
+
+    @media (min-width: 1440px) {
+      HTML {
+        background-image: url("img/pixel-glass/index-desktop-modal.png");
+      }
+    }
+  </style>
+  <link href="pixel-glass/styles.css" rel="stylesheet">
+  <script src="pixel-glass/script.js"></script>
 </head>
 
-<body class='page__body'>
+<body class='page__body page__body--index'>
 
-  <header class='page__header page-header'>
-    <div class='page-header__container container'>
-      <div class='page-header__menu-wrapper'>
-        <a class='page-header__logo logo' aria-label='перейти на главную страницу'>
-          <img class='logo__image' src="img/logo-mobile-white@1x.png" width='100' height='19' alt='логотип'>
-        </a>
-        <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'></button>
-        <nav class='page-header__nav-wrapper'>
-          <ul class='page-header__nav-list'>
-            <li class='page-header__item'>
-              <a class='page-header__link' href='#'>О сервисе</a>
-            </li>
-            <li class='page-header__item'>
-              <a class='page-header__link' href='form.html'>направления</a>
-            </li>
-            <li class='page-header__item'>
-              <a class='page-header__link' href='catalog.html'>попутчики</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+  <header class='page__header'>
+    <div class='page-header page-header--opened'>
+      <div class='page-header__container container'>
+        <div class='page-header__menu-wrapper'>
+          <a class='page-header__logo logo' aria-label='перейти на главную страницу'>
+            <picture class='logo__wrapper'>
+              <source srcset="img/logo-desktop-white@1x.png" media="(min-width: 1440px)">
+              <source srcset="img/logo-tablet-white@1x.png" media="(min-width: 768px)">
+              <img class='logo__image' src="img/logo-mobile-white@1x.png" alt='логотип'>
+            </picture>
+          </a>
+          <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'></button>
+          <nav class='page-header__nav-wrapper'>
+            <ul class='page-header__nav-list'>
+              <li class='page-header__item'>
+                <a class='page-header__link' href='#'>О сервисе</a>
+              </li>
+              <li class='page-header__item'>
+                <a class='page-header__link' href='form.html'>направления</a>
+              </li>
+              <li class='page-header__item'>
+                <a class='page-header__link' href='catalog.html'>попутчики</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
-      <div class='page-header__contacts-wrapper contacts'>
-        <a class='contacts__contact-item contacts__contact-item--phone' href='tel:88005558628'
-          aria-label='наш телефон'></a>
-        <a class='contacts__contact-item contacts__contact-item--email' href='mailto:mail@htmlacademy.ru'
-          aria-label='наша почта'></a>
-        <a class='contacts__auth button' href='#'>Авторизация</a>
-      </div>
-    </div>
+        <div class='page-header__contacts-wrapper contacts'>
+          <div class='contacts__inner-wrapper'>
+            <a class='contacts__contact-item contacts__contact-item--phone' href='tel:88005558628'
+              aria-label='наш телефон'>
+              <span class='contacts__descr'>8 800 555-86-28</span>
+            </a>
+            <a class='contacts__contact-item contacts__contact-item--email' href='mailto:mail@htmlacademy.ru'
+              aria-label='наша почта'>
+              <span class='contacts__descr'>mail@htmlacademy.ru</span>
+            </a>
+          </div>
+          <a class='contacts__auth button' href='#'>Авторизация</a>
+        </div>
 
-    <div class='header-submenu header-submenu--hidden'>
-      <p class='header-submenu__logo logo logo--dark'>Погнали?</p>
-      <nav class='header-submenu__nav-wrapper'>
-        <ul class='header-submenu__nav-list'>
-          <li class='header-submenu__item'>
-            <a class='header-submenu__link' href='#'>О сервисе</a>
+        <ul class='page-header__social social'>
+          <li class='social__social-item'>
+            <a class='social__item-link social__item-link--sub social__item-link--fb' href='#'
+              aria-label='перейти на нашу страницу в Facebook'></a>
           </li>
-          <li class='header-submenu__item'>
-            <a class='header-submenu__link' href='form.html'>направления</a>
+          <li class='social__social-item'>
+            <a class='social__item-link social__item-link--sub social__item-link--vk' href='#'
+              aria-label='перейти на нашу страницу в Vkontakte'></a>
           </li>
-          <li class='header-submenu__item'>
-            <a class='header-submenu__link' href='catalog.html'>попутчики</a>
+          <li class='social__social-item'>
+            <a class='social__item-link social__item-link--sub social__item-link--disabled social__item-link--instagram'
+              href='#' aria-label='перейти на нашу страницу в Instagram'></a>
           </li>
         </ul>
-      </nav>
-      <a class='header-submenu__button' href='#'>Авторизация</a>
-
-      <ul class='header-submenu__contacts contact-list'>
-        <li class='contact-list__contact-item-wrapper'>
-          <a class='contact-list__item contact-list__item--phone' href='tel:88005558628' aria-label='наш телефон'>8 800
-            555-86-28</a>
-        </li>
-        <li class='contact-list__contact-item-wrapper'>
-          <a class='contact-list__item contact-list__item--email' href='mailto:mail@htmlacademy.ru'
-            aria-label='наша почта'>mail@htmlacademy.ru</a>
-        </li>
-      </ul>
-
-      <ul class='header-submenu__social'>
-        <li class='header-submenu__social-item-wrapper'>
-          <a href='#' class='header-submenu__social-item header-submenu__social-item--fb'
-            aria-label='Перейти на нашу страницу в Facebook'></a>
-        </li>
-        <li class='header-submenu__social-item-wrapper'>
-          <a href='#' class='header-submenu__social-item header-submenu__social-item--vk'
-            aria-label='Перейти на нашу страницу в Vkontakte'></a>
-        </li>
-        <li class='header-submenu__social-item-wrapper'>
-          <a href='#' class='header-submenu__social-item header-submenu__social-item--instagram'
-            aria-label='Перейти на нашу страницу в Instagram'></a>
-        </li>
-      </ul>
+      </div>
     </div>
   </header>
 
@@ -98,31 +103,33 @@
         <h3 class='visually-hidden'>Отзывы о нас</h3>
         <blockquote class='feedback__item'>
           <p class='feedback__text'>«Лучшее&nbsp;приложение, что&nbsp;я&nbsp;видел&nbsp;в&nbsp;жизни!»</p>
-          <p class='feedback__text feedback__text--emphasis'>Мурат&nbsp;Эльтазин главный&nbsp;редактор
-            газеты&nbsp;«гаджетлайф»</p>
+          <p class='feedback__text feedback__text--emphasis'>Мурат&nbsp;Эльтазин главный&nbsp;редактор<br>
+            газеты «гаджетлайф»</p>
         </blockquote>
       </div>
     </section>
 
     <section class='page-main__how-to-use how-to-use'>
-      <div class='how-to-use__container container'>
+      <div class='how-to-use__container'>
         <h3 class='visually-hidden'>Как пользоваться сайтом</h3>
         <ol class='how-to-use__items-list'>
           <li class='how-to-use__item how-to-use__item--first'>Выберите<br>направление</li>
-          <li class='how-to-use__item how-to-use__item--second'>Изучите идеи<br>предшественников</li>
+          <li class='how-to-use__item how-to-use__item--second'>Изучите идеи<br>путешественников</li>
           <li class='how-to-use__item how-to-use__item--third'>Находите тех,<br>кто похож на вас</li>
           <li class='how-to-use__item how-to-use__item--fourth'>Путешествуйте<br>вместе!</li>
         </ol>
 
         <div class='page-main__about-us about-us'>
-          <h3 class='about-us__title page-main-subtitle'>О сервисе</h3>
-          <p class='about-us__text'>Любое путешествие веселее&nbsp;с&nbsp;попутчиками, которые на одной волне
-            с&nbsp;тобой! Делитесь
-            своими идеями путешествий и&nbsp;черпайте вдохновение в&nbsp;чужих.</p>
-          <p class='about-us__text about-us__text--emphasis'>А если найдете кого-то близкого по духу — скорее зовите в
-            совместный трип!</p>
+          <div class='about-us__container container'>
+            <h3 class='about-us__title page-main-subtitle'>О сервисе</h3>
+            <p class='about-us__text'>Любое путешествие веселее с&nbsp;попутчиками, которые на одной&nbsp;волне
+              с&nbsp;тобой! Делитесь
+              своими идеями путешествий <br>и черпайте&nbsp;вдохновение в&nbsp;чужих.</p>
+            <p class='about-us__text about-us__text--emphasis'>А если найдете кого-то<br> близкого&nbsp;по духу — скорее
+              зовите&nbsp;в&nbsp;совместный трип!</p>
 
-          <a class='about-us__button button button--arrow-medium-short' href='form.html'>Подробнее</a>
+            <a class='about-us__button button button--arrow-medium-short' href='form.html'>Подробнее</a>
+          </div>
         </div>
       </div>
     </section>
@@ -135,12 +142,15 @@
           </h2>
           <p class='directions__text'>Мы не продаем&nbsp;туры и&nbsp;ничего&nbsp;не&nbsp;рекламируем. Люди
             сами&nbsp;пишут&nbsp;о&nbsp;странах, куда
-            хотели бы&nbsp;отправиться и чем можно там заняться.</p>
+            хотели бы&nbsp;отправиться<br> и чем можно там заняться.</p>
         </div>
         <ul class='directions__directions-list directions-list'>
           <li class='directions-list__item-wrapper'>
             <article class='directions-list__item'>
-              <img class='directions-list__pic' alt='Тайланд' width='270' height='110' src='img/thailand-mobile@1x.jpg'>
+              <picture class='directions-list__pic-wrapper'>
+                <source srcset="img/thailand-desktop@1x.jpg" media="(min-width: 768px)">
+                <img class='directions-list__pic' src="img/thailand-mobile@1x.jpg" alt='Тайланд'>
+              </picture>
               <div class='directions-list__description-wrapper'>
                 <h3 class='directions-list__name directions-list__name--thailand'>Таиланд</h3>
                 <p class='directions-list__slogan'>Джунгли зовут!</p>
@@ -151,7 +161,10 @@
 
           <li class='directions-list__item-wrapper'>
             <article class='directions-list__item'>
-              <img class='directions-list__pic' alt='Франция' width='270' height='110' src='img/france-mobile@1x.jpg'>
+              <picture class='directions-list__pic-wrapper'>
+                <source srcset="img/france-desktop@1x.jpg" media="(min-width: 768px)">
+                <img class='directions-list__pic' src="img/france-mobile@1x.jpg" alt='Франция'>
+              </picture>
               <div class='directions-list__description-wrapper'>
                 <h3 class='directions-list__name directions-list__name--france'>Франция</h3>
                 <p class='directions-list__slogan'>Трэ бьен, манифик!</p>
@@ -162,16 +175,19 @@
 
           <li class='directions-list__item-wrapper'>
             <article class='directions-list__item'>
-              <img class='directions-list__pic' alt='Чехия' width='270' height='110' src='img/czech-mobile@1x.jpg'>
+              <picture class='directions-list__pic-wrapper'>
+                <source srcset="img/czech-desktop@1x.jpg" media="(min-width: 768px)">
+                <img class='directions-list__pic' src="img/czech-mobile@1x.jpg" alt='Чехия'>
+              </picture>
               <div class='directions-list__description-wrapper'>
                 <h3 class='directions-list__name directions-list__name--czech'>Чехия</h3>
-                <p class='directions-list__slogan'>Закоулки старой<br>Европы</p>
-                <p class='directions-list__people'>5326</p>
+                <p class='directions-list__slogan'>Закоулки старой <br>Европы</p>
+                <p class='directions-list__people directions-list__people'>5326</p>
               </div>
             </article>
           </li>
         </ul>
-        <a class='directions__button button button--arrow-medium button--long-full' href='form.html'>Показать все</a>
+        <a class='directions__button button button--arrow-medium' href='form.html'>Показать все</a>
       </div>
     </section>
 
@@ -182,8 +198,8 @@
             <a class='companions__title-link page-main-subtitle' href='catalog.html'>Попутчики</a>
           </h2>
           <p class='companions__text'>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
-            Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-          <p class='companions__text companions__text--bold'>Теперь можно легко найти единомышленников!</p>
+            Одному нужен пляж и коктейль,<br> а другому маршрут для хайкинга.</p>
+          <p class='companions__text companions__text--bold'>Теперь можно легко <br>найти единомышленников!</p>
         </div>
         <ul class='companions__companions-list companions-list'>
           <li class='companions-list__item-wrapper'>
@@ -253,13 +269,12 @@
               </ul>
               <div class='companions-list__description'>
                 <h3 class='companions-list__name companions-list__name--online'>Петя Демин</h3>
-                <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
                 <ul class='companions-list__tag-list'>
-                  <li class='companions-list__tags-item'>#бургер</li>
-                  <li class='companions-list__tags-item'>#бар</li>
-                  <li class='companions-list__tags-item'>#футбол</li>
-                  <li class='companions-list__tags-item'>#концерт</li>
-                  <li class='companions-list__tags-item'>#крафт</li>
+                  <li class='companions-list__tag-item'>#бургер</li>
+                  <li class='companions-list__tag-item'>#бар</li>
+                  <li class='companions-list__tag-item'>#футбол</li>
+                  <li class='companions-list__tag-item'>#концерт</li>
+                  <li class='companions-list__tag-item'>#крафт</li>
                 </ul>
                 <ul class='companions-list__transport'>
                   <li
@@ -282,7 +297,7 @@
             </article>
           </li>
         </ul>
-        <a class='companions__show-all button button--arrow-medium button--long-full' href='catalog.html'>Показать
+        <a class='companions__show-all button button--arrow-medium' href='catalog.html'>Показать
           всех</a>
       </div>
     </section>
@@ -305,29 +320,29 @@
           </li>
         </ol>
         <button class='tariff__business-button-open'>Показать тарифы для бизнеса</button>
-      </div>
 
-      <div class='tariff__business visually-hidden'>
-        <h2 class='tariff__business-title page-main-subtitle'>Бизнес тарифы</h2>
-        <ol class='tariff__business-fee-list'>
-          <li class='tariff__business-item'>
-            <p class='tariff__business-descr'>Реклама у блоггера</p>
-            <p class='tariff__business-fee'>300 000 руб./пост</p>
-          </li>
-          <li class='tariff__business-item'>
-            <p class='tariff__business-descr'>Накрутка подписчиков</p>
-            <p class='tariff__business-fee'>от 1 руб./шт.</p>
-          </li>
-          <li class='tariff__business-item'>
-            <p class='tariff__business-descr'>Лайки от ботов</p>
-            <p class='tariff__business-fee'>от 20 коп./лайк</p>
-          </li>
-          <li class='tariff__business-item'>
-            <p class='tariff__business-descr'>Ваш продакт-плейсмент</p>
-            <p class='tariff__business-fee'>Индивидуально</p>
-          </li>
-        </ol>
-        <a class='tariff__business-button-close'>Закрыть окно</a>
+        <div class='tariff__business'>
+          <h2 class='tariff__business-title page-main-subtitle'>Бизнес-тарифы</h2>
+          <ol class='tariff__business-fee-list'>
+            <li class='tariff__business-item'>
+              <p class='tariff__business-descr'>Реклама у блоггера</p>
+              <p class='tariff__business-fee'>300 000 руб./пост</p>
+            </li>
+            <li class='tariff__business-item'>
+              <p class='tariff__business-descr'>Накрутка подписчиков</p>
+              <p class='tariff__business-fee'>от 1 руб./шт.</p>
+            </li>
+            <li class='tariff__business-item'>
+              <p class='tariff__business-descr'>Лайки от ботов</p>
+              <p class='tariff__business-fee'>от 20 коп./лайк</p>
+            </li>
+            <li class='tariff__business-item'>
+              <p class='tariff__business-descr'>Ваш продакт-плейсмент</p>
+              <p class='tariff__business-fee'>Индивидуально</p>
+            </li>
+          </ol>
+          <button class='tariff__business-button-close'>Закрыть окно</button>
+        </div>
       </div>
     </section>
 
@@ -336,12 +351,13 @@
         <h2 class='visually-hidden'>Регистрация</h2>
         <p class='registration__title page-main-subtitle'>Заинтересовались?</p>
         <p class='registration__text'>Зарегистрируйтесь, это&nbsp;быстро&nbsp;и бесплатно! Уже&nbsp;зарегистрированы?
-          Тогда скорее <a class='registration__login-link' href='#'>авторизуйтесь</a>.</p>
+          Тогда скорее <a class='registration__login-link' href='#'> авторизуйтесь</a>.</p>
         <form class='registration__login-form' action='https://echo.htmlacademy.ru/courses' method='post'>
           <input type='email' name='email' id='email' placeholder='E-mail' class='registration__email-field'>
           <label for='email' class='visually-hidden'>Почта клиента</label>
           <button type='submit' value='Отправить' class='registration__button-form'
-            aria-label='подтвердить регистрацию'></button>
+            aria-label='подтвердить регистрацию'><span
+              class='registration__button-form-text'>Регистрация</span></button>
         </form>
 
         <p class='registration__text registration__text--bottom'>Остались вопросы? Мы&nbsp;с&nbsp;радостью&nbsp;на них
@@ -364,7 +380,7 @@
       <div class='our-address__description container'>
         <h2 class='visually-hidden'>Наш адрес</h2>
         <address class='our-address__text-address'>ул. Большая Конюшенная, 19/8</address>
-        <a class='our-address__button button button--long-full button--bordered'>Проложить маршрут</a>
+        <a class='our-address__button button button--bordered'>Проложить маршрут</a>
         <!--4.6. Ссылка «Проложить маршрут» ведёт на карту (Google или Яндекса) с проложенным маршрутом
           из центра карты в любую точку.-->
       </div>
@@ -378,19 +394,23 @@
   <footer class='page__footer footer'>
     <div class='footer__container container'>
       <a class='footer__logo logo' aria-label='перейти на главную страницу'>
-        <img class='logo__image' src="img/logo-mobile-blue@1x.png" width='100' height='19' alt='логотип'>
+        <picture class='logo__wrapper'>
+          <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
+          <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px)">
+          <img class='logo__image' src="img/logo-mobile-blue@1x.png" alt='логотип'>
+        </picture>
       </a>
-      <ul class='footer__social'>
-        <li class='footer__social-item'>
-          <a class='footer__item-link footer__item-link--fb' href='#'
+      <ul class='footer__social social'>
+        <li class='social__social-item'>
+          <a class='social__item-link social__item-link--fb' href='#'
             aria-label='перейти на нашу страницу в Facebook'></a>
         </li>
-        <li class='footer__social-item'>
-          <a class='footer__item-link footer__item-link--vk' href='#'
+        <li class='social__social-item'>
+          <a class='social__item-link social__item-link--vk' href='#'
             aria-label='перейти на нашу страницу в Vkontakte'></a>
         </li>
-        <li class='footer__social-item'>
-          <a class='footer__item-link footer__item-link--instagram' href='#'
+        <li class='social__social-item'>
+          <a class='social__item-link social__item-link--instagram' href='#'
             aria-label='перейти на нашу страницу в Instagram'></a>
         </li>
       </ul>

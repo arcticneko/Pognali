@@ -13,8 +13,21 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 188px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 188px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+  }
 
   &--arrow-medium {
     text-align: left;
@@ -26,6 +39,24 @@
     padding-left: 23px;
     text-transform: initial;
     color: var(--basic-blue-light);
+    font-size: 18px;
+    line-height: 18px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 24px;
+      line-height: 24px;
+      width: 618px;
+      padding-top: 29px;
+      padding-bottom: 29px;
+      padding-left: 33px;
+      border-radius: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 275px;
+      padding-top: 27px;
+      padding-bottom: 29px;
+    }
   }
 
   &--arrow-medium::after {
@@ -35,6 +66,16 @@
     height: 11px;
     width: 10px;
     content: url("../img/triangle-arrow-right-blue.svg");
+
+    @media (min-width: $tablet-width) {
+      right: 34px;
+      top: calc(45% - 7px);
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 37px;
+      top: calc(45% - 9px);
+    }
   }
 
   &--arrow-medium-short {
@@ -49,6 +90,17 @@
     color: var(--basic-blue-light);
     font-size: 24px;
     line-height: 24px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 27px;
+      padding-bottom: 27px;
+      padding-left: 33px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 33px;
+      border-radius: 18px;
+    }
   }
 
   &--arrow-medium-short::after {
@@ -58,6 +110,11 @@
     height: 11px;
     width: 10px;
     content: url("../img/triangle-arrow-right-blue.svg");
+
+    @media (min-width: $tablet-width) {
+      right: 36px;
+      top: calc(45% - 9px);
+    }
   }
 
   &--bordered {
@@ -66,15 +123,33 @@
     border-radius: 10px;
     border: 3px solid var(--basic-blue-dark);
     width: 270px;
-    padding-top: 22px;
-    padding-bottom: 22px;
+    padding-top: 18px;
+    padding-bottom: 20px;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 18px;
     text-transform: initial;
-    padding-left: 22px;
+    padding-left: 19px;
     color: var(--basic-blue-light);
+
+    @media (min-width: $tablet-width) {
+      font-size: 24px;
+      line-height: 24px;
+      width: 618px;
+      padding-top: 24px;
+      padding-bottom: 26px;
+      padding-left: 34px;
+      border-radius: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 325px;
+      padding-top: 24px;
+      padding-bottom: 26px;
+      padding-left: 34px;
+      border-radius: 20px;
+    }
   }
 
   &--bordered::after {
@@ -85,12 +160,62 @@
     height: 11px;
     width: 10px;
     content: url("../img/email-arrow-blue.svg");
+
+    @media (min-width: $tablet-width) {
+      right: 34px;
+      top: 43%;
+    }
   }
 
   &--long {
     width: 230px;
     font-family: inherit;
     border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 17px;
+
+    @media (min-width: $tablet-width) {
+      width: 150px;
+      padding-top: 16px;
+      padding-bottom: 14px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  &--long-fat {
+    width: 230px;
+    font-family: inherit;
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 17px;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+      width: 286px;
+      padding-top: 27px;
+      padding-bottom: 29px;
+      font-size: 24px;
+      line-height: 24px;
+      text-transform: initial;
+      border-radius: 20px;
+      padding-left: 35px;
+      text-align: left;
+
+      &::after {
+        display: block;
+        position: absolute;
+        right: 37px;
+        top: calc(45% - 9px);
+        height: 11px;
+        width: 10px;
+        content: url("../img/triangle-arrow-right-blue.svg");
+      }
+    }
   }
 
   &--bright {
@@ -98,23 +223,46 @@
     font-family: inherit;
     background-color: var(--basic-white);
     border: none;
+    font-size: 17px;
+    line-height: 17px;
+
+    @media (min-width: $tablet-width) {
+      width: 617px;
+      line-height: 20px;
+      font-size: 20px;
+      padding-left: 6px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 194px;
+    }
   }
 
   &--longer {
     width: 270px;
     font-family: inherit;
     background-color: var(--special-blue-light);
-  }
+    color: var(--basic-blue);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    padding-top: 10px;
+    letter-spacing: 0.02em;
 
-  &--long-full {
     @media (min-width: $tablet-width) {
-      width: 616px;
-      font-size: 24px;
-      line-height: 24px;
+      width: 618px;
+      border-radius: 10px;
+      padding-top: 20px;
+      padding-bottom: 22px;
+      letter-spacing: 0.1em;
     }
 
     @media (min-width: $desktop-width) {
-      width: 280px;
+      width: 190px;
+      border-radius: 0 0 10px 10px;
+      letter-spacing: 0;
+      padding-right: 5px;
     }
   }
 }

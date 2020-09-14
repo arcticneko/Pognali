@@ -4,22 +4,25 @@
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
-    flex-direction: column;
+    margin-top: 42px;
   }
 
   @media (min-width: $desktop-width) {
     width: 562px;
-    height: 451px;
+    margin-top: 17px;
+    margin-left: 32px;
+    margin-bottom: 92px;
   }
 }
 
 .directions-list__item-wrapper {
   position: relative;
-  margin-top: 9px;
+  margin-top: 10px;
 
   @media (min-width: $tablet-width) {
     width: 616px;
-    height: 140px;
+    min-height: 140px;
+    margin-top: 11px;
   }
 
   @media (min-width: $desktop-width) {
@@ -34,7 +37,7 @@
   @media (min-width: $tablet-width) {
     flex-direction: row-reverse;
     width: 100%;
-    height: 100%;
+    min-height: 140px;
   }
 
   /* @media (min-width: $desktop-width) {
@@ -42,43 +45,79 @@
   } */
 }
 
+.directions-list__pic-wrapper {
+  @include reset;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    height: 140px; /*обертка фото. иначе фото растет*/
+  }
+}
+
 .directions-list__pic {
   @include reset;
   border-radius: 10px 10px 0 0;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    border-radius: 0 22px 22px 0;
+  }
 }
 
 .directions-list__description-wrapper {
   background-color: var(--basic-white);
   min-height: 89px;
   border-radius: 10px;
-  margin-top: -12px;
+  margin-top: -15px;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
-    width: 100%;
-    border-radius: 10px 0 0 10px;
+    width: 431px;
+    border-radius: 22px 0 0 22px;
   }
 
-  /* @media (min-width: $desktop-width) {
-
-  } */
+  @media (min-width: $desktop-width) {
+    width: 376px;
+  }
 }
 
 .directions-list__name {
   @include reset;
-  margin-top: 26px;
+  padding-top: 24px;
   margin-left: 24px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 21px;
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 24px;
+    padding-top: 30px;
+    margin-left: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 24px;
+    margin-left: 30px;
   }
 
   &--thailand::before {
     position: absolute;
-    left: 24px;
+    left: 25px;
     top: 85px;
     content: url("../img/flag-thailand.png");
+
+    @media (min-width: $tablet-width) {
+      left: 395px;
+      top: 17px;
+      content: url("../img/flag-thailand-big.png");
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 338px;
+      top: 23px;
+    }
   }
 
   &--france::before {
@@ -86,6 +125,17 @@
     left: 24px;
     top: 85px;
     content: url("../img/flag-france.png");
+
+    @media (min-width: $tablet-width) {
+      left: 395px;
+      top: 17px;
+      content: url("../img/flag-france-big.png");
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 338px;
+      top: 23px;
+    }
   }
 
   &--czech::before {
@@ -93,6 +143,17 @@
     left: 24px;
     top: 85px;
     content: url("../img/flag-czech.png");
+
+    @media (min-width: $tablet-width) {
+      left: 395px;
+      top: 15px;
+      content: url("../img/flag-czech-big.png");
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 338px;
+      top: 23px;
+    }
   }
 }
 
@@ -100,11 +161,27 @@
   @include reset;
   color: var(--basic-blue-semi-light);
   margin-left: 24px;
-  margin-bottom: 10px;
+  padding-top: 2px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.035em;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    margin-left: 27px;
+    padding-top: 4px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 32px;
+    padding-top: 3px;
   }
 }
 
@@ -118,8 +195,17 @@
   font-weight: 600;
 
   @media (min-width: $tablet-width) {
-    bottom: 27px;
-    right: 507px;
+    bottom: 23px;
+    right: 508px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 23px;
+    right: 446px;
   }
 
   &::before {
@@ -127,6 +213,12 @@
     right: 47px;
     bottom: -1px;
     content: url("../img/user-liked.svg");
+
+    @media (min-width: $tablet-width) {
+      content: url("../img/user-liked-big.svg");
+      bottom: -4px;
+      right: 63px;
+    }
   }
 }
 

@@ -6,18 +6,44 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <title>Попутчики</title>
   <link href='css/style.css' rel='stylesheet'>
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-image: url("img/pixel-glass/catalog-mob-modal.png");
+    }
+
+    @media (min-width: 768px) {
+      HTML {
+        background-image: url("img/pixel-glass/catalog-tab-modal.png");
+      }
+    }
+
+    @media (min-width: 1440px) {
+      HTML {
+        background-image: url("img/pixel-glass/catalog-desktop-modal.png");
+      }
+    }
+  </style>
+  <link href="pixel-glass/styles.css" rel="stylesheet">
+  <script src="pixel-glass/script.js"></script>
 </head>
 
-<body class='page__body'>
+<body class='page__body page__body--secondary'>
 
   <header class='page__header page-header page-header--secondary'>
     <div class='page-header__container container'>
       <div class='page-header__menu-wrapper'>
         <a class='page-header__logo logo' href='index.html' aria-label='перейти на главную страницу'>
-          <img class='logo__image' src="img/logo-mobile-white@1x.png" width='100' height='19' alt='логотип'>
+          <picture class='logo__wrapper'>
+            <source srcset="img/logo-desktop-white@1x.png" media="(min-width: 1440px)">
+            <source srcset="img/logo-tablet-white@1x.png" media="(min-width: 768px)">
+            <img class='logo__image' src="img/logo-mobile-white@1x.png" alt='логотип'>
+          </picture>
         </a>
         <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'></button>
-        <h1 class='page-header__title main-title'>Попутчики</h1>
+        <h1 class='page-header__title page-header__title--catalog main-title'>Попутчики</h1>
         <nav class='page-header__nav-wrapper'>
           <ul class='page-header__nav-list'>
             <li class='page-header__item'>
@@ -40,215 +66,661 @@
           aria-label='наша почта'></a>
         <a class='contacts__auth button' href='#'>Авторизация</a>
       </div>
-
       <a class='page-header__back-button' href='index.html'>На главную</a>
-    </div>
-
-    <div class='header-submenu header-submenu--hidden'>
-      <p class='header-submenu__logo logo'>Погнали?</p>
-      <nav class='header-submenu__links-wrapper'>
-        <ul class='header-submenu__nav-list'>
-          <li class='header-submenu__item'>
-            <a class='header-submenu__link' href='#'>О сервисе</a>
-          </li>
-          <li class='header-submenu__item'>
-            <a class='header-submenu__link' href='form.html'>направления</a>
-          </li>
-          <li class='header-submenu__item'>
-            <a class='header-submenu__link' href='catalog.html'>попутчики</a>
-          </li>
-        </ul>
-      </nav>
-      <a class='header-submenu__button' href='#'>Авторизация</a>
-
-      <ul class='header-submenu__contacts contact-list'>
-        <li class='contact-list__contact-item-wrapper'>
-          <a class='contact-list__item contact-list__item--phone' href='tel:88005558628' aria-label='наш телефон'>8 800
-            555-86-28</a>
-        </li>
-        <li class='contact-list__contact-item-wrapper'>
-          <a class='contact-list__item contact-list__item--email' href='mailto:mail@htmlacademy.ru'
-            aria-label='наша почта'>mail@htmlacademy.ru</a>
-        </li>
-      </ul>
-      <ul class='header-submenu__social'>
-        <li class='header-submenu__social-item-wrapper'>
-          <a href='#' class='header-submenu__social-item header-submenu__social-item--fb'
-            aria-label='Перейти на нашу страницу в Facebook'></a>
-        </li>
-        <li class='header-submenu__social-item-wrapper'>
-          <a href='#' class='header-submenu__social-item header-submenu__social-item--vk'
-            aria-label='Перейти на нашу страницу в Vkontakte'></a>
-        </li>
-        <li class='header-submenu__social-item-wrapper'>
-          <a href='#' class='header-submenu__social-item header-submenu__social-item--instagram'
-            aria-label='Перейти на нашу страницу в Instagram'></a>
-        </li>
-      </ul>
     </div>
   </header>
 
   <main class='page__main page-main'>
-    <section class='page-main__country-filter country-filter'>
+    <section class='page-main__country-filter country-filter country-filter--opened'>
       <div class='country-filter__container container'>
-        <h2 class='country-filter__title-main'>Фильтрация по странам</h2>
+        <h2 class='country-filter__title-main'>Фильтрация по странам:</h2>
+        <ul class='country-filter__controls'>
+          <li class='country-filter__controls-wrapper'>
+            <button class='country-filter__world-toggle country-filter__world-toggle--active'>Европа</button>
+          </li>
+          <li class='country-filter__controls-wrapper'>
+            <button class='country-filter__world-toggle'>Азия</button>
+          </li>
+          <li class='country-filter__controls-wrapper'>
+            <button class='country-filter__world-toggle'>Америка</button>
+          </li>
+          <li class='country-filter__controls-wrapper'>
+            <button class='country-filter__world-toggle'>Острова</button>
+          </li>
+          <li class='country-filter__controls-wrapper country-filter__controls-wrapper--show-all'>
+            <button class='country-filter__world-toggle country-filter__world-toggle--show-all'>
+              <span class='country-filter__world-toggle-txt-closed'>Показать все</span>
+              <span class='country-filter__world-toggle-txt-opened'>Свернуть</span>
+            </button>
+          </li>
+        </ul>
+
         <button class='country-filter__toggle' aria-label='Открыть/Закрыть фильтрацию по странам'></button>
-        <div class='country-filter__wrapper-country-filter visually-hidden'>
-          <button class='country-filter__world-toggle'>Европа</button>
-          <button class='country-filter__world-toggle'>Азия</button>
-          <button class='country-filter__world-toggle'>Америка</button>
-          <button class='country-filter__world-toggle'>Острова</button>
-          <ul class='country-filter__letters-wrapper'>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву А'>А</a>
-              <ul class='country-filter__country-list country-filter__country-list--a visually-hidden'>
-                <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
-                  <a class='country-filter__country-link' href='/europe/france.html'>Австралия</a>
-                </li>
-                <li class='country-filter__country-list-item country-filter__country-list-item--europ'>
-                  <a class='country-filter__country-link' href='#'>Австрия</a>
-                </li>
-                <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
-                  <a class='country-filter__country-link' href='#'>Азербайджан</a>
-                </li>
-                <li class='country-filter__country-list-item country-filter__country-list-item--europ'>
-                  <a class='country-filter__country-link' href='#'>Албания</a>
-                </li>
-                <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
-                  <a class='country-filter__country-link' href='#'>Алжир</a>
-                </li>
-                <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
-                  <a class='country-filter__country-link' href='#'>Ангола</a>
-                </li>
-                <li class='country-filter__country-list-item country-filter__country-list-item--europ'>
-                  <a class='country-filter__country-link' href='#'>Андорра</a>
-                </li>
-                <li class='country-filter__country-list-item country-filter__country-list-item--islands'>
-                  <a class='country-filter__country-link' href='#'>Антигуа и Барбуда</a>
-                </li>
-                <li class='country-filter__country-list-item country-filter__country-list-item--america'>
-                  <a class='country-filter__country-link' href='#'>Аргентина</a>
-                </li>
-                <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
-                  <a class='country-filter__country-link' href='#'>Армения</a>
-                </li>
-                <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
-                  <a class='country-filter__country-link' href='#'>Афганистан</a>
-                </li>
-              </ul>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву Б'>Б</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву В'>В</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву Г'>Г</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву Д'>Д</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву Е'>Е</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву З'>З</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву И'>И</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву К'>К</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву Л'>Л</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву М'>М</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву Н'>Н</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву О'>О</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву П'>П</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву Р'>Р</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву С'>С</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву Т'>Т</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву У'>У</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву Ф'>Ф</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву Х'>Х</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву Ч'>Ч</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву Ш'>Ш</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву Э'>Э</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву Ю'>Ю</a>
-            </li>
-            <li class='country-filter__letter-wrapper'>
-              <a class='country-filter__letter' href='#' aria-label='Страны на букву Я'>Я</a>
-            </li>
-          </ul>
-          <div class='country-filter__current-visible-list'>
-            <ul class='country-filter__country-list country-filter__country-list--a'>
-              <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
-                <a class='country-filter__country-link' href='/europe/france.html'>Австралия</a>
+
+        <div class='country-filter__wrapper-country-filter calendar'>
+          <div class='calendar__container-inner container'>
+            <ul class='calendar__letters-wrapper'>
+              <li class='calendar__letter-wrapper calendar__letter-wrapper--active'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву А'>А</a>
+                <ul class='calendar__country-list calendar__country-list--active'>
+                  <li class='calendar__country-list-item calendar__country-list-item--asia'>
+                    <a class='calendar__country-link' href='/europe/france.html'>Австралия</a>
+                  </li>
+                  <li class='calendar__country-list-item calendar__country-list-item--europ'>
+                    <a class='calendar__country-link' href='#'>Австрия</a>
+                  </li>
+                  <li class='calendar__country-list-item calendar__country-list-item--asia'>
+                    <a class='calendar__country-link' href='#'>Азербайджан</a>
+                  </li>
+                  <li class='calendar__country-list-item calendar__country-list-item--europ'>
+                    <a class='calendar__country-link' href='#'>Албания</a>
+                  </li>
+                  <li class='calendar__country-list-item calendar__country-list-item--asia'>
+                    <a class='calendar__country-link' href='#'>Алжир</a>
+                  </li>
+                  <li class='calendar__country-list-item calendar__country-list-item--asia'>
+                    <a class='calendar__country-link' href='#'>Ангола</a>
+                  </li>
+                  <li class='calendar__country-list-item calendar__country-list-item--europ'>
+                    <a class='calendar__country-link' href='#'>Андорра</a>
+                  </li>
+                  <li class='calendar__country-list-item calendar__country-list-item--islands'>
+                    <a class='calendar__country-link' href='#'>Антигуа и Барбуда</a>
+                  </li>
+                  <li class='calendar__country-list-item calendar__country-list-item--america'>
+                    <a class='calendar__country-link' href='#'>Аргентина</a>
+                  </li>
+                  <li class='calendar__country-list-item calendar__country-list-item--asia'>
+                    <a class='calendar__country-link' href='#'>Армения</a>
+                  </li>
+                  <li class='calendar__country-list-item calendar__country-list-item--asia'>
+                    <a class='calendar__country-link' href='#'>Афганистан</a>
+                  </li>
+                </ul>
               </li>
-              <li class='country-filter__country-list-item country-filter__country-list-item--europ'>
-                <a class='country-filter__country-link' href='#'>Австрия</a>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву Б'>Б</a>
+                <ul class='calendar__country-list calendar__country-list--b'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Багамские Острова</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Бангладеш</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Барбадос</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Бахрейн</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Белоруссия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Белиз</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Бельгия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Бенин</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Болгария</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Боливия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Босния и Герцеговина</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Ботсвана</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Бразилия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Бруней</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Буркина-Фасо</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Бурунди</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Бутан</a>
+                  </li>
+                </ul>
               </li>
-              <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
-                <a class='country-filter__country-link' href='#'>Азербайджан</a>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву В'>В</a>
+                <ul class='calendar__country-list calendar__country-list--v'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Вануату</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Великобритания</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Венгрия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Венесуэла</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Восточный Тимор</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Вьетнам</a>
+                  </li>
+                </ul>
               </li>
-              <li class='country-filter__country-list-item country-filter__country-list-item--europ'>
-                <a class='country-filter__country-link' href='#'>Албания</a>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву Г'>Г</a>
+                <ul class='calendar__country-list calendar__country-list--g'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Габон</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Гаити</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Гайана</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Гамбия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Гана</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Гватемала</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Гвинея</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Гвинея-Бисау</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Германия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Гондурас</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Гренада</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Греция</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Грузия</a>
+                  </li>
+                </ul>
               </li>
-              <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
-                <a class='country-filter__country-link' href='#'>Алжир</a>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву Д'>Д</a>
+                <ul class='calendar__country-list calendar__country-list--d'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Дания</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Джибути</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Доминика</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Доминикана</a>
+                  </li>
+                </ul>
               </li>
-              <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
-                <a class='country-filter__country-link' href='#'>Ангола</a>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву Е'>Е</a>
+                <ul class='calendar__country-list calendar__country-list--e'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Египет</a>
+                  </li>
+                </ul>
               </li>
-              <li class='country-filter__country-list-item country-filter__country-list-item--europ'>
-                <a class='country-filter__country-link' href='#'>Андорра</a>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву З'>З</a>
+                <ul class='calendar__country-list calendar__country-list--z'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Замбия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Зимбабве</a>
+                  </li>
+                </ul>
               </li>
-              <li class='country-filter__country-list-item country-filter__country-list-item--islands'>
-                <a class='country-filter__country-link' href='#'>Антигуа и Барбуда</a>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву И'>И</a>
+                <ul class='calendar__country-list calendar__country-list--i'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Израиль</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Индия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Индонезия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Иордания</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Ирак</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Иран</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Ирландия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Исландия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Испания</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Италия</a>
+                  </li>
+                </ul>
               </li>
-              <li class='country-filter__country-list-item country-filter__country-list-item--america'>
-                <a class='country-filter__country-link' href='#'>Аргентина</a>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву К'>К</a>
+                <ul class='calendar__country-list calendar__country-list--k '>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Кабо-Верде</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Казахстан</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Камбоджа</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Камерун</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Канада</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Катар</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Кения</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Кипр</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Киргизия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Кирибати</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Китай</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Колумбия</a>
+                  </li>
+                </ul>
               </li>
-              <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
-                <a class='country-filter__country-link' href='#'>Армения</a>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву Л'>Л</a>
+                <ul class='calendar__country-list calendar__country-list--l'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Лаос</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Латвия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Лесото</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Либерия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Ливан</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Ливия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Литва</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Лихтенштейн</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Люксембург */</a>
+                  </li>
+                </ul>
               </li>
-              <li class='country-filter__country-list-item country-filter__country-list-item--asia'>
-                <a class='country-filter__country-link' href='#'>Афганистан</a>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву М'>М</a>
+                <ul class='calendar__country-list calendar__country-list--m'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Маврикий</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Мавритания</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Мадагаскар</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Малави</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Малайзия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Мали</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Мальдивы</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Мальта</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Марокко</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву Н'>Н</a>
+                <ul class='calendar__country-list calendar__country-list--n'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Намибия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Науру</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Непал</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Нигер</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Нигерия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Нидерланды</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Никарагуа</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Новая Зеландия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Норвегия</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву О'>О</a>
+                <ul class='calendar__country-list calendar__country-list--o'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>ОАЭ</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>ОМАН</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву П'>П</a>
+                <ul class='calendar__country-list calendar__country-list--p'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Пакистан</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Палау</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Панама</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Папуа - Новая Гвинея</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Парагвай</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Перу</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Польша</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Португалия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Болгария</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву Р'>Р</a>
+                <ul class='calendar__country-list calendar__country-list--r'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Руанда</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Румыния</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Россия</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву С'>С</a>
+                <ul class='calendar__country-list calendar__country-list--s'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Сальвадор</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Самоа</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Сан-Марино</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Саудовская Аравия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Сейшелы</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Сенегал</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Сербия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Сингапур</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Сирия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Словакия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Словения</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>США</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву Т'>Т</a>
+                <ul class='calendar__country-list calendar__country-list--b'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Таджикистан</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Таиланд</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Танзания</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Того</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Тонга</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Тринидад и Тобаго</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Тувалу</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Тунис</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Туркмения</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Турция</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву У'>У</a>
+                <ul class='calendar__country-list calendar__country-list--y'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Уганда</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Узбекистан</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Украина</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Уругвай</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву Ф'>Ф</a>
+                <ul class='calendar__country-list calendar__country-list--f'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Фиджи</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Филиппины</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Финляндия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Франция</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву Х'>Х</a>
+                <ul class='calendar__country-list calendar__country-list--h'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Хорватия</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву Ч'>Ч</a>
+                <ul class='calendar__country-list calendar__country-list--ch'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Чад</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Черногория</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Чехия</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Чили</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву Ш'>Ш</a>
+                <ul class='calendar__country-list calendar__country-list--ch'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Швейцария</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Швеция</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Шри-Ланка</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву Э'>Э</a>
+                <ul class='calendar__country-list calendar__country-list--ye'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Эквадор</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Эритрея</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Эсватини</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Эстония</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Эфиопия</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву Ю'>Ю</a>
+                <ul class='calendar__country-list calendar__country-list--yu'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>ЮАР</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Южный Судан</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='calendar__letter-wrapper'>
+                <a class='calendar__letter' href='#' aria-label='Страны на букву Я'>Я</a>
+                <ul class='calendar__country-list calendar__country-list--ya'>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Ямайка</a>
+                  </li>
+                  <li class='calendar__country-list-item'>
+                    <a class='calendar__country-link' href='#'>Япония</a>
+                  </li>
+                </ul>
               </li>
             </ul>
+            <button class='calendar__button button button--longer'
+              aria-label='Свернуть фильтрацию по странам'>Свернуть</button>
           </div>
-          <button class='country-filter__button button button--close'
-            aria-label='Свернуть фильтрацию по странам'>Свернуть</button>
         </div>
       </div>
     </section>
@@ -257,104 +729,114 @@
       <div class='filter__container container'>
         <form class='filter__form' action='https://echo.htmlacademy.ru' method='get'>
           <h2 class='filter__title-main'>Подберите идеального попутчика</h2>
+
           <fieldset class='filter__filtration-wrapper filter__filtration-wrapper--hobby'>
             <legend class='filter__title'>Хобби</legend>
-            <ul class='filter__item-filter-list filter__item-filter-list--open '>
-              <li class='filter__list-option'>
-                <input class='filter__list-option-input visually-hidden' type='checkbox' id='sport'>
-                <label class='filter__list-option-label' for='sport'>Спортзал</label>
-              </li>
-              <li class='filter__list-option'>
-                <input class='filter__list-option-input visually-hidden' type='checkbox' id='hookah'>
-                <label class='filter__list-option-label' for='hookah'>Кальян</label>
-              </li>
-              <li class='filter__list-option'>
-                <input class='filter__list-option-input visually-hidden' type='checkbox' id='sofa'>
-                <label class='filter__list-option-label' for='sofa'>Диван</label>
-              </li>
-            </ul>
+            <div class='filter__item-filter-list-wrapper'>
+              <ul class='filter__item-filter-list'>
+                <li class='filter__list-option'>
+                  <input class='filter__list-option-input visually-hidden' type='checkbox' id='sport'>
+                  <label class='filter__list-option-label' for='sport'>Спортзал</label>
+                </li>
+                <li class='filter__list-option'>
+                  <input class='filter__list-option-input visually-hidden' type='checkbox' id='hookah'>
+                  <label class='filter__list-option-label' for='hookah'>Кальян</label>
+                </li>
+                <li class='filter__list-option'>
+                  <input class='filter__list-option-input visually-hidden' type='checkbox' id='sofa'>
+                  <label class='filter__list-option-label' for='sofa'>Диван</label>
+                </li>
+              </ul>
+            </div>
           </fieldset>
 
           <fieldset class='filter__filtration-wrapper filter__filtration-wrapper--music'>
             <legend class='filter__title'>Музыка</legend>
-            <ul class='filter__item-filter-list filter__item-filter-list--open'>
-              <li class='filter__list-option'>
-                <input class='filter__list-option-input visually-hidden' type='checkbox' id='hard-rock'>
-                <label class='filter__list-option-label' for='hard-rock'>Тяжелый рок</label>
-              </li>
-              <li class='filter__list-option'>
-                <input class='filter__list-option-input visually-hidden' type='checkbox' id='rus-rap'>
-                <label class='filter__list-option-label' for='rus-rap'>Русский рэп</label>
-              </li>
-              <li class='filter__list-option'>
-                <input class='filter__list-option-input visually-hidden' type='checkbox' id='eurodance'>
-                <label class='filter__list-option-label' for='eurodance'>Евроденс</label>
-              </li>
-            </ul>
+            <div class='filter__item-filter-list-wrapper'>
+              <ul class='filter__item-filter-list filter__item-filter-list--open'>
+                <li class='filter__list-option'>
+                  <input class='filter__list-option-input visually-hidden' type='checkbox' id='hard-rock'>
+                  <label class='filter__list-option-label' for='hard-rock'>Тяжелый рок</label>
+                </li>
+                <li class='filter__list-option'>
+                  <input class='filter__list-option-input visually-hidden' type='checkbox' id='rus-rap'>
+                  <label class='filter__list-option-label' for='rus-rap'>Русский рэп</label>
+                </li>
+                <li class='filter__list-option'>
+                  <input class='filter__list-option-input visually-hidden' type='checkbox' id='eurodance'>
+                  <label class='filter__list-option-label' for='eurodance'>Евроденс</label>
+                </li>
+              </ul>
+            </div>
           </fieldset>
 
           <fieldset class='filter__filtration-wrapper filter__filtration-wrapper--food'>
             <legend class='filter__title'>Еда</legend>
-            <ul class='filter__item-filter-list filter__item-filter-list--open'>
-              <li class='filter__list-option'>
-                <input class='filter__list-option-input visually-hidden' type='checkbox' id='meat-eater'>
-                <label class='filter__list-option-label' for='meat-eater'>Мясоед</label>
-              </li>
-              <li class='filter__list-option'>
-                <input class='filter__list-option-input visually-hidden' type='checkbox' id='healthy-diet'>
-                <label class='filter__list-option-label' for='healthy-diet'>Сидит на ПП</label>
-              </li>
-              <li class='filter__list-option'>
-                <input class='filter__list-option-input visually-hidden' type='checkbox' id='vegan-raw'>
-                <label class='filter__list-option-label' for='vegan-raw'>Веган-сыроед</label>
-              </li>
-            </ul>
+            <div class='filter__item-filter-list-wrapper'>
+              <ul class='filter__item-filter-list'>
+                <li class='filter__list-option'>
+                  <input class='filter__list-option-input visually-hidden' type='checkbox' id='meat-eater'>
+                  <label class='filter__list-option-label' for='meat-eater'>Мясоед</label>
+                </li>
+                <li class='filter__list-option'>
+                  <input class='filter__list-option-input visually-hidden' type='checkbox' id='healthy-diet'>
+                  <label class='filter__list-option-label' for='healthy-diet'>Сидит на ПП</label>
+                </li>
+                <li class='filter__list-option'>
+                  <input class='filter__list-option-input visually-hidden' type='checkbox' id='vegan-raw'>
+                  <label class='filter__list-option-label' for='vegan-raw'>Веган-сыроед</label>
+                </li>
+              </ul>
+            </div>
           </fieldset>
 
           <fieldset class='filter__filtration-wrapper filter__filtration-wrapper--transport'>
-            <legend class='filter__title'>Транспорт</legend>
-            <ul class='filter__item-filter-list-transport filter__item-filter-list-transport--open'>
-              <li class='filter__list-option'>
-                <input class='filter__list-option-input visually-hidden' type='checkbox' id='airplane'>
-                <label class='filter__list-option-label-transport' for='airplane' aria-label='Самолет'>
-                  <svg class='filter__transport-pic filter__transport-pic--active' xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 19 21">
-                    <path fill="#101D41"
-                      d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z" />
-                  </svg>
-                </label>
-              </li>
-              <li class='filter__list-option'>
-                <input class='filter__list-option-input visually-hidden' type='checkbox' id='bus'>
-                <label class='filter__list-option-label-transport' for='bus' aria-label='Автобус'>
-                  <svg class='filter__transport-pic filter__transport-pic--active' xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 17 21">
-                    <path fill="#101D41"
-                      d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z" />
-                  </svg>
-                </label>
-              </li>
-              <li class='filter__list-option'>
-                <input class='filter__list-option-input visually-hidden' type='checkbox' id='bicycle'>
-                <label class='filter__list-option-label-transport' for='bicycle' aria-label='Велосипед'>
-                  <svg class='filter__transport-pic' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21">
-                    <path fill="#101D41"
-                      d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z" />
-                  </svg>
-                </label>
-              </li>
-              <li class='filter__list-option'>
-                <input class='filter__list-option-input visually-hidden' type='checkbox' id='walk'>
-                <label class='filter__list-option-label-transport' for='walk' aria-label='Пешком'>
-                  <svg class='filter__transport-pic filter__transport-pic--active' xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 21">
-                    <ellipse fill="#101D41" cx="14.3" cy="2" rx="2.1" ry="2" />
-                    <path fill="#101D41"
-                      d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z" />
-                  </svg>
-                </label>
-              </li>
-            </ul>
+            <legend class='filter__title filter__title--transport'>Транспорт</legend>
+            <div class='filter__item-filter-list-wrapper'>
+              <ul class='filter__item-filter-list-transport filter__item-filter-list-transport--open'>
+                <li class='filter__list-option'>
+                  <input class='filter__list-option-input visually-hidden' type='checkbox' id='airplane'>
+                  <label class='filter__list-option-label-transport' for='airplane' aria-label='Самолет'>
+                    <svg class='filter__transport-pic filter__transport-pic--active' xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 19 21">
+                      <path fill="#101D41"
+                        d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z" />
+                    </svg>
+                  </label>
+                </li>
+                <li class='filter__list-option'>
+                  <input class='filter__list-option-input visually-hidden' type='checkbox' id='bus'>
+                  <label class='filter__list-option-label-transport' for='bus' aria-label='Автобус'>
+                    <svg class='filter__transport-pic filter__transport-pic--active' width="23" height="22"
+                      viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.75127 14.9286C5.75127 14.4948 5.56417 14.1244 5.18998 13.8175C4.81579 13.5106 4.36426 13.3571 3.8354 13.3571C3.30654 13.3571 2.85501 13.5106 2.48082 13.8175C2.10663 14.1244 1.91953 14.4948 1.91953 14.9286C1.91953 15.3624 2.10663 15.7327 2.48082 16.0396C2.85501 16.3465 3.30654 16.5 3.8354 16.5C4.36426 16.5 4.81579 16.3465 5.18998 16.0396C5.56417 15.7327 5.75127 15.3624 5.75127 14.9286ZM21.0782 14.9286C21.0782 14.4948 20.8911 14.1244 20.5169 13.8175C20.1427 13.5106 19.6912 13.3571 19.1623 13.3571C18.6335 13.3571 18.182 13.5106 17.8078 13.8175C17.4336 14.1244 17.2465 14.4948 17.2465 14.9286C17.2465 15.3624 17.4336 15.7327 17.8078 16.0396C18.182 16.3465 18.6335 16.5 19.1623 16.5C19.6912 16.5 20.1427 16.3465 20.5169 16.0396C20.8911 15.7327 21.0782 15.3624 21.0782 14.9286ZM20.3897 10.067L19.312 5.35268C19.2621 5.16443 19.1499 5.01097 18.9753 4.8923C18.8006 4.77362 18.5986 4.71429 18.3691 4.71429H4.62869C4.39918 4.71429 4.19712 4.77362 4.0225 4.8923C3.84787 5.01097 3.73561 5.16443 3.68572 5.35268L2.60805 10.067C2.55815 10.3125 2.628 10.5294 2.81759 10.7176C3.00719 10.9059 3.25166 11 3.55101 11H19.4467C19.7461 11 19.9906 10.9059 20.1802 10.7176C20.3697 10.5294 20.4396 10.3125 20.3897 10.067ZM17.007 2.55357C17.007 2.38988 16.9371 2.25074 16.7974 2.13616C16.6577 2.02158 16.4881 1.96429 16.2885 1.96429H6.7092C6.50963 1.96429 6.34 2.02158 6.2003 2.13616C6.0606 2.25074 5.99075 2.38988 5.99075 2.55357C5.99075 2.71726 6.0606 2.8564 6.2003 2.97098C6.34 3.08557 6.50963 3.14286 6.7092 3.14286H16.2885C16.4881 3.14286 16.6577 3.08557 16.7974 2.97098C16.9371 2.8564 17.007 2.71726 17.007 2.55357ZM22.9941 11.4542V18.8571H21.0782V20.4286C21.0782 20.8624 20.8911 21.2327 20.5169 21.5396C20.1427 21.8465 19.6912 22 19.1623 22C18.6335 22 18.182 21.8465 17.8078 21.5396C17.4336 21.2327 17.2465 20.8624 17.2465 20.4286V18.8571H5.75127V20.4286C5.75127 20.8624 5.56417 21.2327 5.18998 21.5396C4.81579 21.8465 4.36426 22 3.8354 22C3.30654 22 2.85501 21.8465 2.48082 21.5396C2.10663 21.2327 1.91953 20.8624 1.91953 20.4286V18.8571H0.00366211V11.4542C0.00366211 10.5376 0.128393 9.625 0.377855 8.71652L1.91953 3.14286C2.00934 2.50446 2.49579 1.94382 3.37888 1.46094C4.26198 0.978051 5.4095 0.613839 6.82146 0.368304C8.23342 0.122768 9.79255 0 11.4989 0C13.2052 0 14.7643 0.122768 16.1763 0.368304C17.5882 0.613839 18.7358 0.978051 19.6189 1.46094C20.502 1.94382 20.9884 2.50446 21.0782 3.14286L22.6498 8.71652C22.8793 9.55134 22.9941 10.4639 22.9941 11.4542Z"
+                        fill="#1D2E5B" />
+                    </svg>
+                  </label>
+                </li>
+                <li class='filter__list-option'>
+                  <input class='filter__list-option-input visually-hidden' type='checkbox' id='bicycle'>
+                  <label class='filter__list-option-label-transport' for='bicycle' aria-label='Велосипед'>
+                    <svg class='filter__transport-pic' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21">
+                      <path fill="#101D41"
+                        d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z" />
+                    </svg>
+                  </label>
+                </li>
+                <li class='filter__list-option'>
+                  <input class='filter__list-option-input visually-hidden' type='checkbox' id='walk'>
+                  <label class='filter__list-option-label-transport' for='walk' aria-label='Пешком'>
+                    <svg class='filter__transport-pic filter__transport-pic--active' xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 21">
+                      <ellipse fill="#101D41" cx="14.3" cy="2" rx="2.1" ry="2" />
+                      <path fill="#101D41"
+                        d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z" />
+                    </svg>
+                  </label>
+                </li>
+              </ul>
+            </div>
           </fieldset>
 
           <fieldset class='filter__filtration-wrapper filter__filtration-wrapper--lvl'>
@@ -400,12 +882,17 @@
               <div class='companions-catalog__desc-wrapper'>
                 <a class='companions-catalog__avatar-link  companions-catalog__avatar-link--liked' href='#'
                   aria-label='Перейти на страницу пользователя'>
-                  <img class='companions-catalog__avatar' alt='Аватар пользователя' width='70' height='70'
-                    src='img/firsova-mobile@1x.jpg'> <!--  -->
+                  <picture class='companions-catalog__avatar-wrapper'>
+                    <source class='companions-catalog__source' srcset="img/firsova-desktop@1x.jpg"
+                      media="(min-width: 1440px)">
+                    <source class='companions-catalog__source' srcset="img/firsova-tablet@1x.jpg"
+                      media="(min-width: 768px)">
+                    <img class='companions-catalog__avatar' alt='Аватар пользователя' src='img/firsova-mobile@1x.jpg'>
+                  </picture>
                 </a>
                 <h3 class='companions-catalog__name'>
-                  <a class='companions-catalog__name-link' href='#'
-                    aria-label='Перейти на страницу пользователя'>Таня<br>Фирсова</a> <!--  -->
+                  <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Таня
+                    <br>Фирсова</a> <!--  -->
                 </h3>
                 <div class='companions-catalog__likes'>1,5 М</div>
               </div>
@@ -417,7 +904,8 @@
                 <li class='companions-catalog__tag-item'>#авокадо</li>
                 <li class='companions-catalog__tag-item'>#смузи</li>
               </ul>
-              <p class='companions-catalog__text'><span class='companions-catalog__text-inner'>хочет посетить:</span>
+              <p class='companions-catalog__text'><span
+                  class='companions-catalog__text-inner companions-catalog__text-inner--visit'>хочет посетить:</span>
               </p>
               <ul class='companions-catalog__destinations'>
                 <li class='companions-catalog__destinations-item companions-catalog__destinations-item--sri-lanka'>
@@ -458,7 +946,9 @@
               </ul>
 
               <p class='companions-catalog__lvl-text'><span class='companions-catalog__text-inner'>левел</span></p>
-              <div class='companions-catalog__lvl companions-catalog__lvl--99'>99</div>
+              <div class='companions-catalog__lvl companions-catalog__lvl--99'>99
+                <span class='companions-catalog__lvl-desc'>level</span>
+              </div>
               <a class='companions-catalog__button button button--long' href='#'>Позвать!</a>
             </article>
           </li>
@@ -467,12 +957,18 @@
             <article class='companions-catalog__item'>
               <div class='companions-catalog__desc-wrapper'>
                 <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
-                  <img class='companions-catalog__avatar' alt='Аватар пользователя' width='70' height='70'
-                    src='img/photo-account-mobile@1x.jpg'>
+                  <picture class='companions-catalog__avatar-wrapper'>
+                    <source class='companions-catalog__source' srcset="img/demin-desktop@1x.jpg"
+                      media="(min-width: 1440px)">
+                    <source class='companions-catalog__source' srcset="img/demin-tablet@1x.jpg"
+                      media="(min-width: 768px)">
+                    <img class='companions-catalog__avatar' alt='Аватар пользователя'
+                      src='img/photo-account-mobile@1x.jpg'>
+                  </picture>
                 </a>
                 <h3 class='companions-catalog__name'>
-                  <a class='companions-catalog__name-link' href='#'
-                    aria-label='Перейти на страницу пользователя'>Петя<br>
+                  <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Петя
+                    <br>
                     Демин</a>
                 </h3>
                 <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
@@ -485,7 +981,8 @@
                 <li class='companions-catalog__tag-item'>#концерт</li>
                 <li class='companions-catalog__tag-item'>#крафт</li>
               </ul>
-              <p class='companions-catalog__text'><span class='companions-catalog__text-inner'>хочет посетить:</span>
+              <p class='companions-catalog__text'><span
+                  class='companions-catalog__text-inner companions-catalog__text-inner--visit'>хочет посетить:</span>
               </p>
               <ul class='companions-catalog__destinations'>
                 <li class='companions-catalog__destinations-item companions-catalog__destinations-item--belgium'>
@@ -526,7 +1023,9 @@
               </ul>
 
               <p class='companions-catalog__lvl-text'><span class='companions-catalog__text-inner'>левел</span></p>
-              <div class='companions-catalog__lvl companions-catalog__lvl--80'>80</div>
+              <div class='companions-catalog__lvl companions-catalog__lvl--80'>80
+                <span class='companions-catalog__lvl-desc'>level</span>
+              </div>
               <a class='companions-catalog__button button button--long' href='#'>Позвать!</a>
             </article>
           </li>
@@ -535,12 +1034,17 @@
             <article class='companions-catalog__item'>
               <div class='companions-catalog__desc-wrapper'>
                 <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
-                  <img class='companions-catalog__avatar' alt='Аватар пользователя' width='70' height='70'
-                    src='img/smolov-mobile@1x.jpg'>
+                  <picture class='companions-catalog__avatar-wrapper'>
+                    <source class='companions-catalog__source' srcset="img/smolov-desktop@1x.jpg"
+                      media="(min-width: 1440px)">
+                    <source class='companions-catalog__source' srcset="img/smolov-tablet@1x.jpg"
+                      media="(min-width: 768px)">
+                    <img class='companions-catalog__avatar' alt='Аватар пользователя' src='img/smolov-mobile@1x.jpg'>
+                  </picture>
                 </a>
                 <h3 class='companions-catalog__name'>
-                  <a class='companions-catalog__name-link' href='#'
-                    aria-label='Перейти на страницу пользователя'>Марк<br>
+                  <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Марк
+                    <br>
                     Смолов</a>
                 </h3>
                 <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
@@ -553,7 +1057,8 @@
                 <li class='companions-catalog__tag-item'>#кроссовки</li>
                 <li class='companions-catalog__tag-item'>#суприм</li>
               </ul>
-              <p class='companions-catalog__text'><span class='companions-catalog__text-inner'>хочет посетить:</span>
+              <p class='companions-catalog__text'><span
+                  class='companions-catalog__text-inner companions-catalog__text-inner--visit'>хочет посетить:</span>
               </p>
               <ul class='companions-catalog__destinations'>
                 <li class='companions-catalog__destinations-item companions-catalog__destinations-item--usa'>
@@ -566,9 +1071,9 @@
                   Австралия
                 </li>
                 <li class='companions-catalog__destinations-item companions-catalog__destinations-item--dominica'>
-                  <img class='companions-catalog__flag' alt='флаг Доминикана' src='img/flag-dominica.png' width='26'
+                  <img class='companions-catalog__flag' alt='флаг Доминика' src='img/flag-dominica.png' width='26'
                     height='18'>
-                  Доминикана
+                  Доминика
                 </li>
               </ul>
               <p class='companions-catalog__text'><span class='companions-catalog__text-inner'>транспорт:</span></p>
@@ -596,21 +1101,29 @@
               </ul>
 
               <p class='companions-catalog__lvl-text'><span class='companions-catalog__text-inner'>левел</span></p>
-              <div class='companions-catalog__lvl companions-catalog__lvl--25'>25</div>
-              <a class='companions-catalog__button button button--long' href='#'>Позвать!</a>
+              <div class='companions-catalog__lvl companions-catalog__lvl--25'>25
+                <span class='companions-catalog__lvl-desc'>level</span>
+              </div>
+              <a class='companions-catalog__button button button--long companions-catalog__button--fix'
+                href='#'>Позвать!</a>
             </article>
           </li>
 
           <li class='companions-catalog__item-wrapper'>
-            <article class='companions-catalog__item companions-catalog__item--online'>
+            <article class='companions-catalog__item companions-catalog__item--fix companions-catalog__item--online'>
               <div class='companions-catalog__desc-wrapper'>
                 <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
-                  <img class='companions-catalog__avatar' alt='Аватар пользователя' width='70' height='70'
-                    src='img/rogovaya-mobile@1x.jpg'>
+                  <picture class='companions-catalog__avatar-wrapper'>
+                    <source class='companions-catalog__source' srcset="img/rogovaya-desktop@1x.jpg"
+                      media="(min-width: 1440px)">
+                    <source class='companions-catalog__source' srcset="img/rogovaya-tablet@1x.jpg"
+                      media="(min-width: 768px)">
+                    <img class='companions-catalog__avatar' alt='Аватар пользователя' src='img/rogovaya-mobile@1x.jpg'>
+                  </picture>
                 </a>
                 <h3 class='companions-catalog__name'>
-                  <a class='companions-catalog__name-link' href='#'
-                    aria-label='Перейти на страницу пользователя'>Лариса<br>
+                  <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Лариса
+                    <br>
                     Роговая</a>
                 </h3>
                 <!--онлайн/офлайн будут идти псевдоэлементами к классу-->
@@ -622,7 +1135,8 @@
                 <li class='companions-catalog__tag-item'>#учеба</li>
                 <li class='companions-catalog__tag-item'>#линкедин</li>
               </ul>
-              <p class='companions-catalog__text'><span class='companions-catalog__text-inner'>хочет посетить:</span>
+              <p class='companions-catalog__text'><span
+                  class='companions-catalog__text-inner companions-catalog__text-inner--visit'>хочет посетить:</span>
               </p>
               <ul class='companions-catalog__destinations'>
                 <li class='companions-catalog__destinations-item companions-catalog__destinations-item--uk'>
@@ -661,7 +1175,9 @@
                 </li>
               </ul>
               <p class='companions-catalog__lvl-text'><span class='companions-catalog__text-inner'>левел</span></p>
-              <div class='companions-catalog__lvl companions-catalog__lvl--50'>50</div>
+              <div class='companions-catalog__lvl companions-catalog__lvl--50'>50
+                <span class='companions-catalog__lvl-desc'>level</span>
+              </div>
               <a class='companions-catalog__button button button--long' href='#'>Позвать!</a>
             </article>
           </li>
@@ -685,7 +1201,7 @@
             </li>
           </ul>
 
-          <div class='pagination_button-wrapper'>
+          <div class='pagination__button-wrapper'>
             <a class='pagination__button pagination__button--prev' aria-label='предыдущая страница' href='#'></a>
             <a class='pagination__button pagination__button--next' aria-label='следующая страница' href='#'></a>
           </div>
@@ -697,19 +1213,23 @@
   <footer class='page__footer footer footer--secondary'>
     <div class='footer__container container'>
       <a class='footer__logo logo' href='index.html' aria-label='перейти на главную страницу'>
-        <img class='logo__image' src="img/logo-mobile-blue@1x.png" width='100' height='19' alt='логотип'>
+        <picture class='logo__wrapper'>
+          <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
+          <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px)">
+          <img class='logo__image' src="img/logo-mobile-blue@1x.png" alt='логотип'>
+        </picture>
       </a>
-      <ul class='footer__social'>
-        <li class='footer__social-item'>
-          <a class='footer__item-link footer__item-link--fb' href='#'
+      <ul class='footer__social social'>
+        <li class='social__social-item'>
+          <a class='social__item-link social__item-link--fb' href='#'
             aria-label='перейти на нашу страницу в Facebook'></a>
         </li>
-        <li class='footer__social-item'>
-          <a class='footer__item-link footer__item-link--vk' href='#'
+        <li class='social__social-item'>
+          <a class='social__item-link social__item-link--vk' href='#'
             aria-label='перейти на нашу страницу в Vkontakte'></a>
         </li>
-        <li class='footer__social-item'>
-          <a class='footer__item-link footer__item-link--instagram' href='#'
+        <li class='social__social-item'>
+          <a class='social__item-link social__item-link--instagram' href='#'
             aria-label='перейти на нашу страницу в Instagram'></a>
         </li>
       </ul>

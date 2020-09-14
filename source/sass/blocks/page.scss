@@ -4,17 +4,37 @@
   color: var(--basic-white);
 }
 
+.page__header {
+  min-height: 91px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 350px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 103px;
+  }
+}
+
 .page__body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-}
+  background-color: rebeccapurple;
 
-.page__header {
-  /* @include width-container; */ /* new */
-  min-height: 95px;
+  &--index {
+    background-color: var(--basic-blue-light-dark);
+  }
+
+  &--secondary {
+    background-color: var(--basic-blue-pale);
+  }
+
+  &--third {
+    background-color: var(--basic-white-gray7);
+  }
 }
 
 .page__footer {
-  /* @include width-container; */
+  margin-top: -30px;
 }
