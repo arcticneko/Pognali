@@ -17,8 +17,8 @@
 
   @media (min-resolution: 1.5dppx) {
     background-image: url("../img/smolov-back-mobile@1x.png"),
-    url("../img/rogovaya-back-mobile@2x.png"),
-    url("../img/back-cube-mobile.svg");
+      url("../img/rogovaya-back-mobile@2x.png"),
+      url("../img/back-cube-mobile.svg");
     background-size: auto, 71px auto, auto;
   }
 
@@ -33,8 +33,8 @@
 
     @media (min-resolution: 1.5dppx) {
       background-image: url("../img/rogovaya-back-tablet@1x.png"),
-      url("../img/smolov-back-desktop@1x.png"),
-      url("../img/back-cube-mobile.svg");
+        url("../img/smolov-back-desktop@1x.png"),
+        url("../img/back-cube-mobile.svg");
     }
   }
 
@@ -52,8 +52,8 @@
 
     @media (min-resolution: 1.5dppx) {
       background-image: url("../img/rogovaya-back-desktop@2x.png"),
-      url("../img/smolov-back-desktop@2x.png"),
-      url("../img/back-cube-mobile.svg");
+        url("../img/smolov-back-desktop@2x.png"),
+        url("../img/back-cube-mobile.svg");
       background-size: 285px auto, 143px auto, auto;
     }
   }

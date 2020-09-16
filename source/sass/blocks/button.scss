@@ -17,11 +17,11 @@
   line-height: 20px;
 
   &:hover {
-    background-color: #FFBD30;
+    background-color: va(--special-yellow-dark);
   }
 
   &:active {
-    color: rgba(29, 46, 91, 0.3);;
+    color: var(--btn-modal4);
   }
 
   &:active::after {
@@ -147,13 +147,13 @@
     color: var(--basic-blue-light);
 
     &:hover {
-      background-color: #192144;
+      background-color: var(--basic-blue-dark);
       color: var(--basic-white);
     }
 
     &:active {
-      color: rgba(255, 255, 255, 0.3);
-      background-color: #192144;
+      color: var(--basic-gray17);
+      background-color: var(--basic-blue-dark);
     }
 
     @media (min-width: $tablet-width) {
@@ -192,12 +192,12 @@
 
   &--bordered:hover::after {
     content: url("../img/email-arrow-white.svg");
-    border: 3px solid #192144;
+    border: 3px solid var(--basic-blue-dark);
   }
 
   &--bordered:active::after {
     content: url("../img/email-arrow-white-transp.svg");
-    border: 3px solid #192144;
+    border: 3px solid var(--basic-blue-dark);
   }
 
   &--long {

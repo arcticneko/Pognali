@@ -297,7 +297,7 @@
     opacity: 0.45;
   }
 
-  &:active{
+  &:active {
     opacity: 0.15;
   }
 
@@ -327,11 +327,11 @@
   padding-left: 106px;
 
   &:hover {
-    border: 1px solid #959BB2;
+    border: 1px solid var(--basic-white-gray12);
   }
 
-  &:active{
-    border: 1px solid #161C35;
+  &:active {
+    border: 1px solid var(--basic-blue);
   }
 
   @media (min-width: $tablet-width) {
@@ -597,7 +597,7 @@
   font-weight: 400;
   font-size: 14px;
   /* line-height: 30px; */
-  vertical-align: middle;
+  /* vertical-align: middle; */
 
   &:hover {
     outline: 2px solid var(--special-orange-light);
@@ -756,10 +756,6 @@
   }
 }
 
-.step__country-to-visit-select {
-  z-index: 5;
-}
-
 .step__country-to-visit-wrapper {
   position: relative;
   margin-top: 23px;
@@ -894,7 +890,7 @@
   /* ПСЕВДОЭЛЕМЕНТ У SELECT НЕ РАБОТАЕТ */
 
   &:hover {
-    border: 1px solid #959BB2;
+    border: 1px solid var(--basic-white-gray12);
   }
 
   /* &:active {} */
@@ -985,8 +981,6 @@
       height: 18px;
       background-image: url("../img/cross-small.svg");
       opacity: 0.1;
-
-
     }
   }
 }
@@ -1010,7 +1004,7 @@
   background-color: transparent;
 
   &:hover {
-    border: 1px solid #959BB2;
+    border: 1px solid var(--basic-white-gray12);
   }
 
   &::after {
@@ -1040,7 +1034,7 @@
   appearance: none;
 
   &:hover {
-    background-color: #DFE3F0;
+    background-color: var(--special-blue-light);
   }
 
   &::after {
@@ -1284,11 +1278,11 @@
   border: 1px solid var(--basic-white-gray);
 
   &:hover {
-    border: 1px solid #959BB2;
+    border: 1px solid var(--basic-white-gray12);
   }
 
   &:focus-within {
-    border: 1px solid #161C35;
+    border: 1px solid var(--basic-blue);
   }
 
   @media (min-width: $tablet-width) {
@@ -1365,10 +1359,6 @@
   }
 }
 
-/* .step__country-to-visit-wrapper--new-opened:hover:before {
-  background-color: red;
-}
- */
 .step__country-to-visit-wrapper--new-opened .step__wrapper-country-filter {
   /*общий блок-подложка*/
   display: flex;
@@ -1449,9 +1439,8 @@
       box-sizing: border-box;
       border-radius: 4px;
 
-
       &:hover {
-        border: 1px solid #959BB2;
+        border: 1px solid var(--basic-white-gray12);
       }
     }
   }

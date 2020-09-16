@@ -388,7 +388,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: #EDEFF6;
+    background-color: var(--basic-blue-pale);
   }
 
   &:active .tariff__business-button-close-txt {

@@ -38,14 +38,6 @@
   }
 }
 
-/* .country-filter__controls-wrapper:last-child {
-  margin-left: 40px;
-
-  @media (min-width: $desktop-width) {
-    margin-left: 340px;
-  }
-} */
-
 .country-filter__world-toggle {
   display: none;
 
@@ -139,7 +131,7 @@
   line-height: 20px;
   font-family: inherit;
   text-transform: uppercase;
-  color: #192144;
+  color: var(--basic-blue-dark);
 
   &:hover {
     opacity: 0.6;
@@ -171,8 +163,6 @@
 }
 
 .country-filter__world-toggle-txt-closed {
-  display: none;
-
   @media (min-width: $tablet-width) {
     display: inline;
     position: absolute;
@@ -181,17 +171,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: -6px;
-    left: -155px;
-  }
-}
-
-.country-filter__world-toggle-txt-closed {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: inline;
-    position: absolute;
     top: -6px;
     left: -155px;
   }
@@ -240,7 +219,7 @@
     background-image: url("../img/toggle-cross-blue.svg");
     height: 30px;
     top: 51px;
-    right: 70px;;
+    right: 70px;
   }
 
   @media (min-width: $desktop-width) {
@@ -318,11 +297,11 @@
 
 .country-filter--opened .country-filter__world-toggle-txt-opened {
   @media (min-width: $tablet-width) {
-  display: inline;
-  position: absolute;
-  /* margin-left: 10px; */
-  left: -149px;
-  top: 4px;
+    display: inline;
+    position: absolute;
+    /* margin-left: 10px; */
+    left: -149px;
+    top: 4px;
   }
 }
 

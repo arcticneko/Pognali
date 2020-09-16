@@ -121,11 +121,11 @@
   color: var(--special-grey-light);
 
   &:hover {
-    color: #1d2e5b;
+    color: var(--basic-blue-light);
   }
 
   &:active {
-    color: #1d2e5b;
+    color: var(--basic-blue-light);
     opacity: 0.3;
   }
 
@@ -208,11 +208,11 @@
 
 .calendar__button--cat {
   &:hover {
-    background-color: #c8cee8;
+    background-color: var(--basic-white-gray13);
   }
 
   &:active {
-    background-color: #c8cee8;
+    background-color: var(--basic-white-gray13);
   }
 
   &:active::before {
