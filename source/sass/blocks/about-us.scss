@@ -4,7 +4,6 @@
   width: 292px;
   flex-direction: column;
   background-repeat: no-repeat;
-  background-position: 0% 100%;
   color: var(--basic-white);
   background-image: url("../img/about-mobile@1x.png"), url("../img/back-cube-mobile.svg");
   background-position: top 39px right -6px, left -18px top 41px;
@@ -15,13 +14,13 @@
   }
 
   @media (min-width: $tablet-width) {
-    align-self: start;
+    align-self: flex-start;
     background-image: url("../img/about-tablet@1x.png"), url("../img/back-cube-tablet.svg");
     background-position: top /* 129px */ 177px right 45px, left 38px top 129px;
     width: 105%;
 
     @media (min-resolution: 1.5dppx) {
-      background-image: url("../img/about-tablet@2x.png"), url("../img/back-cube-tablet.svg");;
+      background-image: url("../img/about-tablet@2x.png"), url("../img/back-cube-tablet.svg");
       background-size: 376px auto, auto;
     }
   }

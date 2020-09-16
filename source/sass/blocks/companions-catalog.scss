@@ -47,7 +47,7 @@
   }
 
   &:hover {
-    filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.16));
+    filter: drop-shadow(0 4px 9px var(--shadow-modal3));
   }
 }
 
@@ -124,7 +124,7 @@
     width: 31px;
     height: 31px;
     background-image: url("../img/heart.svg");
-    background-color: #EDEFF6;
+    background-color: var(--basic-blue-pale);
     background-size: 40%;
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -144,12 +144,12 @@
   }
 
   &:hover::after {
-    background-color: #E2E5F2;
+    background-color: var(--basic-white-gray4);
     background-image: url("../img/heart-strong.svg");
   }
 
   &:active::after {
-    background-color: #E2E5F2;
+    background-color: var(--basic-white-gray4);
     background-image: url("../img/heart-transp.svg");
   }
 
@@ -160,14 +160,13 @@
   }
 
   &--liked:hover::after {
-    background-color: #F9D8D8;
+    background-color: var(--special-red);
     background-image: url("../img/heart-active-red.svg");
   }
 
   &--liked:active::after {
     opacity: 0.3;
   }
-
 }
 
 .companions-catalog__avatar-wrapper {

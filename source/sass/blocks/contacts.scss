@@ -24,12 +24,12 @@
     background-color: var(--special-orange);
 
     &:hover[href] {
-      background-color: #F26926;
+      background-color: var(--basic-yellow-sp);
     }
 
     &:active {
       background-image: url("../img/topmenu-phone-fade.svg");
-      background-color: #F26926;
+      background-color: var(--basic-yellow-sp);
     }
   }
 
@@ -38,12 +38,12 @@
     background-color: var(--special-yellow-dark);
 
     &:hover[href] {
-      background-color: #FF8D30;
+      background-color: var(--special-orange);
     }
 
     &:active {
       background-image: url("../img/topmenu-mail-fade.svg");
-      background-color: #FF8D30;
+      background-color: var(--special-orange);
     }
   }
 
@@ -59,12 +59,11 @@
 }
 
 .contacts__auth {
-
   &:hover[href] {
-    background-color: #FFBD30;
+    background-color: var(--special-orange);
   }
 
-  &:active .contacts__auth-inner{
+  &:active .contacts__auth-inner {
     opacity: 0.3;
   }
 

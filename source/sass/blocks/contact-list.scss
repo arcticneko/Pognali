@@ -39,11 +39,11 @@
   line-height: 22px;
 
   &:hover {
-    color: #FFBD30;
+    color: var(--special-yellow-dark);
   }
 
   &:active {
-    color: #74581c;
+    color: var(--basic-brown);
   }
 
   @media (min-width: $tablet-width) {

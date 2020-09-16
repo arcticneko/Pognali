@@ -47,7 +47,7 @@
   }
 
   &:hover {
-    filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.16));
+    filter: drop-shadow(0 4px 9px var(--shadow-modal3));
   }
 }
 
@@ -305,7 +305,7 @@
     left: -58px;
 
     @media (min-width: $tablet-width) {
-    left: -53px;
+      left: -53px;
     }
   }
 
@@ -314,7 +314,7 @@
     left: -69px;
 
     @media (min-width: $tablet-width) {
-    left: -62px;
+      left: -62px;
     }
   }
 
@@ -322,7 +322,7 @@
     left: -50px;
 
     @media (min-width: $tablet-width) {
-    left: -45px;
+      left: -45px;
     }
 
     @media (min-width: $desktop-width) {
@@ -334,7 +334,7 @@
     left: -40px;
 
     @media (min-width: $tablet-width) {
-    left: -34px;
+      left: -34px;
     }
   }
 }

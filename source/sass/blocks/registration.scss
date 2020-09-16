@@ -51,11 +51,11 @@
   color: var(--basic-yellow);
 
   &:hover {
-    color: #FF8D30;
+    color: var(--special-orange);
   }
 
   &:active {
-    color: #FF8D30;
+    color: var(--special-orange);
     opacity: 0.3;
   }
 }
@@ -91,13 +91,13 @@
   height: 62px;
 
   &:focus-within {
-    border: 4px solid #FFFFFF;
-    background-color:  #192144;
-    color: #FFFFFF;
+    border: 4px solid var(--basic-white);
+    background-color: var(--basic-blue-dark);
+    color: var(--basic-white);
   }
 
   &:invalid {
-    color: #FF0000;
+    color: var(--basic-red);
   }
 
   @media (min-width: $tablet-width) {
@@ -124,11 +124,11 @@
 
 
 .registration__email-field:hover::-webkit-input-placeholder {
-  color: rgba(68, 68, 68, 0.5);
+  color: var(--placeholder);
 }
 
 .registration__email-field:focus-within::-webkit-input-placeholder {
-  color: #FFFFFF;
+  color: var(--basic-white);
 }
 
 
@@ -138,11 +138,11 @@
 }
 
 .registration__email-field:hover::-moz-placeholder {
-  color: rgba(68, 68, 68, 0.5);
+  color: var(--placeholder);
 }
 
 .registration__email-field:focus-within::-moz-placeholder {
-  color: #FFFFFF;
+  color: var(--basic-white);
 }
 
 
@@ -159,7 +159,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: #FFBD30;
+    background-color: var(--special-yellow-dark);
   }
 
   @media (min-width: $tablet-width) {
@@ -195,7 +195,7 @@
 
 
 .registration__button-form:active .registration__button-form-text {
-  color: rgba(29, 46, 91, 0.3);
+  color: var(--btn-modal4);
 }
 
 .registration__button-form-text {

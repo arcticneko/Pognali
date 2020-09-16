@@ -11,19 +11,17 @@
     background-color: inherit;
     border-radius: 0 0 25px 25px;
     bottom: -18px;
-
   }
 
   @media (min-width: $tablet-width) {
     background-color: var(--basic-blue-light-dark);
     min-height: 350px;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   @media (min-width: $desktop-width) {
     background-color: var(--basic-blue);
     min-height: 100px;
-    justify-content: start;
   }
 }
 
@@ -115,6 +113,7 @@
 .page-header__item {
   margin-top: 28px;
   margin-left: 31px;
+  overflow: hidden; /* overflow: hidden; добавлено для эффекта выезда текста*/
 
   @media (min-width: $tablet-width) {
     margin-top: 44px;
@@ -129,8 +128,9 @@
   }
 }
 
+/*CL5*/
+
 .page-header__link {
-  display: block;
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
@@ -139,23 +139,13 @@
   text-transform: uppercase;
   color: var(--basic-white);
   padding-right: 3px;
-
-  /* overflow: hidden; убрано для эффекта выезда текста*/
-
-   @media (min-width: $tablet-width) {
-    font-weight: 600;
-  }
-}
-
-/*CL5*/
-.page-header__item {
-  overflow: hidden; /* overflow: hidden; добавлено для эффекта выезда текста*/
-}
-
-.page-header__link {
   position: relative;
   display: inline-block;
   transition: transform 0.3s;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 600;
+  }
 
   &::before {
     position: absolute;
@@ -163,13 +153,13 @@
     content: attr(data-hover);
     font-weight: 700;
     transform: translate3d(0, 0, 0);
-    color: #ffd74b;
+    color: var(--basic-yellow);
     font-family: inherit;
     white-space: nowrap;
   }
 
   &:active::before {
-    color: #ffd74b;
+    color: var(--basic-yellow);
     opacity: 0.3;
   }
 
@@ -279,8 +269,6 @@
 .page-header--secondary .page-header__link {
   margin-top: -28px;
 }
-
-
 
 .page-header--secondary .page-header__nav-list {
   @media (min-width: $desktop-width) {
@@ -473,6 +461,13 @@
   }
 }
 
+.page-header--opened .page-header__item {
+  @media (min-width: $desktop-width) {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
+
 .page-header--opened .page-header__nav-wrapper {
   display: block;
   /* margin-top: -12px; */
@@ -486,6 +481,16 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 44px;
+      height: 2px;
+      top: 48px;
+      left: 316px;
+      background-color: var(--basic-blue-dark);
+    }
   }
 }
 
@@ -516,16 +521,6 @@
     font-size: 20px;
     line-height: 20px;
     margin-left: 34px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 44px;
-      height: 2px;
-      top: 9px;
-      left: -54px;
-      background-color: var(--basic-blue-dark);
-    }
   }
 }
 
@@ -536,9 +531,6 @@
 }
 
 .page-header--opened .contacts {
-  /* margin-left: 86px;
-  margin-bottom: 42px;
- */
   @media (min-width: $tablet-width) {
     margin-left: 58px;
     margin-top: 144px;
@@ -560,57 +552,6 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-  }
-}
-
-.page-header--opened .contacts__contact-item {
-  white-space: nowrap;
-  width: 45px;
-  height: 45px;
-  text-transform: uppercase;
-  color: var(--basic-blue-dark);
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-  background-color: var(--special-blue-dark);
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 28px;
-    width: 68px;
-    height: 68px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 50px;
-    height: 50px;
-    background-size: 16px 16px;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-
-  &--phone {
-    background-image: url("../img/contacts-phone-yellow.svg");
-    background-size: 35%;
-
-    @media (min-width: $desktop-width) {
-      background-image: url("../img/topmenu-phone.svg");
-      background-color: var(--special-orange);
-    }
-  }
-
-  &--email {
-    background-image: url("../img/contacts-mail-yellow.svg");
-    background-size: 30%;
-
-    @media (min-width: $desktop-width) {
-      background-image: url("../img/topmenu-mail.svg");
-      background-color: var(--special-yellow-dark);
-    }
   }
 }
 
@@ -698,12 +639,61 @@
 }
 
 .page-header--opened .contacts__contact-item {
+  white-space: nowrap;
+  width: 45px;
+  height: 45px;
+  text-transform: uppercase;
+  color: var(--basic-blue-dark);
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: var(--special-blue-dark);
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 28px;
+    width: 68px;
+    height: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 50px;
+    height: 50px;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--phone {
+    background-image: url("../img/contacts-phone-yellow.svg");
+    background-size: 35%;
+
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/topmenu-phone.svg");
+      background-color: var(--special-orange);
+    }
+  }
+
+  &--email {
+    background-image: url("../img/contacts-mail-yellow.svg");
+    background-size: 30%;
+
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/topmenu-mail.svg");
+      background-color: var(--special-yellow-dark);
+    }
+  }
+
   &:hover {
-    color: #ffbd30;
+    color: var(--special-yellow-dark);
   }
 
   &:active {
-    color: #74581c;
+    color: var(--basic-brown);
   }
 
   @media (min-width: $desktop-width) {
@@ -718,27 +708,25 @@
     }
   }
 
-
-
   @media (max-width: $desktop-width) {
     &--phone:hover {
       background-image: url("../img/contacts-phone-yellow-darker.svg");
-      background-color: #121936;
+      background-color: var(--special-blue-dark);
     }
 
     &--phone:active {
       background-image: url("../img/contacts-phone-yellow-dark.svg");
-      background-color: #121936;
+      background-color: var(--special-blue-dark);
     }
 
     &--email:hover {
       background-image: url("../img/contacts-mail-yellow-darker.svg");
-      background-color: #121936;
+      background-color: var(--special-blue-dark);
     }
 
     &--email:active {
       background-image: url("../img/contacts-mail-yellow-dark.svg");
-      background-color: #121936;
+      background-color: var(--special-blue-dark);
     }
   }
 }
