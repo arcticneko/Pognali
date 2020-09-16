@@ -2,6 +2,7 @@
   border-radius: 25px 25px 0 0;
   background-color: var(--basic-white);
   margin-top: -30px;
+  z-index: 1;
 
   @media (min-width: $tablet-width) {
     border-radius: 40px 40px 0 0;
@@ -26,12 +27,14 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--basic-white);
+  border-radius: 25px 25px 0 0;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     min-height: 140px;
+    border-radius: 40px 40px 0 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -79,6 +82,15 @@
   width: 270px;
   font-size: 16px;
   line-height: 16px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     width: 153px;

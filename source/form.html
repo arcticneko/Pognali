@@ -47,13 +47,13 @@
         <nav class='page-header__nav-wrapper'>
           <ul class='page-header__nav-list'>
             <li class='page-header__item'>
-              <a class='page-header__link' href='#'>О сервисе</a>
+              <a class='page-header__link' href='#' data-hover='О сервисе'>О сервисе</a>
             </li>
             <li class='page-header__item'>
-              <a class='page-header__link' href='form.html'>направления</a>
+              <a class='page-header__link' href='form.html' data-hover='направления'>направления</a>
             </li>
             <li class='page-header__item'>
-              <a class='page-header__link' href='catalog.html'>попутчики</a>
+              <a class='page-header__link' href='catalog.html' data-hover='попутчики'>попутчики</a>
             </li>
           </ul>
         </nav>
@@ -83,19 +83,23 @@
               </span>
             </div>
             <picture class="companion-card__avatar-wrapper">
-              <source class="companion-card__source" srcset="img/demin-tablet@1x.jpg" media="(min-width: 1440px)">
-              <source class="companion-card__source" srcset="img/photo-account-tablet@1x.jpg"
-                media="(min-width: 768px)">
-              <img class="companion-card__avatar" alt="Аватар пользователя" src="img/photo-account-mobile@1x-2.jpg">
+              <source class="companion-card__source" srcset="img/photo-account-mobile@1x-2.jpg" media="(min-width: 1440px)">
+              <source class="companion-card__source" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x" media="(min-width: 768px)">
+              <img class="companion-card__avatar" alt="Аватар пользователя" src="img/photo-account-mobile@1x.jpg" srcset='img/photo-account-mobile@2x.jpg 2x'>
             </picture>
-            <label class='companion-card__avatar-change-label button button--longer' for='change-avatar'><span
-                class='companion-card__avatar-change-label-hidden'>Сменить</span>
-              фото</label>
-            <input class='companion-card__avatar-change-input visually-hidden' type='file' name='change-avatar'
-              id='change-avatar'>
+            <label class='companion-card__avatar-change-label button button--longer' for='change-avatar'>
+              <input class='companion-card__avatar-change-input visually-hidden' type='file'
+                name='change-avatar' id='change-avatar'>
+              <span class='companion-card__avatar-change-label-opacity'>
+                <span class='companion-card__avatar-change-label-hidden'>Сменить
+                </span>фото
+              </span>
+            </label>
 
             <fieldset class='companion-card__tags companion-card__tags--tags'>
-              <legend class='companion-card__tags-legend companion-card__tags-legend--tags companion-card__tags-legend--tags-abs'>Тэги</legend>
+              <legend
+                class='companion-card__tags-legend companion-card__tags-legend--tags companion-card__tags-legend--tags-abs'>
+                Тэги</legend>
               <label class='companion-card__tags-title visually-hidden' for='tags-list'>Тэги</label>
               <textarea class='companion-card__tags-list' name='tags-list'
                 id='tags-list'>#бургер #бар #футбол #концерт #крафт</textarea>
@@ -105,12 +109,12 @@
           <fieldset class='companion-card__tags companion-card__tags--transport'>
             <legend class='companion-card__tags-legend'>Транспорт</legend>
             <ul class='companion-card__transports-list'>
-              <li class='companion-card__transport-wrapper'>
+              <li class='companion-card__transport-wrapper'> <!-- цвет круга  -->
                 <label
                   class='companion-card__transports-item companion-card__transports-item--plane companion-card__transports-item--active'>
+                  <img class='companion-card__transport-tooltip companion-card__transport-tooltip--plane' width='146' height='63' src="img/tooltip-plane.png">
                   <span class='visually-hidden'>передвижение на самолете</span>
-                  <input type='checkbox' name='plane' id='plane'
-                    class='companion-card__transport-input visually-hidden'>
+                  <input checked type='checkbox' name='plane' id='plane' class='companion-card__transport-input visually-hidden'>
                   <svg class='companion-card__transports-pic companion-card__transports-pic--active'
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 21">
                     <path fill="#101D41"
@@ -121,8 +125,9 @@
               <li class='companion-card__transport-wrapper'>
                 <label
                   class='companion-card__transports-item companion-card__transports-item--bus companion-card__transports-item--active'>
+                  <img class='companion-card__transport-tooltip companion-card__transport-tooltip--bus' width='170' height='63' src="img/tooltip-bus.png">
                   <span class='visually-hidden'>передвижение на автобусе</span>
-                  <input type='checkbox' name='bus' id='bus' class='companion-card__transport-input visually-hidden'>
+                  <input checked type='checkbox' name='bus' id='bus' class='companion-card__transport-input visually-hidden'>
                   <svg class='companion-card__transports-pic companion-card__transports-pic--active'
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 21">
                     <path fill="#101D41"
@@ -132,6 +137,7 @@
               </li>
               <li class='companion-card__transport-wrapper'>
                 <label class='companion-card__transports-item companion-card__transports-item--bike'>
+                  <img class='companion-card__transport-tooltip companion-card__transport-tooltip--bike' width='130' height='63' src="img/tooltip-bike.png">
                   <span class='visually-hidden'>передвижение на велосипеде</span>
                   <input type='checkbox' name='bike' id='bike' class='companion-card__transport-input visually-hidden'>
                   <svg class='companion-card__transports-pic' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21">
@@ -143,8 +149,9 @@
               <li class='companion-card__transport-wrapper'>
                 <label
                   class='companion-card__transports-item companion-card__transports-item--walk companion-card__transports-item--active'>
+                  <img class='companion-card__transport-tooltip companion-card__transport-tooltip--walk' width='110' height='63' src="img/tooltip-walk.png">
                   <span class='visually-hidden'>передвижение пешком</span>
-                  <input type='checkbox' name='walk' id='walk' class='companion-card__transport-input visually-hidden'>
+                  <input checked type='checkbox' name='walk' id='walk' class='companion-card__transport-input visually-hidden'>
                   <svg class='companion-card__transports-pic companion-card__transports-pic--active'
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
                     <ellipse fill="#101D41" cx="14.3" cy="2" rx="2.1" ry="2" />
@@ -543,7 +550,9 @@
                 </tr>
               </table>
             </div>
-            <a href='#step-two' class='step__button button button--long-fat'>Следующий шаг</a>
+            <a href='#step-two' class='step__button button button--long-fat'>
+              <span class='button__long-fat-opacity'>Следующий шаг</span>
+            </a>
           </fieldset>
 
           <fieldset class='steps-wrapper__step-two step' id='step-two'>
@@ -565,7 +574,7 @@
             </p>
 
             <div class='step__country-to-visit-general-wrapper'>
-              <div class='step__country-to-visit-wrapper'>
+              <div class='step__country-to-visit-wrapper step__country-to-visit-wrapper--fade'>
                 <label class='step__country-to-visit-label visually-hidden' for='country-to-visit-one'>
                   <span class='visually-hidden'>Первая страна для визита</span>
                 </label>
@@ -576,14 +585,14 @@
                 </div>
                 <div class='step__country-to-visit-flag-wrapper'>
                   <picture class='flag-wrapper'>
-                    <source srcset="img/flag-bosnia-big.png" media="(min-width: 768px)">
-                    <img class='step__country-to-visit-flag' src="img/flag-bosnia.png" width='35' height='24'
+                    <source srcset="img/flag-bosnia.svg" media="(min-width: 768px)">
+                    <img class='step__country-to-visit-flag' src="img/flag-bosnia.svg" width='35' height='24'
                       alt='флаг страны'>
                   </picture>
                 </div>
                 <button class='step__country-to-visit-del-btn del-button' aria-label='Удалить страну'></button>
               </div>
-              <div class='step__country-to-visit-wrapper'>
+              <div class='step__country-to-visit-wrapper step__country-to-visit-wrapper--fade'>
                 <label class='step__country-to-visit-label visually-hidden' for='country-to-visit-two'>
                   <span class='visually-hidden'>Вторая страна для визита</span>
                 </label>
@@ -594,15 +603,16 @@
                 </div>
                 <div class='step__country-to-visit-flag-wrapper'>
                   <picture class='flag-wrapper'>
-                    <source srcset="img/flag-czech-big.png" media="(min-width: 768px)">
-                    <img class='step__country-to-visit-flag' src="img/flag-czech.png" width='35' height='24'
+                    <source srcset="img/flag-czech.svg" media="(min-width: 768px)">
+                    <img class='step__country-to-visit-flag' src="img/flag-czech.svg" width='35' height='24'
                       alt='флаг страны'>
                   </picture>
                 </div>
                 <button class='step__country-to-visit-del-btn del-button' aria-label='Удалить страну'></button>
               </div>
 
-              <div class='step__country-to-visit-wrapper step__country-to-visit-wrapper--new step__country-to-visit-wrapper--new-opened'>
+              <div
+                class='step__country-to-visit-wrapper step__country-to-visit-wrapper--new step__country-to-visit-wrapper--new-opened1'>
                 <label class='step__country-to-visit-new-label visually-hidden' for='country-to-visit-new'></label>
                 <div class='step__country-to-visit-select-wrapper step__country-to-visit-select-wrapper--transp'>
                   <select class='step__country-to-visit-new-select' name='country-to-visit-new'
@@ -1232,7 +1242,8 @@
                         </ul>
                       </li>
                     </ul>
-                    <button class='calendar__button button button--longer' aria-label='Свернуть фильтрацию по странам'>Свернуть</button>
+                    <button class='calendar__button button button--longer'
+                      aria-label='Свернуть фильтрацию по странам'>Свернуть</button>
                   </div>
                 </div>
               </div>
@@ -1248,7 +1259,9 @@
               </div>
             </div>
 
-            <a href='#step-three' class='step__button button button--long-fat'>Следующий шаг</a>
+            <a href='#step-three' class='step__button button button--long-fat'>
+              <span class='button__long-fat-opacity'>Следующий шаг</span>
+            </a>
             <a href='#step-one' class='step__previous-step-btn text-btn'>На шаг назад</a>
           </fieldset>
 
@@ -1270,8 +1283,8 @@
             <div class='step__country-wrapper step__country-wrapper--bordered'>
               <p class='step__country-title'>Босния и Герцеговина</p>
               <picture class='step__flag-wrapper'>
-                <source srcset="img/flag-bosnia-big.png" media="(min-width: 768px)">
-                <img class='step__country-to-visit-flag' src="img/flag-bosnia.png" width='35' height='24'
+                <source srcset="img/flag-bosnia.svg" media="(min-width: 768px)">
+                <img class='step__country-to-visit-flag' src="img/flag-bosnia.svg" width='35' height='24'
                   alt='флаг страны'>
               </picture>
             </div>
@@ -1279,14 +1292,16 @@
             <div class='step__country-wrapper'>
               <p class='step__country-title'>Чехия</p>
               <picture class='step__flag-wrapper'>
-                <source srcset="img/flag-czech-big.png" media="(min-width: 768px)">
-                <img class='step__country-to-visit-flag' alt='флаг страны' src="img/flag-czech.png">
+                <source srcset="img/flag-czech.svg" media="(min-width: 768px)">
+                <img class='step__country-to-visit-flag' alt='флаг страны' src="img/flag-czech.svg" width='35' height='24'>
               </picture>
             </div>
             <textarea class='step__country-plan'
               placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
 
-            <button class='step__button step__button--last button button--long-fat' type='submit'>Отправить</button>
+            <button class='step__button step__button--last button button--long-fat' type='submit'>
+              <span class='button__long-fat-opacity'>Отправить</span>
+            </button>
             <a class='step__previous-step-btn text-btn' href='#step-two'>На шаг назад</a>
           </fieldset>
         </div>

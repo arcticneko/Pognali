@@ -10,6 +10,8 @@
     @include radius(19px);
     background-color: inherit;
     border-radius: 0 0 25px 25px;
+    bottom: -18px;
+
   }
 
   @media (min-width: $tablet-width) {
@@ -63,6 +65,7 @@
   width: 25px;
   border: none;
   z-index: 5;
+  cursor: pointer;
 
   &--opened {
     background-image: url("../img/toggle-cross.svg");
@@ -109,9 +112,25 @@
   }
 }
 
+.page-header__item {
+  margin-top: 28px;
+  margin-left: 31px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 44px;
+  }
+}
+
+.page-header--secondary .page-header__item {
+  margin-top: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+}
+
 .page-header__link {
   display: block;
-  margin-top: 28px;
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
@@ -119,17 +138,46 @@
   line-height: 20px;
   text-transform: uppercase;
   color: var(--basic-white);
-  margin-left: 34px;
+  padding-right: 3px;
 
-  @media (min-width: $tablet-width) {
-    margin-left: 34px;
-  }
+  /* overflow: hidden; убрано для эффекта выезда текста*/
 
-  @media (min-width: $tablet-width) {
-    margin-top: 44px;
-    font-weight: 600; /*не по макету. подобрано*/
+   @media (min-width: $tablet-width) {
+    font-weight: 600;
   }
 }
+
+/*CL5*/
+.page-header__item {
+  overflow: hidden; /* overflow: hidden; добавлено для эффекта выезда текста*/
+}
+
+.page-header__link {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s;
+
+  &::before {
+    position: absolute;
+    top: 100%;
+    content: attr(data-hover);
+    font-weight: 700;
+    transform: translate3d(0, 0, 0);
+    color: #ffd74b;
+    font-family: inherit;
+    white-space: nowrap;
+  }
+
+  &:active::before {
+    color: #ffd74b;
+    opacity: 0.3;
+  }
+
+  &:hover {
+    transform: translateY(-100%);
+  }
+}
+/*CL5*/
 
 .page-header__contacts-wrapper {
   position: absolute;
@@ -175,6 +223,7 @@
   &::after {
     @media (min-width: $tablet-width) {
       @include radius(55px, 55px);
+      bottom: -54px;
     }
   }
 }
@@ -191,6 +240,7 @@
   margin-bottom: 83px;
   margin-top: 19px;
   margin-left: -4px;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     margin-top: 45px;
@@ -227,13 +277,20 @@
 }
 
 .page-header--secondary .page-header__link {
-  margin-left: 40px;
   margin-top: -28px;
 }
 
+
+
+.page-header--secondary .page-header__nav-list {
+  @media (min-width: $desktop-width) {
+    top: -18px;
+  }
+}
+
 .page-header--secondary .page-header__nav-list::before {
-  top: -19px;
-  left: -65px;
+  top: 8px;
+  left: -71px;
 }
 
 .page-header__title {
@@ -293,6 +350,14 @@
   font-size: 20px;
   line-height: 20px;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     bottom: 32px;
@@ -321,7 +386,8 @@
   display: none;
 }
 
-.header-submenu--json { /*добавляется при работающем js*/
+.header-submenu--json {
+  /*добавляется при работающем js*/
   display: none;
   clip: rect(0 0 0 0);
   width: 1px;
@@ -346,9 +412,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 1440px;
-    top: 751px;
+    width: 100%;
+    /* top: 751px; */
     min-height: 90px;
+    position: fixed;
   }
 
   &::after {
@@ -617,5 +684,61 @@
 
   @media (min-width: $desktop-width) {
     display: none;
+  }
+}
+
+.page-header--opened .social__item-link:hover {
+  background-color: white;
+  opacity: 0.6;
+}
+
+.page-header--opened .social__item-link:active {
+  background-color: white;
+  opacity: 0.3;
+}
+
+.page-header--opened .contacts__contact-item {
+  &:hover {
+    color: #ffbd30;
+  }
+
+  &:active {
+    color: #74581c;
+  }
+
+  @media (min-width: $desktop-width) {
+    &--phone:active {
+      background-image: url("../img/topmenu-phone-fade.svg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--email:active {
+      background-image: url("../img/topmenu-mail-fade.svg");
+    }
+  }
+
+
+
+  @media (max-width: $desktop-width) {
+    &--phone:hover {
+      background-image: url("../img/contacts-phone-yellow-darker.svg");
+      background-color: #121936;
+    }
+
+    &--phone:active {
+      background-image: url("../img/contacts-phone-yellow-dark.svg");
+      background-color: #121936;
+    }
+
+    &--email:hover {
+      background-image: url("../img/contacts-mail-yellow-darker.svg");
+      background-color: #121936;
+    }
+
+    &--email:active {
+      background-image: url("../img/contacts-mail-yellow-dark.svg");
+      background-color: #121936;
+    }
   }
 }

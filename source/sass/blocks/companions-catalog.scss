@@ -36,7 +36,7 @@
 .companions-catalog__item-wrapper {
   background-color: var(--basic-white);
   border-radius: 20px;
-  /* margin-top: 12px; */
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     /* margin-top: 41px; */
@@ -45,6 +45,15 @@
   &:first-child {
     margin-top: 28px;
   }
+
+  &:hover {
+    filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.16));
+  }
+}
+
+.companions-catalog__item-wrapper:hover .companions-catalog__avatar {
+  transform: scale(1.1);
+  transition: all 0.5s ease-out;
 }
 
 .companions-catalog__item {
@@ -58,7 +67,7 @@
   @media (min-width: $desktop-width) {
     padding-top: 0;
     padding-bottom: 0;
-    height: 285px; /* без этого высота увеличивается, не понимаю, что дает такой эффект*/
+    /* height: 285px;  *//* без этого высота увеличивается, не понимаю, что дает такой эффект*/
   }
 
   &::before {
@@ -115,7 +124,7 @@
     width: 31px;
     height: 31px;
     background-image: url("../img/heart.svg");
-    background-color: var(--basic-white-gray4);
+    background-color: #EDEFF6;
     background-size: 40%;
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -134,18 +143,42 @@
     }
   }
 
+  &:hover::after {
+    background-color: #E2E5F2;
+    background-image: url("../img/heart-strong.svg");
+  }
+
+  &:active::after {
+    background-color: #E2E5F2;
+    background-image: url("../img/heart-transp.svg");
+  }
+
   &--liked::after {
     content: "";
     background-image: url("../img/heart-active-red.svg");
-    background-color: var(--basic-white-pink);
+    background-color: var(--basic-white);
   }
+
+  &--liked:hover::after {
+    background-color: #F9D8D8;
+    background-image: url("../img/heart-active-red.svg");
+  }
+
+  &--liked:active::after {
+    opacity: 0.3;
+  }
+
 }
 
 .companions-catalog__avatar-wrapper {
+  overflow: hidden;
+
+
   @media (min-width: $tablet-width) {
     display: block;
     margin-top: 20px;
     margin-left: 17px;
+    border-radius: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -191,6 +224,14 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
@@ -272,6 +313,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: -11px;
     margin-top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
@@ -599,6 +644,14 @@
   font-size: 17px;
   line-height: 30px;
   color: var(--basic-blue-light);
+
+  &:hover::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: 48px;

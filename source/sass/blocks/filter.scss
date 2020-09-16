@@ -85,6 +85,15 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -180,13 +189,26 @@
   }
 }
 
+/* .filter__list-option-input:checked + .filter__list-option-label::before{
+  border: 1px solid #CBCED9;
+} */
+
 .filter__list-option-label {
+  position: relative;
   display: block;
   position: relative;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::before {
     box-sizing: border-box;
@@ -218,6 +240,33 @@
   @media (min-width: $desktop-width) {
     margin-left: 0;
   }
+}
+
+
+.filter__list-option-label::after {
+  content: "";
+  display: none;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/tick.svg");
+  position: absolute;
+  top: 1px;
+  right: 203px;
+  z-index: 2;
+  cursor: pointer;
+  background-color: white;
+
+  @media (min-width: $tablet-width) {
+    right: 131px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 131px;
+  }
+}
+
+.filter__list-option-input:checked + .filter__list-option-label::after {
+  display: block;
 }
 
 .filter__item-filter-list-transport {
@@ -304,21 +353,22 @@
   &::before {
     content: "";
     position: absolute;
-    background-image: url("../img/lvl-separator.svg");
+    background-image: url("../img/filter-input-sep.svg");
     background-repeat: no-repeat;
-    height: 33px;
+    background-position: center center;
+    height: 11px;
     width: 16px;
-    top: 1px;
+    top: 12px;
     left: 102px;
     background-color: var(--basic-white);
     z-index: 1;
 
     @media (min-width: $tablet-width) {
-      background-image: url("../img/lvl-separator-tab.svg");
-      top: 1px;
-      left: 66px;
-      height: 44px;
-      width: 23px;
+      background-image: url("../img/filter-input-sep.svg");
+      top: 17px;
+      left: 63px;
+      height: 10px;
+      width: 21px;
     }
 
     @media (min-width: $desktop-width) {
@@ -346,6 +396,14 @@
   text-align: center;
   /* padding-top: 5px; */
 
+  &:hover {
+    border: 1px solid #959bb2;
+  }
+
+  &:active {
+    border: 1px solid #161c35;
+  }
+
   @media (min-width: $tablet-width) {
     width: 74px;
     font-size: 20px;
@@ -357,16 +415,16 @@
   @media (min-width: $desktop-width) {
     width: 96px;
   }
-}
 
-.filter__lvl-input--min {
-  border-radius: 4px 0 0 4px;
-}
+  &--min {
+    border-radius: 4px 0 0 4px;
+  }
 
-.filter__lvl-input--max {
-  position: relative;
-  /* padding-left: 43px; */
-  border-radius: 0 4px 4px 0;
+  &--max {
+    position: relative;
+    border-radius: 0 4px 4px 0;
+    margin-left: -1px;
+  }
 }
 
 /* Range filter*/
@@ -417,7 +475,6 @@
 
 .filter__lvl-range-toggle {
   position: absolute;
-  top: 21px;
   cursor: pointer;
   width: 10px;
   height: 10px;
@@ -425,32 +482,81 @@
   background-color: var(--basic-blue-light);
 
   @media (min-width: $tablet-width) {
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
     top: 20px;
   }
 
   &--min {
     left: 67px;
+    top: 21px;
+
+    &:hover {
+      width: 12px;
+      height: 12px;
+      left: 66px;
+      top: 20px;
+    }
 
     @media (min-width: $tablet-width) {
       left: 65px;
+      top: 21px;
+
+      &:hover {
+       width: 14px;
+       height: 14px;
+       left: 64px;
+       top: 20px;
+      }
     }
 
     @media (min-width: $desktop-width) {
       left: 57px;
+      top: 21px;
+
+      &:hover {
+       width: 14px;
+       height: 14px;
+       left: 56px;
+       top: 20px;
+      }
     }
   }
 
   &--max {
     left: 210px;
+    top: 21px;
+
+    &:hover {
+      width: 12px;
+      height: 12px;
+      left: 209px;
+      top: 20px;
+    }
+
 
     @media (min-width: $tablet-width) {
       left: 266px;
+      top: 21px;
+
+      &:hover {
+        width: 14px;
+        height: 14px;
+        left: 265px;
+        top: 20px;
+      }
     }
 
     @media (min-width: $desktop-width) {
       left: 176px;
+      top: 21px;
+
+      &:hover {
+        width: 14px;
+        height: 14px;
+        left: 175px;
+      top: 20px;
+      }
     }
   }
 }
@@ -467,5 +573,15 @@
   @media (min-width: $desktop-width) {
     margin-left: 23px;
     margin-top: 27px;
+  }
+
+  &:hover {
+    background-color: var(--basic-white);
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.14));
+  }
+
+  &:active {
+    background-color: #F3C72B;
+    filter: none;
   }
 }

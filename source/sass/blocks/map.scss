@@ -1,0 +1,47 @@
+.map {
+  position: relative;
+  height: 320px;
+  background-repeat: no-repeat;
+  width: 320px;
+  min-width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 41px;
+    height: 41px;
+    position: absolute;
+    top: 134px;
+    left: 155px;
+    background-image: url("../img/map-marker.svg");
+
+    @media (min-width: $tablet-width) {
+      top: 275px;
+      left: 394px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 232px;
+      left: 730px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 550px;
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 482px;
+    width: 1440px;
+  }
+}
+
+.map__map-image {
+  @media (min-width: $desktop-width) {
+    transform: translateY(-110px);
+  }
+}

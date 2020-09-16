@@ -49,6 +49,15 @@
   @include reset;
   display: inline;
   color: var(--basic-yellow);
+
+  &:hover {
+    color: #FF8D30;
+  }
+
+  &:active {
+    color: #FF8D30;
+    opacity: 0.3;
+  }
 }
 
 .registration__login-form {
@@ -77,9 +86,19 @@
   font-size: 18px;
   line-height: 18px;
   padding-left: 25px;
-  color: var(--special-grey-light-transp);
+  color: var(--basic-blue-semi-light);
   width: 220px;
   height: 62px;
+
+  &:focus-within {
+    border: 4px solid #FFFFFF;
+    background-color:  #192144;
+    color: #FFFFFF;
+  }
+
+  &:invalid {
+    color: #FF0000;
+  }
 
   @media (min-width: $tablet-width) {
     width: 536px;
@@ -97,6 +116,36 @@
   }
 }
 
+
+/*через запятую не работают*/
+.registration__email-field::-webkit-input-placeholder {
+  color: var(--special-grey-light-transp);
+}
+
+
+.registration__email-field:hover::-webkit-input-placeholder {
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.registration__email-field:focus-within::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+
+
+/*через запятую не работают*/
+.registration__email-field::-moz-placeholder {
+  color: var(--special-grey-light-transp);
+}
+
+.registration__email-field:hover::-moz-placeholder {
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.registration__email-field:focus-within::-moz-placeholder {
+  color: #FFFFFF;
+}
+
+
 .registration__button-form {
   @include reset;
   position: relative;
@@ -107,6 +156,11 @@
   background-color: var(--basic-yellow);
   font-family: inherit;
   text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #FFBD30;
+  }
 
   @media (min-width: $tablet-width) {
     width: 80px;
@@ -122,7 +176,7 @@
     position: absolute;
     content: url("../img/email-arrow-blue.svg");
     left: 26px;
-    top: 50%;
+    top: 53%;
     transform: translate(0, -50%);
 
     @media (min-width: $tablet-width) {
@@ -133,6 +187,15 @@
       left: 278px;
     }
   }
+
+  &:active::after {
+    content: url("../img/email-arrow-blue-transp.svg");
+  }
+}
+
+
+.registration__button-form:active .registration__button-form-text {
+  color: rgba(29, 46, 91, 0.3);
 }
 
 .registration__button-form-text {

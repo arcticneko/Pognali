@@ -268,6 +268,7 @@
   position: relative;
   width: 220px;
   height: 43px;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     width: 532px;
@@ -291,6 +292,14 @@
   background-size: 35%;
   opacity: 0.25;
   border: none;
+
+  &:hover {
+    opacity: 0.45;
+  }
+
+  &:active{
+    opacity: 0.15;
+  }
 
   @media (min-width: $tablet-width) {
     width: 61px;
@@ -316,6 +325,14 @@
   border: 1px solid var(--basic-white-gray);
   border-radius: 4px;
   padding-left: 106px;
+
+  &:hover {
+    border: 1px solid #959BB2;
+  }
+
+  &:active{
+    border: 1px solid #161C35;
+  }
 
   @media (min-width: $tablet-width) {
     padding-left: 259px;
@@ -432,6 +449,14 @@
   width: 14px;
   height: 21px;
   border: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.15;
+  }
 
   @media (min-width: $tablet-width) {
     width: 51px;
@@ -574,6 +599,10 @@
   /* line-height: 30px; */
   vertical-align: middle;
 
+  &:hover {
+    outline: 2px solid var(--special-orange-light);
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 18px;
@@ -581,6 +610,10 @@
     height: 68px;
     /* line-height: 69px; */
     padding-top: 25px;
+
+    &:hover {
+      outline: 4px solid var(--special-orange-light);
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -598,14 +631,14 @@
     opacity: 0.3;
   }
 
-  /* Текущая дата */
-  &--current-date {
+  /* Текущая дата // по стайл гайду это hover*/
+  /* &--current-date {
     border: 2px solid var(--special-orange-light);
 
     @media (min-width: $tablet-width) {
       border: 4px solid var(--special-orange-light);
     }
-  }
+  } */
 
   /* Выбранная дата, toggle по состоянию input'a. через JS */
   &--checked {
@@ -723,6 +756,10 @@
   }
 }
 
+.step__country-to-visit-select {
+  z-index: 5;
+}
+
 .step__country-to-visit-wrapper {
   position: relative;
   margin-top: 23px;
@@ -749,7 +786,7 @@
     background-image: url("../img/dropdown-form.svg");
     background-repeat: no-repeat;
     opacity: 0.3;
-    z-index: 0;
+    z-index: 1;
     /* галка вниз */
 
     @media (min-width: $tablet-width) {
@@ -769,6 +806,31 @@
     }
   }
 
+  &--fade::after {
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      top: 8px;
+      right: 52px;
+      display: block;
+      content: "";
+      width: 52px;
+      height: 36px;
+      background-image: url("../img/fade-mobile.png");
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+  }
+
+  &--add {
+    &:hover::before {
+      opacity: 0.5;
+    }
+
+    &:active::before {
+      opacity: 0.1;
+    }
+  }
+
   &--add::after {
     display: none;
   }
@@ -779,7 +841,7 @@
     width: 14px;
     height: 14px;
     background-image: url("../img/plus-little.svg");
-    opacity: 1;
+    opacity: 0.3;
 
     @media (min-width: $tablet-width) {
       left: 322px;
@@ -830,6 +892,12 @@
   z-index: 3;
   background-color: transparent;
   /* ПСЕВДОЭЛЕМЕНТ У SELECT НЕ РАБОТАЕТ */
+
+  &:hover {
+    border: 1px solid #959BB2;
+  }
+
+  /* &:active {} */
 }
 
 .step__country-to-visit-flag-wrapper {
@@ -890,6 +958,14 @@
     background-color: transparent;
     top: 32px;
     right: 12px;
+
+    &:hover::after {
+      opacity: 0.3;
+    }
+
+    &:active::after {
+      opacity: 0.05;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -902,12 +978,15 @@
     width: 9px;
     height: 9px;
     background-image: url("../img/close-gray.svg");
+    opacity: 0.3;
 
     @media (min-width: $tablet-width) {
       width: 19px;
       height: 18px;
       background-image: url("../img/cross-small.svg");
       opacity: 0.1;
+
+
     }
   }
 }
@@ -929,6 +1008,10 @@
   padding-left: 10px;
   appearance: none;
   background-color: transparent;
+
+  &:hover {
+    border: 1px solid #959BB2;
+  }
 
   &::after {
     display: block;
@@ -955,6 +1038,10 @@
   font-family: inherit;
   padding-left: 12px;
   appearance: none;
+
+  &:hover {
+    background-color: #DFE3F0;
+  }
 
   &::after {
     display: none;
@@ -1033,6 +1120,14 @@
     background-color: transparent;
     top: 32px;
     right: 12px;
+
+    &:hover::after {
+      opacity: 0.3;
+    }
+
+    &:active::after {
+      opacity: 0.05;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -1045,6 +1140,7 @@
     width: 9px;
     height: 9px;
     background-image: url("../img/close-gray.svg");
+    opacity: 0.3;
 
     @media (min-width: $tablet-width) {
       width: 19px;
@@ -1068,6 +1164,14 @@
   line-height: 30px;
   letter-spacing: 0.01em;
   text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     position: absolute;
@@ -1179,6 +1283,14 @@
   opacity: 0.3;
   border: 1px solid var(--basic-white-gray);
 
+  &:hover {
+    border: 1px solid #959BB2;
+  }
+
+  &:focus-within {
+    border: 1px solid #161C35;
+  }
+
   @media (min-width: $tablet-width) {
     width: 500px;
     min-height: 140px;
@@ -1234,6 +1346,15 @@
     opacity: 1;
     top: 15px;
 
+    /* &:hover {
+      opacity: 1;
+      background-color: red;
+    }
+
+    &:active {
+      opacity: 0.1;
+    } */
+
     @media (min-width: $tablet-width) {
       width: 35px;
       height: 35px;
@@ -1244,6 +1365,10 @@
   }
 }
 
+/* .step__country-to-visit-wrapper--new-opened:hover:before {
+  background-color: red;
+}
+ */
 .step__country-to-visit-wrapper--new-opened .step__wrapper-country-filter {
   /*общий блок-подложка*/
   display: flex;
@@ -1320,9 +1445,14 @@
       height: 70px;
       margin-right: 16px;
       margin-top: 14px;
-      border: 1px solid var(--basic-white-gray);
+      /* border: 1px solid var(--basic-white-gray); */
       box-sizing: border-box;
       border-radius: 4px;
+
+
+      &:hover {
+        border: 1px solid #959BB2;
+      }
     }
   }
 }

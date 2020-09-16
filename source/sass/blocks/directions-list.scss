@@ -106,12 +106,12 @@
     position: absolute;
     left: 25px;
     top: 85px;
-    content: url("../img/flag-thailand.png");
+    content: url("../img/flag-thailand-small.svg");
 
     @media (min-width: $tablet-width) {
       left: 395px;
       top: 17px;
-      content: url("../img/flag-thailand-big.png");
+      content: url("../img/flag-thailand.svg");
     }
 
     @media (min-width: $desktop-width) {
@@ -124,12 +124,12 @@
     position: absolute;
     left: 24px;
     top: 85px;
-    content: url("../img/flag-france.png");
+    content: url("../img/flag-france-small.svg");
 
     @media (min-width: $tablet-width) {
       left: 395px;
       top: 17px;
-      content: url("../img/flag-france-big.png");
+      content: url("../img/flag-france.svg");
     }
 
     @media (min-width: $desktop-width) {
@@ -142,12 +142,12 @@
     position: absolute;
     left: 24px;
     top: 85px;
-    content: url("../img/flag-czech.png");
+    content: url("../img/flag-czech-small.svg");
 
     @media (min-width: $tablet-width) {
       left: 395px;
       top: 15px;
-      content: url("../img/flag-czech-big.png");
+      content: url("../img/flag-czech.svg");
     }
 
     @media (min-width: $desktop-width) {

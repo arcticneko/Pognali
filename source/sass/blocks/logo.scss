@@ -1,3 +1,11 @@
-.logo {
-  /* color: inherit; */
+.logo__wrapper--opened {
+  display: none;
+}
+
+.page-header--opened .logo__wrapper--opened {
+  display: block;
+}
+
+.page-header--opened .logo__wrapper--closed {
+  display: none;
 }

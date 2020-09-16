@@ -204,6 +204,14 @@
   line-height: 14px;
   letter-spacing: 0.05em;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
