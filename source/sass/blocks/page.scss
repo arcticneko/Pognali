@@ -5,6 +5,7 @@
 }
 
 .page__header {
+  background-color: var(--basic-blue);
   min-height: 91px;
 
   @media (min-width: $tablet-width) {

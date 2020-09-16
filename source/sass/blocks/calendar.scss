@@ -120,6 +120,15 @@
   line-height: 22px;
   color: var(--special-grey-light);
 
+  &:hover {
+    color: #1d2e5b;
+  }
+
+  &:active {
+    color: #1d2e5b;
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
@@ -194,5 +203,19 @@
     @media (min-width: $desktop-width) {
       left: 594px;
     }
+  }
+}
+
+.calendar__button--cat {
+  &:hover {
+    background-color: #c8cee8;
+  }
+
+  &:active {
+    background-color: #c8cee8;
+  }
+
+  &:active::before {
+    background-image: url("../img/toggle-cross-blue-transp.svg");
   }
 }

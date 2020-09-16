@@ -74,12 +74,14 @@
   &::after {
     @include radius;
     z-index: 1;
+    bottom: -28px;
   }
 
   @media (min-width: $tablet-width) {
     &::after {
       @include radius(55px, 55px);
       z-index: 1;
+      bottom: -54px;
     }
   }
 
@@ -102,12 +104,14 @@
   &::after {
     @include radius;
     z-index: 1;
+    bottom: -28px;
   }
 
   @media (min-width: $tablet-width) {
     &::after {
       @include radius(55px, 55px);
       z-index: 1;
+      bottom: -54px;
     }
   }
 }
@@ -118,9 +122,11 @@
   &::after {
     @include radius;
     z-index: 1;
+    bottom: -28px;
 
     @media (min-width: $tablet-width) {
       @include radius(55px, 55px);
+      bottom: -54px;
     }
   }
 }
@@ -131,9 +137,11 @@
   &::after {
     @include radius;
     z-index: 1;
+    bottom: -28px;
 
     @media (min-width: $tablet-width) {
       @include radius(55px, 55px);
+      bottom: -54px;
     }
   }
 }
@@ -144,26 +152,11 @@
   &::after {
     @include radius;
     z-index: 1;
+    bottom: -28px;
 
     @media (min-width: $tablet-width) {
       @include radius(55px, 55px);
     }
-  }
-}
-
-.page-main__map {
-  min-height: 320px;
-  background-repeat: no-repeat;
-  background-image: url("../img/map-mobile.jpg");
-
-  @media (min-width: $tablet-width) {
-    min-height: 550px;
-    background-image: url("../img/map-tablet.jpg");
-  }
-
-  @media (min-width: $desktop-width) {
-    min-height: 482px;
-    background-image: url("../img/map-desktop.jpg");
   }
 }
 
@@ -176,10 +169,6 @@
 
 .page-main__companions-catalog {
   margin-bottom: -25px;
-
-  @media (min-width: $desktop-width) {
-    /* min-height: 4883px; */
-  }
 }
 
 .page-main__country-filter {
@@ -191,11 +180,6 @@
   @media (min-width: $tablet-width) {
     border-radius: 0 0 55px 55px;
   }
-
-  /* &::after {
-    @include radius;
-    z-index: 1;
-  } */
 }
 
 .page-main__filter {

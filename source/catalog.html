@@ -11,18 +11,18 @@
     HTML {
       background-repeat: no-repeat;
       background-position: 50% 0;
-      background-image: url("img/pixel-glass/catalog-mob-modal.png");
+      background-image: url("img/pixel-glass/catalog-mob.png");
     }
 
     @media (min-width: 768px) {
       HTML {
-        background-image: url("img/pixel-glass/catalog-tab-modal.png");
+        background-image: url("img/pixel-glass/catalog-tab.png");
       }
     }
 
     @media (min-width: 1440px) {
       HTML {
-        background-image: url("img/pixel-glass/catalog-desktop-modal.png");
+        background-image: url("img/pixel-glass/catalog-desktop.png");
       }
     }
   </style>
@@ -46,16 +46,16 @@
         <h1 class='page-header__title page-header__title--catalog main-title'>Попутчики</h1>
         <nav class='page-header__nav-wrapper'>
           <ul class='page-header__nav-list'>
-            <li class='page-header__item'>
-              <a class='page-header__link' href='#'>О сервисе</a>
-            </li>
-            <li class='page-header__item'>
-              <a class='page-header__link' href='form.html'>направления</a>
-            </li>
-            <li class='page-header__item'>
-              <a class='page-header__link' href='catalog.html'>попутчики</a>
-            </li>
-          </ul>
+              <li class='page-header__item'>
+                <a class='page-header__link' href='#' data-hover='О сервисе'>О сервисе</a>
+              </li>
+              <li class='page-header__item'>
+                <a class='page-header__link' href='form.html' data-hover='направления'>направления</a>
+              </li>
+              <li class='page-header__item'>
+                <a class='page-header__link' href='catalog.html' data-hover='попутчики'>попутчики</a>
+              </li>
+            </ul>
         </nav>
       </div>
 
@@ -71,7 +71,7 @@
   </header>
 
   <main class='page__main page-main'>
-    <section class='page-main__country-filter country-filter country-filter--opened'>
+    <section class='page-main__country-filter country-filter country-filter--opened1'>
       <div class='country-filter__container container'>
         <h2 class='country-filter__title-main'>Фильтрация по странам:</h2>
         <ul class='country-filter__controls'>
@@ -87,15 +87,12 @@
           <li class='country-filter__controls-wrapper'>
             <button class='country-filter__world-toggle'>Острова</button>
           </li>
-          <li class='country-filter__controls-wrapper country-filter__controls-wrapper--show-all'>
-            <button class='country-filter__world-toggle country-filter__world-toggle--show-all'>
-              <span class='country-filter__world-toggle-txt-closed'>Показать все</span>
-              <span class='country-filter__world-toggle-txt-opened'>Свернуть</span>
-            </button>
-          </li>
         </ul>
 
-        <button class='country-filter__toggle' aria-label='Открыть/Закрыть фильтрацию по странам'></button>
+        <button class='country-filter__toggle' aria-label='Открыть/Закрыть фильтрацию по странам'>
+          <span class='country-filter__world-toggle-txt-closed'>Показать все</span>
+          <span class='country-filter__world-toggle-txt-opened'>Свернуть</span>
+        </button>
 
         <div class='country-filter__wrapper-country-filter calendar'>
           <div class='calendar__container-inner container'>
@@ -718,8 +715,10 @@
                 </ul>
               </li>
             </ul>
-            <button class='calendar__button button button--longer'
-              aria-label='Свернуть фильтрацию по странам'>Свернуть</button>
+            <button class='calendar__button calendar__button--cat button button--longer'
+              aria-label='Свернуть фильтрацию по странам'>
+              <span class='calendar__button-change-opacity'>Свернуть</span>
+            </button>
           </div>
         </div>
       </div>
@@ -881,18 +880,18 @@
             <article class='companions-catalog__item'>
               <div class='companions-catalog__desc-wrapper'>
                 <a class='companions-catalog__avatar-link  companions-catalog__avatar-link--liked' href='#'
-                  aria-label='Перейти на страницу пользователя'>
+                  aria-label='Перейти на страницу пользователя'> <!-- стилизовать только псевдоэлемент по hover нельзя. нужноо знание js -->
                   <picture class='companions-catalog__avatar-wrapper'>
-                    <source class='companions-catalog__source' srcset="img/firsova-desktop@1x.jpg"
+                    <source class='companions-catalog__source' srcset="img/firsova-desktop@1x.jpg 1x, firsova-desktop@2x.jpg 2x"
                       media="(min-width: 1440px)">
-                    <source class='companions-catalog__source' srcset="img/firsova-tablet@1x.jpg"
+                    <source class='companions-catalog__source' srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x"
                       media="(min-width: 768px)">
-                    <img class='companions-catalog__avatar' alt='Аватар пользователя' src='img/firsova-mobile@1x.jpg'>
+                    <img class='companions-catalog__avatar' alt='Аватар пользователя' src='img/firsova-mobile@1x.jpg' srcset='img/firsova-mobile@2x.jpg 2x'>
                   </picture>
                 </a>
                 <h3 class='companions-catalog__name'>
                   <a class='companions-catalog__name-link' href='#' aria-label='Перейти на страницу пользователя'>Таня
-                    <br>Фирсова</a> <!--  -->
+                    <br>Фирсова</a>
                 </h3>
                 <div class='companions-catalog__likes'>1,5 М</div>
               </div>
@@ -909,16 +908,16 @@
               </p>
               <ul class='companions-catalog__destinations'>
                 <li class='companions-catalog__destinations-item companions-catalog__destinations-item--sri-lanka'>
-                  <img class='companions-catalog__flag' alt='флаг Шри-Ланка' src='img/flag-sri-lanka.png' width='26'
+                  <img class='companions-catalog__flag' alt='флаг Шри-Ланка' src='img/flag-sri-lanka.svg' width='26'
                     height='18'>
                   Шри-Ланка</li>
                 <li class='companions-catalog__destinations-item companions-catalog__destinations-item--thailand'>
-                  <img class='companions-catalog__flag' alt='флаг Таиланд' src='img/flag-thailand.png' width='26'
+                  <img class='companions-catalog__flag' alt='флаг Таиланд' src='img/flag-thailand.svg' width='26'
                     height='18'>
                   Тайланд
                 </li>
                 <li class='companions-catalog__destinations-item companions-catalog__destinations-item--seychelles'>
-                  <img class='companions-catalog__flag' alt='флаг Сейшелы' src='img/flag-seychelles.png' width='26'
+                  <img class='companions-catalog__flag' alt='флаг Сейшелы' src='img/flag-seychelles.svg' width='26'
                     height='18'>
                   Сейшелы
                 </li>
@@ -958,12 +957,11 @@
               <div class='companions-catalog__desc-wrapper'>
                 <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
                   <picture class='companions-catalog__avatar-wrapper'>
-                    <source class='companions-catalog__source' srcset="img/demin-desktop@1x.jpg"
+                    <source class='companions-catalog__source' srcset="img/demin-desktop@1x.jpg 1x, demin-desktop@2x.jpg 2x"
                       media="(min-width: 1440px)">
-                    <source class='companions-catalog__source' srcset="img/demin-tablet@1x.jpg"
+                    <source class='companions-catalog__source' srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x"
                       media="(min-width: 768px)">
-                    <img class='companions-catalog__avatar' alt='Аватар пользователя'
-                      src='img/photo-account-mobile@1x.jpg'>
+                    <img class='companions-catalog__avatar' alt='Аватар пользователя' src='img/demin-mobile@1x.jpg' srcset='img/demin-mobile@2x.jpg 2x'>
                   </picture>
                 </a>
                 <h3 class='companions-catalog__name'>
@@ -986,12 +984,12 @@
               </p>
               <ul class='companions-catalog__destinations'>
                 <li class='companions-catalog__destinations-item companions-catalog__destinations-item--belgium'>
-                  <img class='companions-catalog__flag' alt='флаг Бельгия' src='img/flag-belgium.png' width='26'
+                  <img class='companions-catalog__flag' alt='флаг Бельгия' src='img/flag-belgium.svg' width='26'
                     height='18'>
                   Бельгия
                 </li>
                 <li class='companions-catalog__destinations-item companions-catalog__destinations-item--czech'>
-                  <img class='companions-catalog__flag' alt='флаг Чехия' src='img/flag-czech.png' width='26'
+                  <img class='companions-catalog__flag' alt='флаг Чехия' src='img/flag-czech.svg' width='26'
                     height='18'>
                   Чехия
                 </li>
@@ -1035,11 +1033,11 @@
               <div class='companions-catalog__desc-wrapper'>
                 <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
                   <picture class='companions-catalog__avatar-wrapper'>
-                    <source class='companions-catalog__source' srcset="img/smolov-desktop@1x.jpg"
+                    <source class='companions-catalog__source' srcset="img/smolov-desktop@1x.jpg 1x, smolov-desktop@2x.jpg 2x"
                       media="(min-width: 1440px)">
-                    <source class='companions-catalog__source' srcset="img/smolov-tablet@1x.jpg"
+                    <source class='companions-catalog__source' srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x"
                       media="(min-width: 768px)">
-                    <img class='companions-catalog__avatar' alt='Аватар пользователя' src='img/smolov-mobile@1x.jpg'>
+                    <img class='companions-catalog__avatar' alt='Аватар пользователя' src='img/smolov-mobile@1x.jpg' srcset='img/smolov-mobile@2x.jpg 2x'>>
                   </picture>
                 </a>
                 <h3 class='companions-catalog__name'>
@@ -1062,16 +1060,16 @@
               </p>
               <ul class='companions-catalog__destinations'>
                 <li class='companions-catalog__destinations-item companions-catalog__destinations-item--usa'>
-                  <img class='companions-catalog__flag' alt='флаг США' src='img/flag-usa.png' width='26' height='18'>
+                  <img class='companions-catalog__flag' alt='флаг США' src='img/flag-usa.svg' width='26' height='18'>
                   США
                 </li>
                 <li class='companions-catalog__destinations-item companions-catalog__destinations-item--austria'>
-                  <img class='companions-catalog__flag' alt='флаг Австралия' src='img/flag-australia.png' width='26'
+                  <img class='companions-catalog__flag' alt='флаг Австралия' src='img/flag-australia.svg' width='26'
                     height='18'>
                   Австралия
                 </li>
                 <li class='companions-catalog__destinations-item companions-catalog__destinations-item--dominica'>
-                  <img class='companions-catalog__flag' alt='флаг Доминика' src='img/flag-dominica.png' width='26'
+                  <img class='companions-catalog__flag' alt='флаг Доминика' src='img/flag-dominica.svg' width='26'
                     height='18'>
                   Доминика
                 </li>
@@ -1114,11 +1112,11 @@
               <div class='companions-catalog__desc-wrapper'>
                 <a class='companions-catalog__avatar-link' href='#' aria-label='Перейти на страницу пользователя'>
                   <picture class='companions-catalog__avatar-wrapper'>
-                    <source class='companions-catalog__source' srcset="img/rogovaya-desktop@1x.jpg"
+                    <source class='companions-catalog__source' srcset="img/rogovaya-desktop@1x.jpg 1x, rogovaya-desktop@2x.jpg 2x"
                       media="(min-width: 1440px)">
-                    <source class='companions-catalog__source' srcset="img/rogovaya-tablet@1x.jpg"
+                    <source class='companions-catalog__source' srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x"
                       media="(min-width: 768px)">
-                    <img class='companions-catalog__avatar' alt='Аватар пользователя' src='img/rogovaya-mobile@1x.jpg'>
+                    <img class='companions-catalog__avatar' alt='Аватар пользователя' src='img/rogovaya-mobile@1x.jpg' srcset='img/rogovaya-mobile@2x.jpg 2x'>
                   </picture>
                 </a>
                 <h3 class='companions-catalog__name'>
@@ -1140,12 +1138,12 @@
               </p>
               <ul class='companions-catalog__destinations'>
                 <li class='companions-catalog__destinations-item companions-catalog__destinations-item--uk'>
-                  <img class='companions-catalog__flag' alt='флаг Великобритания' src='img/flag-uk.png' width='26'
+                  <img class='companions-catalog__flag' alt='флаг Великобритания' src='img/flag-uk.svg' width='26'
                     height='18'>
                   Великобритания
                 </li>
                 <li class='companions-catalog__destinations-item companions-catalog__destinations-item--germany'>
-                  <img class='companions-catalog__flag' alt='флаг Германия' src='img/flag-germany.png' width='26'
+                  <img class='companions-catalog__flag' alt='флаг Германия' src='img/flag-germany.svg' width='26'
                     height='18'>
                   Германия
                 </li>

@@ -11,18 +11,18 @@
     HTML {
       background-repeat: no-repeat;
       background-position: 50% 0;
-      background-image: url("img/pixel-glass/index-mob-modal.png");
+      background-image: url("img/pixel-glass/index-mob.png");
     }
 
     @media (min-width: 768px) {
       HTML {
-        background-image: url("img/pixel-glass/index-tab-modal.png");
+        background-image: url("img/pixel-glass/index-tab.png");
       }
     }
 
     @media (min-width: 1440px) {
       HTML {
-        background-image: url("img/pixel-glass/index-desktop-modal.png");
+        background-image: url("img/pixel-glass/index-desktop.png");
       }
     }
   </style>
@@ -33,27 +33,32 @@
 <body class='page__body page__body--index'>
 
   <header class='page__header'>
-    <div class='page-header page-header--opened'>
+    <div class='page-header page-header--opened1'> <!-- открытие/закрытие меню тут -->
       <div class='page-header__container container'>
         <div class='page-header__menu-wrapper'>
           <a class='page-header__logo logo' aria-label='перейти на главную страницу'>
-            <picture class='logo__wrapper'>
-              <source srcset="img/logo-desktop-white@1x.png" media="(min-width: 1440px)">
-              <source srcset="img/logo-tablet-white@1x.png" media="(min-width: 768px)">
-              <img class='logo__image' src="img/logo-mobile-white@1x.png" alt='логотип'>
+            <picture class='logo__wrapper logo__wrapper--closed'>
+              <source srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x" media="(min-width: 1440px)">
+              <source srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x" media="(min-width: 768px)">
+              <img class='logo__image' src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt='логотип'>
+            </picture>
+            <picture class='logo__wrapper logo__wrapper--opened'>
+              <source srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x" media="(min-width: 1440px)">
+                <source srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" media="(min-width: 768px)">
+                <img class='logo__image' src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt='логотип'>
             </picture>
           </a>
           <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'></button>
           <nav class='page-header__nav-wrapper'>
             <ul class='page-header__nav-list'>
               <li class='page-header__item'>
-                <a class='page-header__link' href='#'>О сервисе</a>
+                <a class='page-header__link' href='#' data-hover='О сервисе'>О сервисе</a>
               </li>
               <li class='page-header__item'>
-                <a class='page-header__link' href='form.html'>направления</a>
+                <a class='page-header__link' href='form.html' data-hover='направления'>направления</a>
               </li>
               <li class='page-header__item'>
-                <a class='page-header__link' href='catalog.html'>попутчики</a>
+                <a class='page-header__link' href='catalog.html' data-hover='попутчики'>попутчики</a>
               </li>
             </ul>
           </nav>
@@ -70,7 +75,9 @@
               <span class='contacts__descr'>mail@htmlacademy.ru</span>
             </a>
           </div>
-          <a class='contacts__auth button' href='#'>Авторизация</a>
+          <a class='contacts__auth button' href='#'>
+            <span class='contacts__auth-inner'>Авторизация</span>
+          </a>
         </div>
 
         <ul class='page-header__social social'>
@@ -148,8 +155,8 @@
           <li class='directions-list__item-wrapper'>
             <article class='directions-list__item'>
               <picture class='directions-list__pic-wrapper'>
-                <source srcset="img/thailand-desktop@1x.jpg" media="(min-width: 768px)">
-                <img class='directions-list__pic' src="img/thailand-mobile@1x.jpg" alt='Тайланд'>
+                <source srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x" media="(min-width: 768px)">
+                <img class='directions-list__pic' src="img/thailand-mobile@1x.jpg" alt='Тайланд' srcset='img/thailand-mobile@2x.jpg 2x'>
               </picture>
               <div class='directions-list__description-wrapper'>
                 <h3 class='directions-list__name directions-list__name--thailand'>Таиланд</h3>
@@ -162,8 +169,8 @@
           <li class='directions-list__item-wrapper'>
             <article class='directions-list__item'>
               <picture class='directions-list__pic-wrapper'>
-                <source srcset="img/france-desktop@1x.jpg" media="(min-width: 768px)">
-                <img class='directions-list__pic' src="img/france-mobile@1x.jpg" alt='Франция'>
+                <source srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x" media="(min-width: 768px)">
+                <img class='directions-list__pic' src="img/france-mobile@1x.jpg" alt='Франция' srcset='img/france-mobile@2x.jpg 2x'>
               </picture>
               <div class='directions-list__description-wrapper'>
                 <h3 class='directions-list__name directions-list__name--france'>Франция</h3>
@@ -176,8 +183,8 @@
           <li class='directions-list__item-wrapper'>
             <article class='directions-list__item'>
               <picture class='directions-list__pic-wrapper'>
-                <source srcset="img/czech-desktop@1x.jpg" media="(min-width: 768px)">
-                <img class='directions-list__pic' src="img/czech-mobile@1x.jpg" alt='Чехия'>
+                <source srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x" media="(min-width: 768px)">
+                <img class='directions-list__pic' src="img/czech-mobile@1x.jpg" alt='Чехия' srcset='img/france-mobile@2x.jpg 2x'>
               </picture>
               <div class='directions-list__description-wrapper'>
                 <h3 class='directions-list__name directions-list__name--czech'>Чехия</h3>
@@ -210,15 +217,15 @@
                   class='companions-list__lvl-desc'>level</span></div>
               <ul class='companions-list__countries'>
                 <li class='companions-list__country companions-list__country--sri-lanka'>
-                  <img class='companions-list__flag' alt='флаг Шри-Ланка' src='img/flag-sri-lanka.png' width='35'
+                  <img class='companions-list__flag' alt='флаг Шри-Ланка' src='img/flag-sri-lanka.svg' width='35'
                     height='25'>
                 </li>
                 <li class='companions-list__country companions-list__country--thailand'>
-                  <img class='companions-list__flag' alt='флаг Таиланд' src='img/flag-thailand.png' width='35'
+                  <img class='companions-list__flag' alt='флаг Таиланд' src='img/flag-thailand.svg' width='35'
                     height='25'>
                 </li>
                 <li class='companions-list__country companions-list__country--seychelles'>
-                  <img class='companions-list__flag' alt='флаг Сейшелы' src='img/flag-seychelles.png' width='35'
+                  <img class='companions-list__flag' alt='флаг Сейшелы' src='img/flag-seychelles.svg' width='35'
                     height='25'>
                 </li>
               </ul>
@@ -236,15 +243,22 @@
                 <ul class='companions-list__transport'>
                   <li
                     class='companions-list__transport-item companions-list__transport-item--plane companions-list__transport-item--active'>
+                    <img class='companions-list__transport-tooltip companions-list__transport-tooltip--plane' width='146' height='63' src="img/tooltip-plane.png">
                     <span class='visually-hidden'>передвижение на самолете</span>
                   </li>
                   <li class='companions-list__transport-item companions-list__transport-item--bus'>
+                    <img class='companions-list__transport-tooltip companions-list__transport-tooltip--bus'
+                    width='170' height='63' src="img/tooltip-bus.png">
                     <span class='visually-hidden'>передвижение на поезде</span>
                   </li>
                   <li class='companions-list__transport-item companions-list__transport-item--bike'>
+                    <img class='companions-list__transport-tooltip companions-list__transport-tooltip--bike'
+                    width='130' height='63' src="img/tooltip-bike.png">
                     <span class='visually-hidden'>передвижение на велосипеде</span>
                   </li>
                   <li class='companions-list__transport-item companions-list__transport-item--walk'>
+                    <img class='companions-list__transport-tooltip companions-list__transport-tooltip--walk'
+                    width='110' height='63' src="img/tooltip-walk.png">
                     <span class='visually-hidden'>передвижение пешком</span>
                   </li>
                 </ul>
@@ -260,11 +274,11 @@
                   class='companions-list__lvl-desc'>level</span></div>
               <ul class='companions-list__countries'>
                 <li class='companions-list__country companions-list__country--belgium'>
-                  <img class='companions-list__flag' alt='флаг Бельгия' src='img/flag-belgium.png' width='35'
+                  <img class='companions-list__flag' alt='флаг Бельгия' src='img/flag-belgium.svg' width='35'
                     height='25'>
                 </li>
                 <li class='companions-list__country companions-list__country--czech'>
-                  <img class='companions-list__flag' alt='флаг Чехия' src='img/flag-czech.png' width='35' height='25'>
+                  <img class='companions-list__flag' alt='флаг Чехия' src='img/flag-czech.svg' width='35' height='25'>
                 </li>
               </ul>
               <div class='companions-list__description'>
@@ -279,17 +293,22 @@
                 <ul class='companions-list__transport'>
                   <li
                     class='companions-list__transport-item companions-list__transport-item--plane companions-list__transport-item--active'>
+                    <img class='companions-list__transport-tooltip companions-list__transport-tooltip--plane' width='146' height='63' src="img/tooltip-plane.png">
                     <span class='visually-hidden'>передвижение на самолете</span>
                   </li>
-                  <li
-                    class='companions-list__transport-item companions-list__transport-item--bus companions-list__transport-item--active'>
+                  <li class='companions-list__transport-item companions-list__transport-item--bus'>
+                    <img class='companions-list__transport-tooltip companions-list__transport-tooltip--bus'
+                    width='170' height='63' src="img/tooltip-bus.png">
                     <span class='visually-hidden'>передвижение на поезде</span>
                   </li>
                   <li class='companions-list__transport-item companions-list__transport-item--bike'>
+                    <img class='companions-list__transport-tooltip companions-list__transport-tooltip--bike'
+                    width='130' height='63' src="img/tooltip-bike.png">
                     <span class='visually-hidden'>передвижение на велосипеде</span>
                   </li>
-                  <li
-                    class='companions-list__transport-item companions-list__transport-item--walk companions-list__transport-item--active'>
+                  <li class='companions-list__transport-item companions-list__transport-item--walk'>
+                    <img class='companions-list__transport-tooltip companions-list__transport-tooltip--walk'
+                    width='110' height='63' src="img/tooltip-walk.png">
                     <span class='visually-hidden'>передвижение пешком</span>
                   </li>
                 </ul>
@@ -341,7 +360,9 @@
               <p class='tariff__business-fee'>Индивидуально</p>
             </li>
           </ol>
-          <button class='tariff__business-button-close'>Закрыть окно</button>
+          <button class='tariff__business-button-close'>
+            <span class='tariff__business-button-close-txt'>Закрыть окно</span>
+          </button>
         </div>
       </div>
     </section>
@@ -386,7 +407,12 @@
       </div>
     </section>
 
-    <div class='page-main__map container'>
+    <div class='page-main__map map'>
+      <picture class='map__map-wrapper'>
+        <source srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x" media="(min-width: 1440px)">
+        <source srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x" media="(min-width: 768px)">
+        <img class='map__map-image' src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt='карта'>
+      </picture>
     </div>
 
   </main>

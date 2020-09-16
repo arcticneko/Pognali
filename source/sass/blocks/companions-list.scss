@@ -34,6 +34,21 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 20px 20px 0 0;
+  }
+
+  &:hover .companions-list__item-pic {
+    transform: scale(1.1);
+    transition: all 0.5s ease-out;
+  }
+
+  &:hover {
+    filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.16));
+  }
 }
 
 .companions-list__item-pic {
@@ -113,6 +128,7 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+  z-index: 3;
 
   @media (min-width: $tablet-width) {
     top: 272px;
@@ -132,6 +148,7 @@
   display: flex;
   flex-direction: column;
   border-radius: 0 0 10px 10px;
+  z-index: 2;
 
   @media (min-width: $tablet-width) {
     width: 285px;
@@ -150,6 +167,15 @@
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
+  cursor: context-menu;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
@@ -230,6 +256,7 @@
 }
 
 .companions-list__transport-item {
+  position: relative;
   width: 25px;
   height: 25px;
   background-repeat: no-repeat;
@@ -257,5 +284,57 @@
   &--walk {
     background-image: url("../img/run2.svg");
     margin-left: 10px;
+  }
+}
+
+.companions-list__transport-tooltip {
+  display: none;
+}
+
+.companions-list__transport-item:hover .companions-list__transport-tooltip {
+  display: block;
+  position: absolute;
+  max-width: 170px;
+  height: 63px;
+  transform: translate(0, 100%);
+  bottom: -7px;
+  z-index: 5;
+  opacity: 1;
+
+  &--plane {
+    left: -58px;
+
+    @media (min-width: $tablet-width) {
+    left: -53px;
+    }
+  }
+
+  &--bus {
+    opacity: 1;
+    left: -69px;
+
+    @media (min-width: $tablet-width) {
+    left: -62px;
+    }
+  }
+
+  &--bike {
+    left: -50px;
+
+    @media (min-width: $tablet-width) {
+    left: -45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: -43px;
+    }
+  }
+
+  &--walk {
+    left: -40px;
+
+    @media (min-width: $tablet-width) {
+    left: -34px;
+    }
   }
 }

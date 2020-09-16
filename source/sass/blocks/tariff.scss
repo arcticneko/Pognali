@@ -51,11 +51,22 @@
     right: -135px;
     background-image: url("../img/rates@1x.png");
     background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/rates@2x.png");
+      background-size: 100px, auto;
+    }
 
     @media (min-width: $tablet-width) {
       top: 340px;
       right: -55px;
       z-index: 2;
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/rates@2x.png");
+        background-size: 200px, auto;
+      }
     }
 
     @media (min-width: $desktop-width) {
@@ -202,6 +213,15 @@
   color: var(--basic-blue-bright);
   font-size: 16px;
   line-height: 16px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -365,6 +385,15 @@
   border-radius: 0 0 20px 20px;
   border: none;
   font-family: inherit;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #EDEFF6;
+  }
+
+  &:active .tariff__business-button-close-txt {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: 52px;

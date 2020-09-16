@@ -22,11 +22,29 @@
   &--phone {
     background-image: url("../img/topmenu-phone.svg");
     background-color: var(--special-orange);
+
+    &:hover[href] {
+      background-color: #F26926;
+    }
+
+    &:active {
+      background-image: url("../img/topmenu-phone-fade.svg");
+      background-color: #F26926;
+    }
   }
 
   &--email {
     background-image: url("../img/topmenu-mail.svg");
     background-color: var(--special-yellow-dark);
+
+    &:hover[href] {
+      background-color: #FF8D30;
+    }
+
+    &:active {
+      background-image: url("../img/topmenu-mail-fade.svg");
+      background-color: #FF8D30;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -41,6 +59,15 @@
 }
 
 .contacts__auth {
+
+  &:hover[href] {
+    background-color: #FFBD30;
+  }
+
+  &:active .contacts__auth-inner{
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     display: block;
     font-style: normal;

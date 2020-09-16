@@ -38,6 +38,14 @@
   font-size: 16px;
   line-height: 22px;
 
+  &:hover {
+    color: #FFBD30;
+  }
+
+  &:active {
+    color: #74581c;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 28px;
     line-height: 28px;
@@ -78,6 +86,15 @@
     }
   }
 
+
+  &--phone:hover::before {
+    background-image: url("../img/contacts-phone-yellow-darker.svg");
+  }
+
+  &--phone:active::before {
+    background-image: url("../img/contacts-phone-yellow-dark.svg");
+  }
+
   &--email::before {
     top: -10px;
     background-image: url("../img/contacts-mail-yellow.svg");
@@ -90,5 +107,13 @@
     @media (min-width: $desktop-width) {
       top: -28px;
     }
+  }
+
+  &--email:hover::before {
+    background-image: url("../img/contacts-mail-yellow-darker.svg");
+  }
+
+  &--email:active::before {
+    background-image: url("../img/contacts-mail-yellow-dark.svg");
   }
 }

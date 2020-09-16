@@ -16,6 +16,19 @@
   font-size: 20px;
   line-height: 20px;
 
+  &:hover {
+    background-color: #FFBD30;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
+
   @media (min-width: $tablet-width) {
     width: 188px;
     padding-top: 15px;
@@ -133,6 +146,16 @@
     padding-left: 19px;
     color: var(--basic-blue-light);
 
+    &:hover {
+      background-color: #192144;
+      color: var(--basic-white);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background-color: #192144;
+    }
+
     @media (min-width: $tablet-width) {
       font-size: 24px;
       line-height: 24px;
@@ -165,6 +188,16 @@
       right: 34px;
       top: 43%;
     }
+  }
+
+  &--bordered:hover::after {
+    content: url("../img/email-arrow-white.svg");
+    border: 3px solid #192144;
+  }
+
+  &--bordered:active::after {
+    content: url("../img/email-arrow-white-transp.svg");
+    border: 3px solid #192144;
   }
 
   &--long {
@@ -225,6 +258,18 @@
     border: none;
     font-size: 17px;
     line-height: 17px;
+
+    /* &:hover {
+
+    }
+
+    &:active {
+
+    }
+
+    &:active::after  {
+
+    } */
 
     @media (min-width: $tablet-width) {
       width: 617px;

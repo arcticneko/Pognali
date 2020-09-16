@@ -12,6 +12,10 @@
   width: 44px;
   height: 44px;
 
+  &:hover {
+    background-color: #FFBD30;
+  }
+
   @media (min-width: $tablet-width) {
     width: 62px;
     height: 62px;
@@ -20,23 +24,35 @@
   &--fb {
     background-image: url("../img/facebook-blue.svg");
     background-size: 22%;
+
+    &:active {
+      background-image: url("../img/facebook-blue-transp.svg");
+    }
   }
 
   &--vk {
     background-image: url("../img/vk-blue.svg");
     background-size: 50%;
+
+    &:active {
+      background-image: url("../img/vk-blue-transp.svg");
+    }
   }
 
   &--instagram {
     background-image: url("../img/instagram-blue.svg");
     background-size: 36%;
+
+    &:active {
+      background-image: url("../img/instagram-blue-transp.svg");
+    }
   }
 
   &--sub {
     background-color: transparent;
   }
 
-  &--disabled {
+  /* &--disabled {
     opacity: 0.3;
-  }
+  } */
 }
