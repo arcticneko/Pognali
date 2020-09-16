@@ -14,7 +14,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    align-self: start;
+    align-self: flex-start;
     background-image: url("../img/about-tablet@1x.png"), url("../img/back-cube-tablet.svg");
     background-position: top /* 129px */ 177px right 45px, left 38px top 129px;
     width: 105%;

@@ -15,12 +15,14 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([autoprefixer()]))
+    .pipe(postcss([
+      autoprefixer()
+    ]))
     .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
-    .pipe(sync.stream())
+    .pipe(sync.stream());
 }
 
 exports.styles = styles;
@@ -45,7 +47,6 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 

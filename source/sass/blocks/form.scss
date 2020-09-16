@@ -4,14 +4,7 @@
   box-sizing: border-box;
 }
 
-.form__companion-card {
-  /* @include width-container (25px, 75px, 124px); */
-  /* min-height: 475px; */
-}
-
 .form__my-plan {
-
-  /* min-height: 483px; */
 
   &::before {
     @include radius;
