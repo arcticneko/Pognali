@@ -5,7 +5,7 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <title>Погнали</title>
-  <link href='css/styles.min.css' rel='stylesheet'>
+  <link href='css/style.css' rel='stylesheet'>
   <!-- Pixel Glass -->
   <style>
     HTML {
@@ -33,7 +33,7 @@
 <body class='page__body page__body--index'>
 
   <header class='page__header'>
-    <div class='page-header page-header--opened'> <!-- класс  page-header--opened  открытие/закрытие меню тут -->
+    <div class='page-header'> <!-- класс  page-header--opened  открытие/закрытие меню тут -->
       <div class='page-header__container container'>
         <div class='page-header__menu-wrapper'>
           <a class='page-header__logo logo' aria-label='перейти на главную страницу'>
@@ -340,7 +340,7 @@
         </ol>
         <button class='tariff__business-button-open'>Показать тарифы для бизнеса</button>
 
-        <div class='tariff__business'>
+        <div class='tariff__business tariff__business--closed'>  <!-- класс closed -->
           <h2 class='tariff__business-title page-main-subtitle'>Бизнес-тарифы</h2>
           <ol class='tariff__business-fee-list'>
             <li class='tariff__business-item'>
@@ -450,6 +450,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/index.js"></script>
 </body>
 
 </html>

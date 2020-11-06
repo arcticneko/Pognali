@@ -36,6 +36,12 @@
   }
 }
 
+.page__body--secondary .page-header__nav-wrapper {
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
+}
+
 .page__footer {
   margin-top: -30px;
 }

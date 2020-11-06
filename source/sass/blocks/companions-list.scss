@@ -293,7 +293,7 @@
 
 .companions-list__transport-item:hover .companions-list__transport-tooltip {
   display: block;
-  position: absolute;
+  // position: absolute; hlp
   max-width: 170px;
   height: 63px;
   transform: translate(0, 100%);

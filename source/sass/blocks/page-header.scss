@@ -103,7 +103,7 @@
       position: absolute;
       width: 60px;
       height: 2px;
-      top: 54px;
+      top: 9px;
       left: -70px;
       background-color: var(--basic-white);
     }
@@ -111,13 +111,9 @@
 }
 
 .page-header__item {
-  margin-top: 28px;
+  margin-top: 0;
   margin-left: 31px;
   overflow: hidden; /* overflow: hidden; добавлено для эффекта выезда текста*/
-
-  @media (min-width: $tablet-width) {
-    margin-top: 44px;
-  }
 }
 
 .page-header--secondary .page-header__item {
@@ -151,7 +147,7 @@
     position: absolute;
     top: 100%;
     content: attr(data-hover);
-    font-weight: 700;
+    // font-weight: 700;
     transform: translate3d(0, 0, 0);
     color: var(--basic-yellow);
     font-family: inherit;
@@ -226,6 +222,10 @@
   }
 }
 
+.page-header--secondary-fix .page-header__nav-wrapper {
+  margin-top: 0;
+}
+
 .page-header--secondary .page-header__logo {
   margin-bottom: 83px;
   margin-top: 19px;
@@ -287,7 +287,7 @@
   position: absolute;
   font-size: 36px;
   line-height: 36px;
-  z-index: 2;
+  // z-index: 2;
   top: 93px;
   left: 21px;
 
@@ -396,7 +396,7 @@
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    border: none;
+    // border: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -404,6 +404,7 @@
     /* top: 751px; */
     min-height: 90px;
     position: fixed;
+    border: none;
   }
 
   &::after {
@@ -449,6 +450,11 @@
 
 .page-header--opened .page-header__nav-list {
   display: block;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
 
   @media (min-width: $desktop-width) {
     display: flex;
@@ -457,6 +463,7 @@
   &::before {
     @media (min-width: $desktop-width) {
       display: none;
+      text-align: center;
     }
   }
 }
@@ -468,15 +475,20 @@
   }
 }
 
+.page-header__nav-wrapper {
+  @media (min-width: $desktop-width) {
+    margin-top: 45px;
+  }
+}
+
 .page-header--opened .page-header__nav-wrapper {
   display: block;
-  /* margin-top: -12px; */
-  margin-left: 39px;
-  margin-top: 24px;
+  margin-left: 8px;
+  margin-top: 23px;
 
   @media (min-width: $tablet-width) {
-    margin-left: -40px;
-    margin-top: 48px;
+    margin-left: -71px;
+    margin-top: 47px;
   }
 
   @media (min-width: $desktop-width) {
@@ -729,4 +741,12 @@
       background-color: var(--special-blue-dark);
     }
   }
+}
+
+.page-header--opened .page-header__title--catalog {
+  display: none;
+}
+
+.page-header__container {
+  z-index: 5;
 }

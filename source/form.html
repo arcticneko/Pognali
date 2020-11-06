@@ -5,7 +5,7 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <title>Погнали</title>
-  <link href='css/styles.min.css' rel='stylesheet'>
+  <link href='css/style.css' rel='stylesheet'>
   <!-- Pixel Glass -->
   <style>
     HTML {
@@ -36,10 +36,15 @@
     <div class='page-header__container container'>
       <div class='page-header__menu-wrapper'>
         <a class='page-header__logo logo' href='index.html' aria-label='перейти на главную страницу'>
-          <picture class='logo__wrapper'>
-            <source srcset="img/logo-desktop-white@1x.png" media="(min-width: 1440px)">
-            <source srcset="img/logo-tablet-white@1x.png" media="(min-width: 768px)">
-            <img class='logo__image' src="img/logo-mobile-white@1x.png" alt='логотип'>
+          <picture class='logo__wrapper logo__wrapper--closed'>
+            <source srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x" media="(min-width: 1440px)">
+            <source srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x" media="(min-width: 768px)">
+            <img class='logo__image' src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt='логотип'>
+          </picture>
+          <picture class='logo__wrapper logo__wrapper--opened'>
+            <source srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x" media="(min-width: 1440px)">
+              <source srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" media="(min-width: 768px)">
+              <img class='logo__image' src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt='логотип'>
           </picture>
         </a>
         <button class='page-header__toggle' aria-label='Открыть/Закрыть главное меню'></button>
@@ -47,7 +52,7 @@
         <nav class='page-header__nav-wrapper'>
           <ul class='page-header__nav-list'>
             <li class='page-header__item'>
-              <a class='page-header__link' href='#' data-hover='О сервисе'>О сервисе</a>
+              <a class='page-header__link' href='index.html' data-hover='О сервисе'>О сервисе</a>
             </li>
             <li class='page-header__item'>
               <a class='page-header__link' href='form.html' data-hover='направления'>направления</a>
@@ -59,13 +64,36 @@
         </nav>
       </div>
 
-      <div class='page-header__contacts-wrapper contacts page-header__contacts-wrapper--hidden'>
-        <a class='contacts__contact-item contacts__contact-item--phone' href='tel:88005558628'
-          aria-label='наш телефон'></a>
-        <a class='contacts__contact-item contacts__contact-item--email' href='mailto:mail@htmlacademy.ru'
-          aria-label='наша почта'></a>
-        <a class='contacts__auth button' href='#'>Авторизация</a>
+      <div class='page-header__contacts-wrapper contacts'>
+        <div class='contacts__inner-wrapper'>
+          <a class='contacts__contact-item contacts__contact-item--phone' href='tel:88005558628'
+            aria-label='наш телефон'>
+            <span class='contacts__descr'>8 800 555-86-28</span>
+          </a>
+          <a class='contacts__contact-item contacts__contact-item--email' href='mailto:mail@htmlacademy.ru'
+            aria-label='наша почта'>
+            <span class='contacts__descr'>mail@htmlacademy.ru</span>
+          </a>
+        </div>
+        <a class='contacts__auth button' href='#'>
+          <span class='contacts__auth-inner'>Авторизация</span>
+        </a>
       </div>
+
+      <ul class='page-header__social social'>
+        <li class='social__social-item'>
+          <a class='social__item-link social__item-link--sub social__item-link--fb' href='#'
+            aria-label='перейти на нашу страницу в Facebook'></a>
+        </li>
+        <li class='social__social-item'>
+          <a class='social__item-link social__item-link--sub social__item-link--vk' href='#'
+            aria-label='перейти на нашу страницу в Vkontakte'></a>
+        </li>
+        <li class='social__social-item'>
+          <a class='social__item-link social__item-link--sub social__item-link--disabled social__item-link--instagram'
+            href='#' aria-label='перейти на нашу страницу в Instagram'></a>
+        </li>
+      </ul>
       <!-- <a class='page-header__back-button' href='index.html'>На главную</a> -->
     </div>
   </header>
@@ -248,9 +276,9 @@
               </div>
 
               <div class='step__is-children-wrapper'>
-                <label class='step__is-children-title' for='is-children'>Можно с детьми</label>
                 <input class='step__is-children-input visually-hidden' type='checkbox' name='is-children'
                   id='is-children'>
+                <label class='step__is-children-title' for='is-children'>Можно с детьми</label>
               </div>
             </div>
 
@@ -1342,7 +1370,6 @@
       </div>
     </div>
   </footer>
-
 </body>
 
 </html>

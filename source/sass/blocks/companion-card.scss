@@ -290,6 +290,8 @@
   border-radius: 50%;
   background-color: var(--basic-white);
   text-align: center;
+  overflow: hidden;
+
 
   @media (min-width: $tablet-width) {
     width: 43px;
@@ -377,12 +379,12 @@
 
 .companion-card__transport-input:checked:hover + .companion-card__transports-pic {
   opacity: 0.7;
-  box-shadow: 0 2px 6px var(--shadow-modal5);
+//  box-shadow: 0 2px 6px var(--shadow-modal5);
 }
 
 .companion-card__transport-input:checked:active + .companion-card__transports-pic {
   opacity: 0.3;
-  background-color: #e2e5f1;
+  // background-color: #e2e5f1;
 }
 
 .companion-card__transport-input:not(:checked) + .companion-card__transports-pic {
@@ -391,10 +393,10 @@
 
 .companion-card__transport-input:not(:checked):hover + .companion-card__transports-pic {
   opacity: 0.5;
-  box-shadow: 0 2px 6px var(--shadow-modal5);
+  // box-shadow: 0 2px 6px var(--shadow-modal5);
 }
 
 .companion-card__transport-input:not(:checked):active + .companion-card__transports-pic {
   opacity: 0.2;
-  background-color: var(--basic-white-gray16);
+  // background-color: var(--basic-white-gray16);
 }

@@ -21,7 +21,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 30px;
+    margin-top: 0;
     margin-bottom: 45px;
     border-radius: 60px;
     padding-left: 160px;
@@ -313,7 +313,6 @@
   &--more {
     background-image: url("../img/qty-plus-mobile.svg");
     right: 0;
-    transform: translate(0, -100%);
   }
 }
 
@@ -377,24 +376,59 @@
     top: 46px;
     left: 757px;
   }
+}
+
+.step__is-children-title {
+  position: relative;
+  padding-left: 39px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 58px;
+  }
 
   &::before {
     content: "";
+    display: block;
+    position: absolute;
     width: 24px;
     height: 24px;
+    left: 0;
+    top: -6px;
     border-radius: 4px;
     border: 1px solid var(--basic-white-gray);
-    margin-right: 13px;
 
     @media (min-width: $tablet-width) {
       width: 34px;
       height: 34px;
-      margin-right: 22px;
     }
 
     @media (min-width: $desktop-width) {
       margin-right: 24px;
     }
+  }
+}
+
+.step__is-children-input:checked + .step__is-children-title::after {
+  position: absolute;
+  bottom: 5px;
+  right: 122px;
+  display: block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("../img/isChildrenAllowedTick.svg");
+
+  @media (min-width: $tablet-width) {
+    width: 13px;
+    height: 13px;
+    bottom: 4px;
+    right: 217px;
+  }
+
+  @media (min-width: $tablet-width) {
+    right: 219px;
   }
 }
 
@@ -1060,7 +1094,11 @@
       content: "";
       width: 1px;
       height: 396px;
-      background-image: linear-gradient(to bottom, var(--basic-white-gray9) 316px, var(--basic-white) 396px);
+      background-image: linear-gradient(
+        to bottom,
+        var(--basic-white-gray9) 316px,
+        var(--basic-white) 396px
+      );
 
       @media (min-width: $desktop-width) {
         right: 225px;
@@ -1506,7 +1544,8 @@
   }
 }
 
-.step__country-to-visit-wrapper--new-opened .step__country-to-visit-select-wrapper--transp::before {
+.step__country-to-visit-wrapper--new-opened
+  .step__country-to-visit-select-wrapper--transp::before {
   display: none;
 
   @media (min-width: $tablet-width) {
