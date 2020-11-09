@@ -53,7 +53,7 @@
 
   @media (min-width: $desktop-width) {
     width: 285px;
-    min-height: 814px;
+    min-height: auto;
     position: absolute;
     right: 60px;
     top: 20px;
@@ -266,12 +266,13 @@
 
 .filter__item-filter-list-transport {
   @include reset-list;
-  display: flex;
+  display: none;
   padding-top: 35px;
   padding-bottom: 18px;
   margin-left: -1px;
 
   @media (min-width: $tablet-width) {
+    display: flex;
     padding-left: 130px;
     padding-top: 0;
     margin-top: -6px;
@@ -279,10 +280,15 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: none;
     padding-left: 20px;
     padding-top: 38px;
     padding-bottom: 24px;
   }
+}
+
+.filter__item-filter-list-transport--open {
+  display: flex;
 }
 
 .filter__list-option-label-transport {
@@ -320,14 +326,15 @@
 }
 
 .filter__lvl-range-wrapper {
+  display: none;
   position: relative;
-  display: flex;
   box-sizing: border-box;
   height: 35px;
   margin-top: 41px;
   border-radius: 4px;
 
   @media (min-width: $tablet-width) {
+    display: flex;
     width: 148px;
     height: 46px;
     padding-top: 0;
@@ -341,6 +348,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: none;
     margin-top: 50px;
     margin-left: 22px;
   }
@@ -370,6 +378,10 @@
       left: 85px;
     }
   }
+}
+
+.filter__lvl-range-wrapper--open {
+  display: flex;
 }
 
 .filter__lvl-range {
@@ -425,21 +437,28 @@
 /* Range filter*/
 
 .filter__lvl-range-controls {
+  display: none;
   position: relative;
   padding-top: 25px;
   padding-bottom: 25px;
 
   @media (min-width: $tablet-width) {
+    display: block;
     top: -51px;
     left: 139px;
     width: 280px;
   }
 
   @media (min-width: $desktop-width) {
+    display: none;
     top: 10px;
     left: 24px;
     width: 190px;
   }
+}
+
+.filter__lvl-range-controls--open {
+  display: block;
 }
 
 .filter__lvl-range-scale {
@@ -558,6 +577,7 @@
 
 .filter__button {
   margin-left: -5px;
+  margin-top: 50px;
 
   @media (min-width: $tablet-width) {
     margin-left: 10px;
@@ -567,7 +587,7 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 23px;
-    margin-top: 27px;
+    margin-top: 50px;
   }
 
   &:hover {

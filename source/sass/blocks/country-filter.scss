@@ -163,6 +163,10 @@
 }
 
 .country-filter__world-toggle-txt-closed {
+  @media (min-width: $mobile-width) {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     display: inline;
     position: absolute;

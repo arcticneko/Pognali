@@ -737,7 +737,7 @@
           <fieldset class='filter__filtration-wrapper filter__filtration-wrapper--hobby'>
             <legend class='filter__title'>Хобби</legend>
             <div class='filter__item-filter-list-wrapper'>
-              <ul class='filter__item-filter-list'>
+              <ul class='filter__item-filter-list' id='hobby-box'>
                 <li class='filter__list-option'>
                   <input class='filter__list-option-input visually-hidden' type='checkbox' id='sport'>
                   <label class='filter__list-option-label' for='sport'>Спортзал</label>
@@ -757,7 +757,7 @@
           <fieldset class='filter__filtration-wrapper filter__filtration-wrapper--music'>
             <legend class='filter__title'>Музыка</legend>
             <div class='filter__item-filter-list-wrapper'>
-              <ul class='filter__item-filter-list filter__item-filter-list--open'>
+              <ul class='filter__item-filter-list filter__item-filter-list--open' id='music-box'>
                 <li class='filter__list-option'>
                   <input class='filter__list-option-input visually-hidden' type='checkbox' id='hard-rock'>
                   <label class='filter__list-option-label' for='hard-rock'>Тяжелый рок</label>
@@ -777,7 +777,7 @@
           <fieldset class='filter__filtration-wrapper filter__filtration-wrapper--food'>
             <legend class='filter__title'>Еда</legend>
             <div class='filter__item-filter-list-wrapper'>
-              <ul class='filter__item-filter-list'>
+              <ul class='filter__item-filter-list' id='food-box'>
                 <li class='filter__list-option'>
                   <input class='filter__list-option-input visually-hidden' type='checkbox' id='meat-eater'>
                   <label class='filter__list-option-label' for='meat-eater'>Мясоед</label>
@@ -797,7 +797,7 @@
           <fieldset class='filter__filtration-wrapper filter__filtration-wrapper--transport'>
             <legend class='filter__title filter__title--transport'>Транспорт</legend>
             <div class='filter__item-filter-list-wrapper'>
-              <ul class='filter__item-filter-list-transport filter__item-filter-list-transport--open'>
+              <ul class='filter__item-filter-list-transport filter__item-filter-list-transport--open' id='transport-box'>
                 <li class='filter__list-option'>
                   <input class='filter__list-option-input visually-hidden' type='checkbox' id='airplane'>
                   <label class='filter__list-option-label-transport' for='airplane' aria-label='Самолет'>
@@ -845,7 +845,7 @@
 
           <fieldset class='filter__filtration-wrapper filter__filtration-wrapper--lvl'>
             <legend class='filter__title'>Левел</legend>
-            <div class='filter__lvl-range-wrapper'>
+            <div class='filter__lvl-range-wrapper'  id='lvl-range'>
               <label class='filter__lvl-range filter__lvl-range--min'>
                 <input class='filter__lvl-input filter__lvl-input--min' type='number' name='min-lvl' value='30' step='1'
                   min='0' max='100' aria-label='минимальный уровень'>
@@ -856,7 +856,7 @@
               </label>
             </div>
 
-            <div class='filter__lvl-range-controls'>
+            <div class='filter__lvl-range-controls' id='lvl-range-controls'>
               <div class='filter__lvl-range-scale'>
                 <!--Шкала-->
                 <div class='filter__lvl-range-bar' style="margin-left:73px; width:33%"></div>
@@ -1246,6 +1246,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/catalog.js"></script>
 </body>
 
 </html>
