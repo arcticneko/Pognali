@@ -1435,6 +1435,7 @@ img {
       padding-top: 191px; } }
   @media (min-width: 1440px) {
     .companions__desc-wraper {
+      align-self: start;
       padding-top: 0; } }
 
 .companions__title {
@@ -4212,7 +4213,7 @@ img {
 
 .form {
   /* @include width-container (0, 0, 0); */
-  background-color: var(--basic-white-gray5);
+  background-color: var(--basic-white-gray7);
   box-sizing: border-box; }
 
 .form__my-plan::before {
@@ -4806,7 +4807,8 @@ img {
   font-size: 24px;
   line-height: 24px;
   color: var(--basic-blue-light);
-  background-color: inherit; }
+  background-color: inherit;
+  z-index: 1; }
   @media (min-width: 768px) {
     .steps-wrapper__title {
       /* @include width-container (25px, 75px, 124px); */
